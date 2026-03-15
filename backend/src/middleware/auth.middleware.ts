@@ -17,7 +17,12 @@ export const requireAuth = (req: AuthenticatedRequest, res: Response, next: Next
     return;
   }
 
-  req.user = verifyToken(token);
+  try {
+    req.user = verifyToken(token);
+  } catch {
+    res.status(401).json({ message: "Invalid or expired token" });
+    return;
+  }
+
   next();
 };
-

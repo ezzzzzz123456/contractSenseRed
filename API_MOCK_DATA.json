@@ -1,37 +1,84 @@
 {
   "meta": {
     "project": "ContractSense",
-    "phase": "scaffold-complete",
-    "updatedAt": "2026-03-15T00:00:00.000Z",
+    "phase": "feature-1-complete",
+    "updatedAt": "2026-03-15T23:12:00.000Z",
     "notes": [
       "Fixture data is aligned to the current backend Mongoose model field names.",
-      "AI endpoint examples are mock responses for the current stubbed architecture.",
-      "This file reflects the repository state after initial multi-service scaffolding."
+      "Auth payloads reflect the implemented frontend/backend flow.",
+      "AI payloads remain mock examples because the AI service is not being modified in this stream."
     ]
   },
   "user": {
-    "_id": "67d3d5a1f0a1000000000001",
-    "name": "Avery Brooks",
-    "email": "avery@contractsense.dev",
-    "passwordHash": "$2b$10$examplehashforcontractsense",
+    "_id": "69b6ef54f48f9315bbb59d68",
+    "name": "Test User",
+    "email": "test.auth@contractsense.dev",
+    "passwordHash": "$2a$10$exampleHashedPasswordForFeatureOne",
     "userType": "user",
-    "verificationStatus": "pending",
-    "ratings": 4.8,
+    "verificationStatus": "verified",
+    "ratings": 0,
     "pricing": 0
   },
   "lawyerUser": {
-    "_id": "67d3d5a1f0a1000000000002",
+    "_id": "69b6ef54f48f9315bbb59d69",
     "name": "Jordan Hale",
     "email": "jordan@contractsense.dev",
-    "passwordHash": "$2b$10$examplehashforlawyer",
+    "passwordHash": "$2a$10$exampleHashedPasswordForLawyer",
     "userType": "lawyer",
-    "verificationStatus": "verified",
-    "ratings": 4.9,
-    "pricing": 299
+    "verificationStatus": "pending",
+    "ratings": 0,
+    "pricing": 0
+  },
+  "authRegisterRequest": {
+    "name": "Test User",
+    "email": "test.auth@contractsense.dev",
+    "password": "Secret123!",
+    "userType": "user"
+  },
+  "authRegisterResponse": {
+    "message": "Registration successful",
+    "token": "jwt-token-placeholder",
+    "user": {
+      "_id": "69b6ef54f48f9315bbb59d68",
+      "name": "Test User",
+      "email": "test.auth@contractsense.dev",
+      "userType": "user",
+      "verificationStatus": "verified",
+      "ratings": 0,
+      "pricing": 0
+    }
+  },
+  "authLoginRequest": {
+    "email": "test.auth@contractsense.dev",
+    "password": "Secret123!"
+  },
+  "authLoginResponse": {
+    "message": "Login successful",
+    "token": "jwt-token-placeholder",
+    "user": {
+      "_id": "69b6ef54f48f9315bbb59d68",
+      "name": "Test User",
+      "email": "test.auth@contractsense.dev",
+      "userType": "user",
+      "verificationStatus": "verified",
+      "ratings": 0,
+      "pricing": 0
+    }
+  },
+  "authMeResponse": {
+    "user": {
+      "_id": "69b6ef54f48f9315bbb59d68",
+      "name": "Test User",
+      "email": "test.auth@contractsense.dev",
+      "userType": "user",
+      "verificationStatus": "verified",
+      "ratings": 0,
+      "pricing": 0
+    }
   },
   "contractUploaded": {
     "_id": "67d3d5a1f0a1000000000010",
-    "uploadedBy": "67d3d5a1f0a1000000000001",
+    "uploadedBy": "69b6ef54f48f9315bbb59d68",
     "fileUrl": "/uploads/master-services-agreement.pdf",
     "contractType": "msa",
     "status": "uploaded",
@@ -39,7 +86,7 @@
   },
   "contractAnalyzed": {
     "_id": "67d3d5a1f0a1000000000011",
-    "uploadedBy": "67d3d5a1f0a1000000000001",
+    "uploadedBy": "69b6ef54f48f9315bbb59d68",
     "fileUrl": "/uploads/master-services-agreement.pdf",
     "contractType": "msa",
     "status": "analyzed",
@@ -105,7 +152,7 @@
   },
   "lawyer": {
     "_id": "67d3d5a1f0a1000000000030",
-    "userId": "67d3d5a1f0a1000000000002",
+    "userId": "69b6ef54f48f9315bbb59d69",
     "specializations": [
       "Commercial Contracts",
       "SaaS Agreements"

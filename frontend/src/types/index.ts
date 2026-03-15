@@ -76,3 +76,12 @@ export interface OutcomeMessage {
   content: string;
 }
 
+export interface AuthResponse {
+  message: string;
+  token: string;
+  user: User;
+}
+
+export interface CurrentUserResponse {
+  user: User;
+}
