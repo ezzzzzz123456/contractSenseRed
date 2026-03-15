@@ -1,64 +1,111 @@
 {
+  "meta": {
+    "project": "ContractSense",
+    "phase": "scaffold-complete",
+    "updatedAt": "2026-03-15T00:00:00.000Z",
+    "notes": [
+      "Fixture data is aligned to the current backend Mongoose model field names.",
+      "AI endpoint examples are mock responses for the current stubbed architecture.",
+      "This file reflects the repository state after initial multi-service scaffolding."
+    ]
+  },
   "user": {
-    "_id": "user_001",
+    "_id": "67d3d5a1f0a1000000000001",
     "name": "Avery Brooks",
     "email": "avery@contractsense.dev",
-    "passwordHash": "$2b$10$examplehash",
+    "passwordHash": "$2b$10$examplehashforcontractsense",
     "userType": "user",
     "verificationStatus": "pending",
     "ratings": 4.8,
     "pricing": 0
   },
-  "contract": {
-    "_id": "contract_001",
-    "uploadedBy": "user_001",
-    "fileUrl": "https://cdn.contractsense.dev/contracts/master-services-agreement.pdf",
+  "lawyerUser": {
+    "_id": "67d3d5a1f0a1000000000002",
+    "name": "Jordan Hale",
+    "email": "jordan@contractsense.dev",
+    "passwordHash": "$2b$10$examplehashforlawyer",
+    "userType": "lawyer",
+    "verificationStatus": "verified",
+    "ratings": 4.9,
+    "pricing": 299
+  },
+  "contractUploaded": {
+    "_id": "67d3d5a1f0a1000000000010",
+    "uploadedBy": "67d3d5a1f0a1000000000001",
+    "fileUrl": "/uploads/master-services-agreement.pdf",
+    "contractType": "msa",
+    "status": "uploaded",
+    "clauseList": []
+  },
+  "contractAnalyzed": {
+    "_id": "67d3d5a1f0a1000000000011",
+    "uploadedBy": "67d3d5a1f0a1000000000001",
+    "fileUrl": "/uploads/master-services-agreement.pdf",
     "contractType": "msa",
     "status": "analyzed",
     "clauseList": [
       {
         "text": "The Supplier may terminate this Agreement at any time without cause upon five (5) days written notice.",
-        "simplifiedText": "The supplier can end the agreement for any reason with only five days notice.",
+        "simplifiedText": "The supplier can end the agreement for any reason with five days notice.",
         "riskFlag": "red",
-        "explanation": "This gives the supplier broad exit rights and leaves the customer exposed operationally.",
-        "counterClauseSuggestion": "Either party may terminate for convenience upon thirty (30) days written notice after completing all committed deliverables due in that period."
+        "explanation": "This creates a one-sided termination right that can disrupt operations and negotiating leverage.",
+        "counterClauseSuggestion": "Either party may terminate for convenience upon thirty (30) days written notice, provided all committed deliverables due during that period are completed."
       },
       {
         "text": "Invoices are due within fifteen (15) days of receipt.",
         "simplifiedText": "Invoices must be paid within 15 days.",
         "riskFlag": "yellow",
-        "explanation": "The payment term is short and may pressure cash flow.",
+        "explanation": "The payment window is relatively short and may create cash-flow pressure.",
         "counterClauseSuggestion": "Invoices are due within thirty (30) days of receipt unless otherwise agreed in writing."
       },
       {
         "text": "Each party will comply with all applicable privacy laws.",
-        "simplifiedText": "Both sides must follow privacy laws.",
+        "simplifiedText": "Both parties must follow privacy laws.",
         "riskFlag": "green",
-        "explanation": "This is balanced baseline compliance language.",
+        "explanation": "This is standard balanced compliance language and does not materially favor one side.",
         "counterClauseSuggestion": "No change recommended."
       }
     ]
   },
-  "report": {
-    "_id": "report_001",
-    "contractId": "contract_001",
+  "reportDraft": {
+    "_id": "67d3d5a1f0a1000000000020",
+    "contractId": "67d3d5a1f0a1000000000011",
     "aiOutput": {
-      "summary": "The agreement is workable but contains unilateral termination and aggressive payment timing.",
+      "summary": "Automated contract review completed with one high-risk clause and one medium-risk commercial term.",
       "overallRiskScore": 82,
       "recommendations": [
-        "Extend convenience termination notice to 30 days.",
-        "Negotiate payment terms to net 30."
+        "Negotiate a mutual termination-for-convenience provision with longer notice.",
+        "Extend payment timing to net 30 if commercially feasible."
+      ]
+    },
+    "lawyerOutput": {},
+    "trustSeal": null,
+    "exportedPdfUrl": null
+  },
+  "reportReviewed": {
+    "_id": "67d3d5a1f0a1000000000021",
+    "contractId": "67d3d5a1f0a1000000000011",
+    "aiOutput": {
+      "summary": "Automated contract review completed with notable termination and payment risks.",
+      "overallRiskScore": 82,
+      "recommendations": [
+        "Update termination rights to be mutual.",
+        "Adjust payment timing to reduce short-term cash pressure."
       ]
     },
     "lawyerOutput": {
-      "reviewNotes": "Priority should be placed on termination rights and limitation of liability review."
+      "reviewNotes": "Termination rights should be revised before signature. Payment timing is negotiable but lower priority.",
+      "recommendedEdits": [
+        "Add a 30-day convenience notice period for both parties.",
+        "Include a cure period before any non-payment termination trigger."
+      ]
     },
-    "trustSeal": "trustseal_001",
-    "exportedPdfUrl": "https://cdn.contractsense.dev/reports/report_001.pdf"
+    "trustSeal": "67d3d5a1f0a1000000000040",
+    "exportedPdfUrl": "https://cdn.contractsense.dev/reports/report-reviewed.pdf"
   },
   "lawyer": {
-    "_id": "lawyer_001",
-    "userId": "user_002",
+    "_id": "67d3d5a1f0a1000000000030",
+    "userId": "67d3d5a1f0a1000000000002",
     "specializations": [
       "Commercial Contracts",
       "SaaS Agreements"
@@ -68,67 +115,97 @@
     "feePerReview": 299
   },
   "trustSeal": {
-    "_id": "trustseal_001",
-    "reportId": "report_001",
-    "lawyerId": "lawyer_001",
+    "_id": "67d3d5a1f0a1000000000040",
+    "reportId": "67d3d5a1f0a1000000000021",
+    "lawyerId": "67d3d5a1f0a1000000000030",
     "issuedAt": "2026-03-15T10:00:00.000Z",
-    "sealHash": "sha256:contractsense-demo-seal"
+    "sealHash": "sha256:contractsense-reviewed-report-seal"
   },
-  "contractAnalysisResponse": {
+  "aiAnalyzeRequest": {
+    "contractId": "67d3d5a1f0a1000000000011",
+    "contractText": "The Supplier may terminate this Agreement at any time without cause upon five (5) days written notice. Invoices are due within fifteen (15) days of receipt. Each party will comply with all applicable privacy laws.",
     "contractType": "msa",
-    "summary": "The contract includes one high-risk clause, one medium-risk clause, and one low-risk clause.",
+    "parties": [
+      "Alpha Corp",
+      "Beta LLC"
+    ]
+  },
+  "aiAnalyzeResponse": {
+    "contractType": "msa",
+    "summary": "Automated contract review completed.",
     "clauses": [
       {
         "text": "The Supplier may terminate this Agreement at any time without cause upon five (5) days written notice.",
-        "simplifiedText": "The supplier can end the agreement for any reason with only five days notice.",
+        "simplifiedText": "Plain-English summary: The Supplier may terminate this Agreement at any time without cause upon five (5) days written notice.",
         "riskFlag": "red",
-        "explanation": "This gives the supplier broad exit rights and leaves the customer exposed operationally.",
-        "counterClauseSuggestion": "Either party may terminate for convenience upon thirty (30) days written notice after completing all committed deliverables due in that period."
+        "explanation": "Stub explanation generated by the AI service.",
+        "counterClauseSuggestion": "Stub counter-clause suggestion."
+      },
+      {
+        "text": "Invoices are due within fifteen (15) days of receipt",
+        "simplifiedText": "Plain-English summary: Invoices are due within fifteen (15) days of receipt",
+        "riskFlag": "green",
+        "explanation": "Stub explanation generated by the AI service.",
+        "counterClauseSuggestion": "Stub counter-clause suggestion."
+      }
+    ],
+    "overallRiskScore": 80,
+    "recommendations": [
+      "Review high-risk clauses with counsel.",
+      "Confirm key commercial terms."
+    ]
+  },
+  "aiSimplifyResponse": {
+    "simplifiedText": "Plain-English summary: The Supplier may terminate this Agreement at any time without cause upon five (5) days written notice."
+  },
+  "aiFlagsResponse": {
+    "flags": [
+      {
+        "text": "The Supplier may terminate this Agreement at any time without cause upon five (5) days written notice.",
+        "riskFlag": "red",
+        "explanation": "High leverage or exit-risk language detected."
       },
       {
         "text": "Invoices are due within fifteen (15) days of receipt.",
-        "simplifiedText": "Invoices must be paid within 15 days.",
-        "riskFlag": "yellow",
-        "explanation": "The payment term is short and may pressure cash flow.",
-        "counterClauseSuggestion": "Invoices are due within thirty (30) days of receipt unless otherwise agreed in writing."
+        "riskFlag": "green",
+        "explanation": "Balanced or routine clause language."
       },
       {
         "text": "Each party will comply with all applicable privacy laws.",
-        "simplifiedText": "Both sides must follow privacy laws.",
         "riskFlag": "green",
-        "explanation": "This is balanced baseline compliance language.",
-        "counterClauseSuggestion": "No change recommended."
+        "explanation": "Balanced or routine clause language."
       }
-    ],
-    "overallRiskScore": 82,
-    "recommendations": [
-      "Extend convenience termination notice to 30 days.",
-      "Negotiate payment terms to net 30."
+    ]
+  },
+  "counterClauseSuggestion": {
+    "counterClauseSuggestion": "Suggested alternative for 'reduce termination risk': The Supplier may terminate this Agreement at any time without cause upon five (5) days written notice.",
+    "negotiationNotes": [
+      "Preserves core commercial intent.",
+      "Adds clearer balancing language."
     ]
   },
   "partyIntelligence": {
     "partyName": "Beta LLC",
-    "summary": "Beta LLC is a mid-market procurement vendor with steady growth and recent privacy compliance investments.",
+    "summary": "Beta LLC has a light-touch diligence profile with publicly available footprint data. Beta LLC appears to be an active commercial counterparty with moderate diligence signals.",
     "riskIndicators": [
-      "Two recent contract disputes reported in trade press",
-      "Delayed vendor payments mentioned in one review source"
+      "Reputation review recommended.",
+      "Validate payment history during onboarding."
     ],
     "sources": [
-      "https://example.com/beta-profile",
-      "https://example.com/beta-news"
+      "https://beta.example.com"
     ]
   },
-  "counterClauseSuggestion": {
-    "counterClauseSuggestion": "Customer may terminate for material breach if Supplier fails to cure within fifteen (15) days after written notice.",
-    "negotiationNotes": [
-      "Anchors termination on objective breach.",
-      "Adds a cure period to reduce dispute risk."
-    ]
+  "outcomeSimulation": {
+    "reply": "Likely outcome based on the current clause set: What happens if payment is 45 days late?",
+    "citations": [
+      "Termination clause",
+      "Payment terms"
+    ],
+    "confidence": 0.74
   },
   "reportExport": {
-    "reportId": "report_001",
-    "exportedPdfUrl": "https://cdn.contractsense.dev/reports/report_001.pdf",
+    "reportId": "67d3d5a1f0a1000000000021",
+    "exportedPdfUrl": "https://cdn.contractsense.dev/reports/report-reviewed.pdf",
     "status": "ready"
   }
 }
-
