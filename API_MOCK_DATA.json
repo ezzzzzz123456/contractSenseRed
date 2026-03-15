@@ -1,0 +1,134 @@
+{
+  "user": {
+    "_id": "user_001",
+    "name": "Avery Brooks",
+    "email": "avery@contractsense.dev",
+    "passwordHash": "$2b$10$examplehash",
+    "userType": "user",
+    "verificationStatus": "pending",
+    "ratings": 4.8,
+    "pricing": 0
+  },
+  "contract": {
+    "_id": "contract_001",
+    "uploadedBy": "user_001",
+    "fileUrl": "https://cdn.contractsense.dev/contracts/master-services-agreement.pdf",
+    "contractType": "msa",
+    "status": "analyzed",
+    "clauseList": [
+      {
+        "text": "The Supplier may terminate this Agreement at any time without cause upon five (5) days written notice.",
+        "simplifiedText": "The supplier can end the agreement for any reason with only five days notice.",
+        "riskFlag": "red",
+        "explanation": "This gives the supplier broad exit rights and leaves the customer exposed operationally.",
+        "counterClauseSuggestion": "Either party may terminate for convenience upon thirty (30) days written notice after completing all committed deliverables due in that period."
+      },
+      {
+        "text": "Invoices are due within fifteen (15) days of receipt.",
+        "simplifiedText": "Invoices must be paid within 15 days.",
+        "riskFlag": "yellow",
+        "explanation": "The payment term is short and may pressure cash flow.",
+        "counterClauseSuggestion": "Invoices are due within thirty (30) days of receipt unless otherwise agreed in writing."
+      },
+      {
+        "text": "Each party will comply with all applicable privacy laws.",
+        "simplifiedText": "Both sides must follow privacy laws.",
+        "riskFlag": "green",
+        "explanation": "This is balanced baseline compliance language.",
+        "counterClauseSuggestion": "No change recommended."
+      }
+    ]
+  },
+  "report": {
+    "_id": "report_001",
+    "contractId": "contract_001",
+    "aiOutput": {
+      "summary": "The agreement is workable but contains unilateral termination and aggressive payment timing.",
+      "overallRiskScore": 82,
+      "recommendations": [
+        "Extend convenience termination notice to 30 days.",
+        "Negotiate payment terms to net 30."
+      ]
+    },
+    "lawyerOutput": {
+      "reviewNotes": "Priority should be placed on termination rights and limitation of liability review."
+    },
+    "trustSeal": "trustseal_001",
+    "exportedPdfUrl": "https://cdn.contractsense.dev/reports/report_001.pdf"
+  },
+  "lawyer": {
+    "_id": "lawyer_001",
+    "userId": "user_002",
+    "specializations": [
+      "Commercial Contracts",
+      "SaaS Agreements"
+    ],
+    "isVerified": true,
+    "ratings": 4.9,
+    "feePerReview": 299
+  },
+  "trustSeal": {
+    "_id": "trustseal_001",
+    "reportId": "report_001",
+    "lawyerId": "lawyer_001",
+    "issuedAt": "2026-03-15T10:00:00.000Z",
+    "sealHash": "sha256:contractsense-demo-seal"
+  },
+  "contractAnalysisResponse": {
+    "contractType": "msa",
+    "summary": "The contract includes one high-risk clause, one medium-risk clause, and one low-risk clause.",
+    "clauses": [
+      {
+        "text": "The Supplier may terminate this Agreement at any time without cause upon five (5) days written notice.",
+        "simplifiedText": "The supplier can end the agreement for any reason with only five days notice.",
+        "riskFlag": "red",
+        "explanation": "This gives the supplier broad exit rights and leaves the customer exposed operationally.",
+        "counterClauseSuggestion": "Either party may terminate for convenience upon thirty (30) days written notice after completing all committed deliverables due in that period."
+      },
+      {
+        "text": "Invoices are due within fifteen (15) days of receipt.",
+        "simplifiedText": "Invoices must be paid within 15 days.",
+        "riskFlag": "yellow",
+        "explanation": "The payment term is short and may pressure cash flow.",
+        "counterClauseSuggestion": "Invoices are due within thirty (30) days of receipt unless otherwise agreed in writing."
+      },
+      {
+        "text": "Each party will comply with all applicable privacy laws.",
+        "simplifiedText": "Both sides must follow privacy laws.",
+        "riskFlag": "green",
+        "explanation": "This is balanced baseline compliance language.",
+        "counterClauseSuggestion": "No change recommended."
+      }
+    ],
+    "overallRiskScore": 82,
+    "recommendations": [
+      "Extend convenience termination notice to 30 days.",
+      "Negotiate payment terms to net 30."
+    ]
+  },
+  "partyIntelligence": {
+    "partyName": "Beta LLC",
+    "summary": "Beta LLC is a mid-market procurement vendor with steady growth and recent privacy compliance investments.",
+    "riskIndicators": [
+      "Two recent contract disputes reported in trade press",
+      "Delayed vendor payments mentioned in one review source"
+    ],
+    "sources": [
+      "https://example.com/beta-profile",
+      "https://example.com/beta-news"
+    ]
+  },
+  "counterClauseSuggestion": {
+    "counterClauseSuggestion": "Customer may terminate for material breach if Supplier fails to cure within fifteen (15) days after written notice.",
+    "negotiationNotes": [
+      "Anchors termination on objective breach.",
+      "Adds a cure period to reduce dispute risk."
+    ]
+  },
+  "reportExport": {
+    "reportId": "report_001",
+    "exportedPdfUrl": "https://cdn.contractsense.dev/reports/report_001.pdf",
+    "status": "ready"
+  }
+}
+
