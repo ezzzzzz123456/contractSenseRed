@@ -16,6 +16,8 @@ Integrated finalization on `dev`.
 
 The application now supports the core product workflow end to end across the frontend, central backend, AI backend, and MongoDB. Contracts can be uploaded, analyzed through the gateway-to-AI flow, sent into the lawyer marketplace for review, assigned to a lawyer queue, reviewed by counsel, finalized with a trust seal, exported as a generated PDF, securely shared, reopened directly through reload-safe analysis/report URLs, and enriched through the merged contract-intelligence report flow.
 
+The current focus is analysis-path stabilization on top of the merged branch: refreshing legacy analyses, preferring richer stored intelligence reports in the UI, preventing raw PDF/binary content from showing as clause text, and aligning the running AI-service container with the newer document-ingestion code.
+
 ## What Is Done
 
 - Full project structure created for `frontend`, `backend`, and `ai-service`
@@ -77,6 +79,13 @@ The application now supports the core product workflow end to end across the fro
   - frontend can request stored intelligence reports from the central backend instead of calling the AI service directly
   - outcome simulator can use stored contract context and citations
   - extracted document structure and advanced analysis payloads are supported in the merged frontend types/UI
+- Post-merge analysis-path fixes implemented:
+  - backend contract analysis now prefers `/ai/intelligence/report` before legacy `/ai/analyze`
+  - backend file parsing now detects likely PDF/binary uploads and avoids treating raw bytes as legal text
+  - analysis page now prefers richer persisted report clauses over stale legacy `contract.clauseList`
+  - analysis page auto-refreshes old legacy analyses once when opened
+  - analysis page suppresses obviously broken legacy clause cards instead of rendering raw PDF/XMP content
+  - AI-service dependency conflict identified and fixed in code by aligning `numpy` with `paddleocr`
 - Merge finalization completed on `dev`:
   - `feature/contrac` and `origin/codex/contract-intelligence-platform` are now reconciled in one branch
   - merge conflicts resolved in shared frontend/backend files
@@ -108,6 +117,8 @@ The application now supports the core product workflow end to end across the fro
 ## What Is Partially Done
 
 - Analysis works, but some parsing/intelligence paths still rely on heuristic or stubbed behavior depending on document type and available source text
+- Existing historical contracts may still contain legacy stub analysis results until they are re-analyzed
+- Non-contract documents can still be uploaded today, so document-type validation remains too permissive for the contract-analysis workflow
 - Marketplace assignment works, but richer filtering, availability, and booking workflow are still thin
 - Lawyer dashboard queue works, but broader operational tooling is still minimal
 - Email and payment services remain placeholder integrations
@@ -115,6 +126,7 @@ The application now supports the core product workflow end to end across the fro
 ## What Is Not Done Yet
 
 - Real production-grade PDF/DOC parsing and extraction for complex uploads
+- Explicit contract-vs-non-contract validation before analysis starts
 - Full marketplace business flow with scheduling, messaging, and assignment lifecycle management
 - Production-grade secure sharing controls and revocation management
 - Protected-route UX polish and deeper role-based frontend gating
@@ -139,19 +151,23 @@ The application now supports the core product workflow end to end across the fro
 - Feature 5 lawyer marketplace implemented and verified
 - `dev` finalized by merging `origin/codex/contract-intelligence-platform` and resolving conflicts successfully
 - Frontend build, backend build, and AI-service Python compile verification completed after merge
+- Analysis route debugging completed for legacy/stub result rendering and document-aware analyze routing
+- AI-service Docker rebuild blocker identified in `requirements.txt` and fixed in code
 
 ### In Progress
 
 - Transition from feature completion into production hardening, AI quality improvements, and operational polish on the merged `dev` branch
+- Completing AI-service runtime rebuild verification for the updated PDF/OCR dependency set
 
 ### Next Recommended Milestones
 
-1. Improve file parsing and structured extraction quality for complex PDF/DOC uploads
-2. Expand marketplace into a fuller engagement workflow with filters, availability, and lifecycle controls
-3. Build out lawyer dashboard operations beyond the current assigned-review queue
-4. Add analysis history, contract assistant UX, and richer workflow audit views
-5. Add automated tests across backend, frontend, and merged AI-service flows
-6. Harden validation, authorization boundaries, and share-link lifecycle controls
+1. Finish AI-service runtime rebuild verification and confirm newer PDF/OCR stack is active in Docker
+2. Improve file parsing and structured extraction quality for complex PDF/DOC uploads
+3. Add explicit non-contract upload validation and user-facing rejection/warning states
+4. Expand marketplace into a fuller engagement workflow with filters, availability, and lifecycle controls
+5. Add analysis history, contract assistant UX, and richer workflow audit views
+6. Add automated tests across backend, frontend, and merged AI-service flows
+7. Harden validation, authorization boundaries, and share-link lifecycle controls
 
 ## Priority Roadmap
 
@@ -173,5 +189,5 @@ The application now supports the core product workflow end to end across the fro
 ## Notes
 
 - The project is now in a merged finalization state on `dev`, with frontend, backend, and AI backend connected in Docker.
-- Current project status is best described as `core features complete, merged branch finalized, and ready for hardening/polish work`.
-- `API_MOCK_DATA.json` includes fixtures for auth, upload, analysis, intelligence-report retrieval, lawyer review, trust seal issuance, export, share, marketplace lawyer listing, review requests, assigned review queue retrieval, and outcome simulation aligned with the implemented flow.
+- Current project status is best described as `core features complete, merged branch finalized, and in analysis-path hardening/stabilization`.
+- `API_MOCK_DATA.json` includes fixtures for auth, upload, analysis, intelligence-report retrieval, lawyer review, trust seal issuance, export, share, marketplace lawyer listing, review requests, assigned review queue retrieval, outcome simulation, and legacy-analysis refresh examples aligned with the implemented flow.

@@ -1,3 +1,5 @@
+import fs from "node:fs/promises";
+import path from "node:path";
 import type { Response } from "express";
 import { ContractModel } from "../models/Contract.model";
 import { ReportModel } from "../models/Report.model";
@@ -21,6 +23,62 @@ interface AnalyzeResponse {
   overallRiskScore: number;
   recommendations: string[];
 }
+
+interface DetailedAnalysisClause {
+  originalText: string;
+  plainLanguage: string;
+  colorIndicator: "red" | "yellow" | "green";
+  explanation: string;
+  improvement?: {
+    revisedClause?: string;
+  };
+}
+
+interface DetailedAnalysisReport {
+  contractId: string;
+  summary: string;
+  overallRiskScore: number;
+  recommendations: string[];
+  contractType?: {
+    category?: string;
+  };
+  clauses: DetailedAnalysisClause[];
+}
+
+const getAbsoluteUploadPath = (fileUrl: string): string =>
+  path.resolve(process.cwd(), fileUrl.replace(/^\//, ""));
+
+const inferMediaType = (fileUrl: string): string => {
+  const ext = path.extname(fileUrl).toLowerCase();
+
+  switch (ext) {
+    case ".pdf":
+      return "application/pdf";
+    case ".doc":
+      return "application/msword";
+    case ".docx":
+      return "application/vnd.openxmlformats-officedocument.wordprocessingml.document";
+    case ".txt":
+      return "text/plain";
+    case ".png":
+      return "image/png";
+    case ".jpg":
+    case ".jpeg":
+      return "image/jpeg";
+    default:
+      return "application/octet-stream";
+  }
+};
+
+const mapDetailedClauses = (clauses: DetailedAnalysisClause[]): AnalysisClause[] =>
+  clauses.map((clause) => ({
+    text: clause.originalText,
+    simplifiedText: clause.plainLanguage,
+    riskFlag: clause.colorIndicator,
+    explanation: clause.explanation,
+    counterClauseSuggestion:
+      clause.improvement?.revisedClause?.trim() || "Counter-clause recommendation unavailable for this clause.",
+  }));
 
 const serializeContract = (contract: {
   _id: { toString(): string };
@@ -128,13 +186,46 @@ export const analyzeUploadedContract = async (req: AuthenticatedRequest, res: Re
     return;
   }
 
-  const contractText = await fileParser.extractText(contract.fileUrl);
-  const analysis = await aiClient.post<AnalyzeResponse>("/ai/analyze", {
-    contractId: contract._id.toString(),
-    contractText,
-    contractType: contract.contractType,
-    parties: req.body.parties ?? [],
-  });
+  let analysis: AnalyzeResponse;
+  let reportPayload: Record<string, unknown>;
+
+  try {
+    const absolutePath = getAbsoluteUploadPath(contract.fileUrl);
+    const rawFile = await fs.readFile(absolutePath);
+    const detailedReport = await aiClient.post<DetailedAnalysisReport>("/ai/intelligence/report", {
+      contractId: contract._id.toString(),
+      fileName: path.basename(contract.fileUrl),
+      mediaType: inferMediaType(contract.fileUrl),
+      documentBase64: rawFile.toString("base64"),
+      contractTypeHint: contract.contractType,
+      parties: req.body.parties ?? [],
+      requestedTone: "professional",
+    });
+
+    analysis = {
+      contractType: detailedReport.contractType?.category ?? contract.contractType,
+      summary: detailedReport.summary,
+      clauses: mapDetailedClauses(detailedReport.clauses),
+      overallRiskScore: detailedReport.overallRiskScore,
+      recommendations: detailedReport.recommendations,
+    };
+    reportPayload = detailedReport as unknown as Record<string, unknown>;
+  } catch {
+    const contractText = await fileParser.extractText(contract.fileUrl);
+    const legacyAnalysis = await aiClient.post<AnalyzeResponse>("/ai/analyze", {
+      contractId: contract._id.toString(),
+      contractText,
+      contractType: contract.contractType,
+      parties: req.body.parties ?? [],
+    });
+
+    analysis = legacyAnalysis;
+    reportPayload = {
+      summary: legacyAnalysis.summary,
+      overallRiskScore: legacyAnalysis.overallRiskScore,
+      recommendations: legacyAnalysis.recommendations,
+    };
+  }
 
   contract.contractType = analysis.contractType || contract.contractType;
   contract.status = "analyzed";
@@ -145,11 +236,7 @@ export const analyzeUploadedContract = async (req: AuthenticatedRequest, res: Re
     { contractId: contract._id },
     {
       contractId: contract._id,
-      aiOutput: {
-        summary: analysis.summary,
-        overallRiskScore: analysis.overallRiskScore,
-        recommendations: analysis.recommendations,
-      },
+      aiOutput: reportPayload,
     },
     { upsert: true, new: true, setDefaultsOnInsert: true },
   );

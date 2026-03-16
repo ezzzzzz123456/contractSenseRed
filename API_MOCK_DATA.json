@@ -1,12 +1,13 @@
 {
   "meta": {
     "project": "ContractSense",
-    "phase": "integrated-dev-finalization",
-    "updatedAt": "2026-03-16T19:05:00.000Z",
+    "phase": "analysis-stabilization-on-dev",
+    "updatedAt": "2026-03-16T20:15:00.000Z",
     "notes": [
       "Fixture data is aligned to the current backend Mongoose model field names and current frontend/backend flow.",
       "Auth, contract upload, analysis, lawyer review, trust seal, export, share, marketplace, and merged contract-intelligence payloads reflect the implemented gateway/backend behavior.",
-      "The dev branch now contains the merged frontend, backend, and ai-service integration paths, including stored intelligence-report retrieval through the central backend."
+      "The dev branch now contains the merged frontend, backend, and ai-service integration paths, including stored intelligence-report retrieval through the central backend.",
+      "Current mocks also capture legacy-analysis refresh scenarios and non-contract PDF examples discovered during route debugging."
     ]
   },
   "user": {
@@ -915,6 +916,129 @@
       "https://filings.example.com/techcorp"
     ],
     "framework": "Counterparty diligence v1"
+  },
+  "contractAnalyzeResponseDetailed": {
+    "message": "Contract analysis completed",
+    "contract": {
+      "_id": "69b85f4a7b850f03c5ab51f7",
+      "uploadedBy": "69b85f387b850f03c5ab51f3",
+      "fileUrl": "/uploads/1773690698485-contractsense-smoke.txt",
+      "contractType": "legal statute",
+      "status": "analyzed",
+      "clauseList": [
+        {
+          "text": "Section 1. Payment Terms. Client shall pay all undisputed invoices within 30 days.\nSection 2. Termination. Either party may terminate for material breach after 15 days notice and opportunity to cure.\nSection 3. Liability. Supplier liability is capped at fees paid during the prior 12 months.",
+          "simplifiedText": "The company is required to do something within 30 days. In plain terms, section 1. Payment Terms. Client shall pay all undisputed invoices within 30 days. Section 2. Termination. Either party may terminate for material breach after 15 days notice and opportunity to cure. Section 3. Liability. Supplier liability is capped at fees paid during the prior 12 months.",
+          "riskFlag": "red",
+          "explanation": "Clause risk is warning with score 50.67. The strongest driver is liabilityExposure, and the clause shows elevated exposure where obligations may be hard to contest or limit. Cross-clause context: Detected 3 explicit cross-reference(s).",
+          "counterClauseSuggestion": "Section 1. Payment Terms. Client shall pay all undisputed invoices within 30 days.\nSection 2. Termination. Either party may terminate for material breach after 15 days notice and opportunity to cure.\nSection 3. Liability. Supplier liability is capped at fees paid during the prior 12 months provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry."
+        }
+      ]
+    },
+    "report": {
+      "_id": "69b85f59b6a17a2ba7d58ce7",
+      "contractId": "69b85f4a7b850f03c5ab51f7",
+      "aiOutput": {
+        "contractId": "69b85f4a7b850f03c5ab51f7",
+        "contractType": {
+          "category": "legal statute",
+          "confidence": 0.66,
+          "evidence": [
+            "section"
+          ],
+          "alternatives": {
+            "legal statute": 1,
+            "service contract": 0.77,
+            "employment": 0.37
+          }
+        },
+        "summary": "This legal statute is assessed as critical risk, with 1 critical clauses and 0 warning clauses. The report prioritizes disproportionate liability, ambiguous drafting, loophole-prone overrides, and negotiable remediation paths. The highest-risk issue is termination language in clause-001, scored 58/100.",
+        "overallRiskScore": 56.54,
+        "overallRiskCategory": "critical",
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review.",
+          "Review this clause together with all clauses it references or overrides.",
+          "Add an explicit order-of-precedence rule so linked clauses do not conflict silently."
+        ],
+        "clauses": [
+          {
+            "clauseId": "clause-001",
+            "sectionReference": "General",
+            "originalText": "Section 1. Payment Terms. Client shall pay all undisputed invoices within 30 days.\nSection 2. Termination. Either party may terminate for material breach after 15 days notice and opportunity to cure.\nSection 3. Liability. Supplier liability is capped at fees paid during the prior 12 months.",
+            "plainLanguage": "The company is required to do something within 30 days. In plain terms, section 1. Payment Terms. Client shall pay all undisputed invoices within 30 days. Section 2. Termination. Either party may terminate for material breach after 15 days notice and opportunity to cure. Section 3. Liability. Supplier liability is capped at fees paid during the prior 12 months.",
+            "riskScore": 58.17,
+            "riskCategory": "critical",
+            "colorIndicator": "red",
+            "explanation": "Clause risk is warning with score 50.67. The strongest driver is liabilityExposure, and the clause shows elevated exposure where obligations may be hard to contest or limit. Cross-clause context: Detected 3 explicit cross-reference(s)."
+          }
+        ],
+        "generatedAt": "2026-03-16T19:53:08.288422"
+      },
+      "lawyerOutput": {}
+    }
+  },
+  "legacyAnalysisContract": {
+    "_id": "69b708e80a31a5731589e235",
+    "uploadedBy": "69b6f000f48f9315bbb59d6e",
+    "fileUrl": "/uploads/1773603048007-2-2-pn-junction.pdf",
+    "contractType": "nda",
+    "status": "analyzed",
+    "clauseList": [
+      {
+        "text": "%PDF-1",
+        "simplifiedText": "Plain-English summary: %PDF-1",
+        "riskFlag": "green",
+        "explanation": "Stub explanation generated by the AI service.",
+        "counterClauseSuggestion": "Stub counter-clause suggestion."
+      },
+      {
+        "text": "1-701\"> <rdf:RDF xmlns:rdf=\"http://www",
+        "simplifiedText": "Plain-English summary: 1-701\"> <rdf:RDF xmlns:rdf=\"http://www",
+        "riskFlag": "green",
+        "explanation": "Stub explanation generated by the AI service.",
+        "counterClauseSuggestion": "Stub counter-clause suggestion."
+      }
+    ]
+  },
+  "legacyAnalysisReport": {
+    "_id": "69b708f2b6a17a2ba7d39c95",
+    "contractId": "69b708e80a31a5731589e235",
+    "aiOutput": {
+      "summary": "Automated contract review completed.",
+      "overallRiskScore": 35,
+      "recommendations": [
+        "Review high-risk clauses with counsel.",
+        "Confirm key commercial terms."
+      ]
+    },
+    "lawyerOutput": {},
+    "trustSeal": null,
+    "exportedPdfUrl": null,
+    "shareUrl": null,
+    "shareExpiresAt": null
+  },
+  "analysisLegacyRefreshState": {
+    "route": "/analysis/69b708e80a31a5731589e235",
+    "statusMessage": "Refreshing legacy analysis for this document...",
+    "uiBehavior": [
+      "Hide obviously broken legacy clause cards",
+      "Prefer richer stored intelligence clauses when available",
+      "Re-run analysis once for old legacy results"
+    ]
+  },
+  "nonContractDocumentExample": {
+    "fileName": "2-2-pn-junction.pdf",
+    "detectedProblem": "Uploaded file appears to be a non-contract PDF and legacy analysis stored raw PDF/XMP content as clauses.",
+    "recommendedBehavior": "Warn or reject before contract analysis starts."
+  },
+  "aiServiceRuntimeNote": {
+    "issue": "AI-service Docker rebuild required updated PDF/OCR dependencies to match the merged code path.",
+    "requirementsFix": {
+      "package": "numpy",
+      "from": "2.2.4",
+      "to": "1.26.4",
+      "reason": "paddleocr 2.8.1 requires numpy < 2.0"
+    }
   },
   "outcomeSimulation": {
     "reply": "Based on the stored contract context, the employee would likely face an enforcement threat, but the current non-compete is vulnerable because the geographic scope is broader than necessary and may not survive scrutiny in restrictive jurisdictions.",

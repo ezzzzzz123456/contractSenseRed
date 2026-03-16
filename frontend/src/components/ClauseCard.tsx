@@ -2,8 +2,34 @@ import { useState } from "react";
 import type { Clause } from "../types";
 import RiskFlag from "./RiskFlag";
 
+const looksUnreadable = (value: string | undefined): boolean => {
+  if (!value) {
+    return true;
+  }
+
+  const normalized = value.trim();
+  if (!normalized) {
+    return true;
+  }
+
+  return (
+    normalized.includes("%PDF") ||
+    normalized.includes("/Type /Catalog") ||
+    normalized.includes("StructTreeRoot") ||
+    /[�]{2,}/.test(normalized) ||
+    /<[0-9A-F]{20,}/i.test(normalized)
+  );
+};
+
 const ClauseCard = ({ clause }: { clause: Clause }): JSX.Element => {
   const [copied, setCopied] = useState(false);
+  const readableTitle = looksUnreadable(clause.title) ? undefined : clause.title;
+  const readableText = looksUnreadable(clause.text)
+    ? "Unreadable source text detected in the stored analysis. Re-run analysis to refresh this clause."
+    : clause.text;
+  const readableSummary = looksUnreadable(clause.simplifiedText)
+    ? "Plain-English summary unavailable because the stored clause text appears to contain unreadable PDF content."
+    : clause.simplifiedText;
 
   const handleCopy = async (): Promise<void> => {
     try {
@@ -21,7 +47,7 @@ const ClauseCard = ({ clause }: { clause: Clause }): JSX.Element => {
         <div>
           <div className="risk-card__title-row">
             <span className="risk-card__alert">{clause.riskFlag === "red" ? "!" : clause.riskFlag === "yellow" ? "i" : "v"}</span>
-            <h3>{(clause.title ?? clause.text).slice(0, 42)}{(clause.title ?? clause.text).length > 42 ? "..." : ""}</h3>
+            <h3>{(readableTitle ?? readableText).slice(0, 42)}{(readableTitle ?? readableText).length > 42 ? "..." : ""}</h3>
           </div>
           <p>{clause.explanation}</p>
           {clause.sectionReference ? <p><strong>{clause.sectionReference}</strong></p> : null}
@@ -29,7 +55,7 @@ const ClauseCard = ({ clause }: { clause: Clause }): JSX.Element => {
         </div>
         <RiskFlag value={clause.riskFlag} />
       </header>
-      <blockquote className="risk-card__quote">{clause.simplifiedText}</blockquote>
+      <blockquote className="risk-card__quote">{readableSummary}</blockquote>
       {clause.courtroomAssessment ? (
         <div className="risk-card__counter">
           <span>Courtroom Perspective</span>
