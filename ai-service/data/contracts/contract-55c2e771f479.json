@@ -1,0 +1,499 @@
+{
+  "contractId": "contract-55c2e771f479",
+  "report": {
+    "contractId": "contract-55c2e771f479",
+    "contractType": {
+      "category": "Contract Excerpt (General Commercial)",
+      "confidence": 0.77,
+      "evidence": [
+        "termination"
+      ],
+      "alternatives": {
+        "employment": 1.0,
+        "legal statute": 0.0,
+        "non-disclosure agreement": 0.0,
+        "vendor agreement": 0.0
+      }
+    },
+    "extraction": {
+      "documentKind": "txt",
+      "extractionMethod": "direct_text_payload",
+      "sourceFilename": "uploaded-contract.txt",
+      "mediaType": "text/plain",
+      "structureConfidence": 0.95,
+      "extractedCharacters": 175,
+      "textPreview": "1. Payment. Buyer shall pay within 10 days. 2. Termination. Company may terminate immediately for convenience. 3. Indemnity. Supplier shall indemnify Buyer against all claims.",
+      "notes": [
+        "Used provided contract text directly.",
+        "Applied legal-text normalization."
+      ],
+      "structuredPages": 1,
+      "layoutElements": 3,
+      "tablesDetected": 0,
+      "signaturesDetected": 0,
+      "annotationsDetected": 0
+    },
+    "summary": "This contract excerpt outlines payment terms, a highly one-sided termination right for the 'Company,' and an extremely broad indemnity obligation placed solely on the 'Supplier.' The clauses present significant risks, particularly for the Supplier.",
+    "executiveLegalSummary": "The provided contract excerpt contains three clauses: Payment, Termination, and Indemnity. The Payment clause is clear on the payment window but lacks a specific trigger, creating minor ambiguity. The Termination clause grants the 'Company' an immediate, no-cause termination right, which is highly unfavorable to the counterparty (Supplier) and creates significant business uncertainty. The Indemnity clause is excessively broad, obligating the 'Supplier' to indemnify the 'Buyer' against 'all claims' without limitation to fault or causation, posing a critical and potentially unlimited financial risk to the Supplier. This clause may also face enforceability challenges due to its breadth and lack of specificity regarding the indemnified party's own negligence. Overall, the excerpt is heavily skewed in favor of the 'Company'/'Buyer' and places disproportionate risk on the 'Supplier'.",
+    "overallRiskScore": 42.5,
+    "overallRiskCategory": "critical",
+    "keyVulnerabilities": [
+      "2: Absent specific statutory protections or strong evidence of unconscionability or bad faith, a judge would likely uphold the clause as written, limiting the Supplier's ability to claim damages beyond what the contract explicitly allows (which is nothing in this case).",
+      "3: A judge would likely interpret 'all claims' to implicitly mean claims *related to the Supplier's performance or breach of the agreement*. It is highly unlikely a court would enforce it to cover claims solely caused by the Buyer's own negligence without explicit language to that effect, potentially limiting the scope significantly."
+    ],
+    "legalLoopholes": [
+      "The lack of a specific trigger allows either party to argue for an interpretation that benefits them regarding the payment due date.",
+      "The clause provides the 'Company' with an absolute right to exit the contract without any financial penalty or obligation to the 'Supplier', effectively allowing them to avoid commitments at will.",
+      "The broadness of 'all claims' creates a loophole for the Buyer to attempt to shift liability for its own actions or unrelated third-party claims onto the Supplier."
+    ],
+    "illegalClauseAlerts": [],
+    "recommendations": [
+      "Add a clear trigger for the payment term (e.g., 'within 10 days of receipt of a valid invoice').",
+      "No material risk remediation identified beyond standard legal review.",
+      "Negotiate for a mutual termination for convenience clause.",
+      "Ensure a reasonable notice period (e.g., 60-90 days).",
+      "Include provisions for payment for work performed, expenses incurred, and a reasonable termination fee or wind-down costs.",
+      "Require notice, cure rights, and a defined termination trigger.",
+      "Limit the indemnity to claims arising from the Supplier's breach, negligence, or willful misconduct.",
+      "Explicitly exclude claims arising from the Buyer's own negligence or misconduct."
+    ],
+    "priorityActions": [
+      "Immediately revise the Termination clause to introduce mutual termination rights, reasonable notice periods, and compensation for work performed upon termination for convenience.",
+      "Immediately revise the Indemnity clause to limit the Supplier's obligation to claims arising from its own negligence, breach, or willful misconduct, and explicitly exclude claims arising from the Buyer's negligence.",
+      "Clarify the specific trigger event for the 10-day payment period in the Payment clause (e.g., invoice date, delivery date)."
+    ],
+    "reportFindings": [
+      "The contract exhibits a severe imbalance of power and risk allocation, heavily favoring the 'Company'/'Buyer'.",
+      "The Termination for Convenience clause is a critical risk for the Supplier, offering no protection or compensation upon abrupt termination.",
+      "The Indemnity clause is dangerously broad and could expose the Supplier to unlimited liability for claims entirely outside its control or fault.",
+      "Ambiguity in the Payment clause's trigger could lead to disputes over payment timing."
+    ],
+    "metrics": {
+      "meanClauseRisk": 43.96,
+      "p90ClauseRisk": 55.32,
+      "criticalClauseRatio": 0.33,
+      "warningClauseRatio": 0.33,
+      "riskDispersion": 0.33,
+      "fairnessIndex": 1.0,
+      "legalExposureIndex": 11.17,
+      "concentrationIndex": 33.2,
+      "aggregationFormula": "overall = 0.55*mean_clause_risk + 0.20*p90_clause_risk + 0.15*critical_clause_ratio*100 + 0.10*legal_exposure_index"
+    },
+    "clauses": [
+      {
+        "clauseId": "1",
+        "sectionReference": "Clause 1",
+        "hierarchy": [
+          "Clause 1"
+        ],
+        "title": "Payment",
+        "originalText": "1. Payment. Buyer shall pay within 10 days.",
+        "plainLanguage": "The Buyer must make payment within 10 days.",
+        "clauseType": "payment",
+        "riskCategory": "warning",
+        "colorIndicator": "yellow",
+        "riskScore": 22.25,
+        "confidence": 0.6,
+        "explanation": "While the payment period (10 days) is clear, the clause lacks a specific trigger event for when these 10 days begin (e.g., from invoice date, delivery date, acceptance of goods). This ambiguity can lead to disputes over the actual due date.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.25,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 22.25,
+          "confidence": 0.6,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [
+          "The lack of a specific trigger allows either party to argue for an interpretation that benefits them regarding the payment due date."
+        ],
+        "illegalSignals": [],
+        "recommendations": [
+          "Add a clear trigger for the payment term (e.g., 'within 10 days of receipt of a valid invoice').",
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "1. Payment. Buyer shall pay within 10 days.",
+          "revisedClause": "Buyer shall pay all undisputed invoices within 10 days of the invoice date.",
+          "justification": "Revision generated from Gemini contract analysis."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "Add a clear trigger for the payment term (e.g., 'within 10 days of receipt of a valid invoice').",
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "Clarify the specific event that triggers the 10-day payment period to ensure certainty and avoid future disputes. Propose 'invoice date' as a standard and clear trigger."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Dispute over Clause 1",
+            "likelyConsequence": "A dispute arises where the Buyer claims the 10 days start from their receipt of goods, while the Seller argues it starts from the shipment date. Without clarification, a judge would need to interpret based on industry custom or course of dealing, potentially leading to a ruling that favors neither party definitively or requires further evidence.",
+            "severity": "warning",
+            "reasoning": "A judge would likely find the obligation to pay within 10 days clear, but would scrutinize the lack of a specific trigger event. The court would look for implied terms, industry standards, or prior dealings between the parties to determine the commencement of the 10-day period."
+          }
+        ],
+        "courtroomAssessment": {
+          "judgeView": "A judge would likely find the obligation to pay within 10 days clear, but would scrutinize the lack of a specific trigger event. The court would look for implied terms, industry standards, or prior dealings between the parties to determine the commencement of the 10-day period.",
+          "claimantArguments": [
+            "The 10-day period commences upon the earliest possible event, such as shipment or completion of service, to ensure prompt payment.",
+            "Industry standard dictates that payment terms begin from the date of invoice issuance."
+          ],
+          "defenseArguments": [
+            "The 10-day period commences upon the latest reasonable event, such as receipt of goods, acceptance of services, or receipt of a valid invoice, allowing for proper verification.",
+            "The ambiguity should be construed against the drafting party (if identifiable) or interpreted in a commercially reasonable manner that accounts for processing time."
+          ],
+          "likelyRuling": "A judge would likely rule that payment is due within 10 days, but might require additional evidence to determine the precise start date, potentially favoring a 'receipt of invoice' or 'acceptance of goods' trigger if the Buyer can demonstrate a reasonable need for verification.",
+          "enforceabilityConcerns": [
+            "Ambiguity regarding the trigger event for the 10-day payment period."
+          ],
+          "businessImpact": "Potential for delayed payments, cash flow uncertainty for the seller, and administrative burden due to disputes over payment due dates."
+        }
+      },
+      {
+        "clauseId": "2",
+        "sectionReference": "Clause 2",
+        "hierarchy": [
+          "Clause 2"
+        ],
+        "title": "Termination",
+        "originalText": "2. Termination. Company may terminate immediately for convenience.",
+        "plainLanguage": "The Company can end this agreement at any time, without needing a reason, and with immediate effect.",
+        "clauseType": "termination",
+        "riskCategory": "critical",
+        "colorIndicator": "red",
+        "riskScore": 55.32,
+        "confidence": 0.73,
+        "explanation": "This clause grants the 'Company' (presumably the Buyer/Client) an absolute, immediate right to terminate the agreement without cause. This is extremely one-sided and places the 'Supplier' in a highly vulnerable position, with no notice period or compensation for work performed or costs incurred up to termination. It creates significant business uncertainty and financial risk for the Supplier.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.0,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 1.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.26,
+          "score": 55.32,
+          "confidence": 0.73,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [
+          "The clause provides the 'Company' with an absolute right to exit the contract without any financial penalty or obligation to the 'Supplier', effectively allowing them to avoid commitments at will."
+        ],
+        "illegalSignals": [],
+        "recommendations": [
+          "Negotiate for a mutual termination for convenience clause.",
+          "Ensure a reasonable notice period (e.g., 60-90 days).",
+          "Include provisions for payment for work performed, expenses incurred, and a reasonable termination fee or wind-down costs.",
+          "Require notice, cure rights, and a defined termination trigger."
+        ],
+        "improvement": {
+          "originalClause": "2. Termination. Company may terminate immediately for convenience.",
+          "revisedClause": "Company may terminate this Agreement for convenience upon [e.g., 60] days' prior written notice to Supplier. In such event, Company shall pay Supplier for all services performed and expenses reasonably incurred up to the effective date of termination, plus any reasonable wind-down costs and a termination fee equal to [X] months of average fees.",
+          "justification": "Revision generated from Gemini contract analysis."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "Negotiate for a mutual termination for convenience clause.",
+            "Ensure a reasonable notice period (e.g., 60-90 days).",
+            "Include provisions for payment for work performed, expenses incurred, and a reasonable termination fee or wind-down costs."
+          ],
+          "draftedResponse": "Demand mutuality in termination rights, a reasonable notice period (e.g., 30-90 days), and a clear provision for compensation for work performed, expenses incurred, and potential lost profits or wind-down costs upon termination for convenience. Highlight the commercial unreasonableness and potential for bad faith if the clause remains as is."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Dispute over Clause 2",
+            "likelyConsequence": "The Company terminates the agreement immediately after the Supplier has invested significant resources (e.g., hiring staff, purchasing materials) for a project. The Supplier suffers substantial financial losses and attempts to sue for damages. The Company will argue the clause is clear and enforceable, limiting the Supplier's recourse.",
+            "severity": "critical",
+            "reasoning": "A judge would likely find this clause clear and enforceable as written, particularly in commercial contracts between sophisticated parties. However, in some jurisdictions, courts might scrutinize such a clause for unconscionability or a breach of the implied covenant of good faith and fair dealing, especially if the termination appears arbitrary or designed to avoid payment."
+          }
+        ],
+        "courtroomAssessment": {
+          "judgeView": "A judge would likely find this clause clear and enforceable as written, particularly in commercial contracts between sophisticated parties. However, in some jurisdictions, courts might scrutinize such a clause for unconscionability or a breach of the implied covenant of good faith and fair dealing, especially if the termination appears arbitrary or designed to avoid payment.",
+          "claimantArguments": [
+            "The clause, while seemingly clear, is unconscionable and against public policy as it allows for arbitrary termination without compensation, effectively allowing the Company to benefit from the Supplier's investment without fair consideration.",
+            "The implied covenant of good faith and fair dealing requires reasonable notice and compensation, even in a termination for convenience clause, to prevent abuse."
+          ],
+          "defenseArguments": [
+            "The clause is clear, unambiguous, and was agreed upon by sophisticated commercial parties. The Company exercised its contractual right as explicitly stated.",
+            "The Supplier assumed the risk of immediate termination for convenience when entering into the agreement."
+          ],
+          "likelyRuling": "Absent specific statutory protections or strong evidence of unconscionability or bad faith, a judge would likely uphold the clause as written, limiting the Supplier's ability to claim damages beyond what the contract explicitly allows (which is nothing in this case).",
+          "enforceabilityConcerns": [
+            "Potential for challenge on grounds of unconscionability or breach of implied covenant of good faith and fair dealing in certain jurisdictions or contexts, especially if the termination is deemed abusive.",
+            "May be subject to stricter interpretation if the 'Company' is a significantly more powerful party."
+          ],
+          "businessImpact": "Catastrophic financial risk for the Supplier, inability to plan long-term, potential for significant unrecoverable investments, and severe disruption to business operations."
+        }
+      },
+      {
+        "clauseId": "3",
+        "sectionReference": "Clause 3",
+        "hierarchy": [
+          "Clause 3"
+        ],
+        "title": "Indemnity",
+        "originalText": "3. Indemnity. Supplier shall indemnify Buyer against all claims.",
+        "plainLanguage": "The Supplier must protect the Buyer from any and all legal claims.",
+        "clauseType": "liability",
+        "riskCategory": "critical",
+        "colorIndicator": "red",
+        "riskScore": 54.3,
+        "confidence": 0.83,
+        "explanation": "This is an extremely broad and one-sided indemnity clause. 'All claims' is an unlimited scope, potentially obligating the Supplier to indemnify the Buyer for claims arising from the Buyer's own negligence, willful misconduct, or even claims entirely unrelated to the Supplier's performance. It lacks limitations regarding causation, fault, or type of claim, exposing the Supplier to potentially unlimited and unfair liability.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.25,
+          "liabilityExposure": 0.67,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.3,
+          "score": 54.3,
+          "confidence": 0.83,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [
+          "The broadness of 'all claims' creates a loophole for the Buyer to attempt to shift liability for its own actions or unrelated third-party claims onto the Supplier."
+        ],
+        "illegalSignals": [],
+        "recommendations": [
+          "Limit the indemnity to claims arising from the Supplier's breach, negligence, or willful misconduct.",
+          "Explicitly exclude claims arising from the Buyer's own negligence or misconduct.",
+          "Consider a cap on indemnity liability.",
+          "Ensure the indemnity is mutual where appropriate.",
+          "Cap liability and exclude indirect or unforeseeable damages.",
+          "Limit indemnity to third-party claims caused by the supplier's proven fault."
+        ],
+        "improvement": {
+          "originalClause": "3. Indemnity. Supplier shall indemnify Buyer against all claims.",
+          "revisedClause": "Supplier shall indemnify, defend, and hold harmless Buyer from and against any and all claims, damages, liabilities, costs, and expenses (including reasonable attorneys' fees) arising out of or in connection with (a) Supplier's breach of this Agreement, (b) Supplier's negligence or willful misconduct, or (c) any third-party claim alleging infringement of intellectual property rights by the goods/services provided by Supplier. Supplier's indemnity obligations shall not apply to the extent such claims arise from Buyer's own negligence or willful misconduct.",
+          "justification": "Revision generated from Gemini contract analysis."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "Limit the indemnity to claims arising from the Supplier's breach, negligence, or willful misconduct.",
+            "Explicitly exclude claims arising from the Buyer's own negligence or misconduct.",
+            "Consider a cap on indemnity liability."
+          ],
+          "draftedResponse": "Strongly negotiate to limit the scope of indemnity to claims arising directly from the Supplier's breach of contract, negligence, or willful misconduct. Explicitly exclude claims arising from the Buyer's own negligence or actions. Consider capping the indemnity liability and making it mutual where appropriate."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Dispute over Clause 3",
+            "likelyConsequence": "A third party sues the Buyer for a product defect, which was entirely due to the Buyer's manufacturing process, not the Supplier's components. The Buyer demands the Supplier indemnify them based on this clause. The Supplier refuses, arguing the claim is unrelated to their fault. This leads to costly litigation where the Supplier faces a demand for indemnification for a claim they did not cause.",
+            "severity": "critical",
+            "reasoning": "A judge would likely find the clause enforceable but would interpret 'all claims' narrowly, often requiring a clear and unequivocal statement to indemnify a party for its own negligence. Without such explicit language, the court might limit the indemnity to claims arising from the Supplier's actions or omissions related to the contract."
+          }
+        ],
+        "courtroomAssessment": {
+          "judgeView": "A judge would likely find the clause enforceable but would interpret 'all claims' narrowly, often requiring a clear and unequivocal statement to indemnify a party for its own negligence. Without such explicit language, the court might limit the indemnity to claims arising from the Supplier's actions or omissions related to the contract.",
+          "claimantArguments": [
+            "The language 'all claims' is unambiguous and clearly obligates the Supplier to indemnify the Buyer for any claim, regardless of fault, as agreed upon by the parties.",
+            "The Buyer relied on this broad indemnity to protect itself from all potential liabilities associated with the contractual relationship."
+          ],
+          "defenseArguments": [
+            "The clause is overly broad, commercially unreasonable, and should be limited to claims arising from the Supplier's own negligence, breach, or willful misconduct.",
+            "Indemnification for the Buyer's sole negligence requires explicit and clear language, which is absent here, and such a broad interpretation would be against public policy.",
+            "The implied intent of such a clause is to cover claims related to the indemnifying party's performance, not all claims whatsoever."
+          ],
+          "likelyRuling": "A judge would likely interpret 'all claims' to implicitly mean claims *related to the Supplier's performance or breach of the agreement*. It is highly unlikely a court would enforce it to cover claims solely caused by the Buyer's own negligence without explicit language to that effect, potentially limiting the scope significantly.",
+          "enforceabilityConcerns": [
+            "Overly broad and potentially unenforceable in some jurisdictions for indemnifying against one's own negligence without explicit, clear, and conspicuous language.",
+            "Subject to strict interpretation by courts, often construed against the indemnitee (Buyer).",
+            "May be deemed unconscionable if it creates an extreme imbalance of risk."
+          ],
+          "businessImpact": "Catastrophic financial exposure for the Supplier, potential for unlimited liability for events outside its control or fault, significant legal defense costs, and severe damage to business viability."
+        }
+      }
+    ],
+    "documentStructure": {
+      "documentId": "doc-519d439879a2",
+      "documentKind": "txt",
+      "extractionMethod": "direct_text_payload",
+      "language": "en",
+      "pages": [
+        {
+          "pageNumber": 1,
+          "width": 1000.0,
+          "height": 1400.0,
+          "elements": [
+            {
+              "elementId": "text-001",
+              "type": "clause",
+              "text": "Payment. Buyer shall pay within 10 days.",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 0.0,
+                "y0": 40.0,
+                "x1": 1000.0,
+                "y1": 70.0,
+                "pageWidth": 1000.0,
+                "pageHeight": 1400.0
+              },
+              "confidence": 0.72,
+              "hierarchyPath": [
+                "General",
+                "1"
+              ],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "text_mode"
+              }
+            },
+            {
+              "elementId": "text-002",
+              "type": "clause",
+              "text": "Termination. Company may terminate immediately for convenience.",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 0.0,
+                "y0": 80.0,
+                "x1": 1000.0,
+                "y1": 110.0,
+                "pageWidth": 1000.0,
+                "pageHeight": 1400.0
+              },
+              "confidence": 0.72,
+              "hierarchyPath": [
+                "General",
+                "1"
+              ],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "text_mode"
+              }
+            },
+            {
+              "elementId": "text-003",
+              "type": "clause",
+              "text": "Indemnity. Supplier shall indemnify Buyer against all claims.",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 0.0,
+                "y0": 120.0,
+                "x1": 1000.0,
+                "y1": 150.0,
+                "pageWidth": 1000.0,
+                "pageHeight": 1400.0
+              },
+              "confidence": 0.72,
+              "hierarchyPath": [
+                "General",
+                "1"
+              ],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "text_mode"
+              }
+            }
+          ]
+        }
+      ],
+      "hierarchy": [
+        "General"
+      ],
+      "clauseSegments": [
+        {
+          "clauseId": "clause-001",
+          "sectionReference": "General",
+          "hierarchy": [
+            "General",
+            "1"
+          ],
+          "title": "",
+          "originalText": "Payment. Buyer shall pay within 10 days."
+        },
+        {
+          "clauseId": "clause-002",
+          "sectionReference": "General",
+          "hierarchy": [
+            "General",
+            "1"
+          ],
+          "title": "",
+          "originalText": "Termination. Company may terminate immediately for convenience."
+        },
+        {
+          "clauseId": "clause-003",
+          "sectionReference": "General",
+          "hierarchy": [
+            "General",
+            "1"
+          ],
+          "title": "",
+          "originalText": "Indemnity. Supplier shall indemnify Buyer against all claims."
+        }
+      ],
+      "tables": [],
+      "signatures": [],
+      "annotations": [],
+      "rawText": "1. Payment. Buyer shall pay within 10 days. 2. Termination. Company may terminate immediately for convenience. 3. Indemnity. Supplier shall indemnify Buyer against all claims.",
+      "reconstructionNotes": [
+        "Built structured document from text-mode ingestion path."
+      ]
+    },
+    "ingestionEvaluation": {
+      "documentStructureAccuracy": 0.4,
+      "clauseDetectionAccuracy": 0.9371428571428572,
+      "tableExtractionAccuracy": 0.0,
+      "layoutDetectionPrecision": 1.0,
+      "processingLatencyMs": 7.85,
+      "notes": [
+        "Reference-free intrinsic evaluation used because no gold annotation was supplied."
+      ]
+    },
+    "contractorCredibility": {
+      "score": 38.47,
+      "rating": "weak",
+      "summary": "Public-source diligence for Tesla found 0 positive and 11 negative signals across news, dispute, regulatory, and reputation-oriented searches. Credibility is rated weak because the signal mix shows 0 positive and 11 negative indicators, with 1 neutral footprint signals.",
+      "positiveSignals": [],
+      "negativeSignals": [
+        "Public negative signal: lawsuit: A class-action lawsuit in California alleges that some drivers were overcharged based on inaccurate vehicle safety data, raising questions about the accuracy and fairness of Tesla's insurance ...",
+        "Public negative signal: lawsuit: As Tesla Chief Executive Elon Musk banks the future of his company on autonomous robotaxis, several lawsuits raise concerns over the safety of the technology.",
+        "Public negative signal: lawsuit: - Tesla faces global legal challenges over Autopilot/FSD safety claims, including a $329M liability verdict in Miami and California's misleading advertising lawsuit . - Regulatory delays for robotaxi services and lack of safety certifications contrast with Waymo's 250K weekly rides, exposing competitive disadvantages. - Shareholder lawsuits and Q2 revenue declines (-12% YoY) highlight financial ...",
+        "Public negative signal: sued: California's DMV sued Tesla in 2022 and is seeking to suspend Tesla's ability to sell cars in the state for at least 30 days.",
+        "Public negative signal: lawsuit: Tesla , Inc. has been embroiled in a series of legal challenges related to its external affairs, sparking scrutiny from regulatory bodies and leading to allegations that reach beyond standard corporate disputes. SEC Subpoena and Compliance In 2018, Tesla faced a significant lawsuit when the Securities and Exchange Commission (SEC) issued subpoenas after CEO Elon Musk tweeted about having ...",
+        "Public negative signal: lawsuit: NEW YORK, Aug. 22, 2025 /PRNewswire/ -- Pomerantz LLP announces that a class action lawsuit has been filed against Tesla , Inc. (\" Tesla \" or the \"Company\") (NASDAQ: TSLA) and certain officers. The ..."
+      ],
+      "sources": [
+        "https://www.insurancebusinessmag.com/us/news/risk-compliance-legal/tesla-insurance-hit-by-california-regulatory-action-552029.aspx",
+        "https://www.thestreet.com/automotive/tesla-faces-new-class-action-lawsuit",
+        "https://www.latimes.com/business/story/2025-08-19/tesla-robotaxi-shareholder-lawsuit",
+        "https://www.ainvest.com/news/implications-tesla-ongoing-legal-regulatory-challenges-ai-autonomous-driving-ambitions-2509/",
+        "https://www.businessinsider.com/tesla-license-california-lawsuit-hearing-dmv-fsd-autopilot-2025-7?op=1",
+        "https://moneyinc.com/the-10-biggest-tesla-lawsuits-in-company-history/",
+        "https://www.prnewswire.com/news-releases/pomerantz-law-firm-announces-the-filing-of-a-class-action-against-tesla-inc--and-certain-officers--tsla-302535438.html",
+        "https://natlawreview.com/article/ev-trade-secret-litigation-continues-boom-tesla-suing-it-supplier-over-ev-battery"
+      ],
+      "framework": "credibility = 58 + 24*avg_positive_signal - 34*avg_negative_signal + evidence_coverage + registry_bonus, clamped to [0,100]"
+    },
+    "evaluationMetrics": {
+      "contract_classification": "top-1 accuracy, macro-F1, calibration error",
+      "clause_segmentation": "boundary F1, hierarchical consistency, clause coverage",
+      "risk_detection": "AUROC, precision@critical, weighted Brier score, explanation faithfulness",
+      "explanation_quality": "human adequacy, factual consistency, edit distance to gold simplifications"
+    },
+    "generatedAt": "2026-03-16T15:55:21.192535"
+  },
+  "searchableText": "1. Payment. Buyer shall pay within 10 days. 2. Termination. Company may terminate immediately for convenience. 3. Indemnity. Supplier shall indemnify Buyer against all claims.\n1. Payment. Buyer shall pay within 10 days.\nThe Buyer must make payment within 10 days.\n2. Termination. Company may terminate immediately for convenience.\nThe Company can end this agreement at any time, without needing a reason, and with immediate effect.\n3. Indemnity. Supplier shall indemnify Buyer against all claims.\nThe Supplier must protect the Buyer from any and all legal claims.",
+  "createdAt": "2026-03-16T15:55:21.192535",
+  "updatedAt": "2026-03-16T15:55:21.192535"
+}

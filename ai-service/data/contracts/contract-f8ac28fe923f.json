@@ -1,0 +1,228 @@
+{
+  "contractId": "contract-f8ac28fe923f",
+  "report": {
+    "contractId": "contract-f8ac28fe923f",
+    "contractType": {
+      "category": "service contract",
+      "confidence": 0.83,
+      "evidence": [
+        "fees"
+      ],
+      "alternatives": {
+        "service contract": 1.0,
+        "legal statute": 0.0,
+        "employment": 0.0,
+        "non-disclosure agreement": 0.0
+      }
+    },
+    "extraction": {
+      "documentKind": "txt",
+      "extractionMethod": "direct_text_payload",
+      "sourceFilename": "uploaded-contract.txt",
+      "mediaType": "text/plain",
+      "structureConfidence": 0.92,
+      "extractedCharacters": 215,
+      "textPreview": "Supplier shall indemnify and hold harmless Buyer against all losses, damages, liabilities, and legal fees. Payment is due in 7 days and 2% monthly interest applies. Company may terminate immediately for convenience.",
+      "notes": [
+        "Used provided contract text directly."
+      ]
+    },
+    "summary": "This service contract is assessed as critical risk, with 2 critical clauses and 0 warning clauses. The report prioritizes disproportionate liability, ambiguous drafting, loophole-prone overrides, and negotiable remediation paths. The highest-risk issue is liability language in clause-001, scored 71/100. Counterparty credibility is rated moderate at 62/100.",
+    "executiveLegalSummary": "Overall legal posture is critical. If disputed, the strongest litigation pressure points are: General: A likely ruling will be estimated after clause-level analysis completes. General: A likely ruling will be estimated after clause-level analysis completes.",
+    "overallRiskScore": 63.85,
+    "overallRiskCategory": "critical",
+    "keyVulnerabilities": [
+      "clause-001: A likely ruling will be estimated after clause-level analysis completes.",
+      "clause-002: A likely ruling will be estimated after clause-level analysis completes."
+    ],
+    "legalLoopholes": [],
+    "illegalClauseAlerts": [],
+    "recommendations": [
+      "Cap liability and exclude indirect or unforeseeable damages.",
+      "Limit indemnity to third-party claims caused by the supplier's proven fault.",
+      "Require notice, cure rights, and a defined termination trigger.",
+      "Reduce late-payment interest or add a grace period before default charges apply.",
+      "Validate any critical clause with jurisdiction-specific counsel before signature.",
+      "Compare risk concentration against previous agreements in the contract memory store."
+    ],
+    "priorityActions": [
+      "Cap liability and exclude indirect or unforeseeable damages.",
+      "Limit indemnity to third-party claims caused by the supplier's proven fault.",
+      "Require notice, cure rights, and a defined termination trigger."
+    ],
+    "reportFindings": [
+      "General: A judge is likely to view this as critical because judicial assessment pending deeper legal analysis.",
+      "General: A judge is likely to view this as critical because judicial assessment pending deeper legal analysis."
+    ],
+    "metrics": {
+      "meanClauseRisk": 66.09,
+      "p90ClauseRisk": 71.44,
+      "criticalClauseRatio": 1.0,
+      "warningClauseRatio": 0.0,
+      "riskDispersion": 0.11,
+      "fairnessIndex": 72.0,
+      "legalExposureIndex": 25.0,
+      "concentrationIndex": 64.4,
+      "aggregationFormula": "overall = 0.55*mean_clause_risk + 0.20*p90_clause_risk + 0.15*critical_clause_ratio*100 + 0.10*legal_exposure_index"
+    },
+    "clauses": [
+      {
+        "clauseId": "clause-001",
+        "sectionReference": "General",
+        "hierarchy": [
+          "General"
+        ],
+        "title": "",
+        "originalText": "Supplier shall indemnify and hold harmless Buyer against all losses, damages, liabilities, and legal fees.",
+        "plainLanguage": "Both sides is required to do something. In plain terms, supplier shall indemnify and hold harmless Buyer against all losses, damages, liabilities, and legal fees.",
+        "clauseType": "liability",
+        "riskCategory": "critical",
+        "colorIndicator": "red",
+        "riskScore": 71.44,
+        "confidence": 0.97,
+        "explanation": "Clause risk is critical with score 71.44. The strongest driver is liabilityExposure, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.25,
+          "liabilityExposure": 1.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.33,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.3,
+          "score": 71.44,
+          "confidence": 0.97,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "Cap liability and exclude indirect or unforeseeable damages.",
+          "Limit indemnity to third-party claims caused by the supplier's proven fault."
+        ],
+        "improvement": {
+          "originalClause": "Supplier shall indemnify and hold harmless Buyer against all losses, damages, liabilities, and legal fees.",
+          "revisedClause": "Supplier shall indemnify and hold harmless Buyer against all losses, damages, liabilities, and legal fees provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "Cap liability and exclude indirect or unforeseeable damages.",
+            "Limit indemnity to third-party claims caused by the supplier's proven fault."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording 'Supplier shall indemnify and hold harmless Buyer against all losses, damages, liabilities, and legal fees.' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Third-party claim or service failure",
+            "likelyConsequence": "The clause may transfer defense costs and damages disproportionately.",
+            "severity": "critical",
+            "reasoning": "Liability and indemnity drafting determines who funds disputes and uncapped losses."
+          }
+        ],
+        "courtroomAssessment": {
+          "judgeView": "Judicial assessment pending deeper legal analysis.",
+          "claimantArguments": [],
+          "defenseArguments": [],
+          "likelyRuling": "A likely ruling will be estimated after clause-level analysis completes.",
+          "enforceabilityConcerns": [],
+          "businessImpact": "Business impact will be estimated after clause-level analysis completes."
+        }
+      },
+      {
+        "clauseId": "clause-002",
+        "sectionReference": "General",
+        "hierarchy": [
+          "General"
+        ],
+        "title": "",
+        "originalText": "Payment is due in 7 days and 2% monthly interest applies. Company may terminate immediately for convenience.",
+        "plainLanguage": "The company has discretion to act within 7 days. In plain terms, payment is due in 7 days and 2% monthly interest applies. Company may terminate immediately for convenience.",
+        "clauseType": "termination",
+        "riskCategory": "critical",
+        "colorIndicator": "red",
+        "riskScore": 60.74,
+        "confidence": 0.89,
+        "explanation": "Clause risk is critical with score 60.74. The strongest driver is terminationVolatility, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.0,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.33,
+          "terminationVolatility": 1.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.26,
+          "score": 60.74,
+          "confidence": 0.89,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "Require notice, cure rights, and a defined termination trigger.",
+          "Reduce late-payment interest or add a grace period before default charges apply."
+        ],
+        "improvement": {
+          "originalClause": "Payment is due in 7 days and 2% monthly interest applies. Company may terminate immediately for convenience.",
+          "revisedClause": "Payment is due in 7 days and 2% monthly interest applies. Company may terminate on 30 days written notice unless immediate termination is required by law for convenience.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "Require notice, cure rights, and a defined termination trigger.",
+            "Reduce late-payment interest or add a grace period before default charges apply."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording 'Payment is due in 7 days and 2% monthly interest applies. Company may terminate immediately for convenience.' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Counterparty triggers termination",
+            "likelyConsequence": "Service disruption, accelerated transition costs, and leverage loss in negotiations.",
+            "severity": "critical",
+            "reasoning": "Termination language can be used as pressure if triggers or cure rights are under-defined."
+          },
+          {
+            "scenario": "Late payment dispute escalates",
+            "likelyConsequence": "Interest, collection costs, or suspension rights can increase the effective contract price.",
+            "severity": "warning",
+            "reasoning": "Default-rate clauses become leverage points once an invoice is contested or delayed."
+          }
+        ],
+        "courtroomAssessment": {
+          "judgeView": "Judicial assessment pending deeper legal analysis.",
+          "claimantArguments": [],
+          "defenseArguments": [],
+          "likelyRuling": "A likely ruling will be estimated after clause-level analysis completes.",
+          "enforceabilityConcerns": [],
+          "businessImpact": "Business impact will be estimated after clause-level analysis completes."
+        }
+      }
+    ],
+    "contractorCredibility": {
+      "score": 62.0,
+      "rating": "moderate",
+      "summary": "Tesla has a light-touch diligence profile with publicly available footprint data. Credibility is rated moderate because the signal mix shows 0 positive and 0 negative indicators.",
+      "positiveSignals": [],
+      "negativeSignals": [],
+      "sources": [
+        "https://example.com/counterparty-profile"
+      ],
+      "framework": "credibility = 62 + 22*avg_positive_signal - 28*avg_negative_signal + coverage_bonus, clamped to [0,100]"
+    },
+    "evaluationMetrics": {
+      "contract_classification": "top-1 accuracy, macro-F1, calibration error",
+      "clause_segmentation": "boundary F1, hierarchical consistency, clause coverage",
+      "risk_detection": "AUROC, precision@critical, weighted Brier score, explanation faithfulness",
+      "explanation_quality": "human adequacy, factual consistency, edit distance to gold simplifications"
+    },
+    "generatedAt": "2026-03-15T20:30:31.263709"
+  },
+  "searchableText": "Supplier shall indemnify and hold harmless Buyer against all losses, damages, liabilities, and legal fees. Payment is due in 7 days and 2% monthly interest applies. Company may terminate immediately for convenience.\nSupplier shall indemnify and hold harmless Buyer against all losses, damages, liabilities, and legal fees.\nBoth sides is required to do something. In plain terms, supplier shall indemnify and hold harmless Buyer against all losses, damages, liabilities, and legal fees.\nPayment is due in 7 days and 2% monthly interest applies. Company may terminate immediately for convenience.\nThe company has discretion to act within 7 days. In plain terms, payment is due in 7 days and 2% monthly interest applies. Company may terminate immediately for convenience.",
+  "createdAt": "2026-03-15T20:30:31.263709",
+  "updatedAt": "2026-03-15T20:30:31.263709"
+}

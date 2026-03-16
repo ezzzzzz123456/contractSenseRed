@@ -1,10 +1,12 @@
 import { useContract } from "./useContract";
 
 export const useReport = () => {
-  const { activeReport, setActiveReport } = useContract();
+  const { activeAnalysis, activeReport, setActiveAnalysis, setActiveReport } = useContract();
 
   return {
+    activeAnalysis,
     activeReport,
+    setActiveAnalysis,
     setActiveReport,
   };
 };

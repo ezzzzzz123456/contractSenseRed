@@ -1,0 +1,856 @@
+{
+  "contractId": "contract-d10d06fc8f42",
+  "report": {
+    "contractId": "contract-d10d06fc8f42",
+    "contractType": {
+      "category": "vendor agreement",
+      "confidence": 0.89,
+      "evidence": [
+        "goods"
+      ],
+      "alternatives": {
+        "vendor agreement": 1.0,
+        "legal statute": 0.0,
+        "employment": 0.0,
+        "non-disclosure agreement": 0.0
+      }
+    },
+    "extraction": {
+      "documentKind": "image",
+      "extractionMethod": "tesseract_ocr",
+      "sourceFilename": "Screenshot 2026-03-15 144043.png",
+      "mediaType": "image/png",
+      "structureConfidence": 0.75,
+      "extractedCharacters": 969,
+      "textPreview": "GENERAL CONTRACT FOR PRODUCTS\n\nOder Nbr:\n\nâ€˜This Cott (bis \"Conc is made fete a of\n\nby an bere\n\not\n\n~\n\nad\n\noF\n\n1. TTEMS PURCHASED.\n\nel\n\nes\n\naoe\n\napt\n\ngps oy, floneg pads (a \"Ga\n\nia\n\nâ€˜scone\n\nâ€˜TOTAL: soo\n\n2. PRODUCT STANDARDS. The Go ssl on\n\n(gioton ded.\n\ntod nemesis Commis Uieaeee\n\nACTITLERISK OF LOSS. Hayes o/s sons\n\nBelg accordance wth it\n\nâ€˜Sipping inact eller tall be phi pe\n\napng aa dey\n\n",
+      "notes": [
+        "OCR completed with local Tesseract engine."
+      ]
+    },
+    "summary": "This vendor agreement is assessed as safe risk, with 0 critical clauses and 0 warning clauses. The report prioritizes disproportionate liability, ambiguous drafting, loophole-prone overrides, and negotiable remediation paths. The highest-risk issue is compliance language in clause-014, scored 18/100. Counterparty credibility is rated moderate at 62/100.",
+    "overallRiskScore": 7.94,
+    "overallRiskCategory": "safe",
+    "keyVulnerabilities": [],
+    "legalLoopholes": [],
+    "illegalClauseAlerts": [],
+    "recommendations": [
+      "No material risk remediation identified beyond standard legal review.",
+      "Validate any critical clause with jurisdiction-specific counsel before signature.",
+      "Compare risk concentration against previous agreements in the contract memory store."
+    ],
+    "metrics": {
+      "meanClauseRisk": 11.48,
+      "p90ClauseRisk": 10.95,
+      "criticalClauseRatio": 0.0,
+      "warningClauseRatio": 0.0,
+      "riskDispersion": 0.07,
+      "fairnessIndex": 88.0,
+      "legalExposureIndex": 0.71,
+      "concentrationIndex": 2.8,
+      "aggregationFormula": "overall = 0.55*mean_clause_risk + 0.20*p90_clause_risk + 0.15*critical_clause_ratio*100 + 0.10*legal_exposure_index"
+    },
+    "clauses": [
+      {
+        "clauseId": "clause-001",
+        "sectionReference": "General",
+        "hierarchy": [
+          "General"
+        ],
+        "title": "",
+        "originalText": "GENERAL CONTRACT FOR PRODUCTS",
+        "plainLanguage": "Both sides sets a contract rule. In plain terms, gENERAL CONTRACT FOR PRODUCTS",
+        "clauseType": "general",
+        "riskCategory": "safe",
+        "colorIndicator": "green",
+        "riskScore": 10.95,
+        "confidence": 0.49,
+        "explanation": "Clause risk is safe with score 10.95. The strongest driver is fairnessImbalance, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.0,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 10.95,
+          "confidence": 0.49,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "GENERAL CONTRACT FOR PRODUCTS",
+          "revisedClause": "GENERAL CONTRACT FOR PRODUCTS provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording 'GENERAL CONTRACT FOR PRODUCTS' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "Ambiguous drafting can extend resolution timelines and increase negotiation costs.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ]
+      },
+      {
+        "clauseId": "clause-002",
+        "sectionReference": "Oder Nbr",
+        "hierarchy": [
+          "Oder Nbr"
+        ],
+        "title": "",
+        "originalText": "â€˜This Cott (bis \"Conc is made fete a of by an bere ot ~ ad oF",
+        "plainLanguage": "Both sides sets a contract rule. In plain terms, â€˜This Cott (bis \"Conc is made fete a of by an bere ot ~ ad oF",
+        "clauseType": "general",
+        "riskCategory": "safe",
+        "colorIndicator": "green",
+        "riskScore": 10.95,
+        "confidence": 0.53,
+        "explanation": "Clause risk is safe with score 10.95. The strongest driver is fairnessImbalance, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.0,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 10.95,
+          "confidence": 0.53,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "â€˜This Cott (bis \"Conc is made fete a of by an bere ot ~ ad oF",
+          "revisedClause": "â€˜This Cott (bis \"Conc is made fete a of by an bere ot ~ ad oF provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording 'â€˜This Cott (bis \"Conc is made fete a of by an bere ot ~ ad oF' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "Ambiguous drafting can extend resolution timelines and increase negotiation costs.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ]
+      },
+      {
+        "clauseId": "clause-003",
+        "sectionReference": "Oder Nbr",
+        "hierarchy": [
+          "Oder Nbr",
+          "1"
+        ],
+        "title": "",
+        "originalText": "TTEMS PURCHASED.",
+        "plainLanguage": "Both sides sets a contract rule. In plain terms, tTEMS PURCHASED.",
+        "clauseType": "general",
+        "riskCategory": "safe",
+        "colorIndicator": "green",
+        "riskScore": 10.95,
+        "confidence": 0.47,
+        "explanation": "Clause risk is safe with score 10.95. The strongest driver is fairnessImbalance, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.0,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 10.95,
+          "confidence": 0.47,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "TTEMS PURCHASED.",
+          "revisedClause": "TTEMS PURCHASED provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording 'TTEMS PURCHASED.' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "Ambiguous drafting can extend resolution timelines and increase negotiation costs.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ]
+      },
+      {
+        "clauseId": "clause-004",
+        "sectionReference": "Oder Nbr",
+        "hierarchy": [
+          "Oder Nbr",
+          "1"
+        ],
+        "title": "",
+        "originalText": "el es aoe apt gps oy, floneg pads (a \"Ga ia â€˜scone â€˜TOTAL: soo",
+        "plainLanguage": "Both sides sets a contract rule. In plain terms, el es aoe apt gps oy, floneg pads (a \"Ga ia â€˜scone â€˜TOTAL: soo",
+        "clauseType": "general",
+        "riskCategory": "safe",
+        "colorIndicator": "green",
+        "riskScore": 10.95,
+        "confidence": 0.53,
+        "explanation": "Clause risk is safe with score 10.95. The strongest driver is fairnessImbalance, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.0,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 10.95,
+          "confidence": 0.53,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "el es aoe apt gps oy, floneg pads (a \"Ga ia â€˜scone â€˜TOTAL: soo",
+          "revisedClause": "el es aoe apt gps oy, floneg pads (a \"Ga ia â€˜scone â€˜TOTAL: soo provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording 'el es aoe apt gps oy, floneg pads (a \"Ga ia â€˜scone â€˜TOTAL: soo' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "Ambiguous drafting can extend resolution timelines and increase negotiation costs.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ]
+      },
+      {
+        "clauseId": "clause-005",
+        "sectionReference": "Oder Nbr",
+        "hierarchy": [
+          "Oder Nbr",
+          "2"
+        ],
+        "title": "",
+        "originalText": "PRODUCT STANDARDS. The Go ssl on",
+        "plainLanguage": "Both sides sets a contract rule. In plain terms, pRODUCT STANDARDS. The Go ssl on",
+        "clauseType": "general",
+        "riskCategory": "safe",
+        "colorIndicator": "green",
+        "riskScore": 10.95,
+        "confidence": 0.49,
+        "explanation": "Clause risk is safe with score 10.95. The strongest driver is fairnessImbalance, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.0,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 10.95,
+          "confidence": 0.49,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "PRODUCT STANDARDS. The Go ssl on",
+          "revisedClause": "PRODUCT STANDARDS. The Go ssl on provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording 'PRODUCT STANDARDS. The Go ssl on' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "Ambiguous drafting can extend resolution timelines and increase negotiation costs.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ]
+      },
+      {
+        "clauseId": "clause-006",
+        "sectionReference": "Oder Nbr",
+        "hierarchy": [
+          "Oder Nbr",
+          "2"
+        ],
+        "title": "",
+        "originalText": "(gioton ded. tod nemesis Commis Uieaeee ACTITLERISK OF LOSS.",
+        "plainLanguage": "Both sides sets a contract rule. In plain terms, (gioton ded. tod nemesis Commis Uieaeee ACTITLERISK OF LOSS.",
+        "clauseType": "general",
+        "riskCategory": "safe",
+        "colorIndicator": "green",
+        "riskScore": 10.95,
+        "confidence": 0.53,
+        "explanation": "Clause risk is safe with score 10.95. The strongest driver is fairnessImbalance, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.0,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 10.95,
+          "confidence": 0.53,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "(gioton ded. tod nemesis Commis Uieaeee ACTITLERISK OF LOSS.",
+          "revisedClause": "(gioton ded. tod nemesis Commis Uieaeee ACTITLERISK OF LOSS provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording '(gioton ded. tod nemesis Commis Uieaeee ACTITLERISK OF LOSS.' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "Ambiguous drafting can extend resolution timelines and increase negotiation costs.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ]
+      },
+      {
+        "clauseId": "clause-007",
+        "sectionReference": "Oder Nbr",
+        "hierarchy": [
+          "Oder Nbr",
+          "2"
+        ],
+        "title": "",
+        "originalText": "Hayes o/s sons Belg accordance wth it â€˜Sipping inact eller tall be phi pe apng aa dey ntl Beara ao damage on the eis hr pth ger adie",
+        "plainLanguage": "Both sides sets a contract rule. In plain terms, hayes o/s sons Belg accordance wth it â€˜Sipping inact eller tall be phi pe apng aa dey ntl Beara ao damage on the eis hr pth ger adie",
+        "clauseType": "general",
+        "riskCategory": "safe",
+        "colorIndicator": "green",
+        "riskScore": 10.95,
+        "confidence": 0.62,
+        "explanation": "Clause risk is safe with score 10.95. The strongest driver is fairnessImbalance, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.0,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 10.95,
+          "confidence": 0.62,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "Hayes o/s sons Belg accordance wth it â€˜Sipping inact eller tall be phi pe apng aa dey ntl Beara ao damage on the eis hr pth ger adie",
+          "revisedClause": "Hayes o/s sons Belg accordance wth it â€˜Sipping inact eller tall be phi pe apng aa dey ntl Beara ao damage on the eis hr pth ger adie provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording 'Hayes o/s sons Belg accordance wth it â€˜Sipping inact eller tall be phi pe apng aa dey ntl Beara ao damage on the eis hr pth ger adie' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "Ambiguous drafting can extend resolution timelines and increase negotiation costs.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ]
+      },
+      {
+        "clauseId": "clause-008",
+        "sectionReference": "Oder Nbr",
+        "hierarchy": [
+          "Oder Nbr",
+          "A"
+        ],
+        "title": "",
+        "originalText": "PAYMENT. Pint sal",
+        "plainLanguage": "Both sides sets a contract rule. In plain terms, pAYMENT. Pint sal",
+        "clauseType": "payment",
+        "riskCategory": "safe",
+        "colorIndicator": "green",
+        "riskScore": 10.95,
+        "confidence": 0.47,
+        "explanation": "Clause risk is safe with score 10.95. The strongest driver is fairnessImbalance, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.0,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 10.95,
+          "confidence": 0.47,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "PAYMENT. Pint sal",
+          "revisedClause": "PAYMENT. Pint sal provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording 'PAYMENT. Pint sal' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "Ambiguous drafting can extend resolution timelines and increase negotiation costs.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ]
+      },
+      {
+        "clauseId": "clause-009",
+        "sectionReference": "Oder Nbr",
+        "hierarchy": [
+          "Oder Nbr",
+          "A"
+        ],
+        "title": "",
+        "originalText": "ey inher 09.00 up very fal Goods â€œescibdin is Const.",
+        "plainLanguage": "Both sides sets a contract rule. In plain terms, ey inher 09.00 up very fal Goods â€œescibdin is Const.",
+        "clauseType": "general",
+        "riskCategory": "safe",
+        "colorIndicator": "green",
+        "riskScore": 10.95,
+        "confidence": 0.52,
+        "explanation": "Clause risk is safe with score 10.95. The strongest driver is fairnessImbalance, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.0,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 10.95,
+          "confidence": 0.52,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "ey inher 09.00 up very fal Goods â€œescibdin is Const.",
+          "revisedClause": "ey inher 09.00 up very fal Goods â€œescibdin is Const provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording 'ey inher 09.00 up very fal Goods â€œescibdin is Const.' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "Ambiguous drafting can extend resolution timelines and increase negotiation costs.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ]
+      },
+      {
+        "clauseId": "clause-010",
+        "sectionReference": "Oder Nbr",
+        "hierarchy": [
+          "Oder Nbr",
+          "A"
+        ],
+        "title": "",
+        "originalText": "Payment dor Worn ae 9 cout fol il pal within dy Iran ips ot when, ise Dado and payable an al vere aunts",
+        "plainLanguage": "Both sides sets a contract rule. In plain terms, payment dor Worn ae 9 cout fol il pal within dy Iran ips ot when, ise Dado and payable an al vere aunts",
+        "clauseType": "payment",
+        "riskCategory": "safe",
+        "colorIndicator": "green",
+        "riskScore": 10.95,
+        "confidence": 0.58,
+        "explanation": "Clause risk is safe with score 10.95. The strongest driver is fairnessImbalance, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.0,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 10.95,
+          "confidence": 0.58,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "Payment dor Worn ae 9 cout fol il pal within dy Iran ips ot when, ise Dado and payable an al vere aunts",
+          "revisedClause": "Payment dor Worn ae 9 cout fol il pal within dy Iran ips ot when, ise Dado and payable an al vere aunts provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording 'Payment dor Worn ae 9 cout fol il pal within dy Iran ips ot when, ise Dado and payable an al vere aunts' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "Ambiguous drafting can extend resolution timelines and increase negotiation costs.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ]
+      },
+      {
+        "clauseId": "clause-011",
+        "sectionReference": "Oder Nbr",
+        "hierarchy": [
+          "Oder Nbr",
+          "4"
+        ],
+        "title": "",
+        "originalText": "psn pyar html pee allowed und apie ls, wicheve is",
+        "plainLanguage": "Both sides sets a contract rule. In plain terms, psn pyar html pee allowed und apie ls, wicheve is",
+        "clauseType": "general",
+        "riskCategory": "safe",
+        "colorIndicator": "green",
+        "riskScore": 10.95,
+        "confidence": 0.51,
+        "explanation": "Clause risk is safe with score 10.95. The strongest driver is fairnessImbalance, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.0,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 10.95,
+          "confidence": 0.51,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "psn pyar html pee allowed und apie ls, wicheve is",
+          "revisedClause": "psn pyar html pee allowed und apie ls, wicheve is provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording 'psn pyar html pee allowed und apie ls, wicheve is' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "Ambiguous drafting can extend resolution timelines and increase negotiation costs.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ]
+      },
+      {
+        "clauseId": "clause-012",
+        "sectionReference": "Oder Nbr",
+        "hierarchy": [
+          "Oder Nbr",
+          "4"
+        ],
+        "title": "",
+        "originalText": "ig ay on len clang wot a, erble Ps nadtgos ta slept vey provid by tw, i fats pay for the Goode",
+        "plainLanguage": "Both sides sets a contract rule. In plain terms, ig ay on len clang wot a, erble Ps nadtgos ta slept vey provid by tw, i fats pay for the Goode",
+        "clauseType": "general",
+        "riskCategory": "safe",
+        "colorIndicator": "green",
+        "riskScore": 10.95,
+        "confidence": 0.57,
+        "explanation": "Clause risk is safe with score 10.95. The strongest driver is fairnessImbalance, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.0,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 10.95,
+          "confidence": 0.57,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "ig ay on len clang wot a, erble Ps nadtgos ta slept vey provid by tw, i fats pay for the Goode",
+          "revisedClause": "ig ay on len clang wot a, erble Ps nadtgos ta slept vey provid by tw, i fats pay for the Goode provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording 'ig ay on len clang wot a, erble Ps nadtgos ta slept vey provid by tw, i fats pay for the Goode' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "Ambiguous drafting can extend resolution timelines and increase negotiation costs.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ]
+      },
+      {
+        "clauseId": "clause-013",
+        "sectionReference": "",
+        "hierarchy": [
+          ""
+        ],
+        "title": "",
+        "originalText": "haste option wet sack alr pay na â€˜nara es â€˜ ay ancl is Conan ack legal eee. s.DRLIVERY a",
+        "plainLanguage": "Both sides sets a contract rule. In plain terms, haste option wet sack alr pay na â€˜nara es â€˜ ay ancl is Conan ack legal eee. s.DRLIVERY a",
+        "clauseType": "general",
+        "riskCategory": "safe",
+        "colorIndicator": "green",
+        "riskScore": 10.95,
+        "confidence": 0.57,
+        "explanation": "Clause risk is safe with score 10.95. The strongest driver is fairnessImbalance, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.0,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 10.95,
+          "confidence": 0.57,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "haste option wet sack alr pay na â€˜nara es â€˜ ay ancl is Conan ack legal eee. s.DRLIVERY a",
+          "revisedClause": "haste option wet sack alr pay na â€˜nara es â€˜ ay ancl is Conan ack legal eee. s.DRLIVERY a provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording 'haste option wet sack alr pay na â€˜nara es â€˜ ay ancl is Conan ack legal eee. s.DRLIVERY a' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "Ambiguous drafting can extend resolution timelines and increase negotiation costs.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ]
+      },
+      {
+        "clauseId": "clause-014",
+        "sectionReference": "",
+        "hierarchy": [
+          ""
+        ],
+        "title": "",
+        "originalText": ". . â€˜ is Con . ROCKETLAWYERâ„¢ Al insights with Rocket Copilotâ„¢",
+        "plainLanguage": "Both sides sets a contract rule. In plain terms, . . â€˜ is Con . ROCKETLAWYERâ„¢ Al insights with Rocket Copilotâ„¢",
+        "clauseType": "compliance",
+        "riskCategory": "safe",
+        "colorIndicator": "green",
+        "riskScore": 18.44,
+        "confidence": 0.63,
+        "explanation": "Clause risk is safe with score 18.44. The strongest driver is complianceExposure, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.0,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.2,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 18.44,
+          "confidence": 0.63,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": ". . â€˜ is Con . ROCKETLAWYERâ„¢ Al insights with Rocket Copilotâ„¢",
+          "revisedClause": ". . â€˜ is Con . ROCKETLAWYERâ„¢ Al insights with Rocket Copilotâ„¢ provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording '. . â€˜ is Con . ROCKETLAWYERâ„¢ Al insights with Rocket Copilotâ„¢' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "Ambiguous drafting can extend resolution timelines and increase negotiation costs.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ]
+      }
+    ],
+    "contractorCredibility": {
+      "score": 62.0,
+      "rating": "moderate",
+      "summary": "teslaa has a light-touch diligence profile with publicly available footprint data. Credibility is rated moderate because the signal mix shows 0 positive and 0 negative indicators.",
+      "positiveSignals": [],
+      "negativeSignals": [],
+      "sources": [
+        "https://example.com/counterparty-profile"
+      ],
+      "framework": "credibility = 62 + 22*avg_positive_signal - 28*avg_negative_signal + coverage_bonus, clamped to [0,100]"
+    },
+    "evaluationMetrics": {
+      "contract_classification": "top-1 accuracy, macro-F1, calibration error",
+      "clause_segmentation": "boundary F1, hierarchical consistency, clause coverage",
+      "risk_detection": "AUROC, precision@critical, weighted Brier score, explanation faithfulness",
+      "explanation_quality": "human adequacy, factual consistency, edit distance to gold simplifications"
+    },
+    "generatedAt": "2026-03-15T19:28:38.564747"
+  },
+  "searchableText": "GENERAL CONTRACT FOR PRODUCTS\n\nOder Nbr:\n\nâ€˜This Cott (bis \"Conc is made fete a of\n\nby an bere\n\not\n\n~\n\nad\n\noF\n\n1. TTEMS PURCHASED.\n\nel\n\nes\n\naoe\n\napt\n\ngps oy, floneg pads (a \"Ga\n\nia\n\nâ€˜scone\n\nâ€˜TOTAL: soo\n\n2. PRODUCT STANDARDS. The Go ssl on\n\n(gioton ded.\n\ntod nemesis Commis Uieaeee\n\nACTITLERISK OF LOSS. Hayes o/s sons\n\nBelg accordance wth it\n\nâ€˜Sipping inact eller tall be phi pe\n\napng aa dey\n\nntl Beara ao damage on the eis hr\n\npth ger adie\n\nA. PAYMENT. Pint sal\n\ney\n\ninher 09.00 up very fal Goods\n\nâ€œescibdin is Const.\n\nPayment dor Worn ae 9\n\ncout fol il pal within dy\n\nIran ips ot when, ise Dado and payable an al vere aunts\n\n4 psn pyar html pee allowed und apie ls, wicheve is\n\nig\n\nay on len clang wot a, erble\n\nPs\n\nnadtgos ta\n\nslept vey provid by tw, i\n\nfats pay for\n\nthe Goode\n\n:\n\nhaste option wet sack alr pay na\n\nâ€˜nara es\n\nâ€˜\n\nay ancl is Conan ack legal eee.\n\ns.DRLIVERY\n\na\n\n:\n\n.\n\n.\n\nâ€˜\n\nis Con\n\n.\n\nROCKETLAWYERâ„¢\n\nAl insights with Rocket Copilotâ„¢\nGENERAL CONTRACT FOR PRODUCTS\nBoth sides sets a contract rule. In plain terms, gENERAL CONTRACT FOR PRODUCTS\nâ€˜This Cott (bis \"Conc is made fete a of by an bere ot ~ ad oF\nBoth sides sets a contract rule. In plain terms, â€˜This Cott (bis \"Conc is made fete a of by an bere ot ~ ad oF\nTTEMS PURCHASED.\nBoth sides sets a contract rule. In plain terms, tTEMS PURCHASED.\nel es aoe apt gps oy, floneg pads (a \"Ga ia â€˜scone â€˜TOTAL: soo\nBoth sides sets a contract rule. In plain terms, el es aoe apt gps oy, floneg pads (a \"Ga ia â€˜scone â€˜TOTAL: soo\nPRODUCT STANDARDS. The Go ssl on\nBoth sides sets a contract rule. In plain terms, pRODUCT STANDARDS. The Go ssl on\n(gioton ded. tod nemesis Commis Uieaeee ACTITLERISK OF LOSS.\nBoth sides sets a contract rule. In plain terms, (gioton ded. tod nemesis Commis Uieaeee ACTITLERISK OF LOSS.\nHayes o/s sons Belg accordance wth it â€˜Sipping inact eller tall be phi pe apng aa dey ntl Beara ao damage on the eis hr pth ger adie\nBoth sides sets a contract rule. In plain terms, hayes o/s sons Belg accordance wth it â€˜Sipping inact eller tall be phi pe apng aa dey ntl Beara ao damage on the eis hr pth ger adie\nPAYMENT. Pint sal\nBoth sides sets a contract rule. In plain terms, pAYMENT. Pint sal\ney inher 09.00 up very fal Goods â€œescibdin is Const.\nBoth sides sets a contract rule. In plain terms, ey inher 09.00 up very fal Goods â€œescibdin is Const.\nPayment dor Worn ae 9 cout fol il pal within dy Iran ips ot when, ise Dado and payable an al vere aunts\nBoth sides sets a contract rule. In plain terms, payment dor Worn ae 9 cout fol il pal within dy Iran ips ot when, ise Dado and payable an al vere aunts\npsn pyar html pee allowed und apie ls, wicheve is\nBoth sides sets a contract rule. In plain terms, psn pyar html pee allowed und apie ls, wicheve is\nig ay on len clang wot a, erble Ps nadtgos ta slept vey provid by tw, i fats pay for the Goode\nBoth sides sets a contract rule. In plain terms, ig ay on len clang wot a, erble Ps nadtgos ta slept vey provid by tw, i fats pay for the Goode\nhaste option wet sack alr pay na â€˜nara es â€˜ ay ancl is Conan ack legal eee. s.DRLIVERY a\nBoth sides sets a contract rule. In plain terms, haste option wet sack alr pay na â€˜nara es â€˜ ay ancl is Conan ack legal eee. s.DRLIVERY a\n. . â€˜ is Con . ROCKETLAWYERâ„¢ Al insights with Rocket Copilotâ„¢\nBoth sides sets a contract rule. In plain terms, . . â€˜ is Con . ROCKETLAWYERâ„¢ Al insights with Rocket Copilotâ„¢",
+  "createdAt": "2026-03-15T19:28:38.564747",
+  "updatedAt": "2026-03-15T19:28:38.564747"
+}

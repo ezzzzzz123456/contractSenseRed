@@ -1,0 +1,164 @@
+{
+  "contractId": "contract-d1b3f244f2f2",
+  "report": {
+    "contractId": "contract-d1b3f244f2f2",
+    "contractType": {
+      "category": "legal statute",
+      "confidence": 0.42,
+      "evidence": [],
+      "alternatives": {
+        "legal statute": 0.0,
+        "employment": 0.0,
+        "non-disclosure agreement": 0.0,
+        "vendor agreement": 0.0
+      }
+    },
+    "extraction": {
+      "documentKind": "image",
+      "extractionMethod": "gemini_ocr_unavailable",
+      "sourceFilename": "Screenshot 2026-03-15 144043.png",
+      "mediaType": "image/png",
+      "structureConfidence": 0.05,
+      "extractedCharacters": 0,
+      "textPreview": "",
+      "notes": [
+        "Gemini OCR was unavailable or did not return readable text."
+      ]
+    },
+    "summary": "This legal statute is assessed as safe risk, with 0 critical clauses and 0 warning clauses. The report prioritizes disproportionate liability, ambiguous drafting, loophole-prone overrides, and negotiable remediation paths. The highest-risk issue is general language in clause-001, scored 11/100. Counterparty credibility is rated weak at 38/100.",
+    "executiveLegalSummary": "Overall legal posture is safe. If disputed, the strongest litigation pressure points are: General: A court is likely to enforce the clause substantially as drafted.",
+    "overallRiskScore": 7.67,
+    "overallRiskCategory": "safe",
+    "keyVulnerabilities": [],
+    "legalLoopholes": [],
+    "illegalClauseAlerts": [],
+    "recommendations": [
+      "No material risk remediation identified beyond standard legal review.",
+      "Validate any critical clause with jurisdiction-specific counsel before signature.",
+      "Compare risk concentration against previous agreements in the contract memory store."
+    ],
+    "priorityActions": [
+      "No material risk remediation identified beyond standard legal review.",
+      "Validate any critical clause with jurisdiction-specific counsel before signature.",
+      "Compare risk concentration against previous agreements in the contract memory store."
+    ],
+    "reportFindings": [
+      "General: A judge is likely to view this as safe because a judge is likely to treat this clause as commercially standard unless surrounding facts make enforcement unfair."
+    ],
+    "metrics": {
+      "meanClauseRisk": 10.95,
+      "p90ClauseRisk": 10.95,
+      "criticalClauseRatio": 0.0,
+      "warningClauseRatio": 0.0,
+      "riskDispersion": 0.0,
+      "fairnessIndex": 88.0,
+      "legalExposureIndex": 0.0,
+      "concentrationIndex": 0.0,
+      "aggregationFormula": "overall = 0.55*mean_clause_risk + 0.20*p90_clause_risk + 0.15*critical_clause_ratio*100 + 0.10*legal_exposure_index"
+    },
+    "clauses": [
+      {
+        "clauseId": "clause-001",
+        "sectionReference": "General",
+        "hierarchy": [
+          "General"
+        ],
+        "title": "",
+        "originalText": "",
+        "plainLanguage": "No clause text provided.",
+        "clauseType": "general",
+        "riskCategory": "safe",
+        "colorIndicator": "green",
+        "riskScore": 10.95,
+        "confidence": 0.45,
+        "explanation": "Clause risk is safe with score 10.95. The strongest driver is fairnessImbalance, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.0,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 10.95,
+          "confidence": 0.45,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "",
+          "revisedClause": " provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording '' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "Ambiguous drafting can extend resolution timelines and increase negotiation costs.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ],
+        "courtroomAssessment": {
+          "judgeView": "A judge is likely to treat this clause as commercially standard unless surrounding facts make enforcement unfair.",
+          "claimantArguments": [
+            "The wording should be enforced as written because the parties accepted a clear allocation of risk."
+          ],
+          "defenseArguments": [
+            "Any ambiguous wording should be construed narrowly, especially if one party drafted the clause."
+          ],
+          "likelyRuling": "A court is likely to enforce the clause substantially as drafted.",
+          "enforceabilityConcerns": [],
+          "businessImpact": "This clause shapes dispute leverage, drafting clarity, and the cost of enforcement."
+        }
+      }
+    ],
+    "contractorCredibility": {
+      "score": 38.47,
+      "rating": "weak",
+      "summary": "Public-source diligence for tesla found 0 positive and 11 negative signals across news, dispute, regulatory, and reputation-oriented searches. Credibility is rated weak because the signal mix shows 0 positive and 11 negative indicators, with 1 neutral footprint signals.",
+      "positiveSignals": [],
+      "negativeSignals": [
+        "Public negative signal: lawsuit: A class-action lawsuit in California alleges that some drivers were overcharged based on inaccurate vehicle safety data, raising questions about the accuracy and fairness of Tesla's insurance ...",
+        "Public negative signal: lawsuit: Tesla has filed a lawsuit against the California Department of Motor Vehicles (DMV) to overturn a ruling that the agency says the automaker overstated the capabilities of its Autopilot system, alleging deceptive marketing practices. What sparked the legal showdown? In a TechCrunch report published on February 23, 2026, the details of Tesla's fresh lawsuit were",
+        "Public negative signal: lawsuit: Tesla filed a lawsuit against the California DMV to reverse the ruling that found its 'Full Self-Driving' and 'Autopilot' marketing violated state law — just days after complying with it.",
+        "Public negative signal: lawsuit: Tesla is facing mounting legal and regulatory scrutiny over its electronic door handle designs. A newly proposed class action lawsuit , filed in California federal court, alleges that recent Model S vehicles contain a critical safety defect that can leave occupants trapped inside the car during emergencies if the vehicle loses low-voltage power. The lawsuit , filed by plaintiff Robert L. Hyde ...",
+        "Public negative signal: lawsuit: As Tesla Chief Executive Elon Musk banks the future of his company on autonomous robotaxis, several lawsuits raise concerns over the safety of the technology.",
+        "Public negative signal: lawsuit: - Tesla faces global legal challenges over Autopilot/FSD safety claims, including a $329M liability verdict in Miami and California's misleading advertising lawsuit . - Regulatory delays for robotaxi services and lack of safety certifications contrast with Waymo's 250K weekly rides, exposing competitive disadvantages. - Shareholder lawsuits and Q2 revenue declines (-12% YoY) highlight financial ..."
+      ],
+      "sources": [
+        "https://www.insurancebusinessmag.com/us/news/risk-compliance-legal/tesla-insurance-hit-by-california-regulatory-action-552029.aspx",
+        "https://ubos.tech/news/tesla-sues-california-dmv-over-autopilot-claims-legal-battle-escalates/",
+        "https://www.thestreet.com/automotive/tesla-faces-new-class-action-lawsuit",
+        "https://electrek.co/2026/02/23/tesla-sues-california-dmv-reverse-fsd-false-advertising-ruling/",
+        "https://www.notateslaapp.com/news/3733/tesla-faces-class-action-lawsuit-over-model-s-door-handles",
+        "https://www.latimes.com/business/story/2025-08-19/tesla-robotaxi-shareholder-lawsuit",
+        "https://www.ainvest.com/news/implications-tesla-ongoing-legal-regulatory-challenges-ai-autonomous-driving-ambitions-2509/",
+        "https://www.businessinsider.com/tesla-license-california-lawsuit-hearing-dmv-fsd-autopilot-2025-7?op=1"
+      ],
+      "framework": "credibility = 58 + 24*avg_positive_signal - 34*avg_negative_signal + evidence_coverage + registry_bonus, clamped to [0,100]"
+    },
+    "evaluationMetrics": {
+      "contract_classification": "top-1 accuracy, macro-F1, calibration error",
+      "clause_segmentation": "boundary F1, hierarchical consistency, clause coverage",
+      "risk_detection": "AUROC, precision@critical, weighted Brier score, explanation faithfulness",
+      "explanation_quality": "human adequacy, factual consistency, edit distance to gold simplifications"
+    },
+    "generatedAt": "2026-03-15T23:10:32.403062"
+  },
+  "searchableText": "\n\nNo clause text provided.",
+  "createdAt": "2026-03-15T23:10:32.403062",
+  "updatedAt": "2026-03-15T23:10:32.403062"
+}

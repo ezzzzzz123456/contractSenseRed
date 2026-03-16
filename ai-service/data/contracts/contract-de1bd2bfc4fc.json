@@ -1,0 +1,1248 @@
+{
+  "contractId": "contract-de1bd2bfc4fc",
+  "report": {
+    "contractId": "contract-de1bd2bfc4fc",
+    "contractType": {
+      "category": "GENERAL CONTRACT FOR PRODUCTS",
+      "confidence": 0.98,
+      "evidence": [
+        "delivery",
+        "goods",
+        "invoice"
+      ],
+      "alternatives": {
+        "vendor agreement": 1.0,
+        "service contract": 0.24,
+        "legal statute": 0.0,
+        "employment": 0.0
+      }
+    },
+    "extraction": {
+      "documentKind": "image",
+      "extractionMethod": "gemini_image_ocr",
+      "sourceFilename": "Screenshot 2026-03-15 144043.png",
+      "mediaType": "image/png",
+      "structureConfidence": 0.72,
+      "extractedCharacters": 1901,
+      "textPreview": "GENERAL CONTRACT FOR PRODUCTS\nOrder Number:\nThis Contract (this \"Contract\") is made effective as of _______________, by and between _______________, of _______________, and _______________, of _______________.\n1. ITEMS PURCHASED.\n_______________ agrees to sell, and _______________ agrees to buy, the following products (the \"Goods\") in accordance with the terms and conditions of this Contract:\nTOTA",
+      "notes": [
+        "Gemini multimodal OCR extracted the image content.",
+        "Prepared image page for VLM-based document understanding."
+      ],
+      "structuredPages": 1,
+      "layoutElements": 20,
+      "tablesDetected": 0,
+      "signaturesDetected": 0,
+      "annotationsDetected": 2
+    },
+    "summary": "This contract is a General Contract for Products, but it is severely incomplete and commercially unviable in its current form. Critical information such as the effective date, identities of the parties, description of goods, total purchase price, and specific payment terms are missing. The stated total price and payment amount are $0.00, and interest on overdue payments is set at 0% or the maximum allowed by law, whichever is less, effectively negating any late payment penalties for the buyer. The contract contains numerous blanks that render it unenforceable and expose both parties to significant legal and commercial risks.",
+    "executiveLegalSummary": "The provided 'General Contract for Products' is fundamentally flawed due to extensive omissions of material terms. Key elements required for contract formation and enforceability, including party identification, consideration (purchase price), and specific performance dates, are absent. The clauses related to payment and interest are commercially illogical and highly disadvantageous to the seller. The 'Time is of the essence' clause for delivery is present, but the specific delivery arrangements and completion date are missing. A court would likely find this document an agreement to agree, or void for vagueness, rather than a binding contract, due to the lack of essential terms. Significant revisions are required to make this a legally sound and commercially reasonable agreement.",
+    "overallRiskScore": 95.0,
+    "overallRiskCategory": "critical",
+    "keyVulnerabilities": [
+      "clause_0: The court would most likely rule that no valid contract was formed due to the lack of essential terms, rendering the document unenforceable.",
+      "clause_1: The court would likely rule that no valid contract for sale was formed due to the absence of consideration and indefinite terms regarding the goods.",
+      "clause_4: The court would likely rule that no payment is due under the contract as written due to the $0.00 amount. Any claim for interest on overdue amounts would also fail. The contract would likely be deemed unenforceable for lack of consideration.",
+      "clause_5: The court would likely interpret 'Time is of the essence' as requiring delivery within a 'reasonable time' given the circumstances, but without a specific date, proving breach would be challenging. The missing parties for delivery arrangements would also complicate enforcement."
+    ],
+    "legalLoopholes": [
+      "The complete absence of party identification creates a loophole where neither party can be held accountable.",
+      "The $0.00 price creates a loophole allowing either party to claim no actual sale was intended or that no payment is due.",
+      "The missing reference allows either party to argue for their preferred standard, creating a loophole for non-compliance without clear contractual repercussions.",
+      "The subjective nature of 'reasonable shipping costs' could be exploited by either party to dispute charges.",
+      "The $0.00 payment amount and 0% effective interest rate create a massive loophole for the buyer to receive goods without payment or penalty for late payment.",
+      "Missing party identifications create loopholes for avoiding responsibility."
+    ],
+    "illegalClauseAlerts": [],
+    "recommendations": [
+      "Ensure all party names and addresses are accurately recorded.",
+      "Clearly state the effective date of the contract.",
+      "No material risk remediation identified beyond standard legal review.",
+      "Clearly define the goods being purchased.",
+      "State the accurate and agreed-upon total purchase price.",
+      "Clearly identify the source and date of the quotation.",
+      "Consider attaching the quotation as an exhibit to the contract.",
+      "Define 'reasonable shipping costs' more objectively, perhaps by reference to a specific carrier's rates or a maximum amount."
+    ],
+    "priorityActions": [
+      "Immediately fill in all blank fields, especially those pertaining to parties, effective date, goods description, total price, and payment recipient.",
+      "Rectify the $0.00 total and payment amount to reflect the actual commercial agreement.",
+      "Revise the interest on overdue amounts to be commercially reasonable and enforceable (e.g., 'maximum percentage allowed under applicable laws' without the 'whichever is less' qualifier, or a specific, higher rate).",
+      "Clarify payment discount terms to be meaningful.",
+      "Specify the party responsible for collection costs.",
+      "Define clear delivery arrangements and a completion date."
+    ],
+    "reportFindings": [
+      "The contract is not executable due to numerous missing essential details.",
+      "The stated purchase price and payment amount of $0.00 render the contract commercially nonsensical.",
+      "The interest clause for overdue payments is effectively 0%, which is highly unfavorable to the seller.",
+      "Ambiguity exists regarding 'reasonable shipping costs' and the specific product standards.",
+      "The contract lacks clear identification of the parties involved in several key actions (e.g., collection costs, material breach remedies, delivery arrangements)."
+    ],
+    "metrics": {
+      "meanClauseRisk": 83.33,
+      "p90ClauseRisk": 100.0,
+      "criticalClauseRatio": 0.83,
+      "warningClauseRatio": 0.17,
+      "riskDispersion": 0.6,
+      "fairnessIndex": 10.0,
+      "legalExposureIndex": 4.42,
+      "concentrationIndex": 74.0,
+      "aggregationFormula": "overall = 0.55*mean_clause_risk + 0.20*p90_clause_risk + 0.15*critical_clause_ratio*100 + 0.10*legal_exposure_index"
+    },
+    "clauses": [
+      {
+        "clauseId": "clause_0",
+        "sectionReference": "Preamble",
+        "hierarchy": [
+          "Preamble"
+        ],
+        "title": "Preamble and Parties",
+        "originalText": "This Contract (this \"Contract\") is made effective as of _______________, by and between _______________, of _______________, and _______________, of _______________.",
+        "plainLanguage": "This contract becomes effective on a specified date, between two identified parties, each from a specified location.",
+        "clauseType": "general",
+        "riskCategory": "critical",
+        "colorIndicator": "red",
+        "riskScore": 100.0,
+        "confidence": 0.66,
+        "explanation": "This clause is critically incomplete. It lacks the effective date, the names of both contracting parties, and their respective addresses. Without these fundamental details, the contract cannot be legally formed or enforced, as the identities of the parties and the commencement of their obligations are unknown.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.0,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 10.95,
+          "confidence": 0.66,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [
+          "The complete absence of party identification creates a loophole where neither party can be held accountable."
+        ],
+        "illegalSignals": [],
+        "recommendations": [
+          "Ensure all party names and addresses are accurately recorded.",
+          "Clearly state the effective date of the contract.",
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "This Contract (this \"Contract\") is made effective as of _______________, by and between _______________, of _______________, and _______________, of _______________.",
+          "revisedClause": "This Contract (this \"Contract\") is made effective as of [Effective Date], by and between [Party 1 Name], of [Party 1 Address], and [Party 2 Name], of [Party 2 Address].",
+          "justification": "Revision generated from Gemini contract analysis."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "Ensure all party names and addresses are accurately recorded.",
+            "Clearly state the effective date of the contract.",
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "Insist on full and accurate identification of all parties and the effective date. Without this, there is no contract. This is a non-negotiable requirement for legal validity."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Dispute over Preamble",
+            "likelyConsequence": "A court would likely declare this document void for vagueness or an 'agreement to agree' due to the absence of essential party identification and an effective date. Neither party could successfully sue for breach as the contract's very existence and parties are undefined.",
+            "severity": "critical",
+            "reasoning": "A judge would view this clause as a fatal flaw in contract formation. The absence of parties and an effective date means there is no identifiable agreement between specific entities at a specific time."
+          }
+        ],
+        "courtroomAssessment": {
+          "judgeView": "A judge would view this clause as a fatal flaw in contract formation. The absence of parties and an effective date means there is no identifiable agreement between specific entities at a specific time.",
+          "claimantArguments": [
+            "The claimant would struggle to argue enforceability without identifying themselves or the defendant as parties to the contract.",
+            "If attempting to enforce, the claimant would need to present extrinsic evidence to fill these blanks, which would be highly contested."
+          ],
+          "defenseArguments": [
+            "The defense would argue that no valid contract was formed due to the absence of essential terms, specifically the identities of the parties and the effective date.",
+            "The defense would assert that the document is merely an incomplete template, not a binding agreement."
+          ],
+          "likelyRuling": "The court would most likely rule that no valid contract was formed due to the lack of essential terms, rendering the document unenforceable.",
+          "enforceabilityConcerns": [
+            "Lack of party identification.",
+            "Absence of an effective date.",
+            "Uncertainty of terms."
+          ],
+          "businessImpact": "Without identified parties and an effective date, no business relationship or transaction can legally commence under this document. It creates absolute uncertainty and prevents any legal recourse."
+        }
+      },
+      {
+        "clauseId": "clause_1",
+        "sectionReference": "1. ITEMS PURCHASED.",
+        "hierarchy": [
+          "1. ITEMS PURCHASED."
+        ],
+        "title": "1. ITEMS PURCHASED",
+        "originalText": "_______________ agrees to sell, and _______________ agrees to buy, the following products (the \"Goods\") in accordance with the terms and conditions of this Contract: TOTAL: $0.00",
+        "plainLanguage": "A seller agrees to sell, and a buyer agrees to buy, specific products (the \"Goods\") under this contract. The total price for these goods is $0.00.",
+        "clauseType": "general",
+        "riskCategory": "critical",
+        "colorIndicator": "red",
+        "riskScore": 100.0,
+        "confidence": 0.67,
+        "explanation": "This clause is critically incomplete and commercially nonsensical. It fails to identify the seller and buyer, and most importantly, states a 'TOTAL: $0.00'. A contract for the sale of goods with a $0.00 price lacks consideration, which is a fundamental element for contract formation. Without a clear description of the goods and a valid price, the contract is unenforceable.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.0,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 10.95,
+          "confidence": 0.67,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [
+          "The $0.00 price creates a loophole allowing either party to claim no actual sale was intended or that no payment is due."
+        ],
+        "illegalSignals": [],
+        "recommendations": [
+          "Clearly define the goods being purchased.",
+          "State the accurate and agreed-upon total purchase price.",
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "_______________ agrees to sell, and _______________ agrees to buy, the following products (the \"Goods\") in accordance with the terms and conditions of this Contract: TOTAL: $0.00",
+          "revisedClause": "[Seller Name] agrees to sell, and [Buyer Name] agrees to buy, the following products (the \"Goods\") in accordance with the terms and conditions of this Contract: [Detailed description of Goods, including quantity, specifications, etc.] TOTAL: $[Agreed Total Price]",
+          "justification": "Revision generated from Gemini contract analysis."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "Clearly define the goods being purchased.",
+            "State the accurate and agreed-upon total purchase price.",
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "This clause must be fully completed with the correct parties, a detailed description of the goods, and the actual agreed-upon purchase price. The $0.00 total is unacceptable and must be corrected to reflect the commercial value."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Dispute over 1. ITEMS PURCHASED.",
+            "likelyConsequence": "A court would find this clause, and by extension the contract, void for lack of consideration and indefiniteness of terms. No sale could legally occur, and neither party could claim breach for non-delivery or non-payment.",
+            "severity": "critical",
+            "reasoning": "A judge would immediately question the commercial intent and validity of a contract stating a $0.00 total for purchased items. This indicates a lack of consideration, making the contract unenforceable."
+          }
+        ],
+        "courtroomAssessment": {
+          "judgeView": "A judge would immediately question the commercial intent and validity of a contract stating a $0.00 total for purchased items. This indicates a lack of consideration, making the contract unenforceable.",
+          "claimantArguments": [
+            "The claimant would struggle to prove a valid sale occurred or that any payment was due, given the $0.00 total.",
+            "If the claimant intended a different price, they would need to introduce parol evidence, which might be inadmissible."
+          ],
+          "defenseArguments": [
+            "The defense would argue that the contract lacks consideration, as the stated price is $0.00, rendering it unenforceable.",
+            "The defense would also point to the missing description of goods as a failure of definiteness."
+          ],
+          "likelyRuling": "The court would likely rule that no valid contract for sale was formed due to the absence of consideration and indefinite terms regarding the goods.",
+          "enforceabilityConcerns": [
+            "Lack of consideration (price is $0.00).",
+            "Missing identification of seller and buyer.",
+            "Absence of goods description.",
+            "Indefiniteness of terms."
+          ],
+          "businessImpact": "This clause renders the entire transaction commercially meaningless. No goods can be exchanged for value, and no revenue can be generated from this 'sale'. It creates a false premise for a business transaction."
+        }
+      },
+      {
+        "clauseId": "clause_2",
+        "sectionReference": "2. PRODUCT STANDARDS.",
+        "hierarchy": [
+          "2. PRODUCT STANDARDS."
+        ],
+        "title": "2. PRODUCT STANDARDS",
+        "originalText": "The Goods shall comply with the _______________'s quotation dated _______________ and incorporated into this Contract by this reference.",
+        "plainLanguage": "The products must meet the standards specified in a particular party's quotation, dated on a specific day, which is included as part of this contract.",
+        "clauseType": "obligation",
+        "riskCategory": "warning",
+        "colorIndicator": "yellow",
+        "riskScore": 70.0,
+        "confidence": 0.72,
+        "explanation": "This clause is incomplete as it fails to identify whose quotation the goods must comply with and the specific date of that quotation. This ambiguity creates a significant risk of dispute regarding the quality, specifications, and standards of the goods. Without a clear reference, it's difficult to determine the agreed-upon product standards.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.25,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 22.25,
+          "confidence": 0.72,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [
+          "The missing reference allows either party to argue for their preferred standard, creating a loophole for non-compliance without clear contractual repercussions."
+        ],
+        "illegalSignals": [],
+        "recommendations": [
+          "Clearly identify the source and date of the quotation.",
+          "Consider attaching the quotation as an exhibit to the contract.",
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "The Goods shall comply with the _______________'s quotation dated _______________ and incorporated into this Contract by this reference.",
+          "revisedClause": "The Goods shall comply with the [Seller's/Manufacturer's] quotation dated [Date of Quotation] and incorporated into this Contract by this reference. (Alternatively, attach the quotation as an exhibit).",
+          "justification": "Revision generated from Gemini contract analysis."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "Clearly identify the source and date of the quotation.",
+            "Consider attaching the quotation as an exhibit to the contract.",
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "Insist on specifying the exact quotation document (including the party and date) or, preferably, attach the quotation as an exhibit to the contract to avoid future disputes over product standards."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Dispute over 2. PRODUCT STANDARDS.",
+            "likelyConsequence": "In a dispute over product quality, a court would struggle to determine the applicable standards without the specific quotation reference. This could lead to prolonged litigation and potentially a ruling based on general industry standards or a failure to prove breach of warranty.",
+            "severity": "warning",
+            "reasoning": "A judge would find this clause vague and difficult to apply. Without a specific quotation identified, it's impossible to ascertain the agreed-upon product standards, leading to uncertainty in any claim of non-compliance."
+          }
+        ],
+        "courtroomAssessment": {
+          "judgeView": "A judge would find this clause vague and difficult to apply. Without a specific quotation identified, it's impossible to ascertain the agreed-upon product standards, leading to uncertainty in any claim of non-compliance.",
+          "claimantArguments": [
+            "The claimant (e.g., buyer) would argue that the goods did not meet implied standards or industry norms, attempting to fill the gap left by the missing quotation reference.",
+            "The claimant might try to introduce evidence of pre-contractual discussions about standards."
+          ],
+          "defenseArguments": [
+            "The defense (e.g., seller) would argue that without a specific quotation, there are no defined contractual standards, and thus no breach of contract regarding product quality.",
+            "The defense might argue that the goods met general commercial standards."
+          ],
+          "likelyRuling": "The court might rule that the clause is too vague to enforce specific product standards, potentially defaulting to implied warranties of merchantability or fitness for a particular purpose, if applicable, or finding no breach if the goods meet general industry standards.",
+          "enforceabilityConcerns": [
+            "Vagueness due to missing quotation reference.",
+            "Potential for dispute over applicable standards."
+          ],
+          "businessImpact": "Lack of clear product standards can lead to delivery of non-conforming goods, customer dissatisfaction, costly returns, and disputes, impacting reputation and profitability."
+        }
+      },
+      {
+        "clauseId": "clause_3",
+        "sectionReference": "3. TITLE/RISK OF LOSS.",
+        "hierarchy": [
+          "3. TITLE/RISK OF LOSS."
+        ],
+        "title": "3. TITLE/RISK OF LOSS",
+        "originalText": "Buyer shall pay reasonable shipping costs in accordance with its shipping instructions, but the seller shall be responsible for packaging, shipping and safe delivery and shall bear all risk of damage or loss until the goods are delivered to the buyer's address.",
+        "plainLanguage": "The buyer pays for shipping based on their instructions. The seller is responsible for packaging, shipping, safe delivery, and bears all risk of damage or loss until the goods arrive at the buyer's address.",
+        "clauseType": "obligation",
+        "riskCategory": "warning",
+        "colorIndicator": "yellow",
+        "riskScore": 40.0,
+        "confidence": 0.8,
+        "explanation": "This clause clearly allocates risk of loss to the seller until delivery to the buyer's address, which is generally favorable to the buyer. However, the term 'reasonable shipping costs' for the buyer is subjective and could lead to disputes if the parties disagree on what constitutes 'reasonable'. While the allocation of risk is clear, the cost aspect introduces a minor ambiguity.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.25,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.02,
+          "score": 19.87,
+          "confidence": 0.8,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [
+          "The subjective nature of 'reasonable shipping costs' could be exploited by either party to dispute charges."
+        ],
+        "illegalSignals": [],
+        "recommendations": [
+          "Define 'reasonable shipping costs' more objectively, perhaps by reference to a specific carrier's rates or a maximum amount.",
+          "Consider using Incoterms to provide internationally recognized definitions for risk and cost allocation.",
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "Buyer shall pay reasonable shipping costs in accordance with its shipping instructions, but the seller shall be responsible for packaging, shipping and safe delivery and shall bear all risk of damage or loss until the goods are delivered to the buyer's address.",
+          "revisedClause": "Buyer shall pay shipping costs as agreed in [specific shipping agreement/schedule] or as quoted by [carrier name], in accordance with its shipping instructions, but the seller shall be responsible for packaging, shipping and safe delivery and shall bear all risk of damage or loss until the goods are delivered to the buyer's address.",
+          "justification": "Revision generated from Gemini contract analysis."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "Define 'reasonable shipping costs' more objectively, perhaps by reference to a specific carrier's rates or a maximum amount.",
+            "Consider using Incoterms to provide internationally recognized definitions for risk and cost allocation.",
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "For the buyer: Seek to define 'reasonable shipping costs' more precisely (e.g., cap, specific carrier rates, or a fixed amount) to avoid unexpected charges. For the seller: Ensure shipping costs are clearly defined and recoverable, and consider Incoterms to standardize risk and cost allocation."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Dispute over 3. TITLE/RISK OF LOSS.",
+            "likelyConsequence": "If a dispute arises over shipping costs, a court would need to determine what constitutes 'reasonable' in the context of the transaction, potentially requiring expert testimony or reference to industry standards. If goods are damaged before delivery, the seller would be liable.",
+            "severity": "warning",
+            "reasoning": "A judge would generally uphold the clear allocation of risk of loss to the seller until delivery. However, the term 'reasonable shipping costs' would be scrutinized if challenged, requiring evidence of market rates or prior agreements."
+          }
+        ],
+        "courtroomAssessment": {
+          "judgeView": "A judge would generally uphold the clear allocation of risk of loss to the seller until delivery. However, the term 'reasonable shipping costs' would be scrutinized if challenged, requiring evidence of market rates or prior agreements.",
+          "claimantArguments": [
+            "If the buyer is the claimant, they would argue that the shipping costs charged by the seller were not 'reasonable' based on market rates or prior discussions.",
+            "If goods were damaged before delivery, the buyer would claim the seller is liable."
+          ],
+          "defenseArguments": [
+            "If the seller is the defendant, they would argue that the shipping costs charged were indeed 'reasonable' given the circumstances, carrier, and service level.",
+            "If goods were damaged, the seller would need to prove delivery occurred before damage or that the damage was due to buyer's fault post-delivery."
+          ],
+          "likelyRuling": "The court would likely enforce the risk of loss allocation as written. For 'reasonable shipping costs', the court would assess industry standards or evidence of prior dealings to determine reasonableness.",
+          "enforceabilityConcerns": [
+            "Subjectivity of 'reasonable shipping costs'."
+          ],
+          "businessImpact": "Clear risk allocation protects the buyer from loss during transit. Ambiguity in shipping costs can lead to billing disputes and strained business relations."
+        }
+      },
+      {
+        "clauseId": "clause_4",
+        "sectionReference": "4. PAYMENT.",
+        "hierarchy": [
+          "4. PAYMENT."
+        ],
+        "title": "4. PAYMENT",
+        "originalText": "Payment shall be made to _______________, in the amount of $0.00 upon delivery of all Goods described in this Contract. Payment discount terms are as follows: a 0 percent discount if total bill is paid within 0 days. If any invoice is not paid when due, interest will be added to and payable on all overdue amounts at 0 percent per year or the maximum percentage allowed under applicable laws, whichever is less. _______________ shall pay all costs of collection, including without limitation, reasonable attorney fees. In addition to any other right or remedy provided by law, if _______________ fails to pay for the Goods when due, _______________ has the option to treat such failure to pay as a material breach of this Contract and may cancel this Contract and/or seek legal remedies.",
+        "plainLanguage": "Payment of $0.00 is due to an unnamed party upon delivery of goods. There is no discount for early payment. Overdue payments accrue interest at 0% per year or the maximum allowed by law, whichever is less. An unnamed party pays collection costs, including attorney fees. If an unnamed party fails to pay, another unnamed party can consider it a material breach, cancel the contract, or seek legal remedies.",
+        "clauseType": "payment",
+        "riskCategory": "critical",
+        "colorIndicator": "red",
+        "riskScore": 100.0,
+        "confidence": 0.97,
+        "explanation": "This clause is critically flawed and commercially unacceptable. The payment amount is stated as $0.00, which, combined with the $0.00 total in Clause 1, means no payment is contractually required. The interest on overdue amounts is effectively 0% ('0 percent per year or the maximum percentage allowed under applicable laws, whichever is less'), which is highly unfavorable to the seller and provides no incentive for timely payment. Numerous blanks exist for the payment recipient, the party responsible for collection costs, and the parties involved in breach remedies, rendering these provisions unenforceable.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.25,
+          "liabilityExposure": 0.33,
+          "ambiguity": 0.25,
+          "penaltySeverity": 0.33,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.2,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.02,
+          "score": 53.1,
+          "confidence": 0.97,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [
+          "The $0.00 payment amount and 0% effective interest rate create a massive loophole for the buyer to receive goods without payment or penalty for late payment.",
+          "Missing party identifications create loopholes for avoiding responsibility."
+        ],
+        "illegalSignals": [],
+        "recommendations": [
+          "Correct the payment amount to reflect the actual agreed-upon price.",
+          "Establish a clear and commercially reasonable interest rate for overdue payments.",
+          "Specify the payment recipient and the party responsible for collection costs.",
+          "Clearly define the parties' rights and remedies in case of payment default.",
+          "Reduce late-payment interest or add a grace period before default charges apply."
+        ],
+        "improvement": {
+          "originalClause": "Payment shall be made to _______________, in the amount of $0.00 upon delivery of all Goods described in this Contract. Payment discount terms are as follows: a 0 percent discount if total bill is paid within 0 days. If any invoice is not paid when due, interest will be added to and payable on all overdue amounts at 0 percent per year or the maximum percentage allowed under applicable laws, whichever is less. _______________ shall pay all costs of collection, including without limitation, reasonable attorney fees. In addition to any other right or remedy provided by law, if _______________ fails to pay for the Goods when due, _______________ has the option to treat such failure to pay as a material breach of this Contract and may cancel this Contract and/or seek legal remedies.",
+          "revisedClause": "Payment shall be made to [Seller's Name/Account Details], in the amount of $[Agreed Payment Amount] upon delivery of all Goods described in this Contract. Payment discount terms are as follows: [e.g., a 2 percent discount if total bill is paid within 10 days]. If any invoice is not paid when due, interest will be added to and payable on all overdue amounts at [e.g., 1.5 percent per month or the maximum percentage allowed under applicable laws, whichever is greater]. The Buyer shall pay all costs of collection, including without limitation, reasonable attorney fees. In addition to any other right or remedy provided by law, if Buyer fails to pay for the Goods when due, Seller has the option to treat such failure to pay as a material breach of this Contract and may cancel this Contract and/or seek legal remedies.",
+          "justification": "Revision generated from Gemini contract analysis."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "Correct the payment amount to reflect the actual agreed-upon price.",
+            "Establish a clear and commercially reasonable interest rate for overdue payments.",
+            "Specify the payment recipient and the party responsible for collection costs."
+          ],
+          "draftedResponse": "This clause requires a complete overhaul. The payment amount must be corrected to the actual price. The interest rate for overdue payments must be set at a commercially reasonable and enforceable rate (e.g., 'whichever is greater' or a specific percentage above prime). All blanks must be filled to clearly define responsibilities and rights."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Dispute over 4. PAYMENT.",
+            "likelyConsequence": "A court would find the $0.00 payment amount to be a lack of consideration, making the contract unenforceable for sale. Even if a price were implied, the 0% effective interest rate would prevent the seller from recovering any meaningful damages for late payment. The numerous blanks would make it impossible to assign responsibility for collection costs or enforce breach remedies.",
+            "severity": "critical",
+            "reasoning": "A judge would view this payment clause as commercially absurd and legally problematic. The $0.00 payment and 0% effective interest rate undermine the fundamental principles of a commercial contract. The blanks further compound the unenforceability."
+          }
+        ],
+        "courtroomAssessment": {
+          "judgeView": "A judge would view this payment clause as commercially absurd and legally problematic. The $0.00 payment and 0% effective interest rate undermine the fundamental principles of a commercial contract. The blanks further compound the unenforceability.",
+          "claimantArguments": [
+            "The claimant (seller) would struggle to argue for payment or interest on overdue amounts given the explicit $0.00 amount and 0% effective interest rate.",
+            "The claimant would need to argue for reformation of the contract based on mutual mistake or prior agreements, which is a high bar."
+          ],
+          "defenseArguments": [
+            "The defense (buyer) would simply point to the contract's explicit terms: $0.00 payment and 0% interest on overdue amounts, arguing no breach occurred for non-payment or late payment.",
+            "The defense would also highlight the missing parties for collection costs and breach remedies."
+          ],
+          "likelyRuling": "The court would likely rule that no payment is due under the contract as written due to the $0.00 amount. Any claim for interest on overdue amounts would also fail. The contract would likely be deemed unenforceable for lack of consideration.",
+          "enforceabilityConcerns": [
+            "Lack of consideration (payment amount is $0.00).",
+            "Commercially unreasonable interest rate (effectively 0%).",
+            "Numerous missing party identifications for key actions (payment recipient, collection costs, breach remedies).",
+            "Indefiniteness of terms."
+          ],
+          "businessImpact": "This clause makes the contract commercially worthless for the seller, as no revenue can be collected, and there are no effective penalties for late payment. It creates significant financial risk and operational inefficiency."
+        }
+      },
+      {
+        "clauseId": "clause_5",
+        "sectionReference": "5. DELIVERY.",
+        "hierarchy": [
+          "5. DELIVERY."
+        ],
+        "title": "5. DELIVERY",
+        "originalText": "Time is of the essence in the performance of this Contract. _______________ will arrange for delivery by carrier chosen by _______________. Delivery shall be completed by _______________.",
+        "plainLanguage": "Timely performance is crucial for this contract. An unnamed party will arrange delivery using a carrier chosen by another unnamed party. Delivery must be completed by a specific, unnamed date.",
+        "clauseType": "obligation",
+        "riskCategory": "critical",
+        "colorIndicator": "red",
+        "riskScore": 90.0,
+        "confidence": 0.78,
+        "explanation": "While 'Time is of the essence' is a strong contractual term, this clause is critically incomplete. It fails to identify who is responsible for arranging delivery, who chooses the carrier, and, most importantly, the specific date by which delivery must be completed. Without a defined delivery date, the 'Time is of the essence' provision loses much of its practical effect, and disputes over timely performance are highly likely.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.25,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 22.25,
+          "confidence": 0.78,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [
+          "The absence of a specific delivery date creates a loophole allowing the delivering party to delay performance without clear contractual penalty, despite 'Time is of the essence'."
+        ],
+        "illegalSignals": [],
+        "recommendations": [
+          "Specify a clear and unambiguous delivery completion date.",
+          "Clearly assign responsibility for arranging delivery and choosing the carrier.",
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "Time is of the essence in the performance of this Contract. _______________ will arrange for delivery by carrier chosen by _______________. Delivery shall be completed by _______________.",
+          "revisedClause": "Time is of the essence in the performance of this Contract. [Seller] will arrange for delivery by carrier chosen by [Seller/Buyer]. Delivery shall be completed by [Specific Date].",
+          "justification": "Revision generated from Gemini contract analysis."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "Specify a clear and unambiguous delivery completion date.",
+            "Clearly assign responsibility for arranging delivery and choosing the carrier.",
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "Insist on clearly defining the party responsible for arranging delivery, the party selecting the carrier, and a firm, specific delivery completion date. The 'Time is of the essence' clause should be supported by clear deadlines to be effective."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Dispute over 5. DELIVERY.",
+            "likelyConsequence": "A court would acknowledge 'Time is of the essence' but would struggle to enforce it without a specific delivery date. This could lead to a ruling that a 'reasonable time' for delivery applies, which is subjective and open to interpretation, potentially negating the intent of the clause.",
+            "severity": "critical",
+            "reasoning": "A judge would recognize the 'Time is of the essence' language but would find the clause largely unenforceable due to the missing delivery date and undefined responsibilities for delivery arrangements. This creates ambiguity regarding performance obligations."
+          }
+        ],
+        "courtroomAssessment": {
+          "judgeView": "A judge would recognize the 'Time is of the essence' language but would find the clause largely unenforceable due to the missing delivery date and undefined responsibilities for delivery arrangements. This creates ambiguity regarding performance obligations.",
+          "claimantArguments": [
+            "The claimant (e.g., buyer) would argue that 'Time is of the essence' implies a prompt or reasonable delivery, even without a specific date, and that the defendant failed to meet this.",
+            "The claimant would need to present evidence of what constitutes a 'reasonable' delivery time."
+          ],
+          "defenseArguments": [
+            "The defense (e.g., seller) would argue that without a specific delivery date, there was no breach of the 'Time is of the essence' clause, and that delivery was made within a reasonable timeframe.",
+            "The defense would also point to the missing parties for delivery arrangements as a lack of clarity."
+          ],
+          "likelyRuling": "The court would likely interpret 'Time is of the essence' as requiring delivery within a 'reasonable time' given the circumstances, but without a specific date, proving breach would be challenging. The missing parties for delivery arrangements would also complicate enforcement.",
+          "enforceabilityConcerns": [
+            "Missing specific delivery completion date.",
+            "Undefined party responsible for arranging delivery.",
+            "Undefined party choosing the carrier.",
+            "Weakens the enforceability of 'Time is of the essence'."
+          ],
+          "businessImpact": "Lack of a firm delivery date can lead to delays, production disruptions for the buyer, storage costs, and potential loss of sales. For the seller, it creates uncertainty about performance obligations and potential disputes over what constitutes timely delivery."
+        }
+      }
+    ],
+    "documentStructure": {
+      "documentId": "doc-7de4a6ef4984",
+      "documentKind": "image",
+      "extractionMethod": "gemini_image_ocr",
+      "language": "en",
+      "pages": [
+        {
+          "pageNumber": 1,
+          "width": 228.0,
+          "height": 291.5,
+          "elements": [
+            {
+              "elementId": "vlm-a31e3c86c0",
+              "type": "title",
+              "text": "GENERAL CONTRACT FOR PRODUCTS",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 60.42,
+                "y0": 25.069,
+                "x1": 166.896,
+                "y1": 29.4415,
+                "pageWidth": 228.0,
+                "pageHeight": 291.5
+              },
+              "confidence": 0.74,
+              "hierarchyPath": [
+                "GENERAL CONTRACT FOR PRODUCTS"
+              ],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "vlm_inference"
+              }
+            },
+            {
+              "elementId": "vlm-ae4150da45",
+              "type": "paragraph",
+              "text": "Order Number:",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 79.8,
+                "y0": 37.895,
+                "x1": 102.60000000000001,
+                "y1": 40.81,
+                "pageWidth": 228.0,
+                "pageHeight": 291.5
+              },
+              "confidence": 0.74,
+              "hierarchyPath": [
+                "Order Number:"
+              ],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "vlm_inference"
+              }
+            },
+            {
+              "elementId": "vlm-ee8bd172e0",
+              "type": "paragraph",
+              "text": "This Contract (this \"Contract\") is made effective as of _______________, by and between _______________, of _______________, and _______________, of _______________.",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 26.904,
+                "y0": 50.138,
+                "x1": 200.64000000000001,
+                "y1": 65.879,
+                "pageWidth": 228.0,
+                "pageHeight": 291.5
+              },
+              "confidence": 0.74,
+              "hierarchyPath": [
+                "This Contract (this \"Contract\") is made effective as of _______________, by and between _______________, of _______________, and _______________, of _______________."
+              ],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "vlm_inference"
+              }
+            },
+            {
+              "elementId": "vlm-f76df9f4d8",
+              "type": "section",
+              "text": "1. ITEMS PURCHASED.",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 26.904,
+                "y0": 77.8305,
+                "x1": 75.24000000000001,
+                "y1": 80.7455,
+                "pageWidth": 228.0,
+                "pageHeight": 291.5
+              },
+              "confidence": 0.74,
+              "hierarchyPath": [
+                "1. ITEMS PURCHASED."
+              ],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "vlm_inference"
+              }
+            },
+            {
+              "elementId": "vlm-b78ef65f78",
+              "type": "paragraph",
+              "text": "_______________ agrees to sell, and _______________ agrees to buy, the following products (the \"Goods\") in accordance with the terms and conditions of this Contract:",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 26.904,
+                "y0": 84.535,
+                "x1": 200.64000000000001,
+                "y1": 95.90350000000001,
+                "pageWidth": 228.0,
+                "pageHeight": 291.5
+              },
+              "confidence": 0.74,
+              "hierarchyPath": [
+                "1. ITEMS PURCHASED.",
+                "Paragraph 1"
+              ],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "vlm_inference"
+              }
+            },
+            {
+              "elementId": "vlm-e10efc603e",
+              "type": "paragraph",
+              "text": "TOTAL: $0.00",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 26.904,
+                "y0": 100.5675,
+                "x1": 52.440000000000005,
+                "y1": 103.4825,
+                "pageWidth": 228.0,
+                "pageHeight": 291.5
+              },
+              "confidence": 0.74,
+              "hierarchyPath": [
+                "1. ITEMS PURCHASED.",
+                "TOTAL: $0.00"
+              ],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "vlm_inference"
+              }
+            },
+            {
+              "elementId": "vlm-9ea19a7169",
+              "type": "section",
+              "text": "2. PRODUCT STANDARDS.",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 26.904,
+                "y0": 112.519,
+                "x1": 84.36,
+                "y1": 115.43400000000001,
+                "pageWidth": 228.0,
+                "pageHeight": 291.5
+              },
+              "confidence": 0.74,
+              "hierarchyPath": [
+                "2. PRODUCT STANDARDS."
+              ],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "vlm_inference"
+              }
+            },
+            {
+              "elementId": "vlm-7cb2b6a3c2",
+              "type": "paragraph",
+              "text": "The Goods shall comply with the _______________'s quotation dated _______________ and incorporated into this Contract by this reference.",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 26.904,
+                "y0": 119.22349999999999,
+                "x1": 200.64000000000001,
+                "y1": 130.592,
+                "pageWidth": 228.0,
+                "pageHeight": 291.5
+              },
+              "confidence": 0.74,
+              "hierarchyPath": [
+                "2. PRODUCT STANDARDS.",
+                "Paragraph 1"
+              ],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "vlm_inference"
+              }
+            },
+            {
+              "elementId": "vlm-11e9f5cb0e",
+              "type": "section",
+              "text": "3. TITLE/RISK OF LOSS.",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 26.904,
+                "y0": 133.79850000000002,
+                "x1": 84.36,
+                "y1": 136.71349999999998,
+                "pageWidth": 228.0,
+                "pageHeight": 291.5
+              },
+              "confidence": 0.74,
+              "hierarchyPath": [
+                "3. TITLE/RISK OF LOSS."
+              ],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "vlm_inference"
+              }
+            },
+            {
+              "elementId": "vlm-dc45c58618",
+              "type": "paragraph",
+              "text": "Buyer shall pay reasonable shipping costs in accordance with its shipping instructions, but the seller shall be responsible for packaging, shipping and safe delivery and shall bear all risk of damage or loss until the goods are delivered to the buyer's address.",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 26.904,
+                "y0": 140.503,
+                "x1": 200.64000000000001,
+                "y1": 156.244,
+                "pageWidth": 228.0,
+                "pageHeight": 291.5
+              },
+              "confidence": 0.74,
+              "hierarchyPath": [
+                "3. TITLE/RISK OF LOSS.",
+                "Paragraph 1"
+              ],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "vlm_inference"
+              }
+            },
+            {
+              "elementId": "vlm-df52f8080e",
+              "type": "section",
+              "text": "4. PAYMENT.",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 26.904,
+                "y0": 159.4505,
+                "x1": 54.72,
+                "y1": 162.36550000000003,
+                "pageWidth": 228.0,
+                "pageHeight": 291.5
+              },
+              "confidence": 0.74,
+              "hierarchyPath": [
+                "4. PAYMENT."
+              ],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "vlm_inference"
+              }
+            },
+            {
+              "elementId": "vlm-feb7e5124c",
+              "type": "paragraph",
+              "text": "Payment shall be made to _______________, in the amount of $0.00 upon delivery of all Goods described in this Contract.",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 26.904,
+                "y0": 166.15499999999997,
+                "x1": 200.64000000000001,
+                "y1": 177.52349999999998,
+                "pageWidth": 228.0,
+                "pageHeight": 291.5
+              },
+              "confidence": 0.74,
+              "hierarchyPath": [
+                "4. PAYMENT.",
+                "Paragraph 1"
+              ],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "vlm_inference"
+              }
+            },
+            {
+              "elementId": "vlm-681e39387a",
+              "type": "paragraph",
+              "text": "Payment discount terms are as follows: a 0 percent discount if total bill is paid within 0 days.",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 26.904,
+                "y0": 181.313,
+                "x1": 190.83599999999998,
+                "y1": 184.228,
+                "pageWidth": 228.0,
+                "pageHeight": 291.5
+              },
+              "confidence": 0.74,
+              "hierarchyPath": [
+                "4. PAYMENT.",
+                "Paragraph 2"
+              ],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "vlm_inference"
+              }
+            },
+            {
+              "elementId": "vlm-4c049d9d09",
+              "type": "paragraph",
+              "text": "If any invoice is not paid when due, interest will be added to and payable on all overdue amounts at 0 percent per year or the maximum percentage allowed under applicable laws, whichever is less. _______________ shall pay all costs of collection, including without limitation, reasonable attorney fees.",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 26.904,
+                "y0": 188.0175,
+                "x1": 200.64000000000001,
+                "y1": 204.04999999999998,
+                "pageWidth": 228.0,
+                "pageHeight": 291.5
+              },
+              "confidence": 0.74,
+              "hierarchyPath": [
+                "4. PAYMENT.",
+                "Paragraph 3"
+              ],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "vlm_inference"
+              }
+            },
+            {
+              "elementId": "vlm-8b273fbfd9",
+              "type": "paragraph",
+              "text": "In addition to any other right or remedy provided by law, if _______________ fails to pay for the Goods when due, _______________ has the option to treat such failure to pay as a material breach of this Contract and may cancel this Contract and/or seek legal remedies.",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 26.904,
+                "y0": 207.548,
+                "x1": 200.64000000000001,
+                "y1": 223.28900000000002,
+                "pageWidth": 228.0,
+                "pageHeight": 291.5
+              },
+              "confidence": 0.74,
+              "hierarchyPath": [
+                "4. PAYMENT.",
+                "Paragraph 4"
+              ],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "vlm_inference"
+              }
+            },
+            {
+              "elementId": "vlm-6d3a18be48",
+              "type": "section",
+              "text": "5. DELIVERY.",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 26.904,
+                "y0": 226.49550000000002,
+                "x1": 57.0,
+                "y1": 229.4105,
+                "pageWidth": 228.0,
+                "pageHeight": 291.5
+              },
+              "confidence": 0.74,
+              "hierarchyPath": [
+                "5. DELIVERY."
+              ],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "vlm_inference"
+              }
+            },
+            {
+              "elementId": "vlm-f0ae6744d2",
+              "type": "paragraph",
+              "text": "Time is of the essence in the performance of this Contract. _______________ will arrange for delivery by carrier chosen by _______________.",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 26.904,
+                "y0": 233.20000000000002,
+                "x1": 200.64000000000001,
+                "y1": 244.5685,
+                "pageWidth": 228.0,
+                "pageHeight": 291.5
+              },
+              "confidence": 0.74,
+              "hierarchyPath": [
+                "5. DELIVERY.",
+                "Paragraph 1"
+              ],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "vlm_inference"
+              }
+            },
+            {
+              "elementId": "vlm-0d3ac1a214",
+              "type": "paragraph",
+              "text": "Delivery shall be completed by _______________.",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 26.904,
+                "y0": 248.358,
+                "x1": 111.72,
+                "y1": 251.273,
+                "pageWidth": 228.0,
+                "pageHeight": 291.5
+              },
+              "confidence": 0.74,
+              "hierarchyPath": [
+                "5. DELIVERY.",
+                "Paragraph 2"
+              ],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "vlm_inference"
+              }
+            },
+            {
+              "elementId": "vlm-8a7e116010",
+              "type": "annotation",
+              "text": "ROCKETLAWYER®",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 59.052,
+                "y0": 257.3945,
+                "x1": 168.72,
+                "y1": 267.8885,
+                "pageWidth": 228.0,
+                "pageHeight": 291.5
+              },
+              "confidence": 0.74,
+              "hierarchyPath": [
+                "ROCKETLAWYER®"
+              ],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "vlm_inference"
+              }
+            },
+            {
+              "elementId": "vlm-1dffd67644",
+              "type": "annotation",
+              "text": "AI insights with Rocket Copilot™",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 77.06400000000001,
+                "y0": 279.257,
+                "x1": 150.48000000000002,
+                "y1": 282.17199999999997,
+                "pageWidth": 228.0,
+                "pageHeight": 291.5
+              },
+              "confidence": 0.74,
+              "hierarchyPath": [
+                "AI insights with Rocket Copilot™"
+              ],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "vlm_inference"
+              }
+            }
+          ]
+        }
+      ],
+      "hierarchy": [
+        "GENERAL CONTRACT FOR PRODUCTS",
+        "1. ITEMS PURCHASED.",
+        "2. PRODUCT STANDARDS.",
+        "3. TITLE/RISK OF LOSS.",
+        "4. PAYMENT.",
+        "5. DELIVERY."
+      ],
+      "clauseSegments": [
+        {
+          "clauseId": "clause-001",
+          "sectionReference": "Order Number",
+          "hierarchy": [
+            "Order Number"
+          ],
+          "title": "",
+          "originalText": "This Contract (this \"Contract\") is made effective as of _______________, by and between _______________, of _______________, and _______________, of _______________."
+        },
+        {
+          "clauseId": "clause-002",
+          "sectionReference": "1. ITEMS PURCHASED.",
+          "hierarchy": [
+            "1. ITEMS PURCHASED."
+          ],
+          "title": "",
+          "originalText": "_______________ agrees to sell, and _______________ agrees to buy, the following products (the \"Goods\") in accordance with the terms and conditions of this Contract:"
+        },
+        {
+          "clauseId": "clause-003",
+          "sectionReference": "2. PRODUCT STANDARDS.",
+          "hierarchy": [
+            "2. PRODUCT STANDARDS."
+          ],
+          "title": "",
+          "originalText": "The Goods shall comply with the _______________'s quotation dated _______________ and incorporated into this Contract by this reference."
+        },
+        {
+          "clauseId": "clause-004",
+          "sectionReference": "3. TITLE/RISK OF LOSS.",
+          "hierarchy": [
+            "3. TITLE/RISK OF LOSS."
+          ],
+          "title": "",
+          "originalText": "Buyer shall pay reasonable shipping costs in accordance with its shipping instructions, but the seller shall be responsible for packaging, shipping and safe delivery and shall bear all risk of damage or loss until the goods are delivered to the buyer's address."
+        },
+        {
+          "clauseId": "clause-005",
+          "sectionReference": "3. TITLE/RISK OF LOSS.",
+          "hierarchy": [
+            "3. TITLE/RISK OF LOSS.",
+            "4"
+          ],
+          "title": "",
+          "originalText": "PAYMENT. Payment shall be made to _______________, in the amount of $0.00 upon delivery of all Goods described in this Contract. Payment discount terms are as follows: a 0 percent discount if total bill is paid within 0 days. If any invoice is not paid when due, interest will be added to and payable on all overdue amounts at 0 percent per year or the maximum percentage allowed under applicable laws, whichever is less. _______________ shall pay all costs of collection, including without limitation, reasonable attorney fees. In addition to any other right or remedy provided by law, if _______________ fails to pay for the Goods when due, _______________ has the option to treat such failure to pay as a material breach of this Contract and may cancel this Contract and/or seek legal remedies."
+        },
+        {
+          "clauseId": "clause-006",
+          "sectionReference": "3. TITLE/RISK OF LOSS.",
+          "hierarchy": [
+            "3. TITLE/RISK OF LOSS.",
+            "5"
+          ],
+          "title": "",
+          "originalText": "DELIVERY. Time is of the essence in the performance of this Contract. _______________ will arrange for delivery by carrier chosen by _______________. Delivery shall be completed by _______________. ROCKETLAWYER® AI insights with Rocket Copilot™"
+        }
+      ],
+      "tables": [],
+      "signatures": [],
+      "annotations": [
+        {
+          "elementId": "vlm-8a7e116010",
+          "type": "annotation",
+          "text": "ROCKETLAWYER®",
+          "pageNumber": 1,
+          "bbox": {
+            "x0": 59.052,
+            "y0": 257.3945,
+            "x1": 168.72,
+            "y1": 267.8885,
+            "pageWidth": 228.0,
+            "pageHeight": 291.5
+          },
+          "confidence": 0.74,
+          "hierarchyPath": [
+            "ROCKETLAWYER®"
+          ],
+          "parentId": null,
+          "children": [],
+          "tableCells": [],
+          "metadata": {
+            "source": "vlm_inference"
+          }
+        },
+        {
+          "elementId": "vlm-1dffd67644",
+          "type": "annotation",
+          "text": "AI insights with Rocket Copilot™",
+          "pageNumber": 1,
+          "bbox": {
+            "x0": 77.06400000000001,
+            "y0": 279.257,
+            "x1": 150.48000000000002,
+            "y1": 282.17199999999997,
+            "pageWidth": 228.0,
+            "pageHeight": 291.5
+          },
+          "confidence": 0.74,
+          "hierarchyPath": [
+            "AI insights with Rocket Copilot™"
+          ],
+          "parentId": null,
+          "children": [],
+          "tableCells": [],
+          "metadata": {
+            "source": "vlm_inference"
+          }
+        }
+      ],
+      "rawText": "GENERAL CONTRACT FOR PRODUCTS\nOrder Number:\nThis Contract (this \"Contract\") is made effective as of _______________, by and between _______________, of _______________, and _______________, of _______________.\n1. ITEMS PURCHASED.\n_______________ agrees to sell, and _______________ agrees to buy, the following products (the \"Goods\") in accordance with the terms and conditions of this Contract:\nTOTAL: $0.00\n2. PRODUCT STANDARDS.\nThe Goods shall comply with the _______________'s quotation dated _______________ and incorporated into this Contract by this reference.\n3. TITLE/RISK OF LOSS.\nBuyer shall pay reasonable shipping costs in accordance with its shipping instructions, but the seller shall be responsible for packaging, shipping and safe delivery and shall bear all risk of damage or loss until the goods are delivered to the buyer's address.\n4. PAYMENT.\nPayment shall be made to _______________, in the amount of $0.00 upon delivery of all Goods described in this Contract.\nPayment discount terms are as follows: a 0 percent discount if total bill is paid within 0 days.\nIf any invoice is not paid when due, interest will be added to and payable on all overdue amounts at 0 percent per year or the maximum percentage allowed under applicable laws, whichever is less. _______________ shall pay all costs of collection, including without limitation, reasonable attorney fees.\nIn addition to any other right or remedy provided by law, if _______________ fails to pay for the Goods when due, _______________ has the option to treat such failure to pay as a material breach of this Contract and may cancel this Contract and/or seek legal remedies.\n5. DELIVERY.\nTime is of the essence in the performance of this Contract. _______________ will arrange for delivery by carrier chosen by _______________.\nDelivery shall be completed by _______________.\nROCKETLAWYER®\nAI insights with Rocket Copilot™",
+      "reconstructionNotes": [
+        "Prepared image page for VLM-based document understanding."
+      ]
+    },
+    "ingestionEvaluation": {
+      "documentStructureAccuracy": 0.55,
+      "clauseDetectionAccuracy": 0.9300368227248816,
+      "tableExtractionAccuracy": 0.0,
+      "layoutDetectionPrecision": 0.3,
+      "processingLatencyMs": 17720.74,
+      "notes": [
+        "Reference-free intrinsic evaluation used because no gold annotation was supplied."
+      ]
+    },
+    "contractorCredibility": {
+      "score": 49.2,
+      "rating": "weak",
+      "summary": "Public-source diligence for tesla found 2 positive and 6 negative signals across news, dispute, regulatory, and reputation-oriented searches. Credibility is rated weak because the signal mix shows 2 positive and 6 negative indicators, with 4 neutral footprint signals.",
+      "positiveSignals": [
+        "Public positive signal: expansion: Elon Musk has confirmed that Tesla's ambitious Terafab project will officially launch in seven days. The project represents a massive shift in Tesla's strategy, as the company moves to build its own semiconductors domestically to power its fleet of autonomous vehicles and humanoid robots. The announcement follows months of speculation regarding Tesla's North Campus expansion […]",
+        "Public positive signal: funding: Tesla Motors Club is the official platform of the electric vehicle club and forum for Tesla enthusiasts. Its discussions include topics such as events, technical aspects, energy consumption, environment, Tesla Motors, vehicle models, and more."
+      ],
+      "negativeSignals": [
+        "Public negative signal: lawsuit: A class-action lawsuit in California alleges that some drivers were overcharged based on inaccurate vehicle safety data, raising questions about the accuracy and fairness of Tesla's insurance ...",
+        "Public negative signal: lawsuit: Tesla has filed a lawsuit against the California Department of Motor Vehicles (DMV) to overturn a ruling that the agency says the automaker overstated the capabilities of its Autopilot system, alleging deceptive marketing practices. What sparked the legal showdown? In a TechCrunch report published on February 23, 2026, the details of Tesla's fresh lawsuit were",
+        "Public negative signal: lawsuit: Tesla is facing mounting legal and regulatory scrutiny over its electronic door handle designs. A newly proposed class action lawsuit , filed in California federal court, alleges that recent Model S vehicles contain a critical safety defect that can leave occupants trapped inside the car during emergencies if the vehicle loses low-voltage power.",
+        "Public negative signal: lawsuit: As Tesla Chief Executive Elon Musk banks the future of his company on autonomous robotaxis, several lawsuits raise concerns over the safety of the technology.",
+        "Public negative signal: lawsuit: - Tesla faces global legal challenges over Autopilot/FSD safety claims, including a $329M liability verdict in Miami and California's misleading advertising lawsuit . - Regulatory delays for robotaxi services and lack of safety certifications contrast with Waymo's 250K weekly rides, exposing competitive disadvantages. - Shareholder lawsuits and Q2 revenue declines (-12% YoY) highlight financial ...",
+        "Public negative signal: sued: California's DMV sued Tesla in 2022 and is seeking to suspend Tesla's ability to sell cars in the state for at least 30 days."
+      ],
+      "sources": [
+        "https://teslanorth.com/",
+        "https://www.crunchbase.com/organization/tesla-motors-club",
+        "https://www.teslarati.com/category/tesla/",
+        "https://finance.yahoo.com/quote/TSLA/",
+        "https://www.msn.com/en-in/autos/news/tesla-set-to-launch-gigantic-chip-fab-project-in-seven-says-elon-musk/ar-AA1YE8lJ",
+        "https://www.insurancebusinessmag.com/us/news/risk-compliance-legal/tesla-insurance-hit-by-california-regulatory-action-552029.aspx",
+        "https://ubos.tech/news/tesla-sues-california-dmv-over-autopilot-claims-legal-battle-escalates/",
+        "https://www.thestreet.com/automotive/tesla-faces-new-class-action-lawsuit"
+      ],
+      "framework": "credibility = 58 + 24*avg_positive_signal - 34*avg_negative_signal + evidence_coverage + registry_bonus, clamped to [0,100]"
+    },
+    "evaluationMetrics": {
+      "contract_classification": "top-1 accuracy, macro-F1, calibration error",
+      "clause_segmentation": "boundary F1, hierarchical consistency, clause coverage",
+      "risk_detection": "AUROC, precision@critical, weighted Brier score, explanation faithfulness",
+      "explanation_quality": "human adequacy, factual consistency, edit distance to gold simplifications"
+    },
+    "generatedAt": "2026-03-16T16:00:02.742222"
+  },
+  "searchableText": "GENERAL CONTRACT FOR PRODUCTS\nOrder Number:\nThis Contract (this \"Contract\") is made effective as of _______________, by and between _______________, of _______________, and _______________, of _______________.\n1. ITEMS PURCHASED.\n_______________ agrees to sell, and _______________ agrees to buy, the following products (the \"Goods\") in accordance with the terms and conditions of this Contract:\nTOTAL: $0.00\n2. PRODUCT STANDARDS.\nThe Goods shall comply with the _______________'s quotation dated _______________ and incorporated into this Contract by this reference.\n3. TITLE/RISK OF LOSS.\nBuyer shall pay reasonable shipping costs in accordance with its shipping instructions, but the seller shall be responsible for packaging, shipping and safe delivery and shall bear all risk of damage or loss until the goods are delivered to the buyer's address.\n4. PAYMENT.\nPayment shall be made to _______________, in the amount of $0.00 upon delivery of all Goods described in this Contract.\nPayment discount terms are as follows: a 0 percent discount if total bill is paid within 0 days.\nIf any invoice is not paid when due, interest will be added to and payable on all overdue amounts at 0 percent per year or the maximum percentage allowed under applicable laws, whichever is less. _______________ shall pay all costs of collection, including without limitation, reasonable attorney fees.\nIn addition to any other right or remedy provided by law, if _______________ fails to pay for the Goods when due, _______________ has the option to treat such failure to pay as a material breach of this Contract and may cancel this Contract and/or seek legal remedies.\n5. DELIVERY.\nTime is of the essence in the performance of this Contract. _______________ will arrange for delivery by carrier chosen by _______________.\nDelivery shall be completed by _______________.\nROCKETLAWYER®\nAI insights with Rocket Copilot™\nThis Contract (this \"Contract\") is made effective as of _______________, by and between _______________, of _______________, and _______________, of _______________.\nThis contract becomes effective on a specified date, between two identified parties, each from a specified location.\n_______________ agrees to sell, and _______________ agrees to buy, the following products (the \"Goods\") in accordance with the terms and conditions of this Contract: TOTAL: $0.00\nA seller agrees to sell, and a buyer agrees to buy, specific products (the \"Goods\") under this contract. The total price for these goods is $0.00.\nThe Goods shall comply with the _______________'s quotation dated _______________ and incorporated into this Contract by this reference.\nThe products must meet the standards specified in a particular party's quotation, dated on a specific day, which is included as part of this contract.\nBuyer shall pay reasonable shipping costs in accordance with its shipping instructions, but the seller shall be responsible for packaging, shipping and safe delivery and shall bear all risk of damage or loss until the goods are delivered to the buyer's address.\nThe buyer pays for shipping based on their instructions. The seller is responsible for packaging, shipping, safe delivery, and bears all risk of damage or loss until the goods arrive at the buyer's address.\nPayment shall be made to _______________, in the amount of $0.00 upon delivery of all Goods described in this Contract. Payment discount terms are as follows: a 0 percent discount if total bill is paid within 0 days. If any invoice is not paid when due, interest will be added to and payable on all overdue amounts at 0 percent per year or the maximum percentage allowed under applicable laws, whichever is less. _______________ shall pay all costs of collection, including without limitation, reasonable attorney fees. In addition to any other right or remedy provided by law, if _______________ fails to pay for the Goods when due, _______________ has the option to treat such failure to pay as a material breach of this Contract and may cancel this Contract and/or seek legal remedies.\nPayment of $0.00 is due to an unnamed party upon delivery of goods. There is no discount for early payment. Overdue payments accrue interest at 0% per year or the maximum allowed by law, whichever is less. An unnamed party pays collection costs, including attorney fees. If an unnamed party fails to pay, another unnamed party can consider it a material breach, cancel the contract, or seek legal remedies.\nTime is of the essence in the performance of this Contract. _______________ will arrange for delivery by carrier chosen by _______________. Delivery shall be completed by _______________.\nTimely performance is crucial for this contract. An unnamed party will arrange delivery using a carrier chosen by another unnamed party. Delivery must be completed by a specific, unnamed date.",
+  "createdAt": "2026-03-16T16:00:02.744223",
+  "updatedAt": "2026-03-16T16:00:02.744223"
+}
