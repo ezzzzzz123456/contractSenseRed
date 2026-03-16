@@ -1,3 +1,4 @@
+import WorkspaceHeader from "../components/WorkspaceHeader";
 import LawyerCard from "../components/LawyerCard";
 import type { Lawyer } from "../types";
 
@@ -10,11 +11,18 @@ const lawyer: Lawyer = {
 };
 
 const MarketplacePage = (): JSX.Element => (
-  <main className="page-shell grid">
-    <h1>Lawyer Marketplace</h1>
-    <LawyerCard lawyer={lawyer} />
-  </main>
+  <div className="workspace-page">
+    <WorkspaceHeader actionLabel="Request Lawyer Review" actionTo="/lawyers/dashboard" />
+    <main className="report-layout">
+      <div className="section-heading section-heading--left">
+        <h2>Lawyer Marketplace</h2>
+        <p>Connect with verified legal professionals for human review, trust seal verification, and negotiation support.</p>
+      </div>
+      <div className="portal-grid">
+        <LawyerCard lawyer={lawyer} />
+      </div>
+    </main>
+  </div>
 );
 
 export default MarketplacePage;
-

@@ -6,21 +6,16 @@ const colorMap: Record<RiskFlagType, string> = {
   green: "#1e8a4c",
 };
 
+const labelMap: Record<RiskFlagType, string> = {
+  red: "High Risk",
+  yellow: "Med Risk",
+  green: "Low Risk",
+};
+
 const RiskFlag = ({ value }: { value: RiskFlagType }): JSX.Element => (
-  <span
-    style={{
-      display: "inline-block",
-      padding: "0.25rem 0.65rem",
-      borderRadius: 9999,
-      backgroundColor: `${colorMap[value]}18`,
-      color: colorMap[value],
-      fontWeight: 700,
-      textTransform: "uppercase",
-    }}
-  >
-    {value}
+  <span className="risk-pill" style={{ backgroundColor: `${colorMap[value]}18`, color: colorMap[value] }}>
+    {labelMap[value]}
   </span>
 );
 
 export default RiskFlag;
-

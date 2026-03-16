@@ -3,7 +3,6 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { AuthProvider } from "./context/AuthContext";
 import { ContractProvider } from "./context/ContractContext";
-import Navbar from "./components/Navbar";
 import AuthPage from "./pages/AuthPage";
 import UserDashboard from "./pages/UserDashboard";
 import LawyerDashboard from "./pages/LawyerDashboard";
@@ -16,7 +15,6 @@ const App = (): JSX.Element => (
   <AuthProvider>
     <ContractProvider>
       <BrowserRouter>
-        <Navbar />
         <Routes>
           <Route path="/" element={<AuthPage />} />
           <Route path="/dashboard" element={<UserDashboard />} />
@@ -35,4 +33,3 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
     <App />
   </React.StrictMode>,
 );
-

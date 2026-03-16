@@ -33,7 +33,12 @@ export interface Contract {
 export interface Report {
   _id?: string;
   contractId: string;
-  aiOutput: Record<string, unknown>;
+  aiOutput: {
+    summary?: string;
+    overallRiskScore?: number;
+    recommendations?: string[];
+    [key: string]: unknown;
+  };
   lawyerOutput: Record<string, unknown>;
   trustSeal?: string;
   exportedPdfUrl?: string;
@@ -84,4 +89,19 @@ export interface AuthResponse {
 
 export interface CurrentUserResponse {
   user: User;
+}
+
+export interface ContractListResponse {
+  contracts: Contract[];
+}
+
+export interface ContractUploadResponse {
+  message: string;
+  contract: Contract;
+}
+
+export interface ContractAnalysisTriggerResponse {
+  message: string;
+  contract: Contract;
+  report: Report | null;
 }
