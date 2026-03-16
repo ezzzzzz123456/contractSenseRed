@@ -373,12 +373,7 @@ class DocumentIngestionService:
             pages: list[str] = []
             for page_index in range(len(document)):
                 page = document.load_page(page_index)
-                blocks = sorted(page.get_text("blocks"), key=lambda block: (round(block[1], 1), round(block[0], 1)))
-                block_texts = []
-                for block in blocks:
-                    text = (block[4] or "").strip()
-                    if text:
-                        block_texts.append(text)
+                block_texts = self._ordered_page_blocks(page)
                 if block_texts:
                     pages.append("\n".join(block_texts))
             document.close()
@@ -400,6 +395,7 @@ class DocumentIngestionService:
         normalized = BROKEN_WORD_PATTERN.sub(r"\1\2", normalized)
         lines = [MULTISPACE_PATTERN.sub(" ", line).strip() for line in normalized.split("\n")]
         lines = self._remove_repeated_headers(lines)
+        lines = self._repair_fragmented_lines(lines)
         rebuilt: list[str] = []
         buffer = ""
 
@@ -457,6 +453,59 @@ class DocumentIngestionService:
         if len(current.split()) <= 3 and current[0].isupper():
             return False
         return True
+
+    def _ordered_page_blocks(self, page) -> list[str]:
+        try:
+            blocks = page.get_text("dict").get("blocks", [])
+        except Exception:
+            return []
+        text_blocks = [block for block in blocks if block.get("type") == 0]
+        if not text_blocks:
+            return []
+
+        page_width = float(page.rect.width or 1.0)
+        column_cutoff = page_width * 0.18
+        left_blocks = [block for block in text_blocks if float(block.get("bbox", [0.0])[0]) < column_cutoff]
+        right_blocks = [block for block in text_blocks if float(block.get("bbox", [0.0])[0]) >= column_cutoff]
+        ordered_columns = [left_blocks, right_blocks] if left_blocks and right_blocks else [text_blocks]
+
+        ordered_texts: list[str] = []
+        for column_blocks in ordered_columns:
+            for block in sorted(column_blocks, key=lambda item: (round(item.get("bbox", [0, 0])[1], 1), round(item.get("bbox", [0, 0])[0], 1))):
+                lines: list[str] = []
+                for line in block.get("lines", []):
+                    spans = line.get("spans", [])
+                    line_text = "".join(str(span.get("text") or "") for span in spans).strip()
+                    if line_text:
+                        lines.append(line_text)
+                paragraph = self._normalize_legal_text("\n".join(lines)).strip()
+                if paragraph:
+                    ordered_texts.append(paragraph)
+        return ordered_texts
+
+    def _repair_fragmented_lines(self, lines: list[str]) -> list[str]:
+        repaired: list[str] = []
+        for line in lines:
+            if not line:
+                continue
+            if repaired and self._should_attach_to_previous(repaired[-1], line):
+                repaired[-1] = f"{repaired[-1]} {line}".strip()
+            else:
+                repaired.append(line)
+        return repaired
+
+    def _should_attach_to_previous(self, previous: str, current: str) -> bool:
+        if self._is_heading_line(current) or self._is_clause_start(current):
+            return False
+        if previous.endswith((",", "(", "-", "/")):
+            return True
+        if current[:1].islower():
+            return True
+        if len(current.split()) <= 2 and not current.endswith((".", ";", ":")):
+            return True
+        if previous and previous[-1].isalnum() and current and current[0].isalnum() and not previous.endswith((".", ";", ":")):
+            return len(current.split()) <= 6
+        return False
 
     def _text_quality_score(self, text: str) -> float:
         if not text:

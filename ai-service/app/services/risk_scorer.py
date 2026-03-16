@@ -107,6 +107,64 @@ class RiskScorerService:
         clause.legalScenarios = result["scenarios"]  # type: ignore[assignment]
         return clause
 
+    def contextualize_clause(
+        self,
+        clause: ClauseAnalysis,
+        related_texts: list[str],
+        cross_references: list[str],
+    ) -> ClauseAnalysis:
+        if not related_texts and not cross_references:
+            return clause
+
+        related_blob = " ".join(related_texts).lower()
+        context_bonus = 0.0
+        context_notes: list[str] = []
+
+        if ("subject to" in clause.originalText.lower() or "except as provided" in clause.originalText.lower()) and related_texts:
+            context_bonus += 6.0
+            context_notes.append("This clause depends on another clause for its full effect.")
+        if ("notwithstanding" in clause.originalText.lower() or "prevail over" in clause.originalText.lower()) and related_texts:
+            context_bonus += 8.0
+            clause.loopholes.append("Cross-clause override language may weaken protections elsewhere in the contract.")
+            context_notes.append("Override wording can change the meaning of the referenced clause.")
+        if "terminate" in clause.originalText.lower() and ("payment" in related_blob or "fee" in related_blob):
+            context_bonus += 5.0
+            context_notes.append("Termination and payment clauses interact, increasing operational leverage.")
+        if "liability" in clause.originalText.lower() and ("indemn" in related_blob or "defend" in related_blob):
+            context_bonus += 7.0
+            context_notes.append("Liability terms must be read together with indemnity obligations.")
+        if "confidential" in clause.originalText.lower() and ("termination" in related_blob or "survive" in related_blob):
+            context_bonus += 4.0
+            context_notes.append("Survival or termination language affects how long confidentiality duties last.")
+
+        if cross_references:
+            context_bonus += min(8.0, 2.5 * len(cross_references))
+            context_notes.append(f"Detected {len(cross_references)} explicit cross-reference(s).")
+
+        if context_bonus <= 0.0:
+            return clause
+
+        clause.riskScore = min(100.0, round(clause.riskScore + context_bonus, 2))
+        clause.riskBreakdown.loopholeExposure = min(1.0, round(clause.riskBreakdown.loopholeExposure + min(0.18, context_bonus / 50.0), 2))
+        clause.riskBreakdown.ambiguity = min(1.0, round(clause.riskBreakdown.ambiguity + min(0.12, len(cross_references) * 0.03), 2))
+        clause.riskBreakdown.score = clause.riskScore
+        if clause.riskScore >= 55:
+            clause.riskCategory = "critical"
+            clause.colorIndicator = "red"
+        elif clause.riskScore >= 28:
+            clause.riskCategory = "warning"
+            clause.colorIndicator = "yellow"
+
+        clause.explanation = f"{clause.explanation} Cross-clause context: {' '.join(context_notes)}".strip()
+        clause.recommendations = self._merge_unique(
+            clause.recommendations,
+            [
+                "Review this clause together with all clauses it references or overrides.",
+                "Add an explicit order-of-precedence rule so linked clauses do not conflict silently.",
+            ],
+        )
+        return clause
+
     def aggregate_contract_scores(self, clauses: list[ClauseAnalysis]) -> dict[str, float | str]:
         scores = [clause.riskScore for clause in clauses] or [0.0]
         fairness_values = [1.0 - clause.riskBreakdown.fairnessImbalance for clause in clauses] or [1.0]
@@ -282,6 +340,13 @@ class RiskScorerService:
             "one_sided_termination": int(bool(re.search(r"\b(company|client|buyer)\b.*\bmay terminate\b", text) and not re.search(r"\beither party\b", text))),
             "exclusive_ip": int(bool(re.search(r"\bowned exclusively\b|\bwork made for hire\b", text))),
         }
+
+    def _merge_unique(self, left: list[str], right: list[str]) -> list[str]:
+        merged: list[str] = []
+        for item in left + right:
+            if item and item not in merged:
+                merged.append(item)
+        return merged[:8]
 
 
 risk_scorer = RiskScorerService()

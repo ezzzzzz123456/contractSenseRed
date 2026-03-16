@@ -6,15 +6,15 @@ Build ContractSense, an AI-powered contract analysis platform with:
 
 - a Vite + React + TypeScript frontend
 - a Node.js + Express + TypeScript gateway backend
-- a Python + FastAPI AI service maintained by a separate developer
+- a Python + FastAPI AI service
 - MongoDB for persistence
 - Docker Compose for local multi-service orchestration
 
 ## Current Phase
 
-Foundation complete, Feature 1 complete, Feature 2 complete, Feature 3 complete, Feature 4 complete, and Feature 5 complete.
+Integrated finalization on `dev`.
 
-The application now supports the core product workflow end to end. Contracts can be uploaded, analyzed through the gateway-to-AI flow, sent into the lawyer marketplace for review, assigned to a lawyer queue, reviewed by counsel, finalized with a trust seal, exported as a generated PDF, securely shared, and reopened directly through reload-safe analysis/report URLs.
+The application now supports the core product workflow end to end across the frontend, central backend, AI backend, and MongoDB. Contracts can be uploaded, analyzed through the gateway-to-AI flow, sent into the lawyer marketplace for review, assigned to a lawyer queue, reviewed by counsel, finalized with a trust seal, exported as a generated PDF, securely shared, reopened directly through reload-safe analysis/report URLs, and enriched through the merged contract-intelligence report flow.
 
 ## What Is Done
 
@@ -23,7 +23,7 @@ The application now supports the core product workflow end to end. Contracts can
 - Local `.env` configured for development
 - Frontend bootstrapped with Vite, React Router v6, shared types, pages, components, hooks, and context
 - Backend bootstrapped with Express app setup, environment config, Mongo connection helper, middleware, models, routes, controllers, and AI proxy client
-- AI service scaffolded and running, but treated as out of scope for current implementation ownership
+- AI service scaffolded, extended, and now integrated into the finalized `dev` branch
 - Feature 1 auth implemented in frontend and backend:
   - user registration
   - user login
@@ -72,6 +72,15 @@ The application now supports the core product workflow end to end. Contracts can
   - lawyers can load their assigned review queue
   - lawyer dashboard links directly into the requested contract’s report page
   - marketplace and lawyer dashboard UI now reflect the live assignment workflow
+- Integrated contract-intelligence flow merged into `dev`:
+  - backend AI proxy now exposes intelligence routes for stored report retrieval and contract assistant queries
+  - frontend can request stored intelligence reports from the central backend instead of calling the AI service directly
+  - outcome simulator can use stored contract context and citations
+  - extracted document structure and advanced analysis payloads are supported in the merged frontend types/UI
+- Merge finalization completed on `dev`:
+  - `feature/contrac` and `origin/codex/contract-intelligence-platform` are now reconciled in one branch
+  - merge conflicts resolved in shared frontend/backend files
+  - builds re-verified after merge completion
 - Live Docker verification completed:
   - frontend reachable on `http://localhost:3000`
   - backend reachable on `http://localhost:5001`
@@ -92,11 +101,13 @@ The application now supports the core product workflow end to end. Contracts can
   - fetch shared report
   - request lawyer review from marketplace
   - fetch lawyer assigned review queue
+  - fetch stored intelligence report through backend proxy
+  - run outcome simulation against stored contract context
   - open reload-safe routes for `/analysis/:contractId`, `/report/:contractId`, and `/report/shared/:shareToken`
 
 ## What Is Partially Done
 
-- Analysis works, but real PDF or DOC parsing is still stubbed for non-text files
+- Analysis works, but some parsing/intelligence paths still rely on heuristic or stubbed behavior depending on document type and available source text
 - Marketplace assignment works, but richer filtering, availability, and booking workflow are still thin
 - Lawyer dashboard queue works, but broader operational tooling is still minimal
 - Email and payment services remain placeholder integrations
@@ -108,6 +119,7 @@ The application now supports the core product workflow end to end. Contracts can
 - Production-grade secure sharing controls and revocation management
 - Protected-route UX polish and deeper role-based frontend gating
 - Validation hardening, tests, observability, and production security controls
+- End-to-end automated integration tests for the merged intelligence and review workflows
 
 ## Milestone Log
 
@@ -125,18 +137,20 @@ The application now supports the core product workflow end to end. Contracts can
 - Feature 3 AI analysis pipeline implemented and verified
 - Feature 4 report persistence and UI implemented and verified
 - Feature 5 lawyer marketplace implemented and verified
+- `dev` finalized by merging `origin/codex/contract-intelligence-platform` and resolving conflicts successfully
+- Frontend build, backend build, and AI-service Python compile verification completed after merge
 
 ### In Progress
 
-- Transition from core product workflows to production hardening, parsing quality, and deeper marketplace operations
+- Transition from feature completion into production hardening, AI quality improvements, and operational polish on the merged `dev` branch
 
 ### Next Recommended Milestones
 
-1. Improve file parsing beyond the current fallback text-loading path
+1. Improve file parsing and structured extraction quality for complex PDF/DOC uploads
 2. Expand marketplace into a fuller engagement workflow with filters, availability, and lifecycle controls
 3. Build out lawyer dashboard operations beyond the current assigned-review queue
-4. Add analysis history and richer workflow audit views
-5. Add automated tests across backend and frontend
+4. Add analysis history, contract assistant UX, and richer workflow audit views
+5. Add automated tests across backend, frontend, and merged AI-service flows
 6. Harden validation, authorization boundaries, and share-link lifecycle controls
 
 ## Priority Roadmap
@@ -158,6 +172,6 @@ The application now supports the core product workflow end to end. Contracts can
 
 ## Notes
 
-- The `ai-service` folder is currently treated as owned by another developer and should not be modified as part of the current implementation stream unless explicitly requested.
-- Current project status is best described as `auth complete, contract upload complete, AI analysis complete, report persistence and UI complete, lawyer marketplace complete`.
-- `API_MOCK_DATA.json` includes fixtures for auth, upload, analysis, lawyer review, trust seal issuance, export, share, marketplace lawyer listing, review requests, and assigned review queue retrieval aligned with the implemented frontend/backend flow.
+- The project is now in a merged finalization state on `dev`, with frontend, backend, and AI backend connected in Docker.
+- Current project status is best described as `core features complete, merged branch finalized, and ready for hardening/polish work`.
+- `API_MOCK_DATA.json` includes fixtures for auth, upload, analysis, intelligence-report retrieval, lawyer review, trust seal issuance, export, share, marketplace lawyer listing, review requests, assigned review queue retrieval, and outcome simulation aligned with the implemented flow.

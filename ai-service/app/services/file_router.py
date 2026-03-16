@@ -36,6 +36,20 @@ class FileRouter:
                     return True
         except Exception as error:
             logger.warning("PDF ROUTING: text-layer probe failed: %s", error)
+        try:
+            import fitz  # type: ignore[import-not-found]
+
+            document = fitz.open(stream=raw_bytes, filetype="pdf")
+            for index in range(min(3, len(document))):
+                page = document.load_page(index)
+                text = (page.get_text("text") or "").strip()
+                if text and len(text) > 40:
+                    logger.info("PDF ROUTING: selectable text layer detected via PyMuPDF.")
+                    document.close()
+                    return True
+            document.close()
+        except Exception as error:
+            logger.warning("PDF ROUTING: PyMuPDF text-layer probe failed: %s", error)
         logger.info("PDF ROUTING: no reliable text layer detected, OCR path required.")
         return False
 

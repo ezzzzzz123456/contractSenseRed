@@ -1,12 +1,12 @@
 {
   "meta": {
     "project": "ContractSense",
-    "phase": "feature-5-complete",
-    "updatedAt": "2026-03-16T17:10:00.000Z",
+    "phase": "integrated-dev-finalization",
+    "updatedAt": "2026-03-16T19:05:00.000Z",
     "notes": [
       "Fixture data is aligned to the current backend Mongoose model field names and current frontend/backend flow.",
-      "Auth, contract upload, analysis, lawyer review, trust seal, export, share, and marketplace payloads reflect the implemented gateway/backend behavior.",
-      "AI payloads still reflect the existing external AI-service contract and were not produced by modifying ai-service."
+      "Auth, contract upload, analysis, lawyer review, trust seal, export, share, marketplace, and merged contract-intelligence payloads reflect the implemented gateway/backend behavior.",
+      "The dev branch now contains the merged frontend, backend, and ai-service integration paths, including stored intelligence-report retrieval through the central backend."
     ]
   },
   "user": {
@@ -644,6 +644,221 @@
       "Confirm key commercial terms."
     ]
   },
+  "intelligenceReportRequest": {
+    "contractId": "69b82dc1ee19131497499645",
+    "fileName": "employment-agreement-v2.pdf",
+    "mediaType": "application/pdf",
+    "documentBase64": "JVBERi0xLjQKJMockBase64Payload",
+    "contractText": "Employee agrees to a 12-month non-compete restriction covering all current and future company markets. Inventions created during employment are assigned to the employer. Either party may terminate employment with 30 days notice.",
+    "parties": [
+      "TechCorp Inc.",
+      "Alex Rivera"
+    ],
+    "requestedTone": "professional",
+    "contractTypeHint": "employment",
+    "publicSignals": [
+      {
+        "source": "Secretary of State filing",
+        "signal": "Company is active and in good standing",
+        "impact": "positive"
+      }
+    ]
+  },
+  "intelligenceReportResponse": {
+    "contractId": "69b82dc1ee19131497499645",
+    "contractType": {
+      "category": "employment",
+      "confidence": 0.96,
+      "evidence": [
+        "non-compete restriction",
+        "intellectual property assignment",
+        "termination notice"
+      ],
+      "alternatives": {
+        "msa": 0.03,
+        "consulting": 0.01
+      }
+    },
+    "extraction": {
+      "documentKind": "pdf",
+      "extractionMethod": "hybrid-ocr-layout",
+      "sourceFilename": "employment-agreement-v2.pdf",
+      "mediaType": "application/pdf",
+      "structureConfidence": 0.91,
+      "extractedCharacters": 8342,
+      "textPreview": "Employee agrees to a 12-month non-compete restriction covering all current and future company markets...",
+      "notes": [
+        "Detected 4 heading blocks",
+        "1 signature block identified"
+      ],
+      "structuredPages": 6,
+      "layoutElements": 42,
+      "tablesDetected": 0,
+      "signaturesDetected": 1,
+      "annotationsDetected": 0
+    },
+    "summary": "This employment agreement is commercially standard in several areas but contains a broad non-compete and an expansive invention assignment that raise meaningful negotiation concerns.",
+    "executiveLegalSummary": "The contract has a balanced termination provision but overreaches in post-employment restrictions. The non-compete may be difficult to enforce in employee-friendly jurisdictions and the IP assignment should be narrowed to work product related to the role.",
+    "overallRiskScore": 64,
+    "overallRiskCategory": "warning",
+    "keyVulnerabilities": [
+      "Broad geographic non-compete scope",
+      "Expansive IP assignment language"
+    ],
+    "legalLoopholes": [
+      "No carve-out for pre-existing inventions",
+      "No explicit limits on restricted territory"
+    ],
+    "illegalClauseAlerts": [
+      "Non-compete may be unenforceable in California-style jurisdictions"
+    ],
+    "recommendations": [
+      "Limit the non-compete to a narrower geography and shorter duration.",
+      "Add a carve-out for inventions created outside the employee's duties."
+    ],
+    "priorityActions": [
+      "Negotiate Section 8.4 before signature",
+      "Review IP clause with counsel"
+    ],
+    "reportFindings": [
+      "Termination clause is balanced.",
+      "Restrictive covenants require revision."
+    ],
+    "metrics": {
+      "meanClauseRisk": 49,
+      "p90ClauseRisk": 88,
+      "criticalClauseRatio": 0.18,
+      "warningClauseRatio": 0.41,
+      "riskDispersion": 0.36,
+      "fairnessIndex": 61,
+      "legalExposureIndex": 68,
+      "concentrationIndex": 72,
+      "aggregationFormula": "Weighted average of clause risk and enforceability metrics"
+    },
+    "clauses": [
+      {
+        "clauseId": "clause-8-4",
+        "sectionReference": "Section 8.4",
+        "title": "Non-Compete Geographic Scope",
+        "originalText": "The Employee shall not engage in any competitive business activity within a 100-mile radius of any Company facility for a period of 12 months.",
+        "plainLanguage": "The employee cannot work for a competitor within 100 miles of any office for one year.",
+        "riskScore": 92,
+        "riskCategory": "critical",
+        "colorIndicator": "red",
+        "explanation": "The scope is broad and may exceed what is reasonably necessary to protect the employer's interests.",
+        "recommendations": [
+          "Reduce the territory to the employee's last assigned metro area.",
+          "Limit the restriction to direct competitors."
+        ],
+        "loopholes": [
+          "No role-based limitation",
+          "Applies to all company facilities rather than relevant ones"
+        ],
+        "legalScenarios": [
+          {
+            "scenario": "Employee joins a competitor in another city",
+            "likelyConsequence": "Employer may threaten enforcement, but the restriction is vulnerable if the geography is not tied to the employee's actual market.",
+            "severity": "critical",
+            "reasoning": "Overbroad territorial restrictions are less likely to survive scrutiny."
+          }
+        ],
+        "courtroomAssessment": {
+          "judgeView": "Likely skeptical of the geographic breadth without evidence of necessity.",
+          "claimantArguments": [
+            "The company needs to protect market-sensitive relationships."
+          ],
+          "defenseArguments": [
+            "The radius is untethered to the employee's real duties or customer access."
+          ],
+          "likelyRuling": "Partially narrowed or held unenforceable in restrictive jurisdictions.",
+          "enforceabilityConcerns": [
+            "Territory too broad",
+            "Duration may be excessive depending on role"
+          ],
+          "businessImpact": "Dispute risk and reduced candidate willingness to sign."
+        },
+        "improvement": {
+          "originalClause": "The Employee shall not engage in any competitive business activity within a 100-mile radius of any Company facility for a period of 12 months.",
+          "revisedClause": "The Employee shall not directly compete within the metropolitan area of the Employee's primary office for 6 months after termination.",
+          "justification": "Narrows the restriction to a more defensible scope."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Request a narrower and role-specific restriction.",
+          "talkingPoints": [
+            "The current radius is broader than necessary.",
+            "A metro-area limitation better aligns with the employee's duties."
+          ],
+          "draftedResponse": "We can accept a limited competitive restriction tied to the employee's actual market, but not a blanket 100-mile radius from every company facility."
+        }
+      }
+    ],
+    "documentStructure": null,
+    "ingestionEvaluation": {
+      "documentStructureAccuracy": 0.9,
+      "clauseDetectionAccuracy": 0.88,
+      "tableExtractionAccuracy": 1,
+      "layoutDetectionPrecision": 0.92,
+      "processingLatencyMs": 1840,
+      "notes": [
+        "Layout parsing completed without fallback",
+        "No tabular content present"
+      ]
+    },
+    "contractorCredibility": {
+      "score": 78,
+      "rating": "moderate",
+      "summary": "Counterparty footprint appears stable with no immediate red flags.",
+      "positiveSignals": [
+        "Good standing record found",
+        "Active commercial website"
+      ],
+      "negativeSignals": [
+        "Limited public litigation context"
+      ],
+      "sources": [
+        "https://techcorp.example.com",
+        "https://filings.example.com/techcorp"
+      ],
+      "framework": "Counterparty diligence v1"
+    },
+    "evaluationMetrics": {
+      "pipeline": "document-understanding-v1",
+      "model": "legal-specialist"
+    },
+    "generatedAt": "2026-03-16T18:45:00.000Z"
+  },
+  "storedIntelligenceReportResponse": {
+    "contractId": "69b82dc1ee19131497499645",
+    "summary": "This employment agreement is commercially standard in several areas but contains a broad non-compete and an expansive invention assignment that raise meaningful negotiation concerns.",
+    "overallRiskScore": 64,
+    "overallRiskCategory": "warning",
+    "recommendations": [
+      "Limit the non-compete to a narrower geography and shorter duration.",
+      "Add a carve-out for inventions created outside the employee's duties."
+    ],
+    "generatedAt": "2026-03-16T18:45:00.000Z"
+  },
+  "contractAssistantQueryRequest": {
+    "question": "What happens if the employee joins a competitor after six months?",
+    "contractId": "69b82dc1ee19131497499645",
+    "topK": 3
+  },
+  "contractAssistantQueryResponse": {
+    "answer": "The biggest issue is the breadth of the non-compete. Based on the stored report, enforcement risk is high unless the restriction is narrowed to the employee's actual market and duties.",
+    "evidence": [
+      {
+        "contractId": "69b82dc1ee19131497499645",
+        "clauseId": "clause-8-4",
+        "score": 0.94,
+        "snippet": "The Employee shall not engage in any competitive business activity within a 100-mile radius of any Company facility for a period of 12 months."
+      }
+    ],
+    "referencedContracts": [
+      "69b82dc1ee19131497499645"
+    ],
+    "confidence": 0.86
+  },
   "aiSimplifyResponse": {
     "simplifiedText": "Plain-English summary: Supplier may terminate this Agreement at any time without cause upon five days notice"
   },
@@ -684,12 +899,29 @@
       "https://beta.example.com"
     ]
   },
-  "outcomeSimulation": {
-    "reply": "Likely outcome based on the current clause set: What happens if payment is 45 days late?",
-    "citations": [
-      "Termination clause",
-      "Payment terms"
+  "contractorCredibility": {
+    "score": 78,
+    "rating": "moderate",
+    "summary": "Counterparty footprint appears stable with no immediate red flags.",
+    "positiveSignals": [
+      "Good standing record found",
+      "Active commercial website"
     ],
-    "confidence": 0.74
+    "negativeSignals": [
+      "Limited public litigation context"
+    ],
+    "sources": [
+      "https://techcorp.example.com",
+      "https://filings.example.com/techcorp"
+    ],
+    "framework": "Counterparty diligence v1"
+  },
+  "outcomeSimulation": {
+    "reply": "Based on the stored contract context, the employee would likely face an enforcement threat, but the current non-compete is vulnerable because the geographic scope is broader than necessary and may not survive scrutiny in restrictive jurisdictions.",
+    "citations": [
+      "clause-8-4",
+      "clause-12-1"
+    ],
+    "confidence": 0.81
   }
 }
