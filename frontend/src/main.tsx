@@ -20,7 +20,10 @@ const App = (): JSX.Element => (
           <Route path="/dashboard" element={<UserDashboard />} />
           <Route path="/lawyers/dashboard" element={<LawyerDashboard />} />
           <Route path="/analysis" element={<ContractAnalysisPage />} />
+          <Route path="/analysis/:contractId" element={<ContractAnalysisPage />} />
           <Route path="/report" element={<ReportPage />} />
+          <Route path="/report/:contractId" element={<ReportPage />} />
+          <Route path="/report/shared/:shareToken" element={<ReportPage />} />
           <Route path="/marketplace" element={<MarketplacePage />} />
         </Routes>
       </BrowserRouter>

@@ -84,6 +84,34 @@ export const listContracts = async (req: AuthenticatedRequest, res: Response): P
   });
 };
 
+export const getContractById = async (req: AuthenticatedRequest, res: Response): Promise<void> => {
+  if (!req.user?.userId) {
+    res.status(401).json({ message: "Authentication required" });
+    return;
+  }
+
+  const contract = await ContractModel.findOne({
+    _id: req.params.contractId,
+    uploadedBy: req.user.userId,
+  }).lean();
+
+  if (!contract) {
+    res.status(404).json({ message: "Contract not found" });
+    return;
+  }
+
+  res.json({
+    contract: {
+      _id: contract._id.toString(),
+      uploadedBy: contract.uploadedBy.toString(),
+      fileUrl: contract.fileUrl,
+      contractType: contract.contractType,
+      status: contract.status,
+      clauseList: contract.clauseList,
+    },
+  });
+};
+
 export const analyzeUploadedContract = async (req: AuthenticatedRequest, res: Response): Promise<void> => {
   if (!req.user?.userId) {
     res.status(401).json({ message: "Authentication required" });
@@ -110,7 +138,7 @@ export const analyzeUploadedContract = async (req: AuthenticatedRequest, res: Re
 
   contract.contractType = analysis.contractType || contract.contractType;
   contract.status = "analyzed";
-  contract.clauseList = analysis.clauses;
+  contract.clauseList = analysis.clauses as typeof contract.clauseList;
   await contract.save();
 
   const report = await ReportModel.findOneAndUpdate(

@@ -1264,6 +1264,12 @@ img {
   font-size: 1.08rem;
 }
 
+.report-summary-card h3 {
+  margin: 0;
+  font-size: 1.55rem;
+  letter-spacing: -0.04em;
+}
+
 .risk-breakdown-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1325,6 +1331,29 @@ img {
 .annotation-card p,
 .annotation-card span {
   color: var(--text-soft);
+}
+
+.review-editor {
+  display: grid;
+  gap: 1rem;
+}
+
+.review-editor label {
+  display: grid;
+  gap: 0.45rem;
+  color: var(--navy);
+  font-weight: 700;
+}
+
+.review-editor textarea,
+.review-editor input {
+  width: 100%;
+}
+
+.review-editor__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
 }
 
 .verdict-panel__content,
@@ -1436,6 +1465,13 @@ img {
 .report-preview__actions {
   position: sticky;
   top: 120px;
+}
+
+.report-preview__share {
+  margin-top: 0.8rem;
+  color: var(--text-soft);
+  font-size: 0.9rem;
+  word-break: break-all;
 }
 
 .report-empty {

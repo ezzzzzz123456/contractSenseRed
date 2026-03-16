@@ -1,5 +1,6 @@
 import bcrypt from "bcryptjs";
 import type { Request, Response } from "express";
+import { LawyerModel } from "../models/Lawyer.model";
 import { UserModel } from "../models/User.model";
 import type { AuthenticatedRequest } from "../middleware/auth.middleware";
 import { signToken } from "../utils/jwt";
@@ -53,6 +54,16 @@ export const register = async (req: Request, res: Response): Promise<void> => {
     ratings: 0,
     pricing: 0,
   });
+
+  if (user.userType === "lawyer") {
+    await LawyerModel.create({
+      userId: user._id,
+      specializations: ["Contract Review", "Risk Analysis"],
+      isVerified: false,
+      ratings: 0,
+      feePerReview: 0,
+    });
+  }
 
   const token = signToken({ userId: user._id.toString(), userType: user.userType });
   res.status(201).json({

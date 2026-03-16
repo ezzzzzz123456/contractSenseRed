@@ -7,9 +7,11 @@ const ReportSchema = new Schema(
     lawyerOutput: { type: Schema.Types.Mixed, default: {} },
     trustSeal: { type: Schema.Types.ObjectId, ref: "TrustSeal" },
     exportedPdfUrl: { type: String },
+    shareToken: { type: String },
+    shareExpiresAt: { type: Date },
+    sharedAt: { type: Date },
   },
   { timestamps: true },
 );
 
 export const ReportModel = model("Report", ReportSchema);
-

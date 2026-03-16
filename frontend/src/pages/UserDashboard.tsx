@@ -82,8 +82,8 @@ const UserDashboard = (): JSX.Element => {
                         <button type="button" className="link-button" onClick={() => setActiveContract(contract)}>
                           Select
                         </button>
-                        <Link to="/analysis">Analyze</Link>
-                        <Link to="/report">Report</Link>
+                        <Link to={`/analysis/${contract._id}`}>Analyze</Link>
+                        <Link to={`/report/${contract._id}`}>Report</Link>
                       </span>
                     </article>
                   );

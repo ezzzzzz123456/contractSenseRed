@@ -1,10 +1,23 @@
 import { Router } from "express";
-import { exportReport, getReport, getReportByContract } from "../controllers/report.controller";
+import {
+  createShareLink,
+  exportReport,
+  getReport,
+  getReportByContract,
+  getSharedReport,
+  issueTrustSeal,
+  updateLawyerReview,
+} from "../controllers/report.controller";
+import { requireAuth } from "../middleware/auth.middleware";
 
 const router = Router();
 
-router.get("/contract/:contractId", getReportByContract);
-router.get("/:reportId", getReport);
-router.post("/:reportId/export", exportReport);
+router.get("/shared/:shareToken", getSharedReport);
+router.get("/contract/:contractId", requireAuth, getReportByContract);
+router.get("/:reportId", requireAuth, getReport);
+router.patch("/:reportId/lawyer-review", requireAuth, updateLawyerReview);
+router.post("/:reportId/trust-seal", requireAuth, issueTrustSeal);
+router.post("/:reportId/export", requireAuth, exportReport);
+router.post("/:reportId/share", requireAuth, createShareLink);
 
 export default router;

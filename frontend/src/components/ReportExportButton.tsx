@@ -1,9 +1,8 @@
 import { useState } from "react";
-import api from "../services/api";
 import { useContract } from "../hooks/useContract";
 
 const ReportExportButton = (): JSX.Element => {
-  const { activeReport, setActiveReport } = useContract();
+  const { activeReport, exportReport } = useContract();
   const [status, setStatus] = useState<string | null>(null);
 
   const handleExport = async (): Promise<void> => {
@@ -12,15 +11,12 @@ const ReportExportButton = (): JSX.Element => {
       return;
     }
 
-    const { data } = await api.post<{ reportId: string; exportedPdfUrl: string; status: string }>(
-      `/reports/${activeReport._id}/export`,
-    );
-
-    setActiveReport({
-      ...activeReport,
-      exportedPdfUrl: data.exportedPdfUrl,
-    });
+    const data = await exportReport(activeReport._id);
     setStatus("PDF export prepared.");
+
+    if (data.exportedPdfUrl) {
+      window.open(data.exportedPdfUrl, "_blank", "noopener,noreferrer");
+    }
   };
 
   return (

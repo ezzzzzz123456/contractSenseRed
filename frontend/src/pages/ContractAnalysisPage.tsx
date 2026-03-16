@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import ClauseCard from "../components/ClauseCard";
 import OutcomeSimulatorChat from "../components/OutcomeSimulatorChat";
 import PartyIntelligencePanel from "../components/PartyIntelligencePanel";
@@ -9,16 +9,20 @@ import { useAuth } from "../hooks/useAuth";
 import { useContract } from "../hooks/useContract";
 
 const ContractAnalysisPage = (): JSX.Element => {
+  const navigate = useNavigate();
+  const { contractId } = useParams<{ contractId: string }>();
   const { currentUser } = useAuth();
   const {
     contracts,
     activeContract,
     setActiveContract,
     fetchContracts,
+    fetchContractById,
     analyzeContract,
     isAnalyzingContract,
     activeReport,
     fetchReportByContract,
+    shareReport,
   } = useContract();
   const [statusMessage, setStatusMessage] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -27,13 +31,32 @@ const ContractAnalysisPage = (): JSX.Element => {
     if (currentUser && contracts.length === 0) {
       void fetchContracts();
     }
-  }, [currentUser]);
+  }, [currentUser, contracts.length, fetchContracts]);
+
+  useEffect(() => {
+    if (!contractId || !currentUser) {
+      return;
+    }
+
+    if (activeContract?._id === contractId) {
+      return;
+    }
+
+    const matchingContract = contracts.find((contract) => contract._id === contractId);
+
+    if (matchingContract) {
+      setActiveContract(matchingContract);
+      return;
+    }
+
+    void fetchContractById(contractId);
+  }, [activeContract?._id, contractId, contracts, currentUser, fetchContractById, setActiveContract]);
 
   useEffect(() => {
     if (activeContract?._id && activeContract.status === "analyzed") {
       void fetchReportByContract(activeContract._id);
     }
-  }, [activeContract?._id, activeContract?.status]);
+  }, [activeContract?._id, activeContract?.status, fetchReportByContract]);
 
   const redClauses = activeContract?.clauseList.filter((clause) => clause.riskFlag === "red").length ?? 0;
   const yellowClauses = activeContract?.clauseList.filter((clause) => clause.riskFlag === "yellow").length ?? 0;
@@ -51,9 +74,22 @@ const ContractAnalysisPage = (): JSX.Element => {
     try {
       const result = await analyzeContract(activeContract._id);
       setStatusMessage(`Analysis completed for ${result.contract.contractType.toUpperCase()} contract.`);
+      navigate(`/analysis/${result.contract._id}`);
     } catch (analysisError) {
       setError(analysisError instanceof Error ? analysisError.message : "Unable to analyze contract.");
     }
+  };
+
+  const handleShare = async (): Promise<void> => {
+    if (!activeReport?._id) {
+      await navigator.clipboard.writeText(window.location.href);
+      setStatusMessage("Page link copied.");
+      return;
+    }
+
+    const shareData = await shareReport(activeReport._id);
+    await navigator.clipboard.writeText(shareData.shareUrl);
+    setStatusMessage("Secure report link copied.");
   };
 
   return (
@@ -79,7 +115,7 @@ const ContractAnalysisPage = (): JSX.Element => {
             <button
               type="button"
               className="button button--primary"
-              onClick={() => void navigator.clipboard.writeText(window.location.href)}
+              onClick={() => void handleShare()}
             >
               Share
             </button>
@@ -95,7 +131,10 @@ const ContractAnalysisPage = (): JSX.Element => {
                 key={contract._id}
                 type="button"
                 className={`analysis-picker__item${activeContract?._id === contract._id ? " analysis-picker__item--active" : ""}`}
-                onClick={() => setActiveContract(contract)}
+                onClick={() => {
+                  setActiveContract(contract);
+                  navigate(`/analysis/${contract._id}`);
+                }}
               >
                 <strong>{contract.fileUrl.split("/").pop()}</strong>
                 <span>{contract.status}</span>

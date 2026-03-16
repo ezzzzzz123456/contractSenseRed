@@ -5,8 +5,13 @@ import type {
   Contract,
   ContractAnalysisTriggerResponse,
   ContractListResponse,
+  ContractResponse,
   ContractUploadResponse,
+  ExportReportResponse,
+  LawyerReviewPayload,
+  LawyerReviewResponse,
   Report,
+  ShareReportResponse,
 } from "../types";
 
 interface ContractContextValue {
@@ -18,9 +23,15 @@ interface ContractContextValue {
   setActiveContract: (contract: Contract | null) => void;
   setActiveReport: (report: Report | null) => void;
   fetchContracts: () => Promise<void>;
+  fetchContractById: (contractId: string) => Promise<Contract | null>;
   fetchReportByContract: (contractId: string) => Promise<Report | null>;
+  fetchSharedReport: (shareToken: string) => Promise<Report | null>;
   uploadContract: (payload: { file: File; contractType: string }) => Promise<Contract>;
   analyzeContract: (contractId: string) => Promise<{ contract: Contract; report: Report | null }>;
+  saveLawyerReview: (reportId: string, payload: LawyerReviewPayload) => Promise<Report | null>;
+  issueTrustSeal: (reportId: string, payload?: { finalVerdict?: string }) => Promise<Report | null>;
+  exportReport: (reportId: string) => Promise<ExportReportResponse>;
+  shareReport: (reportId: string) => Promise<ShareReportResponse>;
 }
 
 export const ContractContext = createContext<ContractContextValue | undefined>(undefined);
@@ -45,6 +56,20 @@ export const ContractProvider = ({ children }: { children: ReactNode }): JSX.Ele
       );
     } finally {
       setIsLoadingContracts(false);
+    }
+  };
+
+  const fetchContractById = async (contractId: string): Promise<Contract | null> => {
+    try {
+      const { data } = await api.get<ContractResponse>(`/contracts/${contractId}`);
+      setContracts((currentContracts) => {
+        const next = currentContracts.filter((contract) => contract._id !== data.contract._id);
+        return [data.contract, ...next];
+      });
+      setActiveContract(data.contract);
+      return data.contract;
+    } catch {
+      return null;
     }
   };
 
@@ -75,6 +100,17 @@ export const ContractProvider = ({ children }: { children: ReactNode }): JSX.Ele
     }
   };
 
+  const fetchSharedReport = async (shareToken: string): Promise<Report | null> => {
+    try {
+      const { data } = await api.get<Report>(`/reports/shared/${shareToken}`);
+      setActiveReport(data);
+      return data;
+    } catch {
+      setActiveReport(null);
+      return null;
+    }
+  };
+
   const analyzeContract = async (contractId: string): Promise<{ contract: Contract; report: Report | null }> => {
     setIsAnalyzingContract(true);
 
@@ -96,6 +132,54 @@ export const ContractProvider = ({ children }: { children: ReactNode }): JSX.Ele
     }
   };
 
+  const saveLawyerReview = async (reportId: string, payload: LawyerReviewPayload): Promise<Report | null> => {
+    const { data } = await api.patch<LawyerReviewResponse>(`/reports/${reportId}/lawyer-review`, payload);
+    setActiveReport(data.report);
+    return data.report;
+  };
+
+  const issueTrustSealAction = async (reportId: string, payload?: { finalVerdict?: string }): Promise<Report | null> => {
+    const { data } = await api.post<LawyerReviewResponse>(`/reports/${reportId}/trust-seal`, payload ?? {});
+    setActiveReport(data.report);
+
+    if (data.report?.contractId) {
+      await fetchContractById(data.report.contractId);
+    }
+
+    return data.report;
+  };
+
+  const exportReportAction = async (reportId: string): Promise<ExportReportResponse> => {
+    const { data } = await api.post<ExportReportResponse>(`/reports/${reportId}/export`);
+
+    setActiveReport((currentReport) =>
+      currentReport && currentReport._id === reportId
+        ? {
+            ...currentReport,
+            exportedPdfUrl: data.exportedPdfUrl,
+          }
+        : currentReport,
+    );
+
+    return data;
+  };
+
+  const shareReportAction = async (reportId: string): Promise<ShareReportResponse> => {
+    const { data } = await api.post<ShareReportResponse>(`/reports/${reportId}/share`);
+
+    setActiveReport((currentReport) =>
+      currentReport && currentReport._id === reportId
+        ? {
+            ...currentReport,
+            shareUrl: data.shareUrl,
+            shareExpiresAt: data.shareExpiresAt,
+          }
+        : currentReport,
+    );
+
+    return data;
+  };
+
   const value = useMemo(
     () => ({
       contracts,
@@ -106,9 +190,15 @@ export const ContractProvider = ({ children }: { children: ReactNode }): JSX.Ele
       setActiveContract,
       setActiveReport,
       fetchContracts,
+      fetchContractById,
       fetchReportByContract,
+      fetchSharedReport,
       uploadContract,
       analyzeContract,
+      saveLawyerReview,
+      issueTrustSeal: issueTrustSealAction,
+      exportReport: exportReportAction,
+      shareReport: shareReportAction,
     }),
     [activeContract, activeReport, contracts, isAnalyzingContract, isLoadingContracts],
   );
