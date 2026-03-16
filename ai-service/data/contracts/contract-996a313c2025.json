@@ -1,0 +1,129 @@
+{
+  "contractId": "contract-996a313c2025",
+  "report": {
+    "contractId": "contract-996a313c2025",
+    "contractType": {
+      "category": "legal statute",
+      "confidence": 0.42,
+      "evidence": [],
+      "alternatives": {
+        "legal statute": 0.0,
+        "employment": 0.0,
+        "non-disclosure agreement": 0.0,
+        "vendor agreement": 0.0
+      }
+    },
+    "extraction": {
+      "documentKind": "image",
+      "extractionMethod": "gemini_ocr_unavailable",
+      "sourceFilename": "Screenshot 2026-03-15 144043.png",
+      "mediaType": "image/png",
+      "structureConfidence": 0.05,
+      "extractedCharacters": 0,
+      "textPreview": "",
+      "notes": [
+        "Gemini OCR was unavailable or did not return readable text."
+      ]
+    },
+    "summary": "This legal statute is assessed as safe risk, with 0 critical clauses and 0 warning clauses. The report prioritizes disproportionate liability, ambiguous drafting, loophole-prone overrides, and negotiable remediation paths. The highest-risk issue is general language in clause-001, scored 11/100. Counterparty credibility is rated moderate at 62/100.",
+    "overallRiskScore": 7.67,
+    "overallRiskCategory": "safe",
+    "keyVulnerabilities": [],
+    "legalLoopholes": [],
+    "illegalClauseAlerts": [],
+    "recommendations": [
+      "No material risk remediation identified beyond standard legal review.",
+      "Validate any critical clause with jurisdiction-specific counsel before signature.",
+      "Compare risk concentration against previous agreements in the contract memory store."
+    ],
+    "metrics": {
+      "meanClauseRisk": 10.95,
+      "p90ClauseRisk": 10.95,
+      "criticalClauseRatio": 0.0,
+      "warningClauseRatio": 0.0,
+      "riskDispersion": 0.0,
+      "fairnessIndex": 88.0,
+      "legalExposureIndex": 0.0,
+      "concentrationIndex": 0.0,
+      "aggregationFormula": "overall = 0.55*mean_clause_risk + 0.20*p90_clause_risk + 0.15*critical_clause_ratio*100 + 0.10*legal_exposure_index"
+    },
+    "clauses": [
+      {
+        "clauseId": "clause-001",
+        "sectionReference": "General",
+        "hierarchy": [
+          "General"
+        ],
+        "title": "",
+        "originalText": "",
+        "plainLanguage": "No clause text provided.",
+        "clauseType": "general",
+        "riskCategory": "safe",
+        "colorIndicator": "green",
+        "riskScore": 10.95,
+        "confidence": 0.45,
+        "explanation": "Clause risk is safe with score 10.95. The strongest driver is fairnessImbalance, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.0,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 10.95,
+          "confidence": 0.45,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "",
+          "revisedClause": " provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording '' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "Ambiguous drafting can extend resolution timelines and increase negotiation costs.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ]
+      }
+    ],
+    "contractorCredibility": {
+      "score": 62.0,
+      "rating": "moderate",
+      "summary": "tesla has a light-touch diligence profile with publicly available footprint data. Credibility is rated moderate because the signal mix shows 0 positive and 0 negative indicators.",
+      "positiveSignals": [],
+      "negativeSignals": [],
+      "sources": [
+        "https://example.com/counterparty-profile"
+      ],
+      "framework": "credibility = 62 + 22*avg_positive_signal - 28*avg_negative_signal + coverage_bonus, clamped to [0,100]"
+    },
+    "evaluationMetrics": {
+      "contract_classification": "top-1 accuracy, macro-F1, calibration error",
+      "clause_segmentation": "boundary F1, hierarchical consistency, clause coverage",
+      "risk_detection": "AUROC, precision@critical, weighted Brier score, explanation faithfulness",
+      "explanation_quality": "human adequacy, factual consistency, edit distance to gold simplifications"
+    },
+    "generatedAt": "2026-03-15T20:43:39.333827"
+  },
+  "searchableText": "\n\nNo clause text provided.",
+  "createdAt": "2026-03-15T20:43:39.333827",
+  "updatedAt": "2026-03-15T20:43:39.333827"
+}

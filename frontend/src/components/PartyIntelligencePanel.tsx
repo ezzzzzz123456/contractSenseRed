@@ -1,8 +1,35 @@
 import { useNavigate } from "react-router-dom";
-import type { PartyIntelligence } from "../types";
+import type { ContractorCredibilityReport, PartyIntelligence } from "../types";
 
-const PartyIntelligencePanel = ({ intel }: { intel?: PartyIntelligence }): JSX.Element => {
+const isCredibilityReport = (intel: PartyIntelligence | ContractorCredibilityReport | null | undefined): intel is ContractorCredibilityReport =>
+  Boolean(intel && typeof intel === "object" && "positiveSignals" in intel);
+
+const PartyIntelligencePanel = ({
+  intel,
+}: {
+  intel?: PartyIntelligence | ContractorCredibilityReport | null;
+}): JSX.Element => {
   const navigate = useNavigate();
+
+  if (isCredibilityReport(intel)) {
+    return (
+      <section className="insight-panel">
+        <h2>Counterparty Credibility</h2>
+        <p>{intel.summary}</p>
+        <ul className="insight-panel__list">
+          {intel.positiveSignals.slice(0, 2).map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+          {intel.negativeSignals.slice(0, 2).map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+        <button type="button" className="button button--primary insight-panel__button" onClick={() => navigate("/marketplace")}>
+          Review with Legal Counsel
+        </button>
+      </section>
+    );
+  }
 
   return (
     <section className="insight-panel">

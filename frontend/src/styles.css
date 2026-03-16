@@ -443,7 +443,9 @@ img {
 .auth-form input,
 .auth-form select,
 .search-field input,
-.simulator-card__composer input {
+.simulator-card__composer input,
+.review-editor textarea,
+.review-editor input {
   width: 100%;
   min-height: 52px;
   padding: 0 1rem;
@@ -451,6 +453,11 @@ img {
   border-radius: 14px;
   background: #fff;
   color: var(--text);
+}
+
+.review-editor textarea {
+  padding-top: 0.8rem;
+  min-height: 120px;
 }
 
 .marketing-footer {
@@ -816,6 +823,16 @@ img {
 .status-badge--analyzed {
   background: var(--green-soft);
   color: #17814c;
+}
+
+.status-badge--pending_lawyer {
+  background: #ffe9c6;
+  color: #c57a00;
+}
+
+.status-badge--reviewed {
+  background: #e4f1ff;
+  color: #285b9a;
 }
 
 .risk-text {
@@ -1345,11 +1362,6 @@ img {
   font-weight: 700;
 }
 
-.review-editor textarea,
-.review-editor input {
-  width: 100%;
-}
-
 .review-editor__actions {
   display: flex;
   flex-wrap: wrap;
@@ -1476,6 +1488,25 @@ img {
 
 .report-empty {
   padding: 1.5rem;
+}
+
+.analysis-extra-panel {
+  padding: 1.4rem;
+}
+
+.analysis-extra-panel pre {
+  max-height: 260px;
+  overflow: auto;
+  border-radius: 12px;
+  background: #f4f8fd;
+  padding: 1rem;
+  color: var(--text-soft);
+}
+
+.analysis-extra-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
 }
 
 @media (max-width: 1120px) {

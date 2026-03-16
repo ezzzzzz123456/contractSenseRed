@@ -14,7 +14,7 @@ const UserDashboard = (): JSX.Element => {
     if (currentUser) {
       void fetchContracts();
     }
-  }, [currentUser]);
+  }, [currentUser, fetchContracts]);
 
   return (
     <div className="dashboard-layout">
@@ -60,7 +60,7 @@ const UserDashboard = (): JSX.Element => {
                       ? "High Risk"
                       : contract.clauseList.some((clause) => clause.riskFlag === "yellow")
                         ? "Medium Risk"
-                        : contract.status === "analyzed"
+                        : contract.status === "analyzed" || contract.status === "reviewed"
                           ? "Low Risk"
                           : "Pending";
 

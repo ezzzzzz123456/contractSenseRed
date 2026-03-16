@@ -1,0 +1,194 @@
+{
+  "contractId": "contract-15d581ee951a",
+  "report": {
+    "contractId": "contract-15d581ee951a",
+    "contractType": {
+      "category": "Commercial Agreement Snippet",
+      "confidence": 0.98,
+      "evidence": [
+        "fees",
+        "client"
+      ],
+      "alternatives": {
+        "service contract": 1.0,
+        "legal statute": 0.0,
+        "employment": 0.0,
+        "non-disclosure agreement": 0.0
+      }
+    },
+    "extraction": {
+      "documentKind": "txt",
+      "extractionMethod": "direct_text_payload",
+      "sourceFilename": "samplecontract.txt",
+      "mediaType": "text/plain",
+      "structureConfidence": 0.92,
+      "extractedCharacters": 224,
+      "textPreview": "Client shall pay all invoices within thirty (30) days of receipt. Late payments shall incur interest at a rate of 1.5% per month. Supplier shall indemnify, defend, and hold harmless Buyer against all lawsuits and legal fees.",
+      "notes": [
+        "Used provided contract text directly."
+      ]
+    },
+    "summary": "This contract snippet contains payment terms with a high late payment interest rate and an extremely broad, one-sided indemnification clause. The indemnification clause, in particular, poses critical risk to the Supplier due to its unlimited scope and lack of qualification, heavily favoring the Buyer.",
+    "overallRiskScore": 8.5,
+    "overallRiskCategory": "critical",
+    "keyVulnerabilities": [
+      "clause_2: liability clause scored 72/100 because this clause places an extremely broad, unqualified, and unlimited indemnification obligation on the supplier. it requires the supplier to indemnify, defend, and hold harmless the buyer against *all* lawsuits and legal fees, without any limitations related to the supplier's fault, negligence, or the scope of the agreement. this exposes the supplier to potentially unlimited liability for issues entirely outside their control or responsibility, making it highly one-sided and commercially unreasonable.",
+      "clause_1: payment clause scored 47/100 because the 1.5% monthly interest rate for late payments translates to an 18% annual rate. this is a relatively high penalty that could significantly increase the client's financial burden if payments are delayed, potentially leading to substantial additional costs."
+    ],
+    "legalLoopholes": [],
+    "illegalClauseAlerts": [],
+    "recommendations": [
+      "Reduce late-payment interest or add a grace period before default charges apply.",
+      "Cap liability and exclude indirect or unforeseeable damages.",
+      "Limit indemnity to third-party claims caused by the supplier's proven fault.",
+      "Validate any critical clause with jurisdiction-specific counsel before signature.",
+      "Compare risk concentration against previous agreements in the contract memory store."
+    ],
+    "metrics": {
+      "meanClauseRisk": 59.06,
+      "p90ClauseRisk": 71.58,
+      "criticalClauseRatio": 0.5,
+      "warningClauseRatio": 0.5,
+      "riskDispersion": 0.25,
+      "fairnessIndex": 2.0,
+      "legalExposureIndex": 30.0,
+      "concentrationIndex": 40.0,
+      "aggregationFormula": "overall = 0.55*mean_clause_risk + 0.20*p90_clause_risk + 0.15*critical_clause_ratio*100 + 0.10*legal_exposure_index"
+    },
+    "clauses": [
+      {
+        "clauseId": "clause_1",
+        "sectionReference": "Clause Review",
+        "hierarchy": [
+          "Clause Review"
+        ],
+        "title": "",
+        "originalText": "Client shall pay all invoices within thirty (30) days of receipt. Late payments shall incur interest at a rate of 1.5% per month.",
+        "plainLanguage": "The client must pay invoices within 30 days of receiving them. If payments are late, a monthly interest rate of 1.5% will be applied.",
+        "clauseType": "payment",
+        "riskCategory": "warning",
+        "colorIndicator": "yellow",
+        "riskScore": 46.54,
+        "confidence": 0.81,
+        "explanation": "The 1.5% monthly interest rate for late payments translates to an 18% annual rate. This is a relatively high penalty that could significantly increase the Client's financial burden if payments are delayed, potentially leading to substantial additional costs.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.25,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.67,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 46.54,
+          "confidence": 0.81,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "Reduce late-payment interest or add a grace period before default charges apply."
+        ],
+        "improvement": {
+          "originalClause": "Client shall pay all invoices within thirty (30) days of receipt. Late payments shall incur interest at a rate of 1.5% per month.",
+          "revisedClause": "Client shall pay all invoices within thirty (30) days of receipt. Late payments shall incur interest at a rate of 0.5% per month, or the maximum rate permitted by law, whichever is lower, after a seven (7) day grace period.",
+          "justification": "Revision generated from Gemini contract analysis."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "Reduce late-payment interest or add a grace period before default charges apply."
+          ],
+          "draftedResponse": "The Client should negotiate for a lower interest rate (e.g., 0.5% - 1% per month) or a grace period (e.g., 7-10 days) before interest accrues, citing industry standards or the potential for unforeseen administrative delays. The Supplier might agree to a slightly lower rate to ensure prompt payment without being overly punitive."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Late payment dispute escalates",
+            "likelyConsequence": "If the Client experiences cash flow issues or administrative delays, consistent late payments could lead to a rapid accumulation of interest charges, potentially resulting in a dispute over the total amount owed and straining the commercial relationship. The Supplier could legally pursue these accrued interest payments.",
+            "severity": "warning",
+            "reasoning": "Default-rate clauses become leverage points once an invoice is contested or delayed."
+          }
+        ]
+      },
+      {
+        "clauseId": "clause_2",
+        "sectionReference": "Clause Review",
+        "hierarchy": [
+          "Clause Review"
+        ],
+        "title": "",
+        "originalText": "Supplier shall indemnify, defend, and hold harmless Buyer against all lawsuits and legal fees.",
+        "plainLanguage": "The Supplier is required to protect the Buyer from all lawsuits and cover all associated legal costs, regardless of the cause.",
+        "clauseType": "liability",
+        "riskCategory": "critical",
+        "colorIndicator": "red",
+        "riskScore": 71.58,
+        "confidence": 0.97,
+        "explanation": "This clause places an extremely broad, unqualified, and unlimited indemnification obligation on the Supplier. It requires the Supplier to indemnify, defend, and hold harmless the Buyer against *all* lawsuits and legal fees, without any limitations related to the Supplier's fault, negligence, or the scope of the agreement. This exposes the Supplier to potentially unlimited liability for issues entirely outside their control or responsibility, making it highly one-sided and commercially unreasonable.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.25,
+          "liabilityExposure": 1.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.33,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.2,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.3,
+          "score": 71.58,
+          "confidence": 0.97,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "Cap liability and exclude indirect or unforeseeable damages.",
+          "Limit indemnity to third-party claims caused by the supplier's proven fault."
+        ],
+        "improvement": {
+          "originalClause": "Supplier shall indemnify, defend, and hold harmless Buyer against all lawsuits and legal fees.",
+          "revisedClause": "Supplier shall indemnify, defend, and hold harmless Buyer against third-party claims arising directly from Supplier's gross negligence, willful misconduct, or material breach of this Agreement, provided Buyer promptly notifies Supplier of any such claim and cooperates in its defense. This indemnification shall not apply to claims arising from Buyer's own negligence, misconduct, or breach of this Agreement.",
+          "justification": "Revision generated from Gemini contract analysis."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "Cap liability and exclude indirect or unforeseeable damages.",
+            "Limit indemnity to third-party claims caused by the supplier's proven fault."
+          ],
+          "draftedResponse": "The Supplier must strongly negotiate to limit the scope of indemnification to claims arising directly from their own negligence, willful misconduct, or breach of contract. They should also seek to cap their liability, require prompt notice from the Buyer for any claim, and ensure the Buyer's cooperation in the defense. The Supplier should also ensure that the indemnification does not cover claims arising from the Buyer's own actions or omissions."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Third-party claim or service failure",
+            "likelyConsequence": "If the Buyer faces a lawsuit for any reason, even if entirely unrelated to the Supplier's performance (e.g., a claim against the Buyer's own product, a general business dispute, or even the Buyer's own negligence), the Supplier could be legally obligated to bear all defense costs and potential damages. This could lead to severe financial distress, significant legal expenses, or even bankruptcy for the Supplier, as the liability is uncapped and unqualified.",
+            "severity": "critical",
+            "reasoning": "Liability and indemnity drafting determines who funds disputes and uncapped losses."
+          }
+        ]
+      }
+    ],
+    "contractorCredibility": {
+      "score": 62.0,
+      "rating": "moderate",
+      "summary": "tesla has a light-touch diligence profile with publicly available footprint data. Credibility is rated moderate because the signal mix shows 0 positive and 0 negative indicators.",
+      "positiveSignals": [],
+      "negativeSignals": [],
+      "sources": [
+        "https://example.com/counterparty-profile"
+      ],
+      "framework": "credibility = 62 + 22*avg_positive_signal - 28*avg_negative_signal + coverage_bonus, clamped to [0,100]"
+    },
+    "evaluationMetrics": {
+      "contract_classification": "top-1 accuracy, macro-F1, calibration error",
+      "clause_segmentation": "boundary F1, hierarchical consistency, clause coverage",
+      "risk_detection": "AUROC, precision@critical, weighted Brier score, explanation faithfulness",
+      "explanation_quality": "human adequacy, factual consistency, edit distance to gold simplifications"
+    },
+    "generatedAt": "2026-03-15T19:54:49.731459"
+  },
+  "searchableText": "Client shall pay all invoices within thirty (30) days of receipt. Late payments shall incur interest at a rate of 1.5% per month. Supplier shall indemnify, defend, and hold harmless Buyer against all lawsuits and legal fees.\nClient shall pay all invoices within thirty (30) days of receipt. Late payments shall incur interest at a rate of 1.5% per month.\nThe client must pay invoices within 30 days of receiving them. If payments are late, a monthly interest rate of 1.5% will be applied.\nSupplier shall indemnify, defend, and hold harmless Buyer against all lawsuits and legal fees.\nThe Supplier is required to protect the Buyer from all lawsuits and cover all associated legal costs, regardless of the cause.",
+  "createdAt": "2026-03-15T19:54:49.731459",
+  "updatedAt": "2026-03-15T19:54:49.731459"
+}

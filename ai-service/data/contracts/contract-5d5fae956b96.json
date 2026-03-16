@@ -1,0 +1,364 @@
+{
+  "contractId": "contract-5d5fae956b96",
+  "report": {
+    "contractId": "contract-5d5fae956b96",
+    "contractType": {
+      "category": "service contract",
+      "confidence": 0.98,
+      "evidence": [
+        "services",
+        "fees",
+        "client"
+      ],
+      "alternatives": {
+        "service contract": 1.0,
+        "consulting contract": 0.47,
+        "legal statute": 0.0,
+        "employment": 0.0
+      }
+    },
+    "extraction": {
+      "documentKind": "txt",
+      "extractionMethod": "text_decode",
+      "sourceFilename": "samplecontract.txt",
+      "mediaType": "text/plain",
+      "structureConfidence": 0.88,
+      "extractedCharacters": 965,
+      "textPreview": "Client shall pay all invoices within thirty (30) days of receipt. Late payments shall incur interest at a rate of 1.5% per month, or the maximum rate permitted by law, whichever is lower\r\n\r\nEither party may terminate this Agreement upon thirty (30) days' written notice. If the Consultant fails to deliver the promised services, the Company may terminate this Agreement immediately upon written notic",
+      "notes": []
+    },
+    "summary": "This service contract is assessed as safe risk, with 0 critical clauses and 3 warning clauses. The report prioritizes disproportionate liability, ambiguous drafting, loophole-prone overrides, and negotiable remediation paths. Counterparty credibility is rated moderate at 62/100.",
+    "overallRiskScore": 31.94,
+    "overallRiskCategory": "safe",
+    "keyVulnerabilities": [
+      "clause-004: Cap liability and exclude indirect or unforeseeable damages.",
+      "clause-003: Require notice, cure rights, and a defined termination trigger.",
+      "clause-002: No material risk remediation identified beyond standard legal review.",
+      "clause-001: No material risk remediation identified beyond standard legal review."
+    ],
+    "legalLoopholes": [],
+    "illegalClauseAlerts": [],
+    "recommendations": [
+      "No material risk remediation identified beyond standard legal review.",
+      "Require notice, cure rights, and a defined termination trigger.",
+      "Cap liability and exclude indirect or unforeseeable damages.",
+      "Validate any critical clause with jurisdiction-specific counsel before signature.",
+      "Compare risk concentration against previous agreements in the contract memory store."
+    ],
+    "metrics": {
+      "meanClauseRisk": 37.29,
+      "p90ClauseRisk": 51.78,
+      "criticalClauseRatio": 0.0,
+      "warningClauseRatio": 0.6,
+      "riskDispersion": 0.24,
+      "fairnessIndex": 61.4,
+      "legalExposureIndex": 10.7,
+      "concentrationIndex": 9.6,
+      "aggregationFormula": "overall = 0.55*mean_clause_risk + 0.20*p90_clause_risk + 0.15*critical_clause_ratio*100 + 0.10*legal_exposure_index"
+    },
+    "clauses": [
+      {
+        "clauseId": "clause-001",
+        "sectionReference": "General",
+        "hierarchy": [
+          "General"
+        ],
+        "title": "",
+        "originalText": "Client shall pay all invoices within thirty (30) days of receipt.",
+        "plainLanguage": "The company is required to do something. In plain terms, client shall pay all invoices within thirty (30) days of receipt.",
+        "clauseType": "payment",
+        "riskCategory": "safe",
+        "colorIndicator": "green",
+        "riskScore": 27.84,
+        "confidence": 0.73,
+        "explanation": "Clause risk is safe with score 27.84. The strongest driver is fairnessImbalance, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.25,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.35,
+          "score": 27.84,
+          "confidence": 0.73,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "Client shall pay all invoices within thirty (30) days of receipt.",
+          "revisedClause": "Client shall pay all invoices within thirty (30) days of receipt provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording 'Client shall pay all invoices within thirty (30) days of receipt.' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "Ambiguous drafting can extend resolution timelines and increase negotiation costs.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ]
+      },
+      {
+        "clauseId": "clause-002",
+        "sectionReference": "General",
+        "hierarchy": [
+          "General"
+        ],
+        "title": "",
+        "originalText": "Late payments shall incur interest at a rate of 1.5% per month, or the maximum rate permitted by law, whichever is lower Either party may terminate this Agreement upon thirty (30) days' written notice.",
+        "plainLanguage": "Both sides is required to do something. In plain terms, late payments shall incur interest at a rate of 1.5% per month, or the maximum rate permitted by law, whichever is lower Either party may terminate this Agreement upon thirty (30) days' written notice.",
+        "clauseType": "termination",
+        "riskCategory": "warning",
+        "colorIndicator": "yellow",
+        "riskScore": 39.31,
+        "confidence": 0.97,
+        "explanation": "Clause risk is warning with score 39.31. The strongest driver is fairnessImbalance, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.25,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.25,
+          "terminationVolatility": 0.25,
+          "complianceExposure": 0.2,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.35,
+          "score": 39.31,
+          "confidence": 0.97,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "Late payments shall incur interest at a rate of 1.5% per month, or the maximum rate permitted by law, whichever is lower Either party may terminate this Agreement upon thirty (30) days' written notice.",
+          "revisedClause": "Late payments shall incur interest at a rate of 1.5% per month, or the maximum rate permitted by law, whichever is lower Either party may terminate this Agreement upon thirty (30) days' written notice provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording 'Late payments shall incur interest at a rate of 1.5% per month, or the maximum rate permitted by law, whichever is lower Either party may terminate this Agreeme' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Counterparty triggers termination",
+            "likelyConsequence": "Service disruption, accelerated transition costs, and leverage loss in negotiations.",
+            "severity": "warning",
+            "reasoning": "Termination language can be used as pressure if triggers or cure rights are under-defined."
+          }
+        ]
+      },
+      {
+        "clauseId": "clause-003",
+        "sectionReference": "General",
+        "hierarchy": [
+          "General"
+        ],
+        "title": "",
+        "originalText": "If the Consultant fails to deliver the promised services, the Company may terminate this Agreement immediately upon written notice In no event shall Provider's total liability exceed the fees paid by Customer in the twelve (12) months preceding the claim.",
+        "plainLanguage": "The company is required to do something. In plain terms, if the Consultant fails to deliver the promised services, the Company may terminate this Agreement immediately upon written notice In no event shall Provider's total liability exceed the fees paid by Customer in the twelve (12) months preceding the claim.",
+        "clauseType": "termination",
+        "riskCategory": "warning",
+        "colorIndicator": "yellow",
+        "riskScore": 39.69,
+        "confidence": 0.97,
+        "explanation": "Clause risk is warning with score 39.69. The strongest driver is terminationVolatility, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.25,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.25,
+          "terminationVolatility": 0.5,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.35,
+          "score": 39.69,
+          "confidence": 0.97,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "Require notice, cure rights, and a defined termination trigger."
+        ],
+        "improvement": {
+          "originalClause": "If the Consultant fails to deliver the promised services, the Company may terminate this Agreement immediately upon written notice In no event shall Provider's total liability exceed the fees paid by Customer in the twelve (12) months preceding the claim.",
+          "revisedClause": "If the Consultant fails to deliver the promised services, the Company may terminate this Agreement on 30 days written notice unless immediate termination is required by law upon written notice In no event shall Provider's total liability exceed the fees paid by Customer in the twelve (12) months preceding the claim.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "Require notice, cure rights, and a defined termination trigger."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording 'If the Consultant fails to deliver the promised services, the Company may terminate this Agreement immediately upon written notice In no event shall Provider's ' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Counterparty triggers termination",
+            "likelyConsequence": "Service disruption, accelerated transition costs, and leverage loss in negotiations.",
+            "severity": "warning",
+            "reasoning": "Termination language can be used as pressure if triggers or cure rights are under-defined."
+          },
+          {
+            "scenario": "Third-party claim or service failure",
+            "likelyConsequence": "The clause may transfer defense costs and damages disproportionately.",
+            "severity": "warning",
+            "reasoning": "Liability and indemnity drafting determines who funds disputes and uncapped losses."
+          }
+        ]
+      },
+      {
+        "clauseId": "clause-004",
+        "sectionReference": "General",
+        "hierarchy": [
+          "General"
+        ],
+        "title": "",
+        "originalText": "Provider is not liable for indirect, incidental, or consequential damages (such as lost profits) Supplier shall indemnify, defend, and hold harmless Buyer against all lawsuits, claims, or costs (including legal fees) arising from defective products provided by Supplier.",
+        "plainLanguage": "Both sides is required to do something. In plain terms, provider is not liable for indirect, incidental, or consequential damages (such as lost profits) Supplier shall indemnify, defend, and hold harmless Buyer against all lawsuits, claims, or costs (including legal fees) arising from defective products provided by Supplier.",
+        "clauseType": "liability",
+        "riskCategory": "warning",
+        "colorIndicator": "yellow",
+        "riskScore": 51.78,
+        "confidence": 0.97,
+        "explanation": "Clause risk is warning with score 51.78. The strongest driver is liabilityExposure, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.25,
+          "liabilityExposure": 0.67,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.25,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.2,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.53,
+          "score": 51.78,
+          "confidence": 0.97,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "Cap liability and exclude indirect or unforeseeable damages."
+        ],
+        "improvement": {
+          "originalClause": "Provider is not liable for indirect, incidental, or consequential damages (such as lost profits) Supplier shall indemnify, defend, and hold harmless Buyer against all lawsuits, claims, or costs (including legal fees) arising from defective products provided by Supplier.",
+          "revisedClause": "Provider is not liable for indirect, incidental, or consequential damages (such as lost profits) Supplier shall indemnify, defend, and hold harmless Buyer against all lawsuits, claims, or costs (including legal fees) arising from defective products provided by Supplier provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "Cap liability and exclude indirect or unforeseeable damages."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording 'Provider is not liable for indirect, incidental, or consequential damages (such as lost profits) Supplier shall indemnify, defend, and hold harmless Buyer again' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Third-party claim or service failure",
+            "likelyConsequence": "The clause may transfer defense costs and damages disproportionately.",
+            "severity": "warning",
+            "reasoning": "Liability and indemnity drafting determines who funds disputes and uncapped losses."
+          }
+        ]
+      },
+      {
+        "clauseId": "clause-005",
+        "sectionReference": "General",
+        "hierarchy": [
+          "General"
+        ],
+        "title": "",
+        "originalText": "Upon full payment, all work product, including creative concepts, designs, and code, shall be deemed 'work made for hire' and owned exclusively by the Client.",
+        "plainLanguage": "The company is required to do something. In plain terms, upon full payment, all work product, including creative concepts, designs, and code, shall be deemed 'work made for hire' and owned exclusively by the Client.",
+        "clauseType": "payment",
+        "riskCategory": "safe",
+        "colorIndicator": "green",
+        "riskScore": 27.84,
+        "confidence": 0.85,
+        "explanation": "Clause risk is safe with score 27.84. The strongest driver is fairnessImbalance, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.25,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.35,
+          "score": 27.84,
+          "confidence": 0.85,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "Upon full payment, all work product, including creative concepts, designs, and code, shall be deemed 'work made for hire' and owned exclusively by the Client.",
+          "revisedClause": "Upon full payment, all work product, including creative concepts, designs, and code, shall be deemed 'work made for hire' and owned exclusively by the Client provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording 'Upon full payment, all work product, including creative concepts, designs, and code, shall be deemed 'work made for hire' and owned exclusively by the Client.' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "Ambiguous drafting can extend resolution timelines and increase negotiation costs.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ]
+      }
+    ],
+    "contractorCredibility": {
+      "score": 62.0,
+      "rating": "moderate",
+      "summary": "tesla has a light-touch diligence profile with publicly available footprint data. Credibility is rated moderate because the signal mix shows 0 positive and 0 negative indicators.",
+      "positiveSignals": [],
+      "negativeSignals": [],
+      "sources": [
+        "https://example.com/counterparty-profile"
+      ],
+      "framework": "credibility = 62 + 22*avg_positive_signal - 28*avg_negative_signal + coverage_bonus, clamped to [0,100]"
+    },
+    "evaluationMetrics": {
+      "contract_classification": "top-1 accuracy, macro-F1, calibration error",
+      "clause_segmentation": "boundary F1, hierarchical consistency, clause coverage",
+      "risk_detection": "AUROC, precision@critical, weighted Brier score, explanation faithfulness",
+      "explanation_quality": "human adequacy, factual consistency, edit distance to gold simplifications"
+    },
+    "generatedAt": "2026-03-15T19:24:34.322653"
+  },
+  "searchableText": "Client shall pay all invoices within thirty (30) days of receipt. Late payments shall incur interest at a rate of 1.5% per month, or the maximum rate permitted by law, whichever is lower\r\n\r\nEither party may terminate this Agreement upon thirty (30) days' written notice. If the Consultant fails to deliver the promised services, the Company may terminate this Agreement immediately upon written notice\r\n\r\nIn no event shall Provider's total liability exceed the fees paid by Customer in the twelve (12) months preceding the claim. Provider is not liable for indirect, incidental, or consequential damages (such as lost profits)\r\n\r\nSupplier shall indemnify, defend, and hold harmless Buyer against all lawsuits, claims, or costs (including legal fees) arising from defective products provided by Supplier.\r\n\r\nUpon full payment, all work product, including creative concepts, designs, and code, shall be deemed 'work made for hire' and owned exclusively by the Client.\nClient shall pay all invoices within thirty (30) days of receipt.\nThe company is required to do something. In plain terms, client shall pay all invoices within thirty (30) days of receipt.\nLate payments shall incur interest at a rate of 1.5% per month, or the maximum rate permitted by law, whichever is lower Either party may terminate this Agreement upon thirty (30) days' written notice.\nBoth sides is required to do something. In plain terms, late payments shall incur interest at a rate of 1.5% per month, or the maximum rate permitted by law, whichever is lower Either party may terminate this Agreement upon thirty (30) days' written notice.\nIf the Consultant fails to deliver the promised services, the Company may terminate this Agreement immediately upon written notice In no event shall Provider's total liability exceed the fees paid by Customer in the twelve (12) months preceding the claim.\nThe company is required to do something. In plain terms, if the Consultant fails to deliver the promised services, the Company may terminate this Agreement immediately upon written notice In no event shall Provider's total liability exceed the fees paid by Customer in the twelve (12) months preceding the claim.\nProvider is not liable for indirect, incidental, or consequential damages (such as lost profits) Supplier shall indemnify, defend, and hold harmless Buyer against all lawsuits, claims, or costs (including legal fees) arising from defective products provided by Supplier.\nBoth sides is required to do something. In plain terms, provider is not liable for indirect, incidental, or consequential damages (such as lost profits) Supplier shall indemnify, defend, and hold harmless Buyer against all lawsuits, claims, or costs (including legal fees) arising from defective products provided by Supplier.\nUpon full payment, all work product, including creative concepts, designs, and code, shall be deemed 'work made for hire' and owned exclusively by the Client.\nThe company is required to do something. In plain terms, upon full payment, all work product, including creative concepts, designs, and code, shall be deemed 'work made for hire' and owned exclusively by the Client.",
+  "createdAt": "2026-03-15T19:24:34.322653",
+  "updatedAt": "2026-03-15T19:24:34.322653"
+}

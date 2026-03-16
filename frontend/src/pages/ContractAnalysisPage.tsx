@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import ClauseCard from "../components/ClauseCard";
+import ExtractedDocumentPanel from "../components/ExtractedDocumentPanel";
 import OutcomeSimulatorChat from "../components/OutcomeSimulatorChat";
 import PartyIntelligencePanel from "../components/PartyIntelligencePanel";
 import ReportExportButton from "../components/ReportExportButton";
@@ -21,6 +22,7 @@ const ContractAnalysisPage = (): JSX.Element => {
     analyzeContract,
     isAnalyzingContract,
     activeReport,
+    activeAnalysis,
     fetchReportByContract,
     shareReport,
   } = useContract();
@@ -112,11 +114,7 @@ const ContractAnalysisPage = (): JSX.Element => {
           </div>
           <div className="analysis-header__actions">
             <ReportExportButton />
-            <button
-              type="button"
-              className="button button--primary"
-              onClick={() => void handleShare()}
-            >
+            <button type="button" className="button button--primary" onClick={() => void handleShare()}>
               Share
             </button>
           </div>
@@ -157,19 +155,21 @@ const ContractAnalysisPage = (): JSX.Element => {
               <h2>Executive Summary</h2>
               <p>
                 {activeReport?.aiOutput.summary ??
+                  activeAnalysis?.summary ??
                   "This agreement is standard for the technology sector but contains clauses that may require negotiation before signature."}
               </p>
               <p>
-                Key highlights include clearly defined ownership language, key notice obligations, and a risk distribution profile that should be reviewed before execution.
+                {activeAnalysis?.executiveLegalSummary ??
+                  "Key highlights include clearly defined ownership language, key notice obligations, and a risk distribution profile that should be reviewed before execution."}
               </p>
               <div className="summary-metrics">
                 <div>
                   <span>Risk Score</span>
-                  <strong>{activeReport?.aiOutput.overallRiskScore ?? 64}/100</strong>
+                  <strong>{activeReport?.aiOutput.overallRiskScore ?? activeAnalysis?.overallRiskScore ?? 64}/100</strong>
                 </div>
                 <div>
                   <span>Clauses</span>
-                  <strong>{activeContract?.clauseList.length ?? 0}</strong>
+                  <strong>{activeContract?.clauseList.length ?? activeAnalysis?.clauses.length ?? 0}</strong>
                 </div>
                 <div>
                   <span>Confidence</span>
@@ -178,7 +178,8 @@ const ContractAnalysisPage = (): JSX.Element => {
               </div>
             </section>
 
-            <OutcomeSimulatorChat />
+            {activeAnalysis ? <ExtractedDocumentPanel report={activeAnalysis} /> : null}
+            <OutcomeSimulatorChat contractId={activeContract?._id} />
           </div>
 
           <aside className="analysis-columns__side">
@@ -200,7 +201,7 @@ const ContractAnalysisPage = (): JSX.Element => {
               </section>
             )}
 
-            <PartyIntelligencePanel />
+            <PartyIntelligencePanel intel={activeAnalysis?.contractorCredibility} />
           </aside>
         </div>
       </main>

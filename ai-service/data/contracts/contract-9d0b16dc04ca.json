@@ -1,0 +1,1248 @@
+{
+  "contractId": "contract-9d0b16dc04ca",
+  "report": {
+    "contractId": "contract-9d0b16dc04ca",
+    "contractType": {
+      "category": "vendor agreement",
+      "confidence": 0.98,
+      "evidence": [
+        "delivery",
+        "goods",
+        "invoice"
+      ],
+      "alternatives": {
+        "vendor agreement": 1.0,
+        "service contract": 0.24,
+        "legal statute": 0.0,
+        "employment": 0.0
+      }
+    },
+    "extraction": {
+      "documentKind": "image",
+      "extractionMethod": "gemini_image_ocr",
+      "sourceFilename": "Screenshot 2026-03-15 144043.png",
+      "mediaType": "image/png",
+      "structureConfidence": 0.9,
+      "extractedCharacters": 1662,
+      "textPreview": "GENERAL CONTRACT FOR PRODUCTS\n\nOrder Number:\n\nThis Contract (this \"Contract\") is made effective as of , by and between\n, of , and , of\n.\n\n1. ITEMS PURCHASED. agrees to sell, and\nagrees to buy, the following products (the \"Goods\") in accordance with the terms and conditions of\nthis Contract:\n\nTOTAL: $0.00\n\n2. PRODUCT STANDARDS. The Goods shall comply with the 's\nquotation dated and incorporated int",
+      "notes": [
+        "Gemini multimodal OCR extracted the image content."
+      ]
+    },
+    "summary": "This vendor agreement is assessed as safe risk, with 0 critical clauses and 1 warning clauses. The report prioritizes disproportionate liability, ambiguous drafting, loophole-prone overrides, and negotiable remediation paths. The highest-risk issue is payment language in clause-013, scored 51/100. Counterparty credibility is rated moderate at 62/100.",
+    "executiveLegalSummary": "Overall legal posture is safe. If disputed, the strongest litigation pressure points are: this Contract: A court is likely to award late-payment remedies only if the rate is lawful, conspicuous, and tied to an undisputed default. this Contract: A court is likely to enforce the clause substantially as drafted. this Contract: A court is likely to enforce the clause substantially as drafted.",
+    "overallRiskScore": 14.76,
+    "overallRiskCategory": "safe",
+    "keyVulnerabilities": [
+      "clause-013: A court is likely to award late-payment remedies only if the rate is lawful, conspicuous, and tied to an undisputed default."
+    ],
+    "legalLoopholes": [],
+    "illegalClauseAlerts": [],
+    "recommendations": [
+      "No material risk remediation identified beyond standard legal review.",
+      "Reduce late-payment interest or add a grace period before default charges apply.",
+      "Validate any critical clause with jurisdiction-specific counsel before signature.",
+      "Compare risk concentration against previous agreements in the contract memory store."
+    ],
+    "priorityActions": [
+      "No material risk remediation identified beyond standard legal review.",
+      "Reduce late-payment interest or add a grace period before default charges apply.",
+      "Validate any critical clause with jurisdiction-specific counsel before signature."
+    ],
+    "reportFindings": [
+      "this Contract: A judge is likely to view this as warning because a judge may enforce the clause narrowly, but only after testing ambiguity, notice, scope, and proportionality.",
+      "this Contract: A judge is likely to view this as safe because a judge is likely to treat this clause as commercially standard unless surrounding facts make enforcement unfair.",
+      "this Contract: A judge is likely to view this as safe because a judge is likely to treat this clause as commercially standard unless surrounding facts make enforcement unfair.",
+      "this Contract: A judge is likely to view this as safe because a judge is likely to treat this clause as commercially standard unless surrounding facts make enforcement unfair.",
+      "this Contract: A judge is likely to view this as safe because a judge is likely to treat this clause as commercially standard unless surrounding facts make enforcement unfair."
+    ],
+    "metrics": {
+      "meanClauseRisk": 17.7,
+      "p90ClauseRisk": 24.29,
+      "criticalClauseRatio": 0.0,
+      "warningClauseRatio": 0.06,
+      "riskDispersion": 0.4,
+      "fairnessIndex": 89.18,
+      "legalExposureIndex": 2.74,
+      "concentrationIndex": 16.0,
+      "aggregationFormula": "overall = 0.55*mean_clause_risk + 0.20*p90_clause_risk + 0.15*critical_clause_ratio*100 + 0.10*legal_exposure_index"
+    },
+    "clauses": [
+      {
+        "clauseId": "clause-001",
+        "sectionReference": "General",
+        "hierarchy": [
+          "General"
+        ],
+        "title": "",
+        "originalText": "GENERAL CONTRACT FOR PRODUCTS",
+        "plainLanguage": "Both sides sets a contract rule. In plain terms, gENERAL CONTRACT FOR PRODUCTS",
+        "clauseType": "general",
+        "riskCategory": "safe",
+        "colorIndicator": "green",
+        "riskScore": 10.95,
+        "confidence": 0.49,
+        "explanation": "Clause risk is safe with score 10.95. The strongest driver is fairnessImbalance, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.0,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 10.95,
+          "confidence": 0.49,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "GENERAL CONTRACT FOR PRODUCTS",
+          "revisedClause": "GENERAL CONTRACT FOR PRODUCTS provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording 'GENERAL CONTRACT FOR PRODUCTS' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "Ambiguous drafting can extend resolution timelines and increase negotiation costs.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ],
+        "courtroomAssessment": {
+          "judgeView": "A judge is likely to treat this clause as commercially standard unless surrounding facts make enforcement unfair.",
+          "claimantArguments": [
+            "The wording should be enforced as written because the parties accepted a clear allocation of risk."
+          ],
+          "defenseArguments": [
+            "Any ambiguous wording should be construed narrowly, especially if one party drafted the clause."
+          ],
+          "likelyRuling": "A court is likely to enforce the clause substantially as drafted.",
+          "enforceabilityConcerns": [],
+          "businessImpact": "This clause shapes dispute leverage, drafting clarity, and the cost of enforcement."
+        }
+      },
+      {
+        "clauseId": "clause-002",
+        "sectionReference": "Order Number",
+        "hierarchy": [
+          "Order Number"
+        ],
+        "title": "",
+        "originalText": "This Contract (this \"Contract\") is made effective as of , by and between , of , and , of .",
+        "plainLanguage": "Both sides sets a contract rule. In plain terms, this Contract (this \"Contract\") is made effective as of , by and between , of , and , of .",
+        "clauseType": "general",
+        "riskCategory": "safe",
+        "colorIndicator": "green",
+        "riskScore": 10.95,
+        "confidence": 0.56,
+        "explanation": "Clause risk is safe with score 10.95. The strongest driver is fairnessImbalance, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.0,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 10.95,
+          "confidence": 0.56,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "This Contract (this \"Contract\") is made effective as of , by and between , of , and , of .",
+          "revisedClause": "This Contract (this \"Contract\") is made effective as of , by and between , of , and , of  provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording 'This Contract (this \"Contract\") is made effective as of , by and between , of , and , of .' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "Ambiguous drafting can extend resolution timelines and increase negotiation costs.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ],
+        "courtroomAssessment": {
+          "judgeView": "A judge is likely to treat this clause as commercially standard unless surrounding facts make enforcement unfair.",
+          "claimantArguments": [
+            "The wording should be enforced as written because the parties accepted a clear allocation of risk."
+          ],
+          "defenseArguments": [
+            "Any ambiguous wording should be construed narrowly, especially if one party drafted the clause."
+          ],
+          "likelyRuling": "A court is likely to enforce the clause substantially as drafted.",
+          "enforceabilityConcerns": [],
+          "businessImpact": "This clause shapes dispute leverage, drafting clarity, and the cost of enforcement."
+        }
+      },
+      {
+        "clauseId": "clause-003",
+        "sectionReference": "Order Number",
+        "hierarchy": [
+          "Order Number",
+          "1"
+        ],
+        "title": "",
+        "originalText": "ITEMS PURCHASED. agrees to sell, and",
+        "plainLanguage": "Both sides sets a contract rule. In plain terms, iTEMS PURCHASED. agrees to sell, and",
+        "clauseType": "general",
+        "riskCategory": "safe",
+        "colorIndicator": "green",
+        "riskScore": 10.95,
+        "confidence": 0.49,
+        "explanation": "Clause risk is safe with score 10.95. The strongest driver is fairnessImbalance, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.0,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 10.95,
+          "confidence": 0.49,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "ITEMS PURCHASED. agrees to sell, and",
+          "revisedClause": "ITEMS PURCHASED. agrees to sell, and provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording 'ITEMS PURCHASED. agrees to sell, and' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "Ambiguous drafting can extend resolution timelines and increase negotiation costs.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ],
+        "courtroomAssessment": {
+          "judgeView": "A judge is likely to treat this clause as commercially standard unless surrounding facts make enforcement unfair.",
+          "claimantArguments": [
+            "The wording should be enforced as written because the parties accepted a clear allocation of risk."
+          ],
+          "defenseArguments": [
+            "Any ambiguous wording should be construed narrowly, especially if one party drafted the clause."
+          ],
+          "likelyRuling": "A court is likely to enforce the clause substantially as drafted.",
+          "enforceabilityConcerns": [],
+          "businessImpact": "This clause shapes dispute leverage, drafting clarity, and the cost of enforcement."
+        }
+      },
+      {
+        "clauseId": "clause-004",
+        "sectionReference": "Order Number",
+        "hierarchy": [
+          "Order Number",
+          "1"
+        ],
+        "title": "",
+        "originalText": "agrees to buy, the following products (the \"Goods\") in accordance with the terms and conditions of",
+        "plainLanguage": "Both sides sets a contract rule. In plain terms, agrees to buy, the following products (the \"Goods\") in accordance with the terms and conditions of",
+        "clauseType": "general",
+        "riskCategory": "safe",
+        "colorIndicator": "green",
+        "riskScore": 10.95,
+        "confidence": 0.57,
+        "explanation": "Clause risk is safe with score 10.95. The strongest driver is fairnessImbalance, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.0,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 10.95,
+          "confidence": 0.57,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "agrees to buy, the following products (the \"Goods\") in accordance with the terms and conditions of",
+          "revisedClause": "agrees to buy, the following products (the \"Goods\") in accordance with the terms and conditions of provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording 'agrees to buy, the following products (the \"Goods\") in accordance with the terms and conditions of' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "Ambiguous drafting can extend resolution timelines and increase negotiation costs.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ],
+        "courtroomAssessment": {
+          "judgeView": "A judge is likely to treat this clause as commercially standard unless surrounding facts make enforcement unfair.",
+          "claimantArguments": [
+            "The wording should be enforced as written because the parties accepted a clear allocation of risk."
+          ],
+          "defenseArguments": [
+            "Any ambiguous wording should be construed narrowly, especially if one party drafted the clause."
+          ],
+          "likelyRuling": "A court is likely to enforce the clause substantially as drafted.",
+          "enforceabilityConcerns": [],
+          "businessImpact": "This clause shapes dispute leverage, drafting clarity, and the cost of enforcement."
+        }
+      },
+      {
+        "clauseId": "clause-005",
+        "sectionReference": "this Contract",
+        "hierarchy": [
+          "this Contract"
+        ],
+        "title": "",
+        "originalText": "TOTAL: $0.00",
+        "plainLanguage": "Both sides sets a contract rule. In plain terms, tOTAL: $0.00",
+        "clauseType": "general",
+        "riskCategory": "safe",
+        "colorIndicator": "green",
+        "riskScore": 10.95,
+        "confidence": 0.47,
+        "explanation": "Clause risk is safe with score 10.95. The strongest driver is fairnessImbalance, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.0,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 10.95,
+          "confidence": 0.47,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "TOTAL: $0.00",
+          "revisedClause": "TOTAL: $0.00 provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording 'TOTAL: $0.00' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "Ambiguous drafting can extend resolution timelines and increase negotiation costs.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ],
+        "courtroomAssessment": {
+          "judgeView": "A judge is likely to treat this clause as commercially standard unless surrounding facts make enforcement unfair.",
+          "claimantArguments": [
+            "The wording should be enforced as written because the parties accepted a clear allocation of risk."
+          ],
+          "defenseArguments": [
+            "Any ambiguous wording should be construed narrowly, especially if one party drafted the clause."
+          ],
+          "likelyRuling": "A court is likely to enforce the clause substantially as drafted.",
+          "enforceabilityConcerns": [],
+          "businessImpact": "This clause shapes dispute leverage, drafting clarity, and the cost of enforcement."
+        }
+      },
+      {
+        "clauseId": "clause-006",
+        "sectionReference": "this Contract",
+        "hierarchy": [
+          "this Contract",
+          "2"
+        ],
+        "title": "",
+        "originalText": "PRODUCT STANDARDS. The Goods shall comply with the 's",
+        "plainLanguage": "Both sides is required to do something. In plain terms, pRODUCT STANDARDS. The Goods shall comply with the 's",
+        "clauseType": "obligation",
+        "riskCategory": "safe",
+        "colorIndicator": "green",
+        "riskScore": 22.25,
+        "confidence": 0.62,
+        "explanation": "Clause risk is safe with score 22.25. The strongest driver is obligationAsymmetry, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.25,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 22.25,
+          "confidence": 0.62,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "PRODUCT STANDARDS. The Goods shall comply with the 's",
+          "revisedClause": "PRODUCT STANDARDS. The Goods shall comply with the 's provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording 'PRODUCT STANDARDS. The Goods shall comply with the 's' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "Ambiguous drafting can extend resolution timelines and increase negotiation costs.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ],
+        "courtroomAssessment": {
+          "judgeView": "A judge is likely to treat this clause as commercially standard unless surrounding facts make enforcement unfair.",
+          "claimantArguments": [
+            "The wording should be enforced as written because the parties accepted a clear allocation of risk."
+          ],
+          "defenseArguments": [
+            "Any ambiguous wording should be construed narrowly, especially if one party drafted the clause."
+          ],
+          "likelyRuling": "A court is likely to enforce the clause substantially as drafted.",
+          "enforceabilityConcerns": [],
+          "businessImpact": "This clause shapes dispute leverage, drafting clarity, and the cost of enforcement."
+        }
+      },
+      {
+        "clauseId": "clause-007",
+        "sectionReference": "this Contract",
+        "hierarchy": [
+          "this Contract",
+          "2"
+        ],
+        "title": "",
+        "originalText": "quotation dated and incorporated into this Contract by this reference.",
+        "plainLanguage": "Both sides sets a contract rule. In plain terms, quotation dated and incorporated into this Contract by this reference.",
+        "clauseType": "general",
+        "riskCategory": "safe",
+        "colorIndicator": "green",
+        "riskScore": 10.95,
+        "confidence": 0.54,
+        "explanation": "Clause risk is safe with score 10.95. The strongest driver is fairnessImbalance, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.0,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 10.95,
+          "confidence": 0.54,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "quotation dated and incorporated into this Contract by this reference.",
+          "revisedClause": "quotation dated and incorporated into this Contract by this reference provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording 'quotation dated and incorporated into this Contract by this reference.' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "Ambiguous drafting can extend resolution timelines and increase negotiation costs.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ],
+        "courtroomAssessment": {
+          "judgeView": "A judge is likely to treat this clause as commercially standard unless surrounding facts make enforcement unfair.",
+          "claimantArguments": [
+            "The wording should be enforced as written because the parties accepted a clear allocation of risk."
+          ],
+          "defenseArguments": [
+            "Any ambiguous wording should be construed narrowly, especially if one party drafted the clause."
+          ],
+          "likelyRuling": "A court is likely to enforce the clause substantially as drafted.",
+          "enforceabilityConcerns": [],
+          "businessImpact": "This clause shapes dispute leverage, drafting clarity, and the cost of enforcement."
+        }
+      },
+      {
+        "clauseId": "clause-008",
+        "sectionReference": "this Contract",
+        "hierarchy": [
+          "this Contract",
+          "3"
+        ],
+        "title": "",
+        "originalText": "TITLE/RISK OF LOSS. Buyer shall pay reasonable shipping costs in accordance with its",
+        "plainLanguage": "Both sides is required to do something. In plain terms, tITLE/RISK OF LOSS. Buyer shall pay reasonable shipping costs in accordance with its",
+        "clauseType": "obligation",
+        "riskCategory": "safe",
+        "colorIndicator": "green",
+        "riskScore": 19.87,
+        "confidence": 0.66,
+        "explanation": "Clause risk is safe with score 19.87. The strongest driver is obligationAsymmetry, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.25,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.02,
+          "score": 19.87,
+          "confidence": 0.66,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "TITLE/RISK OF LOSS. Buyer shall pay reasonable shipping costs in accordance with its",
+          "revisedClause": "TITLE/RISK OF LOSS. Buyer shall pay reasonable shipping costs in accordance with its provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording 'TITLE/RISK OF LOSS. Buyer shall pay reasonable shipping costs in accordance with its' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "Ambiguous drafting can extend resolution timelines and increase negotiation costs.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ],
+        "courtroomAssessment": {
+          "judgeView": "A judge is likely to treat this clause as commercially standard unless surrounding facts make enforcement unfair.",
+          "claimantArguments": [
+            "The wording should be enforced as written because the parties accepted a clear allocation of risk."
+          ],
+          "defenseArguments": [
+            "Any ambiguous wording should be construed narrowly, especially if one party drafted the clause."
+          ],
+          "likelyRuling": "A court is likely to enforce the clause substantially as drafted.",
+          "enforceabilityConcerns": [],
+          "businessImpact": "This clause shapes dispute leverage, drafting clarity, and the cost of enforcement."
+        }
+      },
+      {
+        "clauseId": "clause-009",
+        "sectionReference": "this Contract",
+        "hierarchy": [
+          "this Contract",
+          "3"
+        ],
+        "title": "",
+        "originalText": "shipping instructions, but the seller shall be responsible for packaging, shipping and safe delivery and shall bear all risk of damage or loss until the goods are delivered to the buyer's address.",
+        "plainLanguage": "Both sides is required to do something. In plain terms, shipping instructions, but the seller shall be responsible for packaging, shipping and safe delivery and shall bear all risk of damage or loss until the goods are delivered to the buyer's address.",
+        "clauseType": "obligation",
+        "riskCategory": "safe",
+        "colorIndicator": "green",
+        "riskScore": 22.25,
+        "confidence": 0.8,
+        "explanation": "Clause risk is safe with score 22.25. The strongest driver is obligationAsymmetry, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.25,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 22.25,
+          "confidence": 0.8,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "shipping instructions, but the seller shall be responsible for packaging, shipping and safe delivery and shall bear all risk of damage or loss until the goods are delivered to the buyer's address.",
+          "revisedClause": "shipping instructions, but the seller shall be responsible for packaging, shipping and safe delivery and shall bear all risk of damage or loss until the goods are delivered to the buyer's address provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording 'shipping instructions, but the seller shall be responsible for packaging, shipping and safe delivery and shall bear all risk of damage or loss until the goods a' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "Ambiguous drafting can extend resolution timelines and increase negotiation costs.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ],
+        "courtroomAssessment": {
+          "judgeView": "A judge is likely to treat this clause as commercially standard unless surrounding facts make enforcement unfair.",
+          "claimantArguments": [
+            "The wording should be enforced as written because the parties accepted a clear allocation of risk."
+          ],
+          "defenseArguments": [
+            "Any ambiguous wording should be construed narrowly, especially if one party drafted the clause."
+          ],
+          "likelyRuling": "A court is likely to enforce the clause substantially as drafted.",
+          "enforceabilityConcerns": [],
+          "businessImpact": "This clause shapes dispute leverage, drafting clarity, and the cost of enforcement."
+        }
+      },
+      {
+        "clauseId": "clause-010",
+        "sectionReference": "this Contract",
+        "hierarchy": [
+          "this Contract",
+          "4"
+        ],
+        "title": "",
+        "originalText": "PAYMENT. Payment shall be made to in the amount of $0.00 upon delivery of all Goods",
+        "plainLanguage": "Both sides is required to do something. In plain terms, pAYMENT. Payment shall be made to in the amount of $0.00 upon delivery of all Goods",
+        "clauseType": "payment",
+        "riskCategory": "safe",
+        "colorIndicator": "green",
+        "riskScore": 22.25,
+        "confidence": 0.65,
+        "explanation": "Clause risk is safe with score 22.25. The strongest driver is obligationAsymmetry, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.25,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 22.25,
+          "confidence": 0.65,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "PAYMENT. Payment shall be made to in the amount of $0.00 upon delivery of all Goods",
+          "revisedClause": "PAYMENT. Payment shall be made to in the amount of $0.00 upon delivery of all Goods provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording 'PAYMENT. Payment shall be made to in the amount of $0.00 upon delivery of all Goods' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "Ambiguous drafting can extend resolution timelines and increase negotiation costs.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ],
+        "courtroomAssessment": {
+          "judgeView": "A judge is likely to treat this clause as commercially standard unless surrounding facts make enforcement unfair.",
+          "claimantArguments": [
+            "The wording should be enforced as written because the parties accepted a clear allocation of risk."
+          ],
+          "defenseArguments": [
+            "Any ambiguous wording should be construed narrowly, especially if one party drafted the clause."
+          ],
+          "likelyRuling": "A court is likely to enforce the clause substantially as drafted.",
+          "enforceabilityConcerns": [],
+          "businessImpact": "This clause affects cash flow pressure, invoice disputes, and the cost of delay."
+        }
+      },
+      {
+        "clauseId": "clause-011",
+        "sectionReference": "this Contract",
+        "hierarchy": [
+          "this Contract",
+          "4"
+        ],
+        "title": "",
+        "originalText": "described in this Contract.",
+        "plainLanguage": "Both sides sets a contract rule. In plain terms, described in this Contract.",
+        "clauseType": "general",
+        "riskCategory": "safe",
+        "colorIndicator": "green",
+        "riskScore": 10.95,
+        "confidence": 0.48,
+        "explanation": "Clause risk is safe with score 10.95. The strongest driver is fairnessImbalance, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.0,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 10.95,
+          "confidence": 0.48,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "described in this Contract.",
+          "revisedClause": "described in this Contract provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording 'described in this Contract.' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "Ambiguous drafting can extend resolution timelines and increase negotiation costs.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ],
+        "courtroomAssessment": {
+          "judgeView": "A judge is likely to treat this clause as commercially standard unless surrounding facts make enforcement unfair.",
+          "claimantArguments": [
+            "The wording should be enforced as written because the parties accepted a clear allocation of risk."
+          ],
+          "defenseArguments": [
+            "Any ambiguous wording should be construed narrowly, especially if one party drafted the clause."
+          ],
+          "likelyRuling": "A court is likely to enforce the clause substantially as drafted.",
+          "enforceabilityConcerns": [],
+          "businessImpact": "This clause shapes dispute leverage, drafting clarity, and the cost of enforcement."
+        }
+      },
+      {
+        "clauseId": "clause-012",
+        "sectionReference": "this Contract",
+        "hierarchy": [
+          "this Contract",
+          "4"
+        ],
+        "title": "",
+        "originalText": "Payment discount terms are as follows: a 0 percent discount if total bill is paid within 0 days.",
+        "plainLanguage": "Both sides sets a contract rule within 0 days. In plain terms, payment discount terms are as follows: a 0 percent discount if total bill is paid within 0 days.",
+        "clauseType": "payment",
+        "riskCategory": "safe",
+        "colorIndicator": "green",
+        "riskScore": 10.95,
+        "confidence": 0.57,
+        "explanation": "Clause risk is safe with score 10.95. The strongest driver is fairnessImbalance, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.0,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 10.95,
+          "confidence": 0.57,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "Payment discount terms are as follows: a 0 percent discount if total bill is paid within 0 days.",
+          "revisedClause": "Payment discount terms are as follows: a 0 percent discount if total bill is paid within 0 days provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording 'Payment discount terms are as follows: a 0 percent discount if total bill is paid within 0 days.' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "Ambiguous drafting can extend resolution timelines and increase negotiation costs.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ],
+        "courtroomAssessment": {
+          "judgeView": "A judge is likely to treat this clause as commercially standard unless surrounding facts make enforcement unfair.",
+          "claimantArguments": [
+            "The wording should be enforced as written because the parties accepted a clear allocation of risk."
+          ],
+          "defenseArguments": [
+            "Any ambiguous wording should be construed narrowly, especially if one party drafted the clause."
+          ],
+          "likelyRuling": "A court is likely to enforce the clause substantially as drafted.",
+          "enforceabilityConcerns": [],
+          "businessImpact": "This clause affects cash flow pressure, invoice disputes, and the cost of delay."
+        }
+      },
+      {
+        "clauseId": "clause-013",
+        "sectionReference": "this Contract",
+        "hierarchy": [
+          "this Contract",
+          "4"
+        ],
+        "title": "",
+        "originalText": "If any invoice is not paid when due, interest will be added to and payable on all overdue amounts at 0 percent per year or the maximum percentage allowed under applicable laws, whichever is less. shall pay all costs of collection, including without limitation, reasonable attorney fees.",
+        "plainLanguage": "Both sides is required to do something. In plain terms, if any invoice is not paid when due, interest will be added to and payable on all overdue amounts at 0 percent per year or the maximum percentage allowed under applicable laws, whichever is less. shall pay all costs of collection, including without limitation, reasonable attorney fees.",
+        "clauseType": "payment",
+        "riskCategory": "warning",
+        "colorIndicator": "yellow",
+        "riskScore": 50.7,
+        "confidence": 0.97,
+        "explanation": "Clause risk is warning with score 50.70. The strongest driver is liabilityExposure, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.25,
+          "liabilityExposure": 0.33,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.33,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.2,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.02,
+          "score": 50.7,
+          "confidence": 0.97,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "Reduce late-payment interest or add a grace period before default charges apply."
+        ],
+        "improvement": {
+          "originalClause": "If any invoice is not paid when due, interest will be added to and payable on all overdue amounts at 0 percent per year or the maximum percentage allowed under applicable laws, whichever is less. shall pay all costs of collection, including without limitation, reasonable attorney fees.",
+          "revisedClause": "If any invoice is not paid when due, interest will be added to and payable on all overdue amounts at 0 percent per year or the maximum percentage allowed under applicable laws, whichever is less. shall pay all costs of collection, including without limitation, reasonable attorney fees provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "Reduce late-payment interest or add a grace period before default charges apply."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording 'If any invoice is not paid when due, interest will be added to and payable on all overdue amounts at 0 percent per year or the maximum percentage allowed under ' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Late payment dispute escalates",
+            "likelyConsequence": "Interest, collection costs, or suspension rights can increase the effective contract price.",
+            "severity": "warning",
+            "reasoning": "Default-rate clauses become leverage points once an invoice is contested or delayed."
+          }
+        ],
+        "courtroomAssessment": {
+          "judgeView": "A judge may enforce the clause narrowly, but only after testing ambiguity, notice, scope, and proportionality.",
+          "claimantArguments": [
+            "The wording should be enforced as written because the parties accepted a clear allocation of risk.",
+            "Late-payment language creates a contractual right to collect default interest and recovery costs."
+          ],
+          "defenseArguments": [
+            "Any ambiguous wording should be construed narrowly, especially if one party drafted the clause."
+          ],
+          "likelyRuling": "A court is likely to award late-payment remedies only if the rate is lawful, conspicuous, and tied to an undisputed default.",
+          "enforceabilityConcerns": [],
+          "businessImpact": "This clause affects cash flow pressure, invoice disputes, and the cost of delay."
+        }
+      },
+      {
+        "clauseId": "clause-014",
+        "sectionReference": "this Contract",
+        "hierarchy": [
+          "this Contract",
+          "4"
+        ],
+        "title": "",
+        "originalText": "In addition to any other right or remedy provided by law, if fails to pay for the Goods when due, has the option to treat such failure to pay as a material breach of this Contract and may cancel this Contract and/or seek legal remedies.",
+        "plainLanguage": "Both sides has discretion to act. In plain terms, in addition to any other right or remedy provided by law, if fails to pay for the Goods when due, has the option to treat such failure to pay as a material breach of this Contract and may cancel this Contract and/or seek legal remedies.",
+        "clauseType": "compliance",
+        "riskCategory": "safe",
+        "colorIndicator": "green",
+        "riskScore": 24.29,
+        "confidence": 0.9,
+        "explanation": "Clause risk is safe with score 24.29. The strongest driver is ambiguity, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.0,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.25,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.2,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 24.29,
+          "confidence": 0.9,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "In addition to any other right or remedy provided by law, if fails to pay for the Goods when due, has the option to treat such failure to pay as a material breach of this Contract and may cancel this Contract and/or seek legal remedies.",
+          "revisedClause": "In addition to any other right or remedy provided by law, if fails to pay for the Goods when due, has the option to treat such failure to pay as a material breach of this Contract and may cancel this Contract and/or seek legal remedies provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording 'In addition to any other right or remedy provided by law, if fails to pay for the Goods when due, has the option to treat such failure to pay as a material brea' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "Ambiguous drafting can extend resolution timelines and increase negotiation costs.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ],
+        "courtroomAssessment": {
+          "judgeView": "A judge is likely to treat this clause as commercially standard unless surrounding facts make enforcement unfair.",
+          "claimantArguments": [
+            "The wording should be enforced as written because the parties accepted a clear allocation of risk."
+          ],
+          "defenseArguments": [
+            "Any ambiguous wording should be construed narrowly, especially if one party drafted the clause."
+          ],
+          "likelyRuling": "A court is likely to enforce the clause substantially as drafted.",
+          "enforceabilityConcerns": [],
+          "businessImpact": "This clause shapes dispute leverage, drafting clarity, and the cost of enforcement."
+        }
+      },
+      {
+        "clauseId": "clause-015",
+        "sectionReference": "this Contract",
+        "hierarchy": [
+          "this Contract",
+          "5"
+        ],
+        "title": "",
+        "originalText": "DELIVERY. Time is of the essence in the performance of this Contract.",
+        "plainLanguage": "Both sides sets a contract rule. In plain terms, dELIVERY. Time is of the essence in the performance of this Contract.",
+        "clauseType": "general",
+        "riskCategory": "safe",
+        "colorIndicator": "green",
+        "riskScore": 10.95,
+        "confidence": 0.54,
+        "explanation": "Clause risk is safe with score 10.95. The strongest driver is fairnessImbalance, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.0,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 10.95,
+          "confidence": 0.54,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "DELIVERY. Time is of the essence in the performance of this Contract.",
+          "revisedClause": "DELIVERY. Time is of the essence in the performance of this Contract provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording 'DELIVERY. Time is of the essence in the performance of this Contract.' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "Ambiguous drafting can extend resolution timelines and increase negotiation costs.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ],
+        "courtroomAssessment": {
+          "judgeView": "A judge is likely to treat this clause as commercially standard unless surrounding facts make enforcement unfair.",
+          "claimantArguments": [
+            "The wording should be enforced as written because the parties accepted a clear allocation of risk."
+          ],
+          "defenseArguments": [
+            "Any ambiguous wording should be construed narrowly, especially if one party drafted the clause."
+          ],
+          "likelyRuling": "A court is likely to enforce the clause substantially as drafted.",
+          "enforceabilityConcerns": [],
+          "businessImpact": "This clause shapes dispute leverage, drafting clarity, and the cost of enforcement."
+        }
+      },
+      {
+        "clauseId": "clause-016",
+        "sectionReference": "this Contract",
+        "hierarchy": [
+          "this Contract",
+          "5"
+        ],
+        "title": "",
+        "originalText": "will arrange for delivery by carrier chosen by Delivery shall be completed by .",
+        "plainLanguage": "Both sides is required to do something. In plain terms, will arrange for delivery by carrier chosen by Delivery shall be completed by .",
+        "clauseType": "obligation",
+        "riskCategory": "safe",
+        "colorIndicator": "green",
+        "riskScore": 22.25,
+        "confidence": 0.65,
+        "explanation": "Clause risk is safe with score 22.25. The strongest driver is obligationAsymmetry, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.25,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 22.25,
+          "confidence": 0.65,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "will arrange for delivery by carrier chosen by Delivery shall be completed by .",
+          "revisedClause": "will arrange for delivery by carrier chosen by Delivery shall be completed by  provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording 'will arrange for delivery by carrier chosen by Delivery shall be completed by .' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "Ambiguous drafting can extend resolution timelines and increase negotiation costs.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ],
+        "courtroomAssessment": {
+          "judgeView": "A judge is likely to treat this clause as commercially standard unless surrounding facts make enforcement unfair.",
+          "claimantArguments": [
+            "The wording should be enforced as written because the parties accepted a clear allocation of risk."
+          ],
+          "defenseArguments": [
+            "Any ambiguous wording should be construed narrowly, especially if one party drafted the clause."
+          ],
+          "likelyRuling": "A court is likely to enforce the clause substantially as drafted.",
+          "enforceabilityConcerns": [],
+          "businessImpact": "This clause shapes dispute leverage, drafting clarity, and the cost of enforcement."
+        }
+      },
+      {
+        "clauseId": "clause-017",
+        "sectionReference": "this Contract",
+        "hierarchy": [
+          "this Contract",
+          "5"
+        ],
+        "title": "",
+        "originalText": "ROCKETLAWYER® AI insights with Rocket Copilot™",
+        "plainLanguage": "Both sides sets a contract rule. In plain terms, rOCKETLAWYER® AI insights with Rocket Copilot™",
+        "clauseType": "compliance",
+        "riskCategory": "safe",
+        "colorIndicator": "green",
+        "riskScore": 18.44,
+        "confidence": 0.61,
+        "explanation": "Clause risk is safe with score 18.44. The strongest driver is complianceExposure, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.0,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.2,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 18.44,
+          "confidence": 0.61,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "ROCKETLAWYER® AI insights with Rocket Copilot™",
+          "revisedClause": "ROCKETLAWYER® AI insights with Rocket Copilot™ provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording 'ROCKETLAWYER® AI insights with Rocket Copilot™' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "Ambiguous drafting can extend resolution timelines and increase negotiation costs.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ],
+        "courtroomAssessment": {
+          "judgeView": "A judge is likely to treat this clause as commercially standard unless surrounding facts make enforcement unfair.",
+          "claimantArguments": [
+            "The wording should be enforced as written because the parties accepted a clear allocation of risk."
+          ],
+          "defenseArguments": [
+            "Any ambiguous wording should be construed narrowly, especially if one party drafted the clause."
+          ],
+          "likelyRuling": "A court is likely to enforce the clause substantially as drafted.",
+          "enforceabilityConcerns": [],
+          "businessImpact": "This clause shapes dispute leverage, drafting clarity, and the cost of enforcement."
+        }
+      }
+    ],
+    "contractorCredibility": {
+      "score": 62.0,
+      "rating": "moderate",
+      "summary": "tesla has a light-touch diligence profile with publicly available footprint data. Credibility is rated moderate because the signal mix shows 0 positive and 0 negative indicators.",
+      "positiveSignals": [],
+      "negativeSignals": [],
+      "sources": [
+        "https://example.com/counterparty-profile"
+      ],
+      "framework": "credibility = 62 + 22*avg_positive_signal - 28*avg_negative_signal + coverage_bonus, clamped to [0,100]"
+    },
+    "evaluationMetrics": {
+      "contract_classification": "top-1 accuracy, macro-F1, calibration error",
+      "clause_segmentation": "boundary F1, hierarchical consistency, clause coverage",
+      "risk_detection": "AUROC, precision@critical, weighted Brier score, explanation faithfulness",
+      "explanation_quality": "human adequacy, factual consistency, edit distance to gold simplifications"
+    },
+    "generatedAt": "2026-03-15T22:52:27.352372"
+  },
+  "searchableText": "GENERAL CONTRACT FOR PRODUCTS\n\nOrder Number:\n\nThis Contract (this \"Contract\") is made effective as of , by and between\n, of , and , of\n.\n\n1. ITEMS PURCHASED. agrees to sell, and\nagrees to buy, the following products (the \"Goods\") in accordance with the terms and conditions of\nthis Contract:\n\nTOTAL: $0.00\n\n2. PRODUCT STANDARDS. The Goods shall comply with the 's\nquotation dated and incorporated into this Contract by this reference.\n\n3. TITLE/RISK OF LOSS. Buyer shall pay reasonable shipping costs in accordance with its\nshipping instructions, but the seller shall be responsible for packaging, shipping and safe delivery\nand shall bear all risk of damage or loss until the goods are delivered to the buyer's address.\n\n4. PAYMENT. Payment shall be made to in the amount of $0.00 upon delivery of all Goods\ndescribed in this Contract.\n\nPayment discount terms are as follows: a 0 percent discount if total bill is paid within 0 days.\n\nIf any invoice is not paid when due, interest will be added to and payable on all overdue amounts\nat 0 percent per year or the maximum percentage allowed under applicable laws, whichever is\nless. shall pay all costs of collection, including without limitation, reasonable\nattorney fees.\n\nIn addition to any other right or remedy provided by law, if fails to pay for\nthe Goods when due, has the option to treat such failure to pay as a\nmaterial breach of this Contract and may cancel this Contract and/or seek legal remedies.\n\n5. DELIVERY. Time is of the essence in the performance of this Contract.\nwill arrange for delivery by carrier chosen by\nDelivery shall be completed by .\n\nROCKETLAWYER®\nAI insights with Rocket Copilot™\nGENERAL CONTRACT FOR PRODUCTS\nBoth sides sets a contract rule. In plain terms, gENERAL CONTRACT FOR PRODUCTS\nThis Contract (this \"Contract\") is made effective as of , by and between , of , and , of .\nBoth sides sets a contract rule. In plain terms, this Contract (this \"Contract\") is made effective as of , by and between , of , and , of .\nITEMS PURCHASED. agrees to sell, and\nBoth sides sets a contract rule. In plain terms, iTEMS PURCHASED. agrees to sell, and\nagrees to buy, the following products (the \"Goods\") in accordance with the terms and conditions of\nBoth sides sets a contract rule. In plain terms, agrees to buy, the following products (the \"Goods\") in accordance with the terms and conditions of\nTOTAL: $0.00\nBoth sides sets a contract rule. In plain terms, tOTAL: $0.00\nPRODUCT STANDARDS. The Goods shall comply with the 's\nBoth sides is required to do something. In plain terms, pRODUCT STANDARDS. The Goods shall comply with the 's\nquotation dated and incorporated into this Contract by this reference.\nBoth sides sets a contract rule. In plain terms, quotation dated and incorporated into this Contract by this reference.\nTITLE/RISK OF LOSS. Buyer shall pay reasonable shipping costs in accordance with its\nBoth sides is required to do something. In plain terms, tITLE/RISK OF LOSS. Buyer shall pay reasonable shipping costs in accordance with its\nshipping instructions, but the seller shall be responsible for packaging, shipping and safe delivery and shall bear all risk of damage or loss until the goods are delivered to the buyer's address.\nBoth sides is required to do something. In plain terms, shipping instructions, but the seller shall be responsible for packaging, shipping and safe delivery and shall bear all risk of damage or loss until the goods are delivered to the buyer's address.\nPAYMENT. Payment shall be made to in the amount of $0.00 upon delivery of all Goods\nBoth sides is required to do something. In plain terms, pAYMENT. Payment shall be made to in the amount of $0.00 upon delivery of all Goods\ndescribed in this Contract.\nBoth sides sets a contract rule. In plain terms, described in this Contract.\nPayment discount terms are as follows: a 0 percent discount if total bill is paid within 0 days.\nBoth sides sets a contract rule within 0 days. In plain terms, payment discount terms are as follows: a 0 percent discount if total bill is paid within 0 days.\nIf any invoice is not paid when due, interest will be added to and payable on all overdue amounts at 0 percent per year or the maximum percentage allowed under applicable laws, whichever is less. shall pay all costs of collection, including without limitation, reasonable attorney fees.\nBoth sides is required to do something. In plain terms, if any invoice is not paid when due, interest will be added to and payable on all overdue amounts at 0 percent per year or the maximum percentage allowed under applicable laws, whichever is less. shall pay all costs of collection, including without limitation, reasonable attorney fees.\nIn addition to any other right or remedy provided by law, if fails to pay for the Goods when due, has the option to treat such failure to pay as a material breach of this Contract and may cancel this Contract and/or seek legal remedies.\nBoth sides has discretion to act. In plain terms, in addition to any other right or remedy provided by law, if fails to pay for the Goods when due, has the option to treat such failure to pay as a material breach of this Contract and may cancel this Contract and/or seek legal remedies.\nDELIVERY. Time is of the essence in the performance of this Contract.\nBoth sides sets a contract rule. In plain terms, dELIVERY. Time is of the essence in the performance of this Contract.\nwill arrange for delivery by carrier chosen by Delivery shall be completed by .\nBoth sides is required to do something. In plain terms, will arrange for delivery by carrier chosen by Delivery shall be completed by .\nROCKETLAWYER® AI insights with Rocket Copilot™\nBoth sides sets a contract rule. In plain terms, rOCKETLAWYER® AI insights with Rocket Copilot™",
+  "createdAt": "2026-03-15T22:52:27.352372",
+  "updatedAt": "2026-03-15T22:52:27.352372"
+}

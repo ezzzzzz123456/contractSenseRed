@@ -63,7 +63,7 @@ const ContractUploader = (): JSX.Element => {
         <input
           ref={fileInputRef}
           type="file"
-          accept=".pdf,.doc,.docx"
+          accept=".pdf,.doc,.docx,.txt,.jpg,.jpeg,.png"
           className="visually-hidden"
           onChange={(event) => setSelectedFile(event.target.files?.[0] ?? null)}
         />

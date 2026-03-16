@@ -1,8 +1,9 @@
 import { createContext, useMemo, useState } from "react";
 import type { ReactNode } from "react";
-import api from "../services/api";
+import api, { fetchStoredContractReport } from "../services/api";
 import type {
   Contract,
+  ContractAnalysisReport,
   ContractAnalysisTriggerResponse,
   ContractListResponse,
   ContractResponse,
@@ -18,10 +19,12 @@ interface ContractContextValue {
   contracts: Contract[];
   activeContract: Contract | null;
   activeReport: Report | null;
+  activeAnalysis: ContractAnalysisReport | null;
   isLoadingContracts: boolean;
   isAnalyzingContract: boolean;
   setActiveContract: (contract: Contract | null) => void;
   setActiveReport: (report: Report | null) => void;
+  setActiveAnalysis: (report: ContractAnalysisReport | null) => void;
   fetchContracts: () => Promise<void>;
   fetchContractById: (contractId: string) => Promise<Contract | null>;
   fetchReportByContract: (contractId: string) => Promise<Report | null>;
@@ -36,12 +39,40 @@ interface ContractContextValue {
 
 export const ContractContext = createContext<ContractContextValue | undefined>(undefined);
 
+const isDetailedAnalysis = (value: unknown): value is ContractAnalysisReport =>
+  Boolean(
+    value &&
+      typeof value === "object" &&
+      "contractId" in value &&
+      "clauses" in value &&
+      "summary" in value,
+  );
+
 export const ContractProvider = ({ children }: { children: ReactNode }): JSX.Element => {
   const [contracts, setContracts] = useState<Contract[]>([]);
   const [activeContract, setActiveContract] = useState<Contract | null>(null);
   const [activeReport, setActiveReport] = useState<Report | null>(null);
+  const [activeAnalysis, setActiveAnalysis] = useState<ContractAnalysisReport | null>(null);
   const [isLoadingContracts, setIsLoadingContracts] = useState(false);
   const [isAnalyzingContract, setIsAnalyzingContract] = useState(false);
+
+  const storeDetailedAnalysis = async (contractId: string): Promise<void> => {
+    try {
+      const detailedReport = await fetchStoredContractReport(contractId);
+      setActiveAnalysis(detailedReport);
+    } catch {
+      setActiveAnalysis(null);
+    }
+  };
+
+  const maybeStoreAnalysisFromReport = (report: Report | null): void => {
+    if (report && isDetailedAnalysis(report.aiOutput)) {
+      setActiveAnalysis(report.aiOutput);
+      return;
+    }
+
+    setActiveAnalysis(null);
+  };
 
   const fetchContracts = async (): Promise<void> => {
     setIsLoadingContracts(true);
@@ -93,9 +124,11 @@ export const ContractProvider = ({ children }: { children: ReactNode }): JSX.Ele
     try {
       const { data } = await api.get<Report>(`/reports/contract/${contractId}`);
       setActiveReport(data);
+      maybeStoreAnalysisFromReport(data);
       return data;
     } catch {
       setActiveReport(null);
+      setActiveAnalysis(null);
       return null;
     }
   };
@@ -104,9 +137,11 @@ export const ContractProvider = ({ children }: { children: ReactNode }): JSX.Ele
     try {
       const { data } = await api.get<Report>(`/reports/shared/${shareToken}`);
       setActiveReport(data);
+      maybeStoreAnalysisFromReport(data);
       return data;
     } catch {
       setActiveReport(null);
+      setActiveAnalysis(null);
       return null;
     }
   };
@@ -122,6 +157,8 @@ export const ContractProvider = ({ children }: { children: ReactNode }): JSX.Ele
       );
       setActiveContract(data.contract);
       setActiveReport(data.report);
+      maybeStoreAnalysisFromReport(data.report);
+      await storeDetailedAnalysis(contractId);
 
       return {
         contract: data.contract,
@@ -135,12 +172,14 @@ export const ContractProvider = ({ children }: { children: ReactNode }): JSX.Ele
   const saveLawyerReview = async (reportId: string, payload: LawyerReviewPayload): Promise<Report | null> => {
     const { data } = await api.patch<LawyerReviewResponse>(`/reports/${reportId}/lawyer-review`, payload);
     setActiveReport(data.report);
+    maybeStoreAnalysisFromReport(data.report);
     return data.report;
   };
 
   const issueTrustSealAction = async (reportId: string, payload?: { finalVerdict?: string }): Promise<Report | null> => {
     const { data } = await api.post<LawyerReviewResponse>(`/reports/${reportId}/trust-seal`, payload ?? {});
     setActiveReport(data.report);
+    maybeStoreAnalysisFromReport(data.report);
 
     if (data.report?.contractId) {
       await fetchContractById(data.report.contractId);
@@ -185,10 +224,12 @@ export const ContractProvider = ({ children }: { children: ReactNode }): JSX.Ele
       contracts,
       activeContract,
       activeReport,
+      activeAnalysis,
       isLoadingContracts,
       isAnalyzingContract,
       setActiveContract,
       setActiveReport,
+      setActiveAnalysis,
       fetchContracts,
       fetchContractById,
       fetchReportByContract,
@@ -200,7 +241,7 @@ export const ContractProvider = ({ children }: { children: ReactNode }): JSX.Ele
       exportReport: exportReportAction,
       shareReport: shareReportAction,
     }),
-    [activeContract, activeReport, contracts, isAnalyzingContract, isLoadingContracts],
+    [activeAnalysis, activeContract, activeReport, contracts, isAnalyzingContract, isLoadingContracts],
   );
 
   return <ContractContext.Provider value={value}>{children}</ContractContext.Provider>;

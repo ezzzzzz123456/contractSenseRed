@@ -1,0 +1,1604 @@
+{
+  "contractId": "contract-b33888db67ac",
+  "report": {
+    "contractId": "contract-b33888db67ac",
+    "contractType": {
+      "category": "legal statute",
+      "confidence": 0.42,
+      "evidence": [],
+      "alternatives": {
+        "legal statute": 0.0,
+        "employment": 0.0,
+        "non-disclosure agreement": 0.0,
+        "vendor agreement": 0.0
+      }
+    },
+    "extraction": {
+      "documentKind": "image",
+      "extractionMethod": "paddleocr_image_pipeline",
+      "sourceFilename": "Screenshot 2026-03-15 144043.png",
+      "mediaType": "image/png",
+      "structureConfidence": 0.66,
+      "extractedCharacters": 548,
+      "textPreview": "GCNERALCONTRACTFORPRODUCTS\nOrderNmbar.\nof\n1. ITNH PUONASD\npoo0, ) eopd Neyeooy o 'q cg\nUis Coetact:\nTUIAL: $0:00\n2. FRODUCT ETANARDS 7\npanp nogaoeb\n3. TTTL.RISK OP LOB4. By l\nkaivay\nbuisllero\no koyer's mlds\n4.PATMAT. Pymomt ol\n0devryfl\naibad in bin Cdodt.\ntife ifl  p v d.\nu o dNm lo\nallodelleer\nI colectlot, ilndiog writhnt Halwtion, monoeble\ndy porlded by lru, lf\nfu t+pay fce\nd o a md\nGoc\nod mry c",
+      "notes": [
+        "Structured document built from OCR text blocks."
+      ],
+      "structuredPages": 1,
+      "layoutElements": 31,
+      "tablesDetected": 0,
+      "signaturesDetected": 0,
+      "annotationsDetected": 0
+    },
+    "summary": "This legal statute is assessed as safe risk, with 0 critical clauses and 0 warning clauses. The report prioritizes disproportionate liability, ambiguous drafting, loophole-prone overrides, and negotiable remediation paths. The highest-risk issue is compliance language in clause-010, scored 18/100. Counterparty credibility is rated weak at 38/100.",
+    "executiveLegalSummary": "Overall legal posture is safe. If disputed, the strongest litigation pressure points are: 2. FRODUCT ETANARDS 7: A court is likely to enforce the clause substantially as drafted. General: A court is likely to enforce the clause substantially as drafted. 1. ITNH PUONASD: A court is likely to enforce the clause substantially as drafted.",
+    "overallRiskScore": 8.05,
+    "overallRiskCategory": "safe",
+    "keyVulnerabilities": [],
+    "legalLoopholes": [],
+    "illegalClauseAlerts": [],
+    "recommendations": [
+      "No material risk remediation identified beyond standard legal review.",
+      "Validate any critical clause with jurisdiction-specific counsel before signature.",
+      "Compare risk concentration against previous agreements in the contract memory store."
+    ],
+    "priorityActions": [
+      "No material risk remediation identified beyond standard legal review.",
+      "Validate any critical clause with jurisdiction-specific counsel before signature.",
+      "Compare risk concentration against previous agreements in the contract memory store."
+    ],
+    "reportFindings": [
+      "2. FRODUCT ETANARDS 7: A judge is likely to view this as safe because a judge is likely to treat this clause as commercially standard unless surrounding facts make enforcement unfair.",
+      "General: A judge is likely to view this as safe because a judge is likely to treat this clause as commercially standard unless surrounding facts make enforcement unfair.",
+      "1. ITNH PUONASD: A judge is likely to view this as safe because a judge is likely to treat this clause as commercially standard unless surrounding facts make enforcement unfair.",
+      "2. FRODUCT ETANARDS 7: A judge is likely to view this as safe because a judge is likely to treat this clause as commercially standard unless surrounding facts make enforcement unfair.",
+      "2. FRODUCT ETANARDS 7: A judge is likely to view this as safe because a judge is likely to treat this clause as commercially standard unless surrounding facts make enforcement unfair."
+    ],
+    "metrics": {
+      "meanClauseRisk": 11.7,
+      "p90ClauseRisk": 10.95,
+      "criticalClauseRatio": 0.0,
+      "warningClauseRatio": 0.0,
+      "riskDispersion": 0.07,
+      "fairnessIndex": 88.0,
+      "legalExposureIndex": 1.0,
+      "concentrationIndex": 2.8,
+      "aggregationFormula": "overall = 0.55*mean_clause_risk + 0.20*p90_clause_risk + 0.15*critical_clause_ratio*100 + 0.10*legal_exposure_index"
+    },
+    "clauses": [
+      {
+        "clauseId": "clause-001",
+        "sectionReference": "General",
+        "hierarchy": [
+          "General"
+        ],
+        "title": "",
+        "originalText": "GCNERALCONTRACTFORPRODUCTS OrderNmbar. of",
+        "plainLanguage": "Both sides sets a contract rule. In plain terms, gCNERALCONTRACTFORPRODUCTS OrderNmbar. of",
+        "clauseType": "general",
+        "riskCategory": "safe",
+        "colorIndicator": "green",
+        "riskScore": 10.95,
+        "confidence": 0.5,
+        "explanation": "Clause risk is safe with score 10.95. The strongest driver is fairnessImbalance, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.0,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 10.95,
+          "confidence": 0.5,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "GCNERALCONTRACTFORPRODUCTS OrderNmbar. of",
+          "revisedClause": "GCNERALCONTRACTFORPRODUCTS OrderNmbar. of provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording 'GCNERALCONTRACTFORPRODUCTS OrderNmbar. of' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "Ambiguous drafting can extend resolution timelines and increase negotiation costs.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ],
+        "courtroomAssessment": {
+          "judgeView": "A judge is likely to treat this clause as commercially standard unless surrounding facts make enforcement unfair.",
+          "claimantArguments": [
+            "The wording should be enforced as written because the parties accepted a clear allocation of risk."
+          ],
+          "defenseArguments": [
+            "Any ambiguous wording should be construed narrowly, especially if one party drafted the clause."
+          ],
+          "likelyRuling": "A court is likely to enforce the clause substantially as drafted.",
+          "enforceabilityConcerns": [],
+          "businessImpact": "This clause shapes dispute leverage, drafting clarity, and the cost of enforcement."
+        }
+      },
+      {
+        "clauseId": "clause-002",
+        "sectionReference": "1. ITNH PUONASD",
+        "hierarchy": [
+          "1. ITNH PUONASD"
+        ],
+        "title": "",
+        "originalText": "poo0, ) eopd Neyeooy o 'q cg Uis Coetact:",
+        "plainLanguage": "Both sides sets a contract rule. In plain terms, poo0, ) eopd Neyeooy o 'q cg Uis Coetact:",
+        "clauseType": "general",
+        "riskCategory": "safe",
+        "colorIndicator": "green",
+        "riskScore": 10.95,
+        "confidence": 0.5,
+        "explanation": "Clause risk is safe with score 10.95. The strongest driver is fairnessImbalance, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.0,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 10.95,
+          "confidence": 0.5,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "poo0, ) eopd Neyeooy o 'q cg Uis Coetact:",
+          "revisedClause": "poo0, ) eopd Neyeooy o 'q cg Uis Coetact: provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording 'poo0, ) eopd Neyeooy o 'q cg Uis Coetact:' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "Ambiguous drafting can extend resolution timelines and increase negotiation costs.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ],
+        "courtroomAssessment": {
+          "judgeView": "A judge is likely to treat this clause as commercially standard unless surrounding facts make enforcement unfair.",
+          "claimantArguments": [
+            "The wording should be enforced as written because the parties accepted a clear allocation of risk."
+          ],
+          "defenseArguments": [
+            "Any ambiguous wording should be construed narrowly, especially if one party drafted the clause."
+          ],
+          "likelyRuling": "A court is likely to enforce the clause substantially as drafted.",
+          "enforceabilityConcerns": [],
+          "businessImpact": "This clause shapes dispute leverage, drafting clarity, and the cost of enforcement."
+        }
+      },
+      {
+        "clauseId": "clause-003",
+        "sectionReference": "2. FRODUCT ETANARDS 7",
+        "hierarchy": [
+          "2. FRODUCT ETANARDS 7"
+        ],
+        "title": "",
+        "originalText": "panp nogaoeb",
+        "plainLanguage": "Both sides sets a contract rule. In plain terms, panp nogaoeb",
+        "clauseType": "general",
+        "riskCategory": "safe",
+        "colorIndicator": "green",
+        "riskScore": 10.95,
+        "confidence": 0.47,
+        "explanation": "Clause risk is safe with score 10.95. The strongest driver is fairnessImbalance, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.0,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 10.95,
+          "confidence": 0.47,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "panp nogaoeb",
+          "revisedClause": "panp nogaoeb provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording 'panp nogaoeb' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "Ambiguous drafting can extend resolution timelines and increase negotiation costs.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ],
+        "courtroomAssessment": {
+          "judgeView": "A judge is likely to treat this clause as commercially standard unless surrounding facts make enforcement unfair.",
+          "claimantArguments": [
+            "The wording should be enforced as written because the parties accepted a clear allocation of risk."
+          ],
+          "defenseArguments": [
+            "Any ambiguous wording should be construed narrowly, especially if one party drafted the clause."
+          ],
+          "likelyRuling": "A court is likely to enforce the clause substantially as drafted.",
+          "enforceabilityConcerns": [],
+          "businessImpact": "This clause shapes dispute leverage, drafting clarity, and the cost of enforcement."
+        }
+      },
+      {
+        "clauseId": "clause-004",
+        "sectionReference": "2. FRODUCT ETANARDS 7",
+        "hierarchy": [
+          "2. FRODUCT ETANARDS 7",
+          "3"
+        ],
+        "title": "",
+        "originalText": "TTTL.RISK OP LOB4. By l kaivay buisllero",
+        "plainLanguage": "Both sides sets a contract rule. In plain terms, tTTL.RISK OP LOB4. By l kaivay buisllero",
+        "clauseType": "general",
+        "riskCategory": "safe",
+        "colorIndicator": "green",
+        "riskScore": 10.95,
+        "confidence": 0.5,
+        "explanation": "Clause risk is safe with score 10.95. The strongest driver is fairnessImbalance, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.0,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 10.95,
+          "confidence": 0.5,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "TTTL.RISK OP LOB4. By l kaivay buisllero",
+          "revisedClause": "TTTL.RISK OP LOB4. By l kaivay buisllero provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording 'TTTL.RISK OP LOB4. By l kaivay buisllero' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "Ambiguous drafting can extend resolution timelines and increase negotiation costs.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ],
+        "courtroomAssessment": {
+          "judgeView": "A judge is likely to treat this clause as commercially standard unless surrounding facts make enforcement unfair.",
+          "claimantArguments": [
+            "The wording should be enforced as written because the parties accepted a clear allocation of risk."
+          ],
+          "defenseArguments": [
+            "Any ambiguous wording should be construed narrowly, especially if one party drafted the clause."
+          ],
+          "likelyRuling": "A court is likely to enforce the clause substantially as drafted.",
+          "enforceabilityConcerns": [],
+          "businessImpact": "This clause shapes dispute leverage, drafting clarity, and the cost of enforcement."
+        }
+      },
+      {
+        "clauseId": "clause-005",
+        "sectionReference": "2. FRODUCT ETANARDS 7",
+        "hierarchy": [
+          "2. FRODUCT ETANARDS 7",
+          "o"
+        ],
+        "title": "",
+        "originalText": "koyer's mlds 4.PATMAT.",
+        "plainLanguage": "Both sides sets a contract rule. In plain terms, koyer's mlds 4.PATMAT.",
+        "clauseType": "general",
+        "riskCategory": "safe",
+        "colorIndicator": "green",
+        "riskScore": 10.95,
+        "confidence": 0.48,
+        "explanation": "Clause risk is safe with score 10.95. The strongest driver is fairnessImbalance, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.0,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 10.95,
+          "confidence": 0.48,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "koyer's mlds 4.PATMAT.",
+          "revisedClause": "koyer's mlds 4.PATMAT provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording 'koyer's mlds 4.PATMAT.' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "Ambiguous drafting can extend resolution timelines and increase negotiation costs.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ],
+        "courtroomAssessment": {
+          "judgeView": "A judge is likely to treat this clause as commercially standard unless surrounding facts make enforcement unfair.",
+          "claimantArguments": [
+            "The wording should be enforced as written because the parties accepted a clear allocation of risk."
+          ],
+          "defenseArguments": [
+            "Any ambiguous wording should be construed narrowly, especially if one party drafted the clause."
+          ],
+          "likelyRuling": "A court is likely to enforce the clause substantially as drafted.",
+          "enforceabilityConcerns": [],
+          "businessImpact": "This clause shapes dispute leverage, drafting clarity, and the cost of enforcement."
+        }
+      },
+      {
+        "clauseId": "clause-006",
+        "sectionReference": "2. FRODUCT ETANARDS 7",
+        "hierarchy": [
+          "2. FRODUCT ETANARDS 7",
+          "o"
+        ],
+        "title": "",
+        "originalText": "Pymomt ol 0devryfl aibad in bin Cdodt. tife ifl  p v d.",
+        "plainLanguage": "Both sides sets a contract rule. In plain terms, pymomt ol 0devryfl aibad in bin Cdodt. tife ifl p v d.",
+        "clauseType": "general",
+        "riskCategory": "safe",
+        "colorIndicator": "green",
+        "riskScore": 10.95,
+        "confidence": 0.52,
+        "explanation": "Clause risk is safe with score 10.95. The strongest driver is fairnessImbalance, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.0,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 10.95,
+          "confidence": 0.52,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "Pymomt ol 0devryfl aibad in bin Cdodt. tife ifl  p v d.",
+          "revisedClause": "Pymomt ol 0devryfl aibad in bin Cdodt. tife ifl  p v d provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording 'Pymomt ol 0devryfl aibad in bin Cdodt. tife ifl  p v d.' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "Ambiguous drafting can extend resolution timelines and increase negotiation costs.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ],
+        "courtroomAssessment": {
+          "judgeView": "A judge is likely to treat this clause as commercially standard unless surrounding facts make enforcement unfair.",
+          "claimantArguments": [
+            "The wording should be enforced as written because the parties accepted a clear allocation of risk."
+          ],
+          "defenseArguments": [
+            "Any ambiguous wording should be construed narrowly, especially if one party drafted the clause."
+          ],
+          "likelyRuling": "A court is likely to enforce the clause substantially as drafted.",
+          "enforceabilityConcerns": [],
+          "businessImpact": "This clause shapes dispute leverage, drafting clarity, and the cost of enforcement."
+        }
+      },
+      {
+        "clauseId": "clause-007",
+        "sectionReference": "2. FRODUCT ETANARDS 7",
+        "hierarchy": [
+          "2. FRODUCT ETANARDS 7",
+          "u"
+        ],
+        "title": "",
+        "originalText": "o dNm lo allodelleer",
+        "plainLanguage": "Both sides sets a contract rule. In plain terms, o dNm lo allodelleer",
+        "clauseType": "general",
+        "riskCategory": "safe",
+        "colorIndicator": "green",
+        "riskScore": 10.95,
+        "confidence": 0.48,
+        "explanation": "Clause risk is safe with score 10.95. The strongest driver is fairnessImbalance, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.0,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 10.95,
+          "confidence": 0.48,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "o dNm lo allodelleer",
+          "revisedClause": "o dNm lo allodelleer provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording 'o dNm lo allodelleer' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "Ambiguous drafting can extend resolution timelines and increase negotiation costs.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ],
+        "courtroomAssessment": {
+          "judgeView": "A judge is likely to treat this clause as commercially standard unless surrounding facts make enforcement unfair.",
+          "claimantArguments": [
+            "The wording should be enforced as written because the parties accepted a clear allocation of risk."
+          ],
+          "defenseArguments": [
+            "Any ambiguous wording should be construed narrowly, especially if one party drafted the clause."
+          ],
+          "likelyRuling": "A court is likely to enforce the clause substantially as drafted.",
+          "enforceabilityConcerns": [],
+          "businessImpact": "This clause shapes dispute leverage, drafting clarity, and the cost of enforcement."
+        }
+      },
+      {
+        "clauseId": "clause-008",
+        "sectionReference": "2. FRODUCT ETANARDS 7",
+        "hierarchy": [
+          "2. FRODUCT ETANARDS 7",
+          "I"
+        ],
+        "title": "",
+        "originalText": "colectlot, ilndiog writhnt Halwtion, monoeble dy porlded by lru, lf fu t+pay fce",
+        "plainLanguage": "Both sides sets a contract rule. In plain terms, colectlot, ilndiog writhnt Halwtion, monoeble dy porlded by lru, lf fu t+pay fce",
+        "clauseType": "general",
+        "riskCategory": "safe",
+        "colorIndicator": "green",
+        "riskScore": 10.95,
+        "confidence": 0.55,
+        "explanation": "Clause risk is safe with score 10.95. The strongest driver is fairnessImbalance, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.0,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 10.95,
+          "confidence": 0.55,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "colectlot, ilndiog writhnt Halwtion, monoeble dy porlded by lru, lf fu t+pay fce",
+          "revisedClause": "colectlot, ilndiog writhnt Halwtion, monoeble dy porlded by lru, lf fu t+pay fce provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording 'colectlot, ilndiog writhnt Halwtion, monoeble dy porlded by lru, lf fu t+pay fce' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "Ambiguous drafting can extend resolution timelines and increase negotiation costs.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ],
+        "courtroomAssessment": {
+          "judgeView": "A judge is likely to treat this clause as commercially standard unless surrounding facts make enforcement unfair.",
+          "claimantArguments": [
+            "The wording should be enforced as written because the parties accepted a clear allocation of risk."
+          ],
+          "defenseArguments": [
+            "Any ambiguous wording should be construed narrowly, especially if one party drafted the clause."
+          ],
+          "likelyRuling": "A court is likely to enforce the clause substantially as drafted.",
+          "enforceabilityConcerns": [],
+          "businessImpact": "This clause shapes dispute leverage, drafting clarity, and the cost of enforcement."
+        }
+      },
+      {
+        "clauseId": "clause-009",
+        "sectionReference": "2. FRODUCT ETANARDS 7",
+        "hierarchy": [
+          "2. FRODUCT ETANARDS 7",
+          "d"
+        ],
+        "title": "",
+        "originalText": "o a md Goc od mry cmcel tlis Cortacl d'ar het l pl an=. he cn c permme frs Con S.DCIVTNY.T",
+        "plainLanguage": "Both sides sets a contract rule. In plain terms, o a md Goc od mry cmcel tlis Cortacl d'ar het l pl an=. he cn c permme frs Con S.DCIVTNY.T",
+        "clauseType": "general",
+        "riskCategory": "safe",
+        "colorIndicator": "green",
+        "riskScore": 10.95,
+        "confidence": 0.56,
+        "explanation": "Clause risk is safe with score 10.95. The strongest driver is fairnessImbalance, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.0,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 10.95,
+          "confidence": 0.56,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "o a md Goc od mry cmcel tlis Cortacl d'ar het l pl an=. he cn c permme frs Con S.DCIVTNY.T",
+          "revisedClause": "o a md Goc od mry cmcel tlis Cortacl d'ar het l pl an=. he cn c permme frs Con S.DCIVTNY.T provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording 'o a md Goc od mry cmcel tlis Cortacl d'ar het l pl an=. he cn c permme frs Con S.DCIVTNY.T' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "Ambiguous drafting can extend resolution timelines and increase negotiation costs.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ],
+        "courtroomAssessment": {
+          "judgeView": "A judge is likely to treat this clause as commercially standard unless surrounding facts make enforcement unfair.",
+          "claimantArguments": [
+            "The wording should be enforced as written because the parties accepted a clear allocation of risk."
+          ],
+          "defenseArguments": [
+            "Any ambiguous wording should be construed narrowly, especially if one party drafted the clause."
+          ],
+          "likelyRuling": "A court is likely to enforce the clause substantially as drafted.",
+          "enforceabilityConcerns": [],
+          "businessImpact": "This clause shapes dispute leverage, drafting clarity, and the cost of enforcement."
+        }
+      },
+      {
+        "clauseId": "clause-010",
+        "sectionReference": "2. FRODUCT ETANARDS 7",
+        "hierarchy": [
+          "2. FRODUCT ETANARDS 7",
+          "q"
+        ],
+        "title": "",
+        "originalText": "q ny Drlis : bat b rowp'hI h ROCKETLAWYER Al insights with Rodket Copilot*",
+        "plainLanguage": "Both sides sets a contract rule. In plain terms, q ny Drlis : bat b rowp'hI h ROCKETLAWYER Al insights with Rodket Copilot*",
+        "clauseType": "compliance",
+        "riskCategory": "safe",
+        "colorIndicator": "green",
+        "riskScore": 18.44,
+        "confidence": 0.64,
+        "explanation": "Clause risk is safe with score 18.44. The strongest driver is complianceExposure, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.0,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.2,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 18.44,
+          "confidence": 0.64,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "q ny Drlis : bat b rowp'hI h ROCKETLAWYER Al insights with Rodket Copilot*",
+          "revisedClause": "q ny Drlis : bat b rowp'hI h ROCKETLAWYER Al insights with Rodket Copilot* provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording 'q ny Drlis : bat b rowp'hI h ROCKETLAWYER Al insights with Rodket Copilot*' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "Ambiguous drafting can extend resolution timelines and increase negotiation costs.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ],
+        "courtroomAssessment": {
+          "judgeView": "A judge is likely to treat this clause as commercially standard unless surrounding facts make enforcement unfair.",
+          "claimantArguments": [
+            "The wording should be enforced as written because the parties accepted a clear allocation of risk."
+          ],
+          "defenseArguments": [
+            "Any ambiguous wording should be construed narrowly, especially if one party drafted the clause."
+          ],
+          "likelyRuling": "A court is likely to enforce the clause substantially as drafted.",
+          "enforceabilityConcerns": [],
+          "businessImpact": "This clause shapes dispute leverage, drafting clarity, and the cost of enforcement."
+        }
+      }
+    ],
+    "documentStructure": {
+      "documentId": "doc-3a1b28186774",
+      "documentKind": "image",
+      "extractionMethod": "paddleocr_image_pipeline",
+      "language": "en",
+      "pages": [
+        {
+          "pageNumber": 1,
+          "width": 1000.0,
+          "height": 1400.0,
+          "elements": [
+            {
+              "elementId": "layout-c3acdf9c3f",
+              "type": "title",
+              "text": "GCNERALCONTRACTFORPRODUCTS",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 122.0,
+                "y0": 51.0,
+                "x1": 340.0,
+                "y1": 62.0,
+                "pageWidth": 1000.0,
+                "pageHeight": 1400.0
+              },
+              "confidence": 0.9402879040974838,
+              "hierarchyPath": [],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "ocr_layout_detector"
+              }
+            },
+            {
+              "elementId": "layout-8cf8b17fc9",
+              "type": "paragraph",
+              "text": "OrderNmbar.",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 161.0,
+                "y0": 75.0,
+                "x1": 218.0,
+                "y1": 85.0,
+                "pageWidth": 1000.0,
+                "pageHeight": 1400.0
+              },
+              "confidence": 0.845354909246618,
+              "hierarchyPath": [],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "ocr_layout_detector"
+              }
+            },
+            {
+              "elementId": "layout-9e64811eab",
+              "type": "paragraph",
+              "text": "of",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 138.0,
+                "y0": 108.0,
+                "x1": 152.0,
+                "y1": 120.0,
+                "pageWidth": 1000.0,
+                "pageHeight": 1400.0
+              },
+              "confidence": 0.799865335226059,
+              "hierarchyPath": [],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "ocr_layout_detector"
+              }
+            },
+            {
+              "elementId": "layout-6e77cd9f6b",
+              "type": "title",
+              "text": "1. ITNH PUONASD",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 55.0,
+                "y0": 153.0,
+                "x1": 157.0,
+                "y1": 164.0,
+                "pageWidth": 1000.0,
+                "pageHeight": 1400.0
+              },
+              "confidence": 0.609635517001152,
+              "hierarchyPath": [],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "ocr_layout_detector"
+              }
+            },
+            {
+              "elementId": "layout-5609faf958",
+              "type": "paragraph",
+              "text": "poo0, ) eopd Neyeooy o 'q cg",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 53.0,
+                "y0": 163.0,
+                "x1": 245.0,
+                "y1": 178.0,
+                "pageWidth": 1000.0,
+                "pageHeight": 1400.0
+              },
+              "confidence": 0.5566642959912618,
+              "hierarchyPath": [],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "ocr_layout_detector"
+              }
+            },
+            {
+              "elementId": "layout-9120b922f7",
+              "type": "paragraph",
+              "text": "Uis Coetact:",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 53.0,
+                "y0": 174.0,
+                "x1": 105.0,
+                "y1": 189.0,
+                "pageWidth": 1000.0,
+                "pageHeight": 1400.0
+              },
+              "confidence": 0.6392856116096178,
+              "hierarchyPath": [],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "ocr_layout_detector"
+              }
+            },
+            {
+              "elementId": "layout-694e22438d",
+              "type": "title",
+              "text": "TUIAL: $0:00",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 53.0,
+                "y0": 198.0,
+                "x1": 116.0,
+                "y1": 210.0,
+                "pageWidth": 1000.0,
+                "pageHeight": 1400.0
+              },
+              "confidence": 0.860839252670606,
+              "hierarchyPath": [],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "ocr_layout_detector"
+              }
+            },
+            {
+              "elementId": "layout-260ce3d3fd",
+              "type": "title",
+              "text": "2. FRODUCT ETANARDS 7",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 53.0,
+                "y0": 220.0,
+                "x1": 190.0,
+                "y1": 234.0,
+                "pageWidth": 1000.0,
+                "pageHeight": 1400.0
+              },
+              "confidence": 0.8082048963932764,
+              "hierarchyPath": [],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "ocr_layout_detector"
+              }
+            },
+            {
+              "elementId": "layout-7f41b2e7bc",
+              "type": "paragraph",
+              "text": "panp nogaoeb",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 53.0,
+                "y0": 232.0,
+                "x1": 113.0,
+                "y1": 244.0,
+                "pageWidth": 1000.0,
+                "pageHeight": 1400.0
+              },
+              "confidence": 0.7133183032274246,
+              "hierarchyPath": [],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "ocr_layout_detector"
+              }
+            },
+            {
+              "elementId": "layout-2df3189b5e",
+              "type": "clause",
+              "text": "3. TTTL.RISK OP LOB4. By l",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 53.0,
+                "y0": 254.0,
+                "x1": 207.0,
+                "y1": 267.0,
+                "pageWidth": 1000.0,
+                "pageHeight": 1400.0
+              },
+              "confidence": 0.8117653716069001,
+              "hierarchyPath": [],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "ocr_layout_detector"
+              }
+            },
+            {
+              "elementId": "layout-b5aedf2501",
+              "type": "paragraph",
+              "text": "kaivay",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 345.0,
+                "y0": 264.0,
+                "x1": 397.0,
+                "y1": 279.0,
+                "pageWidth": 1000.0,
+                "pageHeight": 1400.0
+              },
+              "confidence": 0.7597123434146246,
+              "hierarchyPath": [],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "ocr_layout_detector"
+              }
+            },
+            {
+              "elementId": "layout-094d0fcb45",
+              "type": "paragraph",
+              "text": "buisllero",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 82.0,
+                "y0": 265.0,
+                "x1": 209.0,
+                "y1": 278.0,
+                "pageWidth": 1000.0,
+                "pageHeight": 1400.0
+              },
+              "confidence": 0.6783873471948836,
+              "hierarchyPath": [],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "ocr_layout_detector"
+              }
+            },
+            {
+              "elementId": "layout-7180bfc4f9",
+              "type": "paragraph",
+              "text": "o koyer's mlds",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 312.0,
+                "y0": 277.0,
+                "x1": 382.0,
+                "y1": 290.0,
+                "pageWidth": 1000.0,
+                "pageHeight": 1400.0
+              },
+              "confidence": 0.5881065683705466,
+              "hierarchyPath": [],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "ocr_layout_detector"
+              }
+            },
+            {
+              "elementId": "layout-ee5d70467e",
+              "type": "paragraph",
+              "text": "4.PATMAT. Pymomt ol",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 55.0,
+                "y0": 300.0,
+                "x1": 169.0,
+                "y1": 311.0,
+                "pageWidth": 1000.0,
+                "pageHeight": 1400.0
+              },
+              "confidence": 0.7239758984038704,
+              "hierarchyPath": [],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "ocr_layout_detector"
+              }
+            },
+            {
+              "elementId": "layout-5d4dd6e78d",
+              "type": "paragraph",
+              "text": "0devryfl",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 287.0,
+                "y0": 310.0,
+                "x1": 375.0,
+                "y1": 322.0,
+                "pageWidth": 1000.0,
+                "pageHeight": 1400.0
+              },
+              "confidence": 0.632222443819046,
+              "hierarchyPath": [],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "ocr_layout_detector"
+              }
+            },
+            {
+              "elementId": "layout-b24c74c15c",
+              "type": "paragraph",
+              "text": "aibad in bin Cdodt.",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 55.0,
+                "y0": 323.0,
+                "x1": 149.0,
+                "y1": 333.0,
+                "pageWidth": 1000.0,
+                "pageHeight": 1400.0
+              },
+              "confidence": 0.7193754315376282,
+              "hierarchyPath": [],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "ocr_layout_detector"
+              }
+            },
+            {
+              "elementId": "layout-5d4adddc9b",
+              "type": "paragraph",
+              "text": "tife ifl  p v d.",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 233.0,
+                "y0": 344.0,
+                "x1": 383.0,
+                "y1": 358.0,
+                "pageWidth": 1000.0,
+                "pageHeight": 1400.0
+              },
+              "confidence": 0.6108154179528356,
+              "hierarchyPath": [],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "ocr_layout_detector"
+              }
+            },
+            {
+              "elementId": "layout-878185615e",
+              "type": "paragraph",
+              "text": "u o dNm lo",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 247.0,
+                "y0": 368.0,
+                "x1": 374.0,
+                "y1": 378.0,
+                "pageWidth": 1000.0,
+                "pageHeight": 1400.0
+              },
+              "confidence": 0.5199519127607346,
+              "hierarchyPath": [],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "ocr_layout_detector"
+              }
+            },
+            {
+              "elementId": "layout-6491d9ca6c",
+              "type": "paragraph",
+              "text": "allodelleer",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 230.0,
+                "y0": 377.0,
+                "x1": 394.0,
+                "y1": 392.0,
+                "pageWidth": 1000.0,
+                "pageHeight": 1400.0
+              },
+              "confidence": 0.6501689336516641,
+              "hierarchyPath": [],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "ocr_layout_detector"
+              }
+            },
+            {
+              "elementId": "layout-6cee0ef0c3",
+              "type": "paragraph",
+              "text": "I colectlot, ilndiog writhnt Halwtion, monoeble",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 219.0,
+                "y0": 389.0,
+                "x1": 405.0,
+                "y1": 401.0,
+                "pageWidth": 1000.0,
+                "pageHeight": 1400.0
+              },
+              "confidence": 0.6164501765941052,
+              "hierarchyPath": [],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "ocr_layout_detector"
+              }
+            },
+            {
+              "elementId": "layout-2b2e3f9bad",
+              "type": "paragraph",
+              "text": "dy porlded by lru, lf",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 187.0,
+                "y0": 423.0,
+                "x1": 272.0,
+                "y1": 436.0,
+                "pageWidth": 1000.0,
+                "pageHeight": 1400.0
+              },
+              "confidence": 0.6616653537466413,
+              "hierarchyPath": [],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "ocr_layout_detector"
+              }
+            },
+            {
+              "elementId": "layout-83d3e79733",
+              "type": "paragraph",
+              "text": "fu t+pay fce",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 347.0,
+                "y0": 423.0,
+                "x1": 403.0,
+                "y1": 436.0,
+                "pageWidth": 1000.0,
+                "pageHeight": 1400.0
+              },
+              "confidence": 0.668968508640925,
+              "hierarchyPath": [],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "ocr_layout_detector"
+              }
+            },
+            {
+              "elementId": "layout-89df695b55",
+              "type": "paragraph",
+              "text": "d o a md",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 211.0,
+                "y0": 433.0,
+                "x1": 382.0,
+                "y1": 449.0,
+                "pageWidth": 1000.0,
+                "pageHeight": 1400.0
+              },
+              "confidence": 0.5447275698184967,
+              "hierarchyPath": [],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "ocr_layout_detector"
+              }
+            },
+            {
+              "elementId": "layout-71a84b676a",
+              "type": "paragraph",
+              "text": "Goc",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 55.0,
+                "y0": 437.0,
+                "x1": 82.0,
+                "y1": 445.0,
+                "pageWidth": 1000.0,
+                "pageHeight": 1400.0
+              },
+              "confidence": 0.6481547057628632,
+              "hierarchyPath": [],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "ocr_layout_detector"
+              }
+            },
+            {
+              "elementId": "layout-8d685eeb7a",
+              "type": "paragraph",
+              "text": "od mry cmcel tlis Cortacl d'ar het l pl an=.",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 175.0,
+                "y0": 446.0,
+                "x1": 376.0,
+                "y1": 459.0,
+                "pageWidth": 1000.0,
+                "pageHeight": 1400.0
+              },
+              "confidence": 0.7156080644239079,
+              "hierarchyPath": [],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "ocr_layout_detector"
+              }
+            },
+            {
+              "elementId": "layout-4f2a1384fa",
+              "type": "paragraph",
+              "text": "he cn c permme frs Con",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 152.0,
+                "y0": 467.0,
+                "x1": 326.0,
+                "y1": 483.0,
+                "pageWidth": 1000.0,
+                "pageHeight": 1400.0
+              },
+              "confidence": 0.6531019752675836,
+              "hierarchyPath": [],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "ocr_layout_detector"
+              }
+            },
+            {
+              "elementId": "layout-ffda3d42fc",
+              "type": "title",
+              "text": "S.DCIVTNY.T",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 54.0,
+                "y0": 469.0,
+                "x1": 137.0,
+                "y1": 479.0,
+                "pageWidth": 1000.0,
+                "pageHeight": 1400.0
+              },
+              "confidence": 0.6202503930438649,
+              "hierarchyPath": [],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "ocr_layout_detector"
+              }
+            },
+            {
+              "elementId": "layout-05d562f347",
+              "type": "paragraph",
+              "text": "q q ny",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 133.0,
+                "y0": 479.0,
+                "x1": 304.0,
+                "y1": 494.0,
+                "pageWidth": 1000.0,
+                "pageHeight": 1400.0
+              },
+              "confidence": 0.6966778300702572,
+              "hierarchyPath": [],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "ocr_layout_detector"
+              }
+            },
+            {
+              "elementId": "layout-cd3e502d9b",
+              "type": "paragraph",
+              "text": "Drlis : bat b rowp'hI h",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 54.0,
+                "y0": 489.0,
+                "x1": 170.0,
+                "y1": 503.0,
+                "pageWidth": 1000.0,
+                "pageHeight": 1400.0
+              },
+              "confidence": 0.570585055195767,
+              "hierarchyPath": [],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "ocr_layout_detector"
+              }
+            },
+            {
+              "elementId": "layout-66104327ee",
+              "type": "title",
+              "text": "ROCKETLAWYER",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 118.0,
+                "y0": 516.0,
+                "x1": 349.0,
+                "y1": 537.0,
+                "pageWidth": 1000.0,
+                "pageHeight": 1400.0
+              },
+              "confidence": 0.98,
+              "hierarchyPath": [],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "ocr_layout_detector"
+              }
+            },
+            {
+              "elementId": "layout-148a4b5c38",
+              "type": "paragraph",
+              "text": "Al insights with Rodket Copilot*",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 152.0,
+                "y0": 557.0,
+                "x1": 315.0,
+                "y1": 572.0,
+                "pageWidth": 1000.0,
+                "pageHeight": 1400.0
+              },
+              "confidence": 0.9264897368848324,
+              "hierarchyPath": [],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "ocr_layout_detector"
+              }
+            }
+          ]
+        }
+      ],
+      "hierarchy": [
+        "GCNERALCONTRACTFORPRODUCTS",
+        "1. ITNH PUONASD",
+        "TUIAL: $0:00",
+        "2. FRODUCT ETANARDS 7",
+        "S.DCIVTNY.T",
+        "ROCKETLAWYER"
+      ],
+      "clauseSegments": [
+        {
+          "clauseId": "clause-001",
+          "sectionReference": "General",
+          "hierarchy": [
+            "General"
+          ],
+          "title": "",
+          "originalText": "GCNERALCONTRACTFORPRODUCTS OrderNmbar. of"
+        },
+        {
+          "clauseId": "clause-002",
+          "sectionReference": "1. ITNH PUONASD",
+          "hierarchy": [
+            "1. ITNH PUONASD"
+          ],
+          "title": "",
+          "originalText": "poo0, ) eopd Neyeooy o 'q cg Uis Coetact:"
+        },
+        {
+          "clauseId": "clause-003",
+          "sectionReference": "2. FRODUCT ETANARDS 7",
+          "hierarchy": [
+            "2. FRODUCT ETANARDS 7"
+          ],
+          "title": "",
+          "originalText": "panp nogaoeb"
+        },
+        {
+          "clauseId": "clause-004",
+          "sectionReference": "2. FRODUCT ETANARDS 7",
+          "hierarchy": [
+            "2. FRODUCT ETANARDS 7",
+            "3"
+          ],
+          "title": "",
+          "originalText": "TTTL.RISK OP LOB4. By l kaivay buisllero"
+        },
+        {
+          "clauseId": "clause-005",
+          "sectionReference": "2. FRODUCT ETANARDS 7",
+          "hierarchy": [
+            "2. FRODUCT ETANARDS 7",
+            "o"
+          ],
+          "title": "",
+          "originalText": "koyer's mlds 4.PATMAT."
+        },
+        {
+          "clauseId": "clause-006",
+          "sectionReference": "2. FRODUCT ETANARDS 7",
+          "hierarchy": [
+            "2. FRODUCT ETANARDS 7",
+            "o"
+          ],
+          "title": "",
+          "originalText": "Pymomt ol 0devryfl aibad in bin Cdodt. tife ifl  p v d."
+        },
+        {
+          "clauseId": "clause-007",
+          "sectionReference": "2. FRODUCT ETANARDS 7",
+          "hierarchy": [
+            "2. FRODUCT ETANARDS 7",
+            "u"
+          ],
+          "title": "",
+          "originalText": "o dNm lo allodelleer"
+        },
+        {
+          "clauseId": "clause-008",
+          "sectionReference": "2. FRODUCT ETANARDS 7",
+          "hierarchy": [
+            "2. FRODUCT ETANARDS 7",
+            "I"
+          ],
+          "title": "",
+          "originalText": "colectlot, ilndiog writhnt Halwtion, monoeble dy porlded by lru, lf fu t+pay fce"
+        },
+        {
+          "clauseId": "clause-009",
+          "sectionReference": "2. FRODUCT ETANARDS 7",
+          "hierarchy": [
+            "2. FRODUCT ETANARDS 7",
+            "d"
+          ],
+          "title": "",
+          "originalText": "o a md Goc od mry cmcel tlis Cortacl d'ar het l pl an=. he cn c permme frs Con S.DCIVTNY.T"
+        },
+        {
+          "clauseId": "clause-010",
+          "sectionReference": "2. FRODUCT ETANARDS 7",
+          "hierarchy": [
+            "2. FRODUCT ETANARDS 7",
+            "q"
+          ],
+          "title": "",
+          "originalText": "q ny Drlis : bat b rowp'hI h ROCKETLAWYER Al insights with Rodket Copilot*"
+        }
+      ],
+      "tables": [],
+      "signatures": [],
+      "annotations": [],
+      "rawText": "GCNERALCONTRACTFORPRODUCTS\nOrderNmbar.\nof\n1. ITNH PUONASD\npoo0, ) eopd Neyeooy o 'q cg\nUis Coetact:\nTUIAL: $0:00\n2. FRODUCT ETANARDS 7\npanp nogaoeb\n3. TTTL.RISK OP LOB4. By l\nkaivay\nbuisllero\no koyer's mlds\n4.PATMAT. Pymomt ol\n0devryfl\naibad in bin Cdodt.\ntife ifl  p v d.\nu o dNm lo\nallodelleer\nI colectlot, ilndiog writhnt Halwtion, monoeble\ndy porlded by lru, lf\nfu t+pay fce\nd o a md\nGoc\nod mry cmcel tlis Cortacl d'ar het l pl an=.\nhe cn c permme frs Con\nS.DCIVTNY.T\nq q ny\nDrlis : bat b rowp'hI h\nROCKETLAWYER\nAl insights with Rodket Copilot*",
+      "reconstructionNotes": [
+        "Structured document built from OCR text blocks."
+      ]
+    },
+    "ingestionEvaluation": {
+      "documentStructureAccuracy": 0.5833333333333334,
+      "clauseDetectionAccuracy": 0.8667883211678832,
+      "tableExtractionAccuracy": 0.0,
+      "layoutDetectionPrecision": 0.22580645161290322,
+      "processingLatencyMs": 13.89,
+      "notes": [
+        "Reference-free intrinsic evaluation used because no gold annotation was supplied."
+      ]
+    },
+    "contractorCredibility": {
+      "score": 38.47,
+      "rating": "weak",
+      "summary": "Public-source diligence for tesla found 0 positive and 11 negative signals across news, dispute, regulatory, and reputation-oriented searches. Credibility is rated weak because the signal mix shows 0 positive and 11 negative indicators, with 1 neutral footprint signals.",
+      "positiveSignals": [],
+      "negativeSignals": [
+        "Public negative signal: lawsuit: A class-action lawsuit in California alleges that some drivers were overcharged based on inaccurate vehicle safety data, raising questions about the accuracy and fairness of Tesla's insurance ...",
+        "Public negative signal: lawsuit: Tesla has filed a lawsuit against the California Department of Motor Vehicles (DMV) to overturn a ruling that the agency says the automaker overstated the capabilities of its Autopilot system, alleging deceptive marketing practices. What sparked the legal showdown? In a TechCrunch report published on February 23, 2026, the details of Tesla's fresh lawsuit were",
+        "Public negative signal: lawsuit: Tesla is facing mounting legal and regulatory scrutiny over its electronic door handle designs. A newly proposed class action lawsuit , filed in California federal court, alleges that recent Model S vehicles contain a critical safety defect that can leave occupants trapped inside the car during emergencies if the vehicle loses low-voltage power.",
+        "Public negative signal: lawsuit: As Tesla Chief Executive Elon Musk banks the future of his company on autonomous robotaxis, several lawsuits raise concerns over the safety of the technology.",
+        "Public negative signal: lawsuit: - Tesla faces global legal challenges over Autopilot/FSD safety claims, including a $329M liability verdict in Miami and California's misleading advertising lawsuit . - Regulatory delays for robotaxi services and lack of safety certifications contrast with Waymo's 250K weekly rides, exposing competitive disadvantages. - Shareholder lawsuits and Q2 revenue declines (-12% YoY) highlight financial ...",
+        "Public negative signal: sued: California's DMV sued Tesla in 2022 and is seeking to suspend Tesla's ability to sell cars in the state for at least 30 days."
+      ],
+      "sources": [
+        "https://www.insurancebusinessmag.com/us/news/risk-compliance-legal/tesla-insurance-hit-by-california-regulatory-action-552029.aspx",
+        "https://ubos.tech/news/tesla-sues-california-dmv-over-autopilot-claims-legal-battle-escalates/",
+        "https://www.thestreet.com/automotive/tesla-faces-new-class-action-lawsuit",
+        "https://www.notateslaapp.com/news/3733/tesla-faces-class-action-lawsuit-over-model-s-door-handles",
+        "https://www.latimes.com/business/story/2025-08-19/tesla-robotaxi-shareholder-lawsuit",
+        "https://www.ainvest.com/news/implications-tesla-ongoing-legal-regulatory-challenges-ai-autonomous-driving-ambitions-2509/",
+        "https://www.businessinsider.com/tesla-license-california-lawsuit-hearing-dmv-fsd-autopilot-2025-7?op=1",
+        "https://finance.biggo.com/news/202510031453_Tesla_Cybertruck_Safety_Lawsuit_and_Transportation_Industry_Regulatory_Shifts"
+      ],
+      "framework": "credibility = 58 + 24*avg_positive_signal - 34*avg_negative_signal + evidence_coverage + registry_bonus, clamped to [0,100]"
+    },
+    "evaluationMetrics": {
+      "contract_classification": "top-1 accuracy, macro-F1, calibration error",
+      "clause_segmentation": "boundary F1, hierarchical consistency, clause coverage",
+      "risk_detection": "AUROC, precision@critical, weighted Brier score, explanation faithfulness",
+      "explanation_quality": "human adequacy, factual consistency, edit distance to gold simplifications"
+    },
+    "generatedAt": "2026-03-16T17:15:39.801119"
+  },
+  "searchableText": "GCNERALCONTRACTFORPRODUCTS\nOrderNmbar.\nof\n1. ITNH PUONASD\npoo0, ) eopd Neyeooy o 'q cg\nUis Coetact:\nTUIAL: $0:00\n2. FRODUCT ETANARDS 7\npanp nogaoeb\n3. TTTL.RISK OP LOB4. By l\nkaivay\nbuisllero\no koyer's mlds\n4.PATMAT. Pymomt ol\n0devryfl\naibad in bin Cdodt.\ntife ifl  p v d.\nu o dNm lo\nallodelleer\nI colectlot, ilndiog writhnt Halwtion, monoeble\ndy porlded by lru, lf\nfu t+pay fce\nd o a md\nGoc\nod mry cmcel tlis Cortacl d'ar het l pl an=.\nhe cn c permme frs Con\nS.DCIVTNY.T\nq q ny\nDrlis : bat b rowp'hI h\nROCKETLAWYER\nAl insights with Rodket Copilot*\nGCNERALCONTRACTFORPRODUCTS OrderNmbar. of\nBoth sides sets a contract rule. In plain terms, gCNERALCONTRACTFORPRODUCTS OrderNmbar. of\npoo0, ) eopd Neyeooy o 'q cg Uis Coetact:\nBoth sides sets a contract rule. In plain terms, poo0, ) eopd Neyeooy o 'q cg Uis Coetact:\npanp nogaoeb\nBoth sides sets a contract rule. In plain terms, panp nogaoeb\nTTTL.RISK OP LOB4. By l kaivay buisllero\nBoth sides sets a contract rule. In plain terms, tTTL.RISK OP LOB4. By l kaivay buisllero\nkoyer's mlds 4.PATMAT.\nBoth sides sets a contract rule. In plain terms, koyer's mlds 4.PATMAT.\nPymomt ol 0devryfl aibad in bin Cdodt. tife ifl  p v d.\nBoth sides sets a contract rule. In plain terms, pymomt ol 0devryfl aibad in bin Cdodt. tife ifl p v d.\no dNm lo allodelleer\nBoth sides sets a contract rule. In plain terms, o dNm lo allodelleer\ncolectlot, ilndiog writhnt Halwtion, monoeble dy porlded by lru, lf fu t+pay fce\nBoth sides sets a contract rule. In plain terms, colectlot, ilndiog writhnt Halwtion, monoeble dy porlded by lru, lf fu t+pay fce\no a md Goc od mry cmcel tlis Cortacl d'ar het l pl an=. he cn c permme frs Con S.DCIVTNY.T\nBoth sides sets a contract rule. In plain terms, o a md Goc od mry cmcel tlis Cortacl d'ar het l pl an=. he cn c permme frs Con S.DCIVTNY.T\nq ny Drlis : bat b rowp'hI h ROCKETLAWYER Al insights with Rodket Copilot*\nBoth sides sets a contract rule. In plain terms, q ny Drlis : bat b rowp'hI h ROCKETLAWYER Al insights with Rodket Copilot*",
+  "createdAt": "2026-03-16T17:15:39.801119",
+  "updatedAt": "2026-03-16T17:15:39.801119"
+}

@@ -1,0 +1,632 @@
+{
+  "contractId": "contract-4cacbf6cbc45",
+  "report": {
+    "contractId": "contract-4cacbf6cbc45",
+    "contractType": {
+      "category": "General Contract for Products",
+      "confidence": 0.98,
+      "evidence": [
+        "delivery",
+        "goods",
+        "invoice"
+      ],
+      "alternatives": {
+        "vendor agreement": 1.0,
+        "service contract": 0.24,
+        "legal statute": 0.0,
+        "employment": 0.0
+      }
+    },
+    "extraction": {
+      "documentKind": "image",
+      "extractionMethod": "gemini_image_ocr",
+      "sourceFilename": "Screenshot 2026-03-15 144043.png",
+      "mediaType": "image/png",
+      "structureConfidence": 0.9,
+      "extractedCharacters": 2041,
+      "textPreview": "**GENERAL CONTRACT FOR PRODUCTS**\nOrder Number: ____________________\n\nThis Contract (this \"Contract\") is made effective as of ____________________, by and between\n____________________, of ____________________, and ____________________,\nof ____________________.\n\n**1. ITEMS PURCHASED.** ____________________ agrees to sell, and ____________________\nagrees to buy, the following products (the \"Goods\") ",
+      "notes": [
+        "Gemini multimodal OCR extracted the image content."
+      ]
+    },
+    "summary": "This is a general contract for the purchase of products, outlining terms for items purchased, product standards, risk of loss, payment, and delivery. However, it contains numerous critical blank fields and contradictory or ineffective terms (e.g., $0.00 total, 0% discount, 0% interest), rendering it largely incomplete and potentially unenforceable. Significant revisions are required to make it a functional and legally sound agreement.",
+    "overallRiskScore": 20.5,
+    "overallRiskCategory": "critical",
+    "keyVulnerabilities": [
+      "clause_4_payment_collection_costs: payment clause scored 39/100 because the party responsible for paying collection costs is left blank, creating ambiguity about who bears these expenses in case of default on payment.",
+      "clause_4_payment_interest_overdue: payment clause scored 34/100 because stating an interest rate of '0 percent per year' effectively negates any interest charge unless the 'maximum percentage allowed under applicable laws' is also 0%, which is highly unlikely. this makes the interest provision weak for the seller."
+    ],
+    "legalLoopholes": [],
+    "illegalClauseAlerts": [],
+    "recommendations": [
+      "No material risk remediation identified beyond standard legal review.",
+      "Reduce late-payment interest or add a grace period before default charges apply.",
+      "Validate any critical clause with jurisdiction-specific counsel before signature.",
+      "Compare risk concentration against previous agreements in the contract memory store."
+    ],
+    "metrics": {
+      "meanClauseRisk": 21.7,
+      "p90ClauseRisk": 34.19,
+      "criticalClauseRatio": 0.0,
+      "warningClauseRatio": 0.2,
+      "riskDispersion": 0.28,
+      "fairnessIndex": 2.0,
+      "legalExposureIndex": 3.65,
+      "concentrationIndex": 11.2,
+      "aggregationFormula": "overall = 0.55*mean_clause_risk + 0.20*p90_clause_risk + 0.15*critical_clause_ratio*100 + 0.10*legal_exposure_index"
+    },
+    "clauses": [
+      {
+        "clauseId": "preamble",
+        "sectionReference": "Clause Review",
+        "hierarchy": [
+          "Clause Review"
+        ],
+        "title": "",
+        "originalText": "GENERAL CONTRACT FOR PRODUCTS\nOrder Number: ____________________\n\nThis Contract (this \"Contract\") is made effective as of ____________________, by and between\n____________________, of ____________________, and ____________________,\nof ____________________.",
+        "plainLanguage": "This contract for products requires an order number, an effective date, and the names and addresses of the two parties involved to be filled in.",
+        "clauseType": "general",
+        "riskCategory": "critical",
+        "colorIndicator": "red",
+        "riskScore": 10.95,
+        "confidence": 0.7,
+        "explanation": "Multiple critical fields (Order Number, Effective Date, Party Names, and Addresses) are left blank. Without these details, the contract is incomplete, ambiguous, and potentially unenforceable as the parties and commencement date are not defined.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.0,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 10.95,
+          "confidence": 0.7,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "GENERAL CONTRACT FOR PRODUCTS\nOrder Number: ____________________\n\nThis Contract (this \"Contract\") is made effective as of ____________________, by and between\n____________________, of ____________________, and ____________________,\nof ____________________.",
+          "revisedClause": "Ensure all blank fields are accurately and completely filled in with the specific Order Number, Effective Date, and the full legal names and addresses of both contracting parties before execution.",
+          "justification": "Revision generated from Gemini contract analysis."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "Prioritize the completion of all identifying information. Insist on specific dates and full legal names/addresses to ensure the contract is valid and binding."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "A court may deem the contract invalid or require extensive extrinsic evidence to determine the parties and effective date, leading to significant delays and legal costs in any dispute.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ]
+      },
+      {
+        "clauseId": "clause_1_items_purchased",
+        "sectionReference": "Clause Review",
+        "hierarchy": [
+          "Clause Review"
+        ],
+        "title": "",
+        "originalText": "1. ITEMS PURCHASED. ____________________ agrees to sell, and ____________________\nagrees to buy, the following products (the \"Goods\") in accordance with the terms and conditions of\nthis Contract:\n\nTOTAL: $0.00",
+        "plainLanguage": "One party agrees to sell, and another party agrees to buy, specific products (Goods) as described in this contract. The total price is currently $0.00.",
+        "clauseType": "general",
+        "riskCategory": "critical",
+        "colorIndicator": "red",
+        "riskScore": 10.95,
+        "confidence": 0.7,
+        "explanation": "The parties involved in the sale/purchase are blank, the specific 'Goods' are not described, and the total price is explicitly stated as $0.00. These are fundamental commercial terms that are either missing or incorrect, making the clause unenforceable.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.0,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 10.95,
+          "confidence": 0.7,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "1. ITEMS PURCHASED. ____________________ agrees to sell, and ____________________\nagrees to buy, the following products (the \"Goods\") in accordance with the terms and conditions of\nthis Contract:\n\nTOTAL: $0.00",
+          "revisedClause": "Clearly identify the Seller and Buyer, provide a detailed and specific description of the Goods being purchased, and state the correct total purchase price.",
+          "justification": "Revision generated from Gemini contract analysis."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "Insist on a clear, itemized list of goods with quantities and specifications, and an accurate, agreed-upon total price. Define who is the Seller and who is the Buyer."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "A court would likely find this clause too vague to enforce, as the subject matter and consideration (price) are not defined, potentially leading to the contract being void for lack of essential terms.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ]
+      },
+      {
+        "clauseId": "clause_2_product_standards",
+        "sectionReference": "Clause Review",
+        "hierarchy": [
+          "Clause Review"
+        ],
+        "title": "",
+        "originalText": "2. PRODUCT STANDARDS. The Goods shall comply with the ____________________'s\nquotation dated ____________________ and incorporated into this Contract by this reference.",
+        "plainLanguage": "The products must meet the standards outlined in a specific quotation from one of the parties, dated on a particular day, which is included as part of this contract.",
+        "clauseType": "obligation",
+        "riskCategory": "warning",
+        "colorIndicator": "yellow",
+        "riskScore": 22.25,
+        "confidence": 0.76,
+        "explanation": "The party whose quotation sets the standards and the date of that quotation are blank. This makes the product standards undefined and could lead to disputes over quality or specifications.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.25,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 22.25,
+          "confidence": 0.76,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "2. PRODUCT STANDARDS. The Goods shall comply with the ____________________'s\nquotation dated ____________________ and incorporated into this Contract by this reference.",
+          "revisedClause": "Specify the party providing the quotation (e.g., 'Seller's quotation') and the exact date of the quotation. Ensure the referenced quotation is attached as an exhibit to the contract.",
+          "justification": "Revision generated from Gemini contract analysis."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "Agree on the specific quotation that defines product standards and ensure it is accurately referenced and physically attached to the contract to avoid future ambiguity."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "Without a specified quotation, the buyer may have difficulty proving non-compliance, and the seller may argue that no specific standards were agreed upon, leading to costly quality disputes.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ]
+      },
+      {
+        "clauseId": "clause_3_title_risk_of_loss",
+        "sectionReference": "Clause Review",
+        "hierarchy": [
+          "Clause Review"
+        ],
+        "title": "",
+        "originalText": "3. TITLE/RISK OF LOSS. Buyer shall pay reasonable shipping costs in accordance with its\nshipping instructions, but the seller shall be responsible for packaging, shipping and safe delivery\nand shall bear all risk of damage or loss until the goods are delivered to the buyer's address.",
+        "plainLanguage": "The buyer pays for shipping, but the seller is responsible for packaging, shipping, safe delivery, and bears all risk of damage or loss until the goods are delivered to the buyer's address.",
+        "clauseType": "obligation",
+        "riskCategory": "safe",
+        "colorIndicator": "green",
+        "riskScore": 19.87,
+        "confidence": 0.8,
+        "explanation": "This clause clearly defines the responsibilities for shipping costs and the point at which the risk of loss transfers from seller to buyer. The risk transfer upon delivery to the buyer's address is generally favorable to the buyer.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.25,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.02,
+          "score": 19.87,
+          "confidence": 0.8,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "3. TITLE/RISK OF LOSS. Buyer shall pay reasonable shipping costs in accordance with its\nshipping instructions, but the seller shall be responsible for packaging, shipping and safe delivery\nand shall bear all risk of damage or loss until the goods are delivered to the buyer's address.",
+          "revisedClause": "No revision needed, as this clause is clear and allocates risk appropriately.",
+          "justification": "Revision generated from Gemini contract analysis."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "Maintain this clause as it provides clear protection for the buyer regarding risk of loss during transit."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "If goods are damaged during transit before reaching the buyer's address, the seller would be liable for replacement or compensation, as the risk of loss remains with the seller until that point.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ]
+      },
+      {
+        "clauseId": "clause_4_payment_recipient_amount",
+        "sectionReference": "Clause Review",
+        "hierarchy": [
+          "Clause Review"
+        ],
+        "title": "",
+        "originalText": "4. PAYMENT. Payment shall be made to ____________________ in the amount of $0.00 upon delivery of all Goods\ndescribed in this Contract.",
+        "plainLanguage": "Payment for the goods, totaling $0.00, is due to a specified party upon delivery.",
+        "clauseType": "payment",
+        "riskCategory": "critical",
+        "colorIndicator": "red",
+        "riskScore": 22.25,
+        "confidence": 0.72,
+        "explanation": "The recipient of payment is blank, and the payment amount is stated as $0.00. This makes the payment terms unenforceable and contradicts the nature of a purchase agreement.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.25,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 22.25,
+          "confidence": 0.72,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "4. PAYMENT. Payment shall be made to ____________________ in the amount of $0.00 upon delivery of all Goods\ndescribed in this Contract.",
+          "revisedClause": "Clearly state the full legal name of the payee and the correct, agreed-upon payment amount.",
+          "justification": "Revision generated from Gemini contract analysis."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "Ensure the payee and the exact payment amount are explicitly stated and agreed upon to avoid any payment disputes."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "A court would likely find this clause invalid due to lack of consideration or ambiguity regarding the payment amount, making the contract unenforceable for the seller seeking payment.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ]
+      },
+      {
+        "clauseId": "clause_4_payment_discount_terms",
+        "sectionReference": "Clause Review",
+        "hierarchy": [
+          "Clause Review"
+        ],
+        "title": "",
+        "originalText": "Payment discount terms are as follows: a 0 percent discount if total bill is paid within 0 days.",
+        "plainLanguage": "There is a 0% discount if the bill is paid within 0 days.",
+        "clauseType": "payment",
+        "riskCategory": "warning",
+        "colorIndicator": "yellow",
+        "riskScore": 10.95,
+        "confidence": 0.57,
+        "explanation": "The discount terms are effectively meaningless (0% discount for 0 days), offering no actual incentive or benefit. This indicates a potential oversight or placeholder that was not properly filled.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.0,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 10.95,
+          "confidence": 0.57,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "Payment discount terms are as follows: a 0 percent discount if total bill is paid within 0 days.",
+          "revisedClause": "Either remove this clause if no discount is intended, or specify a meaningful discount percentage and payment period (e.g., '2 percent discount if paid within 10 days').",
+          "justification": "Revision generated from Gemini contract analysis."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "Clarify if any discount is intended. If not, propose removing the clause to avoid confusion. If a discount is desired, propose specific, beneficial terms."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "This clause would have no practical effect, as it offers no discount. It could lead to minor confusion but no significant legal consequence beyond its ineffectiveness.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ]
+      },
+      {
+        "clauseId": "clause_4_payment_interest_overdue",
+        "sectionReference": "Clause Review",
+        "hierarchy": [
+          "Clause Review"
+        ],
+        "title": "",
+        "originalText": "If any invoice is not paid when due, interest will be added to and payable on all overdue amounts\nat 0 percent per year, or the maximum percentage allowed under applicable laws, whichever is\nless.",
+        "plainLanguage": "Overdue payments will accrue interest at 0% per year, or the maximum legal rate, whichever is lower.",
+        "clauseType": "payment",
+        "riskCategory": "warning",
+        "colorIndicator": "yellow",
+        "riskScore": 34.19,
+        "confidence": 0.9,
+        "explanation": "Stating an interest rate of '0 percent per year' effectively negates any interest charge unless the 'maximum percentage allowed under applicable laws' is also 0%, which is highly unlikely. This makes the interest provision weak for the seller.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.0,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.33,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.2,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 34.19,
+          "confidence": 0.9,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "Reduce late-payment interest or add a grace period before default charges apply."
+        ],
+        "improvement": {
+          "originalClause": "If any invoice is not paid when due, interest will be added to and payable on all overdue amounts\nat 0 percent per year, or the maximum percentage allowed under applicable laws, whichever is\nless.",
+          "revisedClause": "Specify a reasonable, non-zero interest rate (e.g., '1.5 percent per month' or '18 percent per year') or explicitly state 'the maximum percentage allowed under applicable laws' without the 0% option.",
+          "justification": "Revision generated from Gemini contract analysis."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "Reduce late-payment interest or add a grace period before default charges apply."
+          ],
+          "draftedResponse": "For the seller, negotiate a clear, enforceable interest rate for overdue payments to incentivize timely payment. For the buyer, this clause is favorable as it minimizes late payment penalties."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Late payment dispute escalates",
+            "likelyConsequence": "If a payment is overdue, the seller would only be able to charge interest at 0% or the maximum legal rate if that rate is less than 0% (which is impossible), effectively meaning no interest can be charged, reducing the incentive for timely payment.",
+            "severity": "warning",
+            "reasoning": "Default-rate clauses become leverage points once an invoice is contested or delayed."
+          }
+        ]
+      },
+      {
+        "clauseId": "clause_4_payment_collection_costs",
+        "sectionReference": "Clause Review",
+        "hierarchy": [
+          "Clause Review"
+        ],
+        "title": "",
+        "originalText": "____________________ shall pay all costs of collection, including without limitation, reasonable\nattorney fees.",
+        "plainLanguage": "A specified party is responsible for all collection costs, including reasonable attorney fees.",
+        "clauseType": "payment",
+        "riskCategory": "warning",
+        "colorIndicator": "yellow",
+        "riskScore": 39.0,
+        "confidence": 0.79,
+        "explanation": "The party responsible for paying collection costs is left blank, creating ambiguity about who bears these expenses in case of default on payment.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.25,
+          "liabilityExposure": 0.33,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.02,
+          "score": 39.0,
+          "confidence": 0.79,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "____________________ shall pay all costs of collection, including without limitation, reasonable\nattorney fees.",
+          "revisedClause": "Clearly specify which party (e.g., 'Buyer') is responsible for collection costs if they default on payment.",
+          "justification": "Revision generated from Gemini contract analysis."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "Ensure the defaulting party is clearly identified as responsible for collection costs to provide a clear path for recovery in case of non-payment."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "In a dispute over unpaid invoices, the court would need to determine which party is liable for collection costs, potentially leading to further litigation or an unfavorable ruling for the party seeking to recover costs.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ]
+      },
+      {
+        "clauseId": "clause_4_payment_material_breach",
+        "sectionReference": "Clause Review",
+        "hierarchy": [
+          "Clause Review"
+        ],
+        "title": "",
+        "originalText": "In addition to any other right or remedy provided by law, if ____________________ fails to pay for\nthe Goods when due, ____________________ has the option to treat such failure to pay as a\nmaterial breach of this Contract and may cancel this Contract and/or seek legal remedies.",
+        "plainLanguage": "If a specified party fails to pay for the goods on time, another specified party can consider it a major breach, cancel the contract, and/or pursue legal action.",
+        "clauseType": "compliance",
+        "riskCategory": "warning",
+        "colorIndicator": "yellow",
+        "riskScore": 24.29,
+        "confidence": 0.9,
+        "explanation": "The parties involved in the non-payment scenario (who fails to pay, and who has the option to treat it as a breach) are left blank, making the enforcement mechanism unclear.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.0,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.25,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.2,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 24.29,
+          "confidence": 0.9,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "In addition to any other right or remedy provided by law, if ____________________ fails to pay for\nthe Goods when due, ____________________ has the option to treat such failure to pay as a\nmaterial breach of this Contract and may cancel this Contract and/or seek legal remedies.",
+          "revisedClause": "Clearly identify the 'Buyer' as the party who fails to pay and the 'Seller' as the party who has the option to treat it as a material breach.",
+          "justification": "Revision generated from Gemini contract analysis."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "Ensure the clause clearly states that the Buyer's failure to pay constitutes a material breach, giving the Seller clear remedies and grounds for contract termination."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "Without specifying the parties, the ability to declare a material breach and pursue remedies for non-payment would be severely hampered, potentially requiring a court to interpret the intent, which could delay or complicate recovery for the aggrieved party.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ]
+      },
+      {
+        "clauseId": "clause_5_delivery",
+        "sectionReference": "Clause Review",
+        "hierarchy": [
+          "Clause Review"
+        ],
+        "title": "",
+        "originalText": "5. DELIVERY. Time is of the essence in the performance of this Contract.\n____________________ will arrange for delivery by carrier chosen by ____________________.\nDelivery shall be completed by ____________________.",
+        "plainLanguage": "Timely delivery is crucial. A specified party will arrange delivery using a carrier chosen by another specified party. The delivery must be completed by a specific date.",
+        "clauseType": "obligation",
+        "riskCategory": "critical",
+        "colorIndicator": "red",
+        "riskScore": 22.25,
+        "confidence": 0.8,
+        "explanation": "Critical details regarding delivery arrangements (who arranges, who chooses the carrier, and the completion date) are left blank. This makes the delivery terms ambiguous and potentially unenforceable, despite the 'Time is of the essence' clause.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.25,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 22.25,
+          "confidence": 0.8,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "5. DELIVERY. Time is of the essence in the performance of this Contract.\n____________________ will arrange for delivery by carrier chosen by ____________________.\nDelivery shall be completed by ____________________.",
+          "revisedClause": "Clearly state which party (e.g., 'Seller') arranges delivery, which party chooses the carrier (e.g., 'Seller' or 'Buyer'), and specify a firm delivery completion date.",
+          "justification": "Revision generated from Gemini contract analysis."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "Define clear responsibilities for delivery logistics and establish a firm, agreed-upon delivery deadline to ensure timely performance and avoid disputes."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "Without specified parties and a completion date, disputes over delivery delays or non-delivery are highly likely. The 'Time is of the essence' clause would be difficult to enforce without a specific deadline, potentially leading to contract cancellation or claims for damages.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ]
+      }
+    ],
+    "contractorCredibility": {
+      "score": 62.0,
+      "rating": "moderate",
+      "summary": "tesla has a light-touch diligence profile with publicly available footprint data. Credibility is rated moderate because the signal mix shows 0 positive and 0 negative indicators.",
+      "positiveSignals": [],
+      "negativeSignals": [],
+      "sources": [
+        "https://example.com/counterparty-profile"
+      ],
+      "framework": "credibility = 62 + 22*avg_positive_signal - 28*avg_negative_signal + coverage_bonus, clamped to [0,100]"
+    },
+    "evaluationMetrics": {
+      "contract_classification": "top-1 accuracy, macro-F1, calibration error",
+      "clause_segmentation": "boundary F1, hierarchical consistency, clause coverage",
+      "risk_detection": "AUROC, precision@critical, weighted Brier score, explanation faithfulness",
+      "explanation_quality": "human adequacy, factual consistency, edit distance to gold simplifications"
+    },
+    "generatedAt": "2026-03-15T19:59:15.755858"
+  },
+  "searchableText": "**GENERAL CONTRACT FOR PRODUCTS**\nOrder Number: ____________________\n\nThis Contract (this \"Contract\") is made effective as of ____________________, by and between\n____________________, of ____________________, and ____________________,\nof ____________________.\n\n**1. ITEMS PURCHASED.** ____________________ agrees to sell, and ____________________\nagrees to buy, the following products (the \"Goods\") in accordance with the terms and conditions of\nthis Contract:\n\nTOTAL: $0.00\n\n**2. PRODUCT STANDARDS.** The Goods shall comply with the ____________________'s\nquotation dated ____________________ and incorporated into this Contract by this reference.\n\n**3. TITLE/RISK OF LOSS.** Buyer shall pay reasonable shipping costs in accordance with its\nshipping instructions, but the seller shall be responsible for packaging, shipping and safe delivery\nand shall bear all risk of damage or loss until the goods are delivered to the buyer's address.\n\n**4. PAYMENT.** Payment shall be made to ____________________ in the amount of $0.00 upon delivery of all Goods\ndescribed in this Contract.\n\nPayment discount terms are as follows: a 0 percent discount if total bill is paid within 0 days.\n\nIf any invoice is not paid when due, interest will be added to and payable on all overdue amounts\nat 0 percent per year, or the maximum percentage allowed under applicable laws, whichever is\nless. ____________________ shall pay all costs of collection, including without limitation, reasonable\nattorney fees.\n\nIn addition to any other right or remedy provided by law, if ____________________ fails to pay for\nthe Goods when due, ____________________ has the option to treat such failure to pay as a\nmaterial breach of this Contract and may cancel this Contract and/or seek legal remedies.\n\n**5. DELIVERY.** Time is of the essence in the performance of this Contract.\n____________________ will arrange for delivery by carrier chosen by ____________________.\nDelivery shall be completed by ____________________.\n\n**ROCKETLAWYER®**\nAI insights with Rocket Copilot™\nGENERAL CONTRACT FOR PRODUCTS\nOrder Number: ____________________\n\nThis Contract (this \"Contract\") is made effective as of ____________________, by and between\n____________________, of ____________________, and ____________________,\nof ____________________.\nThis contract for products requires an order number, an effective date, and the names and addresses of the two parties involved to be filled in.\n1. ITEMS PURCHASED. ____________________ agrees to sell, and ____________________\nagrees to buy, the following products (the \"Goods\") in accordance with the terms and conditions of\nthis Contract:\n\nTOTAL: $0.00\nOne party agrees to sell, and another party agrees to buy, specific products (Goods) as described in this contract. The total price is currently $0.00.\n2. PRODUCT STANDARDS. The Goods shall comply with the ____________________'s\nquotation dated ____________________ and incorporated into this Contract by this reference.\nThe products must meet the standards outlined in a specific quotation from one of the parties, dated on a particular day, which is included as part of this contract.\n3. TITLE/RISK OF LOSS. Buyer shall pay reasonable shipping costs in accordance with its\nshipping instructions, but the seller shall be responsible for packaging, shipping and safe delivery\nand shall bear all risk of damage or loss until the goods are delivered to the buyer's address.\nThe buyer pays for shipping, but the seller is responsible for packaging, shipping, safe delivery, and bears all risk of damage or loss until the goods are delivered to the buyer's address.\n4. PAYMENT. Payment shall be made to ____________________ in the amount of $0.00 upon delivery of all Goods\ndescribed in this Contract.\nPayment for the goods, totaling $0.00, is due to a specified party upon delivery.\nPayment discount terms are as follows: a 0 percent discount if total bill is paid within 0 days.\nThere is a 0% discount if the bill is paid within 0 days.\nIf any invoice is not paid when due, interest will be added to and payable on all overdue amounts\nat 0 percent per year, or the maximum percentage allowed under applicable laws, whichever is\nless.\nOverdue payments will accrue interest at 0% per year, or the maximum legal rate, whichever is lower.\n____________________ shall pay all costs of collection, including without limitation, reasonable\nattorney fees.\nA specified party is responsible for all collection costs, including reasonable attorney fees.\nIn addition to any other right or remedy provided by law, if ____________________ fails to pay for\nthe Goods when due, ____________________ has the option to treat such failure to pay as a\nmaterial breach of this Contract and may cancel this Contract and/or seek legal remedies.\nIf a specified party fails to pay for the goods on time, another specified party can consider it a major breach, cancel the contract, and/or pursue legal action.\n5. DELIVERY. Time is of the essence in the performance of this Contract.\n____________________ will arrange for delivery by carrier chosen by ____________________.\nDelivery shall be completed by ____________________.\nTimely delivery is crucial. A specified party will arrange delivery using a carrier chosen by another specified party. The delivery must be completed by a specific date.",
+  "createdAt": "2026-03-15T19:59:15.755858",
+  "updatedAt": "2026-03-15T19:59:15.755858"
+}

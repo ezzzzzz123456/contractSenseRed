@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { useParams } from "react-router-dom";
+import ExtractedDocumentPanel from "../components/ExtractedDocumentPanel";
 import WorkspaceHeader from "../components/WorkspaceHeader";
 import ReportExportButton from "../components/ReportExportButton";
 import TrustSealBadge from "../components/TrustSealBadge";
@@ -12,6 +13,7 @@ const ReportPage = (): JSX.Element => {
   const {
     activeContract,
     activeReport,
+    activeAnalysis,
     fetchContractById,
     fetchReportByContract,
     fetchSharedReport,
@@ -153,11 +155,7 @@ const ReportPage = (): JSX.Element => {
             <p>Verified Analysis: Agreement {activeContract?._id?.slice(-6) ?? "#8821-XP"} ({activeContract?.contractType ?? "Service Master Agreement"})</p>
           </div>
           <div className="report-hero__actions">
-            <button
-              type="button"
-              className="button button--ghost"
-              onClick={() => void handleShare()}
-            >
+            <button type="button" className="button button--ghost" onClick={() => void handleShare()}>
               Share Securely
             </button>
             <ReportExportButton />
@@ -173,10 +171,12 @@ const ReportPage = (): JSX.Element => {
             <section className="report-summary-block">
               <div className="numbered-heading"><span>1</span><h2>Executive Summary (Plain English)</h2></div>
               <div className="report-summary-card">
-                <p>{activeReport.aiOutput.summary ?? "No summary available."}</p>
+                <p>{activeReport.aiOutput.summary ?? activeAnalysis?.summary ?? "No summary available."}</p>
                 <p><strong>Key Takeaway:</strong> {activeReport.lawyerOutput.recommendation ?? recommendations[0] ?? "The agreement is broadly acceptable, but several clauses still benefit from human legal review."}</p>
               </div>
             </section>
+
+            {activeAnalysis ? <ExtractedDocumentPanel report={activeAnalysis} /> : null}
 
             <section className="report-risk-block">
               <div className="numbered-heading"><span>2</span><h2>AI Risk Analysis</h2></div>
@@ -260,6 +260,7 @@ const ReportPage = (): JSX.Element => {
                 <h3>Recommendation: {finalRecommendation.toUpperCase()}</h3>
                 <p>
                   {activeReport.lawyerOutput.summary ??
+                    activeAnalysis?.executiveLegalSummary ??
                     "Following a comprehensive dual-review by our proprietary AI engine and human legal specialists, we find this agreement to be within acceptable commercial risk parameters."}
                 </p>
                 <div className="verdict-checks">
@@ -278,13 +279,13 @@ const ReportPage = (): JSX.Element => {
                 </div>
                 <h2>Final Trust Seal Report</h2>
                 <div className="report-preview__metrics">
-                  <div><span>Risk Score</span><strong>{activeReport.aiOutput.overallRiskScore ?? 94}/100</strong></div>
+                  <div><span>Risk Score</span><strong>{activeReport.aiOutput.overallRiskScore ?? activeAnalysis?.overallRiskScore ?? 94}/100</strong></div>
                   <div><span>Final Status</span><strong>{activeReport.trustSeal ? "APPROVED" : "PENDING"}</strong></div>
                   <div><span>Seal Integrity</span><strong>{activeReport.trustSeal ? "VALID" : "WAITING"}</strong></div>
                 </div>
                 <div className="report-preview__section">
                   <h3>Executive Summary</h3>
-                  <p>{activeReport.aiOutput.summary ?? "No summary available."}</p>
+                  <p>{activeReport.aiOutput.summary ?? activeAnalysis?.summary ?? "No summary available."}</p>
                 </div>
                 <div className="report-preview__section">
                   <h3>Risk Profile &amp; Analysis</h3>

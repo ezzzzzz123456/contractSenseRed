@@ -1,0 +1,401 @@
+{
+  "contractId": "contract-7ed84c79fffc",
+  "report": {
+    "contractId": "contract-7ed84c79fffc",
+    "contractType": {
+      "category": "service contract",
+      "confidence": 0.86,
+      "evidence": [
+        "fees",
+        "client"
+      ],
+      "alternatives": {
+        "service contract": 1.0,
+        "employment": 0.47,
+        "legal statute": 0.0,
+        "non-disclosure agreement": 0.0
+      }
+    },
+    "extraction": {
+      "documentKind": "txt",
+      "extractionMethod": "direct_text_payload",
+      "sourceFilename": "uploaded-contract.txt",
+      "mediaType": "text/plain",
+      "structureConfidence": 0.95,
+      "extractedCharacters": 428,
+      "textPreview": "1. Payment. Buyer shall pay invoices within 10 days of receipt. Late payments incur interest at 2% per month.\n2. Termination. Company may terminate this Agreement immediately for convenience without liability.\n3. Indemnity. Supplier shall indemnify, defend, and hold harmless Buyer from all claims, losses, damages, and attorneys fees.\n4. IP Ownership. All work product and background tools shall be ",
+      "notes": [
+        "Used provided contract text directly.",
+        "Applied legal-text normalization."
+      ]
+    },
+    "summary": "This service contract is assessed as critical risk, with 2 critical clauses and 2 warning clauses. The report prioritizes disproportionate liability, ambiguous drafting, loophole-prone overrides, and negotiable remediation paths. The highest-risk issue is liability language in clause-003, scored 70/100. Counterparty credibility is rated weak at 49/100.",
+    "executiveLegalSummary": "Overall legal posture is critical. If disputed, the strongest litigation pressure points are: General: A court is likely to enforce indemnity only to the extent the scope is clear, causation is proven, and the loss category fits the clause. General: A court will likely ask whether notice, cure rights, and the stated trigger were actually satisfied before upholding termination. General: A court is likely to award late-payment remedies only if the rate is lawful, conspicuous, and tied to an undisputed default.",
+    "overallRiskScore": 55.34,
+    "overallRiskCategory": "critical",
+    "keyVulnerabilities": [
+      "clause-003: A court is likely to enforce indemnity only to the extent the scope is clear, causation is proven, and the loss category fits the clause.",
+      "clause-002: A court will likely ask whether notice, cure rights, and the stated trigger were actually satisfied before upholding termination.",
+      "clause-001: A court is likely to award late-payment remedies only if the rate is lawful, conspicuous, and tied to an undisputed default.",
+      "clause-004: A court would likely enforce the commercial core of the clause while trimming ambiguous or overreaching edges."
+    ],
+    "legalLoopholes": [],
+    "illegalClauseAlerts": [],
+    "recommendations": [
+      "Reduce late-payment interest or add a grace period before default charges apply.",
+      "Require notice, cure rights, and a defined termination trigger.",
+      "Cap liability and exclude indirect or unforeseeable damages.",
+      "Limit indemnity to third-party claims caused by the supplier's proven fault.",
+      "Clarify ownership carve-outs for pre-existing IP, tools, and reusable know-how.",
+      "Validate any critical clause with jurisdiction-specific counsel before signature.",
+      "Compare risk concentration against previous agreements in the contract memory store."
+    ],
+    "priorityActions": [
+      "Redraft General to address: Penalty-like economics may face scrutiny if they exceed compensatory loss.",
+      "Reduce late-payment interest or add a grace period before default charges apply.",
+      "Require notice, cure rights, and a defined termination trigger.",
+      "Cap liability and exclude indirect or unforeseeable damages."
+    ],
+    "reportFindings": [
+      "General: A judge is likely to view this as critical because a judge is likely to read this liability clause as heavily one-sided because clause risk is critical with score 70.03. the strongest driver is liabilityexposure, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+      "General: A judge is likely to view this as critical because a judge is likely to read this termination clause as heavily one-sided because clause risk is critical with score 63.13. the strongest driver is terminationvolatility, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+      "General: A judge is likely to view this as warning because a judge may enforce the clause narrowly, but only after testing ambiguity, notice, scope, and proportionality.",
+      "General: A judge is likely to view this as warning because a judge may enforce the clause narrowly, but only after testing ambiguity, notice, scope, and proportionality."
+    ],
+    "metrics": {
+      "meanClauseRisk": 54.45,
+      "p90ClauseRisk": 70.03,
+      "criticalClauseRatio": 0.5,
+      "warningClauseRatio": 0.5,
+      "riskDispersion": 0.32,
+      "fairnessIndex": 75.5,
+      "legalExposureIndex": 16.62,
+      "concentrationIndex": 42.8,
+      "aggregationFormula": "overall = 0.55*mean_clause_risk + 0.20*p90_clause_risk + 0.15*critical_clause_ratio*100 + 0.10*legal_exposure_index"
+    },
+    "clauses": [
+      {
+        "clauseId": "clause-001",
+        "sectionReference": "General",
+        "hierarchy": [
+          "General",
+          "1"
+        ],
+        "title": "",
+        "originalText": "Payment. Buyer shall pay invoices within 10 days of receipt. Late payments incur interest at 2% per month.",
+        "plainLanguage": "Both sides is required to do something within 10 days. In plain terms, payment. Buyer shall pay invoices within 10 days of receipt. Late payments incur interest at 2% per month.",
+        "clauseType": "payment",
+        "riskCategory": "warning",
+        "colorIndicator": "yellow",
+        "riskScore": 46.54,
+        "confidence": 0.78,
+        "explanation": "Clause risk is warning with score 46.54. The strongest driver is penaltySeverity, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.25,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.67,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 46.54,
+          "confidence": 0.78,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "Reduce late-payment interest or add a grace period before default charges apply."
+        ],
+        "improvement": {
+          "originalClause": "Payment. Buyer shall pay invoices within 10 days of receipt. Late payments incur interest at 2% per month.",
+          "revisedClause": "Payment. Buyer shall pay invoices within 10 days of receipt. Late payments incur interest at 2% per month provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "Reduce late-payment interest or add a grace period before default charges apply."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording 'Payment. Buyer shall pay invoices within 10 days of receipt. Late payments incur interest at 2% per month.' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Late payment dispute escalates",
+            "likelyConsequence": "Interest, collection costs, or suspension rights can increase the effective contract price.",
+            "severity": "warning",
+            "reasoning": "Default-rate clauses become leverage points once an invoice is contested or delayed."
+          }
+        ],
+        "courtroomAssessment": {
+          "judgeView": "A judge may enforce the clause narrowly, but only after testing ambiguity, notice, scope, and proportionality.",
+          "claimantArguments": [
+            "The wording should be enforced as written because the parties accepted a clear allocation of risk.",
+            "Late-payment language creates a contractual right to collect default interest and recovery costs."
+          ],
+          "defenseArguments": [
+            "Any ambiguous wording should be construed narrowly, especially if one party drafted the clause."
+          ],
+          "likelyRuling": "A court is likely to award late-payment remedies only if the rate is lawful, conspicuous, and tied to an undisputed default.",
+          "enforceabilityConcerns": [
+            "Penalty-like economics may face scrutiny if they exceed compensatory loss."
+          ],
+          "businessImpact": "This clause affects cash flow pressure, invoice disputes, and the cost of delay."
+        }
+      },
+      {
+        "clauseId": "clause-002",
+        "sectionReference": "General",
+        "hierarchy": [
+          "General",
+          "2"
+        ],
+        "title": "",
+        "originalText": "Termination. Company may terminate this Agreement immediately for convenience without liability.",
+        "plainLanguage": "The company has discretion to act. In plain terms, termination. Company may terminate this Agreement immediately for convenience without liability.",
+        "clauseType": "termination",
+        "riskCategory": "critical",
+        "colorIndicator": "red",
+        "riskScore": 63.13,
+        "confidence": 0.87,
+        "explanation": "Clause risk is critical with score 63.13. The strongest driver is terminationVolatility, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.0,
+          "liabilityExposure": 0.33,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 1.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.26,
+          "score": 63.13,
+          "confidence": 0.87,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "Require notice, cure rights, and a defined termination trigger."
+        ],
+        "improvement": {
+          "originalClause": "Termination. Company may terminate this Agreement immediately for convenience without liability.",
+          "revisedClause": "Termination. Company may terminate this Agreement on 30 days written notice unless immediate termination is required by law for convenience without liability.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "Require notice, cure rights, and a defined termination trigger."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording 'Termination. Company may terminate this Agreement immediately for convenience without liability.' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Counterparty triggers termination",
+            "likelyConsequence": "Service disruption, accelerated transition costs, and leverage loss in negotiations.",
+            "severity": "critical",
+            "reasoning": "Termination language can be used as pressure if triggers or cure rights are under-defined."
+          },
+          {
+            "scenario": "Third-party claim or service failure",
+            "likelyConsequence": "The clause may transfer defense costs and damages disproportionately.",
+            "severity": "critical",
+            "reasoning": "Liability and indemnity drafting determines who funds disputes and uncapped losses."
+          }
+        ],
+        "courtroomAssessment": {
+          "judgeView": "A judge is likely to read this termination clause as heavily one-sided because clause risk is critical with score 63.13. the strongest driver is terminationvolatility, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+          "claimantArguments": [
+            "The wording should be enforced as written because the parties accepted a clear allocation of risk.",
+            "The termination trigger was activated under the contract text, so the claimant may exit without further cure."
+          ],
+          "defenseArguments": [
+            "Any ambiguous wording should be construed narrowly, especially if one party drafted the clause."
+          ],
+          "likelyRuling": "A court will likely ask whether notice, cure rights, and the stated trigger were actually satisfied before upholding termination.",
+          "enforceabilityConcerns": [],
+          "businessImpact": "This clause controls leverage at the moment of operational failure, suspension, or exit."
+        }
+      },
+      {
+        "clauseId": "clause-003",
+        "sectionReference": "General",
+        "hierarchy": [
+          "General",
+          "3"
+        ],
+        "title": "",
+        "originalText": "Indemnity. Supplier shall indemnify, defend, and hold harmless Buyer from all claims, losses, damages, and attorneys fees.",
+        "plainLanguage": "Both sides is required to do something. In plain terms, indemnity. Supplier shall indemnify, defend, and hold harmless Buyer from all claims, losses, damages, and attorneys fees.",
+        "clauseType": "liability",
+        "riskCategory": "critical",
+        "colorIndicator": "red",
+        "riskScore": 70.03,
+        "confidence": 0.97,
+        "explanation": "Clause risk is critical with score 70.03. The strongest driver is liabilityExposure, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.25,
+          "liabilityExposure": 1.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.33,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.3,
+          "score": 70.03,
+          "confidence": 0.97,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "Cap liability and exclude indirect or unforeseeable damages.",
+          "Limit indemnity to third-party claims caused by the supplier's proven fault."
+        ],
+        "improvement": {
+          "originalClause": "Indemnity. Supplier shall indemnify, defend, and hold harmless Buyer from all claims, losses, damages, and attorneys fees.",
+          "revisedClause": "Indemnity. Supplier shall indemnify, defend, and hold harmless Buyer from all claims, losses, damages, and attorneys fees provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "Cap liability and exclude indirect or unforeseeable damages.",
+            "Limit indemnity to third-party claims caused by the supplier's proven fault."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording 'Indemnity. Supplier shall indemnify, defend, and hold harmless Buyer from all claims, losses, damages, and attorneys fees.' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Third-party claim or service failure",
+            "likelyConsequence": "The clause may transfer defense costs and damages disproportionately.",
+            "severity": "critical",
+            "reasoning": "Liability and indemnity drafting determines who funds disputes and uncapped losses."
+          }
+        ],
+        "courtroomAssessment": {
+          "judgeView": "A judge is likely to read this liability clause as heavily one-sided because clause risk is critical with score 70.03. the strongest driver is liabilityexposure, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+          "claimantArguments": [
+            "The wording should be enforced as written because the parties accepted a clear allocation of risk.",
+            "The indemnity language is broad enough to shift defense costs and third-party claim exposure immediately."
+          ],
+          "defenseArguments": [
+            "Any ambiguous wording should be construed narrowly, especially if one party drafted the clause."
+          ],
+          "likelyRuling": "A court is likely to enforce indemnity only to the extent the scope is clear, causation is proven, and the loss category fits the clause.",
+          "enforceabilityConcerns": [],
+          "businessImpact": "This clause can decide who pays defense costs, settlement pressure, and uncovered losses once a dispute starts."
+        }
+      },
+      {
+        "clauseId": "clause-004",
+        "sectionReference": "General",
+        "hierarchy": [
+          "General",
+          "4"
+        ],
+        "title": "",
+        "originalText": "IP Ownership. All work product and background tools shall be owned exclusively by Client.",
+        "plainLanguage": "The company is required to do something. In plain terms, iP Ownership. All work product and background tools shall be owned exclusively by Client.",
+        "clauseType": "ip",
+        "riskCategory": "warning",
+        "colorIndicator": "yellow",
+        "riskScore": 38.08,
+        "confidence": 0.76,
+        "explanation": "Clause risk is warning with score 38.08. The strongest driver is obligationAsymmetry, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.5,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.3,
+          "score": 38.08,
+          "confidence": 0.76,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "Clarify ownership carve-outs for pre-existing IP, tools, and reusable know-how."
+        ],
+        "improvement": {
+          "originalClause": "IP Ownership. All work product and background tools shall be owned exclusively by Client.",
+          "revisedClause": "IP Ownership. All work product and background tools shall be owned exclusively by Client provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "Clarify ownership carve-outs for pre-existing IP, tools, and reusable know-how."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording 'IP Ownership. All work product and background tools shall be owned exclusively by Client.' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "Ambiguous drafting can extend resolution timelines and increase negotiation costs.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ],
+        "courtroomAssessment": {
+          "judgeView": "A judge may enforce the clause narrowly, but only after testing ambiguity, notice, scope, and proportionality.",
+          "claimantArguments": [
+            "The wording should be enforced as written because the parties accepted a clear allocation of risk."
+          ],
+          "defenseArguments": [
+            "Any ambiguous wording should be construed narrowly, especially if one party drafted the clause."
+          ],
+          "likelyRuling": "A court would likely enforce the commercial core of the clause while trimming ambiguous or overreaching edges.",
+          "enforceabilityConcerns": [],
+          "businessImpact": "This clause shapes dispute leverage, drafting clarity, and the cost of enforcement."
+        }
+      }
+    ],
+    "contractorCredibility": {
+      "score": 48.77,
+      "rating": "weak",
+      "summary": "Public-source diligence for Tesla found 1 positive and 8 negative signals across news, dispute, regulatory, and reputation-oriented searches. Credibility is rated weak because the signal mix shows 1 positive and 8 negative indicators, with 3 neutral footprint signals.",
+      "positiveSignals": [
+        "Public positive signal: expansion: Elon Musk has confirmed that Tesla's ambitious Terafab project will officially launch in seven days. The project represents a massive shift in Tesla's strategy, as the company moves to build its own semiconductors domestically to power its fleet of autonomous vehicles and humanoid robots. The announcement follows months of speculation regarding Tesla's North Campus expansion […]"
+      ],
+      "negativeSignals": [
+        "Public negative signal: lawsuit: A class-action lawsuit in California alleges that some drivers were overcharged based on inaccurate vehicle safety data, raising questions about the accuracy and fairness of Tesla's insurance ...",
+        "Public negative signal: lawsuit: Tesla filed a lawsuit against the California DMV to reverse the ruling that found its 'Full Self-Driving' and 'Autopilot' marketing violated state law — just days after complying with it.",
+        "Public negative signal: lawsuit: Tesla has filed a lawsuit against the California Department of Motor Vehicles (DMV) to overturn a ruling that the agency says the automaker overstated the capabilities of its Autopilot system, alleging deceptive marketing practices. What sparked the legal showdown? In a TechCrunch report published on February 23, 2026, the details of Tesla's fresh lawsuit were",
+        "Public negative signal: lawsuit: Tesla is facing mounting legal and regulatory scrutiny over its electronic door handle designs. A newly proposed class action lawsuit , filed in California federal court, alleges that recent Model S vehicles contain a critical safety defect that can leave occupants trapped inside the car during emergencies if the vehicle loses low-voltage power. The lawsuit , filed by plaintiff Robert L. Hyde ...",
+        "Public negative signal: lawsuit: The complaint arrives as Tesla continues to face legal, regulatory , and public scrutiny over Autopilot and Full Self-Driving marketing and safety claims. Lawsuit centers on Cybertruck crash and FSD claims",
+        "Public negative signal: lawsuit: As Tesla Chief Executive Elon Musk banks the future of his company on autonomous robotaxis, several lawsuits raise concerns over the safety of the technology."
+      ],
+      "sources": [
+        "https://teslanorth.com/",
+        "https://finance.yahoo.com/quote/TSLA/",
+        "https://www.teslarati.com/category/tesla/",
+        "https://www.insurancebusinessmag.com/us/news/risk-compliance-legal/tesla-insurance-hit-by-california-regulatory-action-552029.aspx",
+        "https://electrek.co/2026/02/23/tesla-sues-california-dmv-reverse-fsd-false-advertising-ruling/",
+        "https://ubos.tech/news/tesla-sues-california-dmv-over-autopilot-claims-legal-battle-escalates/",
+        "https://www.notateslaapp.com/news/3733/tesla-faces-class-action-lawsuit-over-model-s-door-handles",
+        "https://www.thestreet.com/automotive/tesla-faces-new-class-action-lawsuit"
+      ],
+      "framework": "credibility = 58 + 24*avg_positive_signal - 34*avg_negative_signal + evidence_coverage + registry_bonus, clamped to [0,100]"
+    },
+    "evaluationMetrics": {
+      "contract_classification": "top-1 accuracy, macro-F1, calibration error",
+      "clause_segmentation": "boundary F1, hierarchical consistency, clause coverage",
+      "risk_detection": "AUROC, precision@critical, weighted Brier score, explanation faithfulness",
+      "explanation_quality": "human adequacy, factual consistency, edit distance to gold simplifications"
+    },
+    "generatedAt": "2026-03-15T23:04:51.807380"
+  },
+  "searchableText": "1. Payment. Buyer shall pay invoices within 10 days of receipt. Late payments incur interest at 2% per month.\n2. Termination. Company may terminate this Agreement immediately for convenience without liability.\n3. Indemnity. Supplier shall indemnify, defend, and hold harmless Buyer from all claims, losses, damages, and attorneys fees.\n4. IP Ownership. All work product and background tools shall be owned exclusively by Client.\nPayment. Buyer shall pay invoices within 10 days of receipt. Late payments incur interest at 2% per month.\nBoth sides is required to do something within 10 days. In plain terms, payment. Buyer shall pay invoices within 10 days of receipt. Late payments incur interest at 2% per month.\nTermination. Company may terminate this Agreement immediately for convenience without liability.\nThe company has discretion to act. In plain terms, termination. Company may terminate this Agreement immediately for convenience without liability.\nIndemnity. Supplier shall indemnify, defend, and hold harmless Buyer from all claims, losses, damages, and attorneys fees.\nBoth sides is required to do something. In plain terms, indemnity. Supplier shall indemnify, defend, and hold harmless Buyer from all claims, losses, damages, and attorneys fees.\nIP Ownership. All work product and background tools shall be owned exclusively by Client.\nThe company is required to do something. In plain terms, iP Ownership. All work product and background tools shall be owned exclusively by Client.",
+  "createdAt": "2026-03-15T23:04:51.807380",
+  "updatedAt": "2026-03-15T23:04:51.807380"
+}

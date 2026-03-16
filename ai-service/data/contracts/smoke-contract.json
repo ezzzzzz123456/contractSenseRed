@@ -1,0 +1,142 @@
+{
+  "contractId": "smoke-contract",
+  "report": {
+    "contractId": "smoke-contract",
+    "contractType": {
+      "category": "service contract",
+      "confidence": 0.8,
+      "evidence": [
+        "services",
+        "client"
+      ],
+      "alternatives": {
+        "service contract": 1.0,
+        "vendor agreement": 0.74,
+        "employment": 0.29,
+        "non-disclosure agreement": 0.0
+      }
+    },
+    "extraction": {
+      "documentKind": "txt",
+      "extractionMethod": "direct_text_payload",
+      "sourceFilename": "msa.txt",
+      "mediaType": "text/plain",
+      "structureConfidence": 0.92,
+      "notes": [
+        "Used provided contract text directly."
+      ]
+    },
+    "summary": "This service contract is assessed as warning risk, with 0 critical clauses and 1 warning clauses. The report prioritizes disproportionate liability, ambiguous drafting, loophole-prone overrides, and negotiable remediation paths. Counterparty credibility is rated moderate at 62/100.",
+    "overallRiskScore": 40.71,
+    "overallRiskCategory": "warning",
+    "keyVulnerabilities": [
+      "clause-001: Cap liability and exclude indirect or unforeseeable damages."
+    ],
+    "legalLoopholes": [],
+    "illegalClauseAlerts": [],
+    "recommendations": [
+      "Cap liability and exclude indirect or unforeseeable damages.",
+      "Require notice, cure rights, and a defined termination trigger.",
+      "Validate any critical clause with jurisdiction-specific counsel before signature.",
+      "Compare risk concentration against previous agreements in the contract memory store."
+    ],
+    "metrics": {
+      "meanClauseRisk": 49.81,
+      "p90ClauseRisk": 49.81,
+      "criticalClauseRatio": 0.0,
+      "warningClauseRatio": 1.0,
+      "riskDispersion": 0.0,
+      "fairnessIndex": 65.0,
+      "legalExposureIndex": 33.5,
+      "concentrationIndex": 0.0,
+      "aggregationFormula": "overall = 0.55*mean_clause_risk + 0.20*p90_clause_risk + 0.15*critical_clause_ratio*100 + 0.10*legal_exposure_index"
+    },
+    "clauses": [
+      {
+        "clauseId": "clause-001",
+        "sectionReference": "General",
+        "hierarchy": [
+          "General",
+          "1"
+        ],
+        "title": "Services",
+        "originalText": "Services: Vendor shall provide services. 2. Liability: Vendor has unlimited liability for all losses. 3. Termination: Client may terminate immediately for any reason.",
+        "plainLanguage": "The contractor is required to do something. In plain terms, services: Vendor shall provide services. 2. Liability: Vendor has unlimited liability for all losses. 3. Termination: Client may terminate immediately for any reason.",
+        "clauseType": "termination",
+        "riskCategory": "warning",
+        "colorIndicator": "yellow",
+        "riskScore": 49.81,
+        "confidence": 0.97,
+        "explanation": "Clause risk is warning with score 49.81. The strongest driver is liabilityExposure, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.25,
+          "liabilityExposure": 0.67,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.5,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.35,
+          "score": 49.81,
+          "confidence": 0.97,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "Cap liability and exclude indirect or unforeseeable damages.",
+          "Require notice, cure rights, and a defined termination trigger."
+        ],
+        "improvement": {
+          "originalClause": "Services: Vendor shall provide services. 2. Liability: Vendor has unlimited liability for all losses. 3. Termination: Client may terminate immediately for any reason.",
+          "revisedClause": "Services: Vendor shall provide services. 2. Liability: Vendor has liability capped at fees paid under the agreement during the previous 12 months for all losses. 3. Termination: Client may terminate on 30 days written notice unless immediate termination is required by law for material breach, insolvency, or repeated service failure.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "Cap liability and exclude indirect or unforeseeable damages.",
+            "Require notice, cure rights, and a defined termination trigger."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording 'Services: Vendor shall provide services. 2. Liability: Vendor has unlimited liability for all losses. 3. Termination: Client may terminate immediately for any r' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Counterparty triggers termination",
+            "likelyConsequence": "Service disruption, accelerated transition costs, and leverage loss in negotiations.",
+            "severity": "warning",
+            "reasoning": "Termination language can be used as pressure if triggers or cure rights are under-defined."
+          },
+          {
+            "scenario": "Third-party claim or service failure",
+            "likelyConsequence": "The clause may transfer defense costs and damages disproportionately.",
+            "severity": "warning",
+            "reasoning": "Liability and indemnity drafting determines who funds disputes and uncapped losses."
+          }
+        ]
+      }
+    ],
+    "contractorCredibility": {
+      "score": 62.0,
+      "rating": "moderate",
+      "summary": "Demo Vendor has a light-touch diligence profile with publicly available footprint data. Credibility is rated moderate because the signal mix shows 0 positive and 0 negative indicators.",
+      "positiveSignals": [],
+      "negativeSignals": [],
+      "sources": [
+        "https://example.com/counterparty-profile"
+      ],
+      "framework": "credibility = 62 + 22*avg_positive_signal - 28*avg_negative_signal + coverage_bonus, clamped to [0,100]"
+    },
+    "evaluationMetrics": {
+      "contract_classification": "top-1 accuracy, macro-F1, calibration error",
+      "clause_segmentation": "boundary F1, hierarchical consistency, clause coverage",
+      "risk_detection": "AUROC, precision@critical, weighted Brier score, explanation faithfulness",
+      "explanation_quality": "human adequacy, factual consistency, edit distance to gold simplifications"
+    },
+    "generatedAt": "2026-03-15T18:43:13.966102"
+  },
+  "searchableText": "1. Services: Vendor shall provide services. 2. Liability: Vendor has unlimited liability for all losses. 3. Termination: Client may terminate immediately for any reason.\nServices: Vendor shall provide services. 2. Liability: Vendor has unlimited liability for all losses. 3. Termination: Client may terminate immediately for any reason.\nThe contractor is required to do something. In plain terms, services: Vendor shall provide services. 2. Liability: Vendor has unlimited liability for all losses. 3. Termination: Client may terminate immediately for any reason.",
+  "createdAt": "2026-03-15T18:43:13.966102",
+  "updatedAt": "2026-03-15T18:43:13.966102"
+}

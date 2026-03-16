@@ -3,9 +3,9 @@ import { connectDb } from "./config/db";
 import { env } from "./config/env";
 
 const start = async (): Promise<void> => {
-  await connectDb();
+  const dbConnected = await connectDb();
   app.listen(env.port, () => {
-    console.log(`Backend listening on ${env.port}`);
+    console.log(`Backend listening on ${env.port}${dbConnected ? "" : " (degraded mode: MongoDB offline)"}`);
   });
 };
 
