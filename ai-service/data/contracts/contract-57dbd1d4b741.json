@@ -1,0 +1,581 @@
+{
+  "contractId": "contract-57dbd1d4b741",
+  "report": {
+    "contractId": "contract-57dbd1d4b741",
+    "contractType": {
+      "category": "legal statute",
+      "confidence": 0.69,
+      "evidence": [
+        "section"
+      ],
+      "alternatives": {
+        "legal statute": 1.0,
+        "employment": 0.63,
+        "service contract": 0.46,
+        "non-disclosure agreement": 0.0
+      }
+    },
+    "extraction": {
+      "documentKind": "txt",
+      "extractionMethod": "direct_text_payload",
+      "sourceFilename": "sample.txt",
+      "mediaType": "text/plain",
+      "structureConfidence": 0.95,
+      "extractedCharacters": 295,
+      "textPreview": "1. Payment. Client shall pay invoices within 30 days.\n2. Termination. Either party may terminate for material breach subject to Section 4.\n3. Liability. Supplier indemnifies Buyer for all third-party claims.\n4. Notice and Cure. Before termination, the breaching party shall have 10 days to cure.",
+      "notes": [
+        "Used provided contract text directly.",
+        "Applied legal-text normalization."
+      ],
+      "structuredPages": 1,
+      "layoutElements": 4,
+      "tablesDetected": 0,
+      "signaturesDetected": 0,
+      "annotationsDetected": 0
+    },
+    "summary": "This legal statute is assessed as warning risk, with 0 critical clauses and 3 warning clauses. The report prioritizes disproportionate liability, ambiguous drafting, loophole-prone overrides, and negotiable remediation paths. The highest-risk issue is liability language in clause-003, scored 49/100.",
+    "executiveLegalSummary": "Overall legal posture is warning. If disputed, the strongest litigation pressure points are: General: A court is likely to enforce indemnity only to the extent the scope is clear, causation is proven, and the loss category fits the clause. A court would read it together with 2 related clause(s). General: A court will likely ask whether notice, cure rights, and the stated trigger were actually satisfied before upholding termination. A court would read it together with 3 related clause(s). General: A court would likely enforce the commercial core of the clause while trimming ambiguous or overreaching edges. A court would read it together with 1 related clause(s).",
+    "overallRiskScore": 37.36,
+    "overallRiskCategory": "warning",
+    "keyVulnerabilities": [
+      "clause-003: A court is likely to enforce indemnity only to the extent the scope is clear, causation is proven, and the loss category fits the clause. A court would read it together with 2 related clause(s).",
+      "clause-002: A court will likely ask whether notice, cure rights, and the stated trigger were actually satisfied before upholding termination. A court would read it together with 3 related clause(s).",
+      "clause-004: A court would likely enforce the commercial core of the clause while trimming ambiguous or overreaching edges. A court would read it together with 1 related clause(s)."
+    ],
+    "legalLoopholes": [],
+    "illegalClauseAlerts": [],
+    "recommendations": [
+      "No material risk remediation identified beyond standard legal review.",
+      "Review this clause together with all clauses it references or overrides.",
+      "Add an explicit order-of-precedence rule so linked clauses do not conflict silently.",
+      "Cap liability and exclude indirect or unforeseeable damages.",
+      "Limit indemnity to third-party claims caused by the supplier's proven fault.",
+      "Validate any critical clause with jurisdiction-specific counsel before signature.",
+      "Compare risk concentration against previous agreements in the contract memory store."
+    ],
+    "priorityActions": [
+      "Redraft General to address: Linked clauses may alter scope, remedies, or priority if they are not harmonized.",
+      "No material risk remediation identified beyond standard legal review.",
+      "Review this clause together with all clauses it references or overrides.",
+      "Add an explicit order-of-precedence rule so linked clauses do not conflict silently."
+    ],
+    "reportFindings": [
+      "General: A judge is likely to view this as warning because a judge may enforce the clause narrowly, but only after testing ambiguity, notice, scope, and proportionality. contextually, related clauses: clause-002, clause-004.",
+      "General: A judge is likely to view this as warning because a judge may enforce the clause narrowly, but only after testing ambiguity, notice, scope, and proportionality. contextually, references: 4. related clauses: clause-004, clause-001, clause-003.",
+      "General: A judge is likely to view this as warning because a judge may enforce the clause narrowly, but only after testing ambiguity, notice, scope, and proportionality. contextually, related clauses: clause-003.",
+      "General: A judge is likely to view this as safe because a judge is likely to treat this clause as commercially standard unless surrounding facts make enforcement unfair. contextually, related clauses: clause-002."
+    ],
+    "metrics": {
+      "meanClauseRisk": 38.24,
+      "p90ClauseRisk": 48.93,
+      "criticalClauseRatio": 0.0,
+      "warningClauseRatio": 0.75,
+      "riskDispersion": 0.27,
+      "fairnessIndex": 91.0,
+      "legalExposureIndex": 8.38,
+      "concentrationIndex": 10.8,
+      "aggregationFormula": "overall = 0.55*mean_clause_risk + 0.20*p90_clause_risk + 0.15*critical_clause_ratio*100 + 0.10*legal_exposure_index"
+    },
+    "clauses": [
+      {
+        "clauseId": "clause-001",
+        "sectionReference": "General",
+        "hierarchy": [
+          "General",
+          "1"
+        ],
+        "title": "",
+        "originalText": "Payment. Client shall pay invoices within 30 days.",
+        "plainLanguage": "The company is required to do something within 30 days. In plain terms, payment. Client shall pay invoices within 30 days.",
+        "clauseType": "payment",
+        "riskCategory": "safe",
+        "colorIndicator": "green",
+        "riskScore": 22.25,
+        "confidence": 0.61,
+        "explanation": "Clause risk is safe with score 22.25. The strongest driver is obligationAsymmetry, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.25,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 22.25,
+          "confidence": 0.61,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "Payment. Client shall pay invoices within 30 days.",
+          "revisedClause": "Payment. Client shall pay invoices within 30 days provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording 'Payment. Client shall pay invoices within 30 days.' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "Ambiguous drafting can extend resolution timelines and increase negotiation costs.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ],
+        "courtroomAssessment": {
+          "judgeView": "A judge is likely to treat this clause as commercially standard unless surrounding facts make enforcement unfair. Contextually, related clauses: clause-002.",
+          "claimantArguments": [
+            "The wording should be enforced as written because the parties accepted a clear allocation of risk."
+          ],
+          "defenseArguments": [
+            "Any ambiguous wording should be construed narrowly, especially if one party drafted the clause."
+          ],
+          "likelyRuling": "A court is likely to enforce the clause substantially as drafted. A court would read it together with 1 related clause(s).",
+          "enforceabilityConcerns": [
+            "Linked clauses may alter scope, remedies, or priority if they are not harmonized."
+          ],
+          "businessImpact": "This clause affects cash flow pressure, invoice disputes, and the cost of delay. Cross-clause interaction can change who has leverage if a dispute arises."
+        },
+        "linkedClauseIds": [
+          "clause-002"
+        ],
+        "crossReferences": [],
+        "contextSummary": "Related clauses: clause-002."
+      },
+      {
+        "clauseId": "clause-002",
+        "sectionReference": "General",
+        "hierarchy": [
+          "General",
+          "2"
+        ],
+        "title": "",
+        "originalText": "Termination. Either party may terminate for material breach subject to Section 4.",
+        "plainLanguage": "Both sides has discretion to act. In plain terms, termination. Either party may terminate for material breach subject to Section 4.",
+        "clauseType": "termination",
+        "riskCategory": "warning",
+        "colorIndicator": "yellow",
+        "riskScore": 45.84,
+        "confidence": 0.75,
+        "explanation": "Clause risk is warning with score 32.34. The strongest driver is terminationVolatility, and the clause shows elevated exposure where obligations may be hard to contest or limit. Cross-clause context: This clause depends on another clause for its full effect. Termination and payment clauses interact, increasing operational leverage. Detected 1 explicit cross-reference(s).",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.0,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.28,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.33,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.18,
+          "fairnessImbalance": 0.0,
+          "score": 45.84,
+          "confidence": 0.75,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review.",
+          "Review this clause together with all clauses it references or overrides.",
+          "Add an explicit order-of-precedence rule so linked clauses do not conflict silently."
+        ],
+        "improvement": {
+          "originalClause": "Termination. Either party may terminate for material breach subject to Section 4.",
+          "revisedClause": "Termination. Either party may terminate for material breach subject to Section 4 provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording 'Termination. Either party may terminate for material breach subject to Section 4.' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Counterparty triggers termination",
+            "likelyConsequence": "Service disruption, accelerated transition costs, and leverage loss in negotiations.",
+            "severity": "warning",
+            "reasoning": "Termination language can be used as pressure if triggers or cure rights are under-defined."
+          }
+        ],
+        "courtroomAssessment": {
+          "judgeView": "A judge may enforce the clause narrowly, but only after testing ambiguity, notice, scope, and proportionality. Contextually, references: 4. related clauses: clause-004, clause-001, clause-003.",
+          "claimantArguments": [
+            "The wording should be enforced as written because the parties accepted a clear allocation of risk.",
+            "The termination trigger was activated under the contract text, so the claimant may exit without further cure."
+          ],
+          "defenseArguments": [
+            "Any ambiguous wording should be construed narrowly, especially if one party drafted the clause."
+          ],
+          "likelyRuling": "A court will likely ask whether notice, cure rights, and the stated trigger were actually satisfied before upholding termination. A court would read it together with 3 related clause(s).",
+          "enforceabilityConcerns": [
+            "Linked clauses may alter scope, remedies, or priority if they are not harmonized."
+          ],
+          "businessImpact": "This clause controls leverage at the moment of operational failure, suspension, or exit. Cross-clause interaction can change who has leverage if a dispute arises."
+        },
+        "linkedClauseIds": [
+          "clause-004",
+          "clause-001",
+          "clause-003"
+        ],
+        "crossReferences": [
+          "4"
+        ],
+        "contextSummary": "References: 4. Related clauses: clause-004, clause-001, clause-003."
+      },
+      {
+        "clauseId": "clause-003",
+        "sectionReference": "General",
+        "hierarchy": [
+          "General",
+          "3"
+        ],
+        "title": "",
+        "originalText": "Liability. Supplier indemnifies Buyer for all third-party claims.",
+        "plainLanguage": "Both sides sets a contract rule. In plain terms, liability. Supplier indemnifies Buyer for all third-party claims.",
+        "clauseType": "liability",
+        "riskCategory": "warning",
+        "colorIndicator": "yellow",
+        "riskScore": 48.93,
+        "confidence": 0.63,
+        "explanation": "Clause risk is warning with score 48.93. The strongest driver is liabilityExposure, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.0,
+          "liabilityExposure": 0.67,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.0,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 48.93,
+          "confidence": 0.63,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "Cap liability and exclude indirect or unforeseeable damages.",
+          "Limit indemnity to third-party claims caused by the supplier's proven fault."
+        ],
+        "improvement": {
+          "originalClause": "Liability. Supplier indemnifies Buyer for all third-party claims.",
+          "revisedClause": "Liability. Supplier indemnifies Buyer for all third-party claims provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "Cap liability and exclude indirect or unforeseeable damages.",
+            "Limit indemnity to third-party claims caused by the supplier's proven fault."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording 'Liability. Supplier indemnifies Buyer for all third-party claims.' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Third-party claim or service failure",
+            "likelyConsequence": "The clause may transfer defense costs and damages disproportionately.",
+            "severity": "warning",
+            "reasoning": "Liability and indemnity drafting determines who funds disputes and uncapped losses."
+          }
+        ],
+        "courtroomAssessment": {
+          "judgeView": "A judge may enforce the clause narrowly, but only after testing ambiguity, notice, scope, and proportionality. Contextually, related clauses: clause-002, clause-004.",
+          "claimantArguments": [
+            "The wording should be enforced as written because the parties accepted a clear allocation of risk.",
+            "The indemnity language is broad enough to shift defense costs and third-party claim exposure immediately."
+          ],
+          "defenseArguments": [
+            "Any ambiguous wording should be construed narrowly, especially if one party drafted the clause."
+          ],
+          "likelyRuling": "A court is likely to enforce indemnity only to the extent the scope is clear, causation is proven, and the loss category fits the clause. A court would read it together with 2 related clause(s).",
+          "enforceabilityConcerns": [
+            "Linked clauses may alter scope, remedies, or priority if they are not harmonized."
+          ],
+          "businessImpact": "This clause can decide who pays defense costs, settlement pressure, and uncovered losses once a dispute starts. Cross-clause interaction can change who has leverage if a dispute arises."
+        },
+        "linkedClauseIds": [
+          "clause-002",
+          "clause-004"
+        ],
+        "crossReferences": [],
+        "contextSummary": "Related clauses: clause-002, clause-004."
+      },
+      {
+        "clauseId": "clause-004",
+        "sectionReference": "General",
+        "hierarchy": [
+          "General",
+          "4"
+        ],
+        "title": "",
+        "originalText": "Notice and Cure. Before termination, the breaching party shall have 10 days to cure.",
+        "plainLanguage": "Both sides is required to do something within 10 days. In plain terms, notice and Cure. Before termination, the breaching party shall have 10 days to cure.",
+        "clauseType": "obligation",
+        "riskCategory": "warning",
+        "colorIndicator": "yellow",
+        "riskScore": 35.93,
+        "confidence": 0.76,
+        "explanation": "Clause risk is warning with score 35.93. The strongest driver is terminationVolatility, and the clause shows elevated exposure where obligations may be hard to contest or limit.",
+        "riskBreakdown": {
+          "obligationAsymmetry": 0.25,
+          "liabilityExposure": 0.0,
+          "ambiguity": 0.0,
+          "penaltySeverity": 0.0,
+          "terminationVolatility": 0.33,
+          "complianceExposure": 0.0,
+          "loopholeExposure": 0.0,
+          "fairnessImbalance": 0.12,
+          "score": 35.93,
+          "confidence": 0.76,
+          "formula": "score = 100 * sqrt(sum(weight_i * metric_i) + interaction_penalty + ambiguity_loophole_penalty), with metrics normalized to [0,1]"
+        },
+        "loopholes": [],
+        "illegalSignals": [],
+        "recommendations": [
+          "No material risk remediation identified beyond standard legal review."
+        ],
+        "improvement": {
+          "originalClause": "Notice and Cure. Before termination, the breaching party shall have 10 days to cure.",
+          "revisedClause": "Notice and Cure. Before termination, the breaching party shall have 10 days to cure provided that the obligation is proportionate, clearly defined, and limited to the legitimate objective of reduce legal and commercial asymmetry.",
+          "justification": "The revision constrains open-ended drafting, aligns obligations with commercial reasonableness, and makes the clause easier to negotiate or enforce."
+        },
+        "negotiation": {
+          "tone": "professional",
+          "stance": "Balanced and commercially grounded.",
+          "talkingPoints": [
+            "No material risk remediation identified beyond standard legal review."
+          ],
+          "draftedResponse": "We propose revising this clause to better align risk allocation with market practice. Specifically, the current wording 'Notice and Cure. Before termination, the breaching party shall have 10 days to cure.' should be replaced with a version that limits ambiguous or unilateral obligations."
+        },
+        "legalScenarios": [
+          {
+            "scenario": "Routine operational dispute",
+            "likelyConsequence": "Ambiguous drafting can extend resolution timelines and increase negotiation costs.",
+            "severity": "warning",
+            "reasoning": "Even non-critical clauses become expensive when key obligations are vague."
+          }
+        ],
+        "courtroomAssessment": {
+          "judgeView": "A judge may enforce the clause narrowly, but only after testing ambiguity, notice, scope, and proportionality. Contextually, related clauses: clause-003.",
+          "claimantArguments": [
+            "The wording should be enforced as written because the parties accepted a clear allocation of risk."
+          ],
+          "defenseArguments": [
+            "Any ambiguous wording should be construed narrowly, especially if one party drafted the clause."
+          ],
+          "likelyRuling": "A court would likely enforce the commercial core of the clause while trimming ambiguous or overreaching edges. A court would read it together with 1 related clause(s).",
+          "enforceabilityConcerns": [
+            "Linked clauses may alter scope, remedies, or priority if they are not harmonized."
+          ],
+          "businessImpact": "This clause shapes dispute leverage, drafting clarity, and the cost of enforcement. Cross-clause interaction can change who has leverage if a dispute arises."
+        },
+        "linkedClauseIds": [
+          "clause-003"
+        ],
+        "crossReferences": [],
+        "contextSummary": "Related clauses: clause-003."
+      }
+    ],
+    "documentStructure": {
+      "documentId": "doc-3100e36c6922",
+      "documentKind": "txt",
+      "extractionMethod": "direct_text_payload",
+      "language": "en",
+      "pages": [
+        {
+          "pageNumber": 1,
+          "width": 1000.0,
+          "height": 1400.0,
+          "elements": [
+            {
+              "elementId": "text-001",
+              "type": "clause",
+              "text": "Payment. Client shall pay invoices within 30 days.",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 0.0,
+                "y0": 40.0,
+                "x1": 1000.0,
+                "y1": 70.0,
+                "pageWidth": 1000.0,
+                "pageHeight": 1400.0
+              },
+              "confidence": 0.72,
+              "hierarchyPath": [
+                "General",
+                "1"
+              ],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "text_mode"
+              }
+            },
+            {
+              "elementId": "text-002",
+              "type": "clause",
+              "text": "Termination. Either party may terminate for material breach subject to Section 4.",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 0.0,
+                "y0": 80.0,
+                "x1": 1000.0,
+                "y1": 110.0,
+                "pageWidth": 1000.0,
+                "pageHeight": 1400.0
+              },
+              "confidence": 0.72,
+              "hierarchyPath": [
+                "General",
+                "2"
+              ],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "text_mode"
+              }
+            },
+            {
+              "elementId": "text-003",
+              "type": "clause",
+              "text": "Liability. Supplier indemnifies Buyer for all third-party claims.",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 0.0,
+                "y0": 120.0,
+                "x1": 1000.0,
+                "y1": 150.0,
+                "pageWidth": 1000.0,
+                "pageHeight": 1400.0
+              },
+              "confidence": 0.72,
+              "hierarchyPath": [
+                "General",
+                "3"
+              ],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "text_mode"
+              }
+            },
+            {
+              "elementId": "text-004",
+              "type": "clause",
+              "text": "Notice and Cure. Before termination, the breaching party shall have 10 days to cure.",
+              "pageNumber": 1,
+              "bbox": {
+                "x0": 0.0,
+                "y0": 160.0,
+                "x1": 1000.0,
+                "y1": 190.0,
+                "pageWidth": 1000.0,
+                "pageHeight": 1400.0
+              },
+              "confidence": 0.72,
+              "hierarchyPath": [
+                "General",
+                "4"
+              ],
+              "parentId": null,
+              "children": [],
+              "tableCells": [],
+              "metadata": {
+                "source": "text_mode"
+              }
+            }
+          ]
+        }
+      ],
+      "hierarchy": [
+        "General"
+      ],
+      "clauseSegments": [
+        {
+          "clauseId": "clause-001",
+          "sectionReference": "General",
+          "hierarchy": [
+            "General",
+            "1"
+          ],
+          "title": "",
+          "originalText": "Payment. Client shall pay invoices within 30 days."
+        },
+        {
+          "clauseId": "clause-002",
+          "sectionReference": "General",
+          "hierarchy": [
+            "General",
+            "2"
+          ],
+          "title": "",
+          "originalText": "Termination. Either party may terminate for material breach subject to Section 4."
+        },
+        {
+          "clauseId": "clause-003",
+          "sectionReference": "General",
+          "hierarchy": [
+            "General",
+            "3"
+          ],
+          "title": "",
+          "originalText": "Liability. Supplier indemnifies Buyer for all third-party claims."
+        },
+        {
+          "clauseId": "clause-004",
+          "sectionReference": "General",
+          "hierarchy": [
+            "General",
+            "4"
+          ],
+          "title": "",
+          "originalText": "Notice and Cure. Before termination, the breaching party shall have 10 days to cure."
+        }
+      ],
+      "tables": [],
+      "signatures": [],
+      "annotations": [],
+      "rawText": "1. Payment. Client shall pay invoices within 30 days.\n2. Termination. Either party may terminate for material breach subject to Section 4.\n3. Liability. Supplier indemnifies Buyer for all third-party claims.\n4. Notice and Cure. Before termination, the breaching party shall have 10 days to cure.",
+      "reconstructionNotes": [
+        "Built structured document from text-mode ingestion path."
+      ]
+    },
+    "ingestionEvaluation": {
+      "documentStructureAccuracy": 0.4083333333333333,
+      "clauseDetectionAccuracy": 0.9491525423728814,
+      "tableExtractionAccuracy": 0.0,
+      "layoutDetectionPrecision": 1.0,
+      "processingLatencyMs": 10.36,
+      "notes": [
+        "Reference-free intrinsic evaluation used because no gold annotation was supplied."
+      ]
+    },
+    "contractorCredibility": null,
+    "evaluationMetrics": {
+      "contract_classification": "top-1 accuracy, macro-F1, calibration error",
+      "clause_segmentation": "boundary F1, hierarchical consistency, clause coverage",
+      "risk_detection": "AUROC, precision@critical, weighted Brier score, explanation faithfulness",
+      "explanation_quality": "human adequacy, factual consistency, edit distance to gold simplifications"
+    },
+    "generatedAt": "2026-03-16T19:04:26.230455"
+  },
+  "searchableText": "1. Payment. Client shall pay invoices within 30 days.\n2. Termination. Either party may terminate for material breach subject to Section 4.\n3. Liability. Supplier indemnifies Buyer for all third-party claims.\n4. Notice and Cure. Before termination, the breaching party shall have 10 days to cure.\nPayment. Client shall pay invoices within 30 days.\nThe company is required to do something within 30 days. In plain terms, payment. Client shall pay invoices within 30 days.\nTermination. Either party may terminate for material breach subject to Section 4.\nBoth sides has discretion to act. In plain terms, termination. Either party may terminate for material breach subject to Section 4.\nLiability. Supplier indemnifies Buyer for all third-party claims.\nBoth sides sets a contract rule. In plain terms, liability. Supplier indemnifies Buyer for all third-party claims.\nNotice and Cure. Before termination, the breaching party shall have 10 days to cure.\nBoth sides is required to do something within 10 days. In plain terms, notice and Cure. Before termination, the breaching party shall have 10 days to cure.",
+  "createdAt": "2026-03-16T19:04:26.231446",
+  "updatedAt": "2026-03-16T19:04:26.231446"
+}

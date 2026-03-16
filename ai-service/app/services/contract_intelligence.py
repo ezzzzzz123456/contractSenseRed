@@ -35,6 +35,10 @@ CLAUSE_TYPE_RULES = {
     "ip": ["intellectual property", "license", "ownership", "royalty"],
 }
 logger = logging.getLogger("contractsense.ingestion")
+REFERENCE_PATTERN = re.compile(
+    r"\b(?:section|clause|article|part|schedule)\s+([A-Za-z0-9]+(?:\.[A-Za-z0-9]+)*)",
+    re.IGNORECASE,
+)
 
 
 class ContractIntelligenceService:
@@ -55,6 +59,7 @@ class ContractIntelligenceService:
             contract_type_hint=payload.contractTypeHint,
         )
         clause_reports = self._build_clause_reports(contract_text, payload, structured)
+        clause_reports = self._link_clause_context(clause_reports)
 
         aggregate = risk_scorer.aggregate_contract_scores(clause_reports)
         model_overall_risk = self._safe_number(structured.get("overallRiskScore")) if structured else None
@@ -565,6 +570,9 @@ class ContractIntelligenceService:
                 enforceabilityConcerns=[],
                 businessImpact="Business impact will be estimated after clause-level analysis completes.",
             ),
+            linkedClauseIds=[],
+            crossReferences=[],
+            contextSummary="",
         )
 
     def _safe_number(self, value) -> float | None:
@@ -577,6 +585,116 @@ class ContractIntelligenceService:
 
     def _color_from_risk(self, risk_level: str) -> str:
         return {"critical": "red", "warning": "yellow", "safe": "green"}[risk_level]
+
+    def _link_clause_context(self, clauses: list[ClauseAnalysis]) -> list[ClauseAnalysis]:
+        if not clauses:
+            return clauses
+
+        reference_index = self._build_reference_index(clauses)
+        for index, clause in enumerate(clauses):
+            references = self._extract_cross_references(clause.originalText)
+            linked_ids: list[str] = []
+            related_texts: list[str] = []
+
+            for reference in references:
+                for linked_clause in reference_index.get(reference.lower(), []):
+                    if linked_clause.clauseId == clause.clauseId:
+                        continue
+                    if linked_clause.clauseId not in linked_ids:
+                        linked_ids.append(linked_clause.clauseId)
+                        related_texts.append(linked_clause.originalText)
+
+            if index > 0:
+                linked_ids.append(clauses[index - 1].clauseId)
+                related_texts.append(clauses[index - 1].originalText)
+            if index + 1 < len(clauses):
+                linked_ids.append(clauses[index + 1].clauseId)
+                related_texts.append(clauses[index + 1].originalText)
+
+            deduped_ids: list[str] = []
+            deduped_related: list[str] = []
+            seen_texts: set[str] = set()
+            for linked_id, related_text in zip(linked_ids, related_texts):
+                if linked_id not in deduped_ids:
+                    deduped_ids.append(linked_id)
+                if related_text not in seen_texts:
+                    seen_texts.add(related_text)
+                    deduped_related.append(related_text)
+
+            clause.linkedClauseIds = deduped_ids[:6]
+            clause.crossReferences = references[:6]
+            clause.contextSummary = self._build_context_summary(clause, deduped_ids, references)
+            clause = risk_scorer.contextualize_clause(clause, deduped_related[:4], references)
+            clause = self._apply_contextual_legal_reasoning(clause, deduped_ids, references)
+            clauses[index] = clause
+        return clauses
+
+    def _build_reference_index(self, clauses: list[ClauseAnalysis]) -> dict[str, list[ClauseAnalysis]]:
+        index: dict[str, list[ClauseAnalysis]] = {}
+        for clause in clauses:
+            keys = {
+                clause.clauseId.lower(),
+                clause.sectionReference.lower(),
+                clause.title.lower(),
+            }
+            for item in clause.hierarchy:
+                if item:
+                    keys.add(item.lower())
+                    suffix = item.split()[-1].strip(":.").lower()
+                    if suffix:
+                        keys.add(suffix)
+            numbered = re.match(r"^(\d+(?:\.\d+)*)", clause.originalText.strip())
+            if numbered:
+                keys.add(numbered.group(1).lower())
+            for key in keys:
+                if key and key not in {"general", "clause review"}:
+                    index.setdefault(key, []).append(clause)
+        return index
+
+    def _extract_cross_references(self, text: str) -> list[str]:
+        refs = [match.group(1).strip() for match in REFERENCE_PATTERN.finditer(text)]
+        ordered: list[str] = []
+        for ref in refs:
+            if ref not in ordered:
+                ordered.append(ref)
+        return ordered
+
+    def _build_context_summary(self, clause: ClauseAnalysis, linked_ids: list[str], references: list[str]) -> str:
+        parts: list[str] = []
+        if references:
+            parts.append(f"References: {', '.join(references[:4])}.")
+        if linked_ids:
+            parts.append(f"Related clauses: {', '.join(linked_ids[:4])}.")
+        if not parts:
+            parts.append("Primary context comes from adjacent clauses in the document flow.")
+        return " ".join(parts)
+
+    def _apply_contextual_legal_reasoning(
+        self,
+        clause: ClauseAnalysis,
+        linked_ids: list[str],
+        references: list[str],
+    ) -> ClauseAnalysis:
+        if not linked_ids and not references:
+            return clause
+
+        context_sentence = clause.contextSummary or "This clause should be read with surrounding clauses."
+        clause.courtroomAssessment.judgeView = (
+            f"{clause.courtroomAssessment.judgeView} Contextually, {context_sentence.lower()}"
+        )
+        clause.courtroomAssessment.likelyRuling = (
+            f"{clause.courtroomAssessment.likelyRuling} A court would read it together with {len(linked_ids) or 'nearby'} related clause(s)."
+        )
+        clause.courtroomAssessment.businessImpact = (
+            f"{clause.courtroomAssessment.businessImpact} Cross-clause interaction can change who has leverage if a dispute arises."
+        )
+        clause.courtroomAssessment.enforceabilityConcerns = self._collect_unique(
+            clause.courtroomAssessment.enforceabilityConcerns + [
+                "Linked clauses may alter scope, remedies, or priority if they are not harmonized."
+            ],
+            limit=5,
+        )
+        return clause
 
 
 contract_intelligence_service = ContractIntelligenceService()

@@ -254,6 +254,9 @@ class ClauseAnalysis(BaseModel):
     negotiation: NegotiationStrategy
     legalScenarios: list[LegalScenario] = Field(default_factory=list)
     courtroomAssessment: CourtroomAssessment
+    linkedClauseIds: list[str] = Field(default_factory=list)
+    crossReferences: list[str] = Field(default_factory=list)
+    contextSummary: str = ""
 
 
 class ContractRiskMetrics(BaseModel):
