@@ -7,12 +7,12 @@ const MarketingHeader = (): JSX.Element => (
       <Brand />
       <nav className="marketing-header__nav">
         <a href="#features">Features</a>
-        <a href="#pricing">Pricing</a>
         <a href="#solutions">Solutions</a>
+        <a href="#auth-panel">Portal Access</a>
       </nav>
       <div className="marketing-header__actions">
-        <a href="#auth-panel" className="button button--ghost">Log In</a>
-        <a href="#auth-panel" className="button button--primary">Contact Us</a>
+        <a href="#auth-panel" className="button button--glass">Log In</a>
+        <a href="#auth-panel" className="button button--primary">Get Started Free</a>
       </div>
     </div>
   </header>

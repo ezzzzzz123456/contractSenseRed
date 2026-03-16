@@ -2,10 +2,14 @@ import { Link, useLocation } from "react-router-dom";
 import Brand from "./Brand";
 
 const navItems = [
-  { label: "Home", to: "/dashboard", badge: null, short: "H" },
-  { label: "Marketplace", to: "/marketplace", badge: null, short: "M" },
-  { label: "Inbox", to: "/report", badge: "12", short: "I" },
-  { label: "Settings", to: "/analysis", badge: null, short: "S" },
+  { label: "Dashboard", to: "/dashboard", badge: null, short: "D" },
+  { label: "Reports", to: "/report", badge: null, short: "R" },
+  { label: "My Contracts", to: "/analysis", badge: null, short: "C" },
+];
+
+const footerItems = [
+  { label: "Settings", to: "/marketplace", short: "S" },
+  { label: "Support", to: "/marketplace", short: "?" },
 ];
 
 const DashboardSidebar = (): JSX.Element => {
@@ -31,13 +35,24 @@ const DashboardSidebar = (): JSX.Element => {
         })}
       </nav>
 
-      <section className="plan-card">
-        <h3>Pro Plan</h3>
-        <p>85/100 contracts analyzed this month.</p>
-        <div className="plan-card__track">
-          <span className="plan-card__fill" />
-        </div>
-      </section>
+      <div className="dashboard-sidebar__footer">
+        <section className="dashboard-sidebar__aux">
+          {footerItems.map((item) => (
+            <Link key={item.label} to={item.to} className="side-link side-link--footer">
+              <span className="side-link__icon">{item.short}</span>
+              <span>{item.label}</span>
+            </Link>
+          ))}
+        </section>
+        <section className="plan-card">
+          <span className="eyebrow eyebrow--muted">usage</span>
+          <h3>Pro Plan</h3>
+          <p>85 of 100 contracts analyzed this month.</p>
+          <div className="plan-card__track">
+            <span className="plan-card__fill" />
+          </div>
+        </section>
+      </div>
     </aside>
   );
 };

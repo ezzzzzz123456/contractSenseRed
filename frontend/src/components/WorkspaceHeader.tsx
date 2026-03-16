@@ -1,15 +1,18 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Brand from "./Brand";
+import { useAuth } from "../hooks/useAuth";
 
 const links = [
   { label: "Dashboard", to: "/dashboard" },
-  { label: "Documents", to: "/dashboard" },
   { label: "Analysis", to: "/analysis" },
-  { label: "History", to: "/report" },
+  { label: "Reports", to: "/report" },
+  { label: "Legal Team", to: "/marketplace" },
 ];
 
 const WorkspaceHeader = ({ actionLabel, actionTo }: { actionLabel?: string; actionTo?: string }): JSX.Element => {
   const location = useLocation();
+  const navigate = useNavigate();
+  const { logout } = useAuth();
 
   return (
     <header className="workspace-header">
@@ -30,6 +33,16 @@ const WorkspaceHeader = ({ actionLabel, actionTo }: { actionLabel?: string; acti
           {actionLabel ? (
             actionTo ? <Link to={actionTo} className="button button--primary">{actionLabel}</Link> : <button type="button" className="button button--primary">{actionLabel}</button>
           ) : null}
+          <button
+            type="button"
+            className="button button--glass"
+            onClick={() => {
+              logout();
+              navigate("/");
+            }}
+          >
+            Log Out
+          </button>
           <span className="avatar-badge">JD</span>
         </div>
       </div>

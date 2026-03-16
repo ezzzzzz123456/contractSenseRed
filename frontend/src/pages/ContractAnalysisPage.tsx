@@ -1,10 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import ClauseCard from "../components/ClauseCard";
-import OutcomeSimulatorChat from "../components/OutcomeSimulatorChat";
-import PartyIntelligencePanel from "../components/PartyIntelligencePanel";
-import ReportExportButton from "../components/ReportExportButton";
-import WorkspaceHeader from "../components/WorkspaceHeader";
+import DashboardSidebar from "../components/DashboardSidebar";
+import DashboardTopbar from "../components/DashboardTopbar";
 import { useAuth } from "../hooks/useAuth";
 import { useContract } from "../hooks/useContract";
 
@@ -22,22 +19,20 @@ const ContractAnalysisPage = (): JSX.Element => {
   } = useContract();
   const [statusMessage, setStatusMessage] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [openClauseIndex, setOpenClauseIndex] = useState<number>(0);
+  const [assistantOpen, setAssistantOpen] = useState(false);
 
   useEffect(() => {
     if (currentUser && contracts.length === 0) {
       void fetchContracts();
     }
-  }, [currentUser]);
+  }, [currentUser, contracts.length, fetchContracts]);
 
   useEffect(() => {
     if (activeContract?._id && activeContract.status === "analyzed") {
       void fetchReportByContract(activeContract._id);
     }
-  }, [activeContract?._id, activeContract?.status]);
-
-  const redClauses = activeContract?.clauseList.filter((clause) => clause.riskFlag === "red").length ?? 0;
-  const yellowClauses = activeContract?.clauseList.filter((clause) => clause.riskFlag === "yellow").length ?? 0;
-  const confidence = activeReport?.aiOutput.overallRiskScore ? Math.min(98, activeReport.aiOutput.overallRiskScore + 18) : 98;
+  }, [activeContract?._id, activeContract?.status, fetchReportByContract]);
 
   const handleAnalyze = async (): Promise<void> => {
     if (!activeContract?._id) {
@@ -56,115 +51,134 @@ const ContractAnalysisPage = (): JSX.Element => {
     }
   };
 
+  const clauses = activeContract?.clauseList ?? [];
+  const summary = activeReport?.aiOutput.summary ?? "Run analysis to generate a contract summary and detailed risk breakdown.";
+
   return (
-    <div className="workspace-page">
-      <WorkspaceHeader actionLabel="Request Lawyer Review" actionTo="/marketplace" />
-      <main className="analysis-layout">
-        <div className="analysis-header">
-          <div>
-            <div className="breadcrumbs">
-              <Link to="/dashboard">Documents</Link>
-              <span>&gt;</span>
-              <span>{activeContract?.fileUrl.split("/").pop() ?? "Employment_Agreement_v2.pdf"}</span>
+    <div className="dashboard-layout dashboard-layout--light">
+      <DashboardSidebar />
+      <div className="dashboard-main">
+        <DashboardTopbar title="My Contracts" subtitle="Review contract outputs in a simpler, more readable workspace." />
+        <main className="dashboard-content dashboard-content--light page-fade-in">
+          <section className="contracts-toolbar lift-card">
+            <div>
+              <h2>{activeContract?.fileUrl.split("/").pop() ?? "Select a contract"}</h2>
+              <p>{summary}</p>
             </div>
-            <h1>Contract Analysis Report</h1>
-            <div className="analysis-meta">
-              <span>Analyzed {activeContract?.status === "analyzed" ? "just now" : "pending analysis"}</span>
-              <span>{activeContract?.contractType ?? "Employment/Non-Compete"}</span>
-              <span>TechCorp Inc.</span>
-            </div>
-          </div>
-          <div className="analysis-header__actions">
-            <ReportExportButton />
-            <button
-              type="button"
-              className="button button--primary"
-              onClick={() => void navigator.clipboard.writeText(window.location.href)}
-            >
-              Share
-            </button>
-          </div>
-        </div>
-
-        <section className="analysis-picker">
-          {!currentUser ? <p>Please sign in to analyze a contract.</p> : null}
-          {currentUser && contracts.length === 0 ? <p>No uploaded contracts yet. Upload one from the dashboard first.</p> : null}
-          <div className="analysis-picker__row">
-            {contracts.map((contract) => (
-              <button
-                key={contract._id}
-                type="button"
-                className={`analysis-picker__item${activeContract?._id === contract._id ? " analysis-picker__item--active" : ""}`}
-                onClick={() => setActiveContract(contract)}
-              >
-                <strong>{contract.fileUrl.split("/").pop()}</strong>
-                <span>{contract.status}</span>
+            <div className="contracts-toolbar__actions">
+              <button type="button" className="button button--primary" onClick={() => void handleAnalyze()} disabled={!activeContract || isAnalyzingContract}>
+                {isAnalyzingContract ? "Analyzing..." : "Run Analysis"}
               </button>
-            ))}
-          </div>
-          <div className="analysis-picker__actions">
-            <button type="button" className="button button--primary" onClick={() => void handleAnalyze()} disabled={!activeContract || isAnalyzingContract}>
-              {isAnalyzingContract ? "Analyzing..." : "Run AI Analysis"}
-            </button>
-            {statusMessage ? <span className="form-success">{statusMessage}</span> : null}
-            {error ? <span className="form-error">{error}</span> : null}
-          </div>
-        </section>
+              <Link to="/report" className="button button--glass">Open Report</Link>
+            </div>
+          </section>
 
-        <div className="analysis-columns">
-          <div className="analysis-columns__main">
-            <section className="summary-card">
-              <div className="summary-card__icon">S</div>
-              <h2>Executive Summary</h2>
-              <p>
-                {activeReport?.aiOutput.summary ??
-                  "This agreement is standard for the technology sector but contains clauses that may require negotiation before signature."}
-              </p>
-              <p>
-                Key highlights include clearly defined ownership language, key notice obligations, and a risk distribution profile that should be reviewed before execution.
-              </p>
-              <div className="summary-metrics">
-                <div>
-                  <span>Risk Score</span>
-                  <strong>{activeReport?.aiOutput.overallRiskScore ?? 64}/100</strong>
+          <section className="contracts-main-grid">
+            <aside className="contracts-main-grid__side">
+              <section className="contracts-list-card lift-card">
+                <h3>Your contracts</h3>
+                <div className="contracts-list">
+                  {contracts.map((contract) => (
+                    <button
+                      key={contract._id}
+                      type="button"
+                      className={`contracts-list__item${activeContract?._id === contract._id ? " contracts-list__item--active" : ""}`}
+                      onClick={() => setActiveContract(contract)}
+                    >
+                      <strong>{contract.fileUrl.split("/").pop()}</strong>
+                      <span>{contract.contractType.toUpperCase()}</span>
+                    </button>
+                  ))}
                 </div>
-                <div>
-                  <span>Clauses</span>
-                  <strong>{activeContract?.clauseList.length ?? 0}</strong>
-                </div>
-                <div>
-                  <span>Confidence</span>
-                  <strong>{confidence}%</strong>
-                </div>
-              </div>
-            </section>
-
-            <OutcomeSimulatorChat />
-          </div>
-
-          <aside className="analysis-columns__side">
-            <section className="risk-summary-header">
-              <h2>Risk Flags</h2>
-              <div className="risk-summary-header__pills">
-                <span>{redClauses} High</span>
-                <span>{yellowClauses} Med</span>
-              </div>
-            </section>
-
-            {activeContract?.clauseList?.length ? (
-              activeContract.clauseList.map((clause, index) => (
-                <ClauseCard key={`${clause.text}-${index}`} clause={clause} />
-              ))
-            ) : (
-              <section className="empty-analysis card">
-                <p>No clause analysis available yet. Run analysis on an uploaded contract to populate this view.</p>
               </section>
-            )}
+            </aside>
 
-            <PartyIntelligencePanel />
-          </aside>
-        </div>
-      </main>
+            <div className={`contracts-main-grid__content${assistantOpen ? " contracts-main-grid__content--split" : ""}`}>
+              <div className="contracts-output">
+                <section className="contracts-summary-card lift-card">
+                  <div className="contracts-summary-card__stats">
+                    <article>
+                      <span>Risk score</span>
+                      <strong>{activeReport?.aiOutput.overallRiskScore ?? 0}/100</strong>
+                    </article>
+                    <article>
+                      <span>Clauses found</span>
+                      <strong>{clauses.length}</strong>
+                    </article>
+                    <article>
+                      <span>Status</span>
+                      <strong>{activeContract?.status ?? "draft"}</strong>
+                    </article>
+                  </div>
+                  {statusMessage ? <p className="form-success">{statusMessage}</p> : null}
+                  {error ? <p className="form-error">{error}</p> : null}
+                </section>
+
+                <section className="contracts-clauses">
+                  <div className="contracts-section-heading">
+                    <h3>Clause details</h3>
+                    <p>Open each section only when you want more detail.</p>
+                  </div>
+
+                  {clauses.length ? (
+                    clauses.map((clause, index) => {
+                      const isOpen = openClauseIndex === index;
+
+                      return (
+                        <article key={`${clause.text}-${index}`} className={`contracts-accordion contracts-accordion--${clause.riskFlag} lift-card`}>
+                          <button
+                            type="button"
+                            className="contracts-accordion__toggle"
+                            onClick={() => setOpenClauseIndex(isOpen ? -1 : index)}
+                          >
+                            <div>
+                              <strong>{clause.text.slice(0, 56)}{clause.text.length > 56 ? "..." : ""}</strong>
+                              <span>{clause.explanation}</span>
+                            </div>
+                            <span className={`contracts-accordion__badge contracts-accordion__badge--${clause.riskFlag}`}>
+                              {clause.riskFlag.toUpperCase()}
+                            </span>
+                          </button>
+                          {isOpen ? (
+                            <div className="contracts-accordion__body">
+                              <section>
+                                <h4>Simplified explanation</h4>
+                                <p>{clause.simplifiedText}</p>
+                              </section>
+                              <section>
+                                <h4>Suggested revision</h4>
+                                <p>{clause.counterClauseSuggestion}</p>
+                              </section>
+                            </div>
+                          ) : null}
+                        </article>
+                      );
+                    })
+                  ) : (
+                    <section className="contracts-empty lift-card">
+                      <p>No analysis details available yet. Upload and analyze a contract to populate this section.</p>
+                    </section>
+                  )}
+                </section>
+              </div>
+
+              <aside className={`contracts-assistant${assistantOpen ? " contracts-assistant--open" : ""}`}>
+                <button type="button" className="contracts-assistant__toggle button button--glass" onClick={() => setAssistantOpen((value) => !value)}>
+                  {assistantOpen ? "Minimize AI Query" : "Ask AI Query"}
+                </button>
+                {assistantOpen ? (
+                  <div className="contracts-assistant__panel lift-card">
+                    <h3>Ask a contract question</h3>
+                    <p>Use this when you want detailed scenario help without leaving the report.</p>
+                    <textarea placeholder="What happens if payment is 45 days late?" rows={8} />
+                    <button type="button" className="button button--primary">Send Query</button>
+                  </div>
+                ) : null}
+              </aside>
+            </div>
+          </section>
+        </main>
+      </div>
     </div>
   );
 };

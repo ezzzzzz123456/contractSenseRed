@@ -42,7 +42,7 @@ const OutcomeSimulatorChat = (): JSX.Element => {
   };
 
   return (
-    <section className="simulator-card">
+    <section className="simulator-card lift-card">
       <header className="simulator-card__header">
         <h2>Outcome Simulator</h2>
         <span>AI Model: L4-Legal-Specialist</span>

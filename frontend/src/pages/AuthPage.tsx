@@ -1,19 +1,24 @@
 import { useEffect, useState } from "react";
 import type { FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
-import Brand from "../components/Brand";
-import LawyerCard from "../components/LawyerCard";
 import MarketingHeader from "../components/MarketingHeader";
 import { useAuth } from "../hooks/useAuth";
-import type { Lawyer, UserType } from "../types";
+import type { UserType } from "../types";
 
-const demoLawyer: Lawyer = {
-  userId: "lawyer-demo",
-  specializations: ["AI-powered clause analysis", "Batch processing & bulk actions"],
-  isVerified: true,
-  ratings: 4.9,
-  feePerReview: 299,
-};
+const features = [
+  {
+    title: "Secure storage",
+    body: "Keep agreements organized in one clean workspace with easy upload and review flows.",
+  },
+  {
+    title: "AI analysis",
+    body: "Detect risk, simplify legal text, and generate readable outputs for non-legal users.",
+  },
+  {
+    title: "Lawyer review",
+    body: "Escalate important reports to lawyers when human review is needed before signature.",
+  },
+];
 
 const AuthPage = (): JSX.Element => {
   const { currentUser, isLoading, login, register } = useAuth();
@@ -25,6 +30,12 @@ const AuthPage = (): JSX.Element => {
   const [userType, setUserType] = useState<UserType>("user");
   const [error, setError] = useState<string | null>(null);
   const [submitting, setSubmitting] = useState(false);
+  const [showIntro, setShowIntro] = useState(true);
+
+  useEffect(() => {
+    const timer = window.setTimeout(() => setShowIntro(false), 1400);
+    return () => window.clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     if (!isLoading && currentUser) {
@@ -52,109 +63,95 @@ const AuthPage = (): JSX.Element => {
   };
 
   return (
-    <div className="marketing-page">
+    <div className="marketing-page marketing-page--reference">
+      <div className={`intro-splash${showIntro ? "" : " intro-splash--hidden"}`} aria-hidden={!showIntro}>
+        <div className="intro-splash__core">
+          <span className="intro-splash__ring intro-splash__ring--outer" />
+          <span className="intro-splash__ring intro-splash__ring--inner" />
+          <div className="intro-splash__mark">CS</div>
+        </div>
+        <p>Opening ContractSense</p>
+      </div>
+
       <MarketingHeader />
-      <main>
-        <section className="hero-section">
-          <div className="hero-section__copy">
-            <span className="eyebrow">NEXT-GEN LEGAL AI</span>
+
+      <main className="page-fade-in">
+        <section className="landing-hero landing-hero--simple">
+          <div className="landing-hero__copy">
+            <span className="eyebrow">NEXT-GEN LEGAL TECH</span>
             <h1>
               Intelligent
               <br />
               Contract
               <br />
-              Management <span>for Everyone</span>
+              Management for
+              <br />
+              Everyone
             </h1>
             <p>
-              ContractSense uses AI to streamline legal workflows, whether you are managing personal agreements or
-              complex high-stakes firm cases.
+              ContractSense helps users upload contracts, understand risks, review reports, and consult the right lawyer
+              only when it is needed.
             </p>
-            <div className="hero-section__actions">
+            <div className="landing-hero__actions">
               <a href="#auth-panel" className="button button--primary">Get Started Free</a>
-              <a href="#solutions" className="button button--ghost">View Demo</a>
+              <a href="#features" className="button button--glass">View Features</a>
             </div>
           </div>
-          <div className="hero-visual">
-            <div className="hero-visual__photo" />
+
+          <div className="landing-hero__visual">
+            <div className="landing-window lift-card">
+              <div className="landing-window__toolbar">
+                <span />
+                <span />
+                <span />
+              </div>
+              <div className="landing-window__app">
+                <div className="landing-window__sidebar" />
+                <div className="landing-window__panel">
+                  <div className="landing-window__search" />
+                  <div className="landing-window__cards">
+                    <span />
+                    <span />
+                    <span />
+                  </div>
+                  <div className="landing-window__list">
+                    <span />
+                    <span />
+                    <span />
+                    <span />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
-        <section className="experience-section" id="solutions">
+        <section className="landing-features" id="features">
           <div className="section-heading">
-            <h2>Choose your experience</h2>
-            <p>
-              We've tailored ContractSense to fit your specific needs, providing specialized toolsets for both
-              individuals and legal professionals.
-            </p>
+            <h2>Powerful features for modern legal work</h2>
+            <p>Everything important is kept simple: upload, analyze, review, and consult when needed.</p>
           </div>
-
-          <div className="portal-grid">
-            <article className="portal-card">
-              <div className="portal-card__media portal-card__media--user" />
-              <div className="portal-card__icon">U</div>
-              <h3>I am a User</h3>
-              <p>Manage your personal contracts, rent agreements, and digital signatures with ease.</p>
-              <ul className="portal-card__list">
-                <li>Simple, intuitive dashboard</li>
-                <li>Unlimited electronic signatures</li>
-                <li>Automated renewal alerts</li>
-              </ul>
-              <button
-                type="button"
-                className="button button--secondary button--block"
-                onClick={() => {
-                  setUserType("user");
-                  setMode("register");
-                  document.getElementById("auth-panel")?.scrollIntoView({ behavior: "smooth", block: "start" });
-                }}
-              >
-                Select User Portal
-              </button>
-            </article>
-
-            <LawyerCard lawyer={demoLawyer} />
-          </div>
-        </section>
-
-        <section className="security-section" id="features">
-          <div className="section-heading">
-            <h2>Built for Security and Precision</h2>
-            <p>Our platform combines enterprise-level security with specialized legal intelligence.</p>
-          </div>
-          <div className="feature-grid">
-            <article className="feature-card">
-              <span className="feature-card__icon">S</span>
-              <h3>Secure Storage</h3>
-              <p>Bank-grade AES-256 encryption protects all your sensitive legal documents and communications.</p>
-            </article>
-            <article className="feature-card">
-              <span className="feature-card__icon">A</span>
-              <h3>AI Analysis</h3>
-              <p>Automatically identify risks, anomalies, and key clauses in seconds with proprietary LLM models.</p>
-            </article>
-            <article className="feature-card">
-              <span className="feature-card__icon">C</span>
-              <h3>Collaboration</h3>
-              <p>Work together with clients or firm colleagues in real-time with granular permission control.</p>
-            </article>
+          <div className="feature-grid feature-grid--landing">
+            {features.map((feature) => (
+              <article key={feature.title} className="feature-card feature-card--landing lift-card">
+                <h3>{feature.title}</h3>
+                <p>{feature.body}</p>
+              </article>
+            ))}
           </div>
         </section>
 
         <section className="auth-panel-section" id="auth-panel">
-          <div className="auth-panel card">
-            <div>
+          <div className="auth-panel card lift-card">
+            <div className="auth-panel__copy">
               <span className="eyebrow">PORTAL ACCESS</span>
-              <h2>{mode === "login" ? "Log in to your workspace" : "Create your ContractSense account"}</h2>
-              <p>
-                {mode === "login"
-                  ? "Continue to your dashboard, active analyses, and generated reports."
-                  : "Start as a business user or lawyer and unlock the full legal workflow suite."}
-              </p>
+              <h2>{mode === "login" ? "Sign in to your workspace" : "Create your account"}</h2>
+              <p>Select whether you are logging in as a user or lawyer directly in the form below.</p>
               <div className="auth-panel__switches">
-                <button type="button" className={`button ${mode === "login" ? "button--primary" : "button--ghost"}`} onClick={() => setMode("login")}>
+                <button type="button" className={`button ${mode === "login" ? "button--primary" : "button--glass"}`} onClick={() => setMode("login")}>
                   Log In
                 </button>
-                <button type="button" className={`button ${mode === "register" ? "button--primary" : "button--ghost"}`} onClick={() => setMode("register")}>
+                <button type="button" className={`button ${mode === "register" ? "button--primary" : "button--glass"}`} onClick={() => setMode("register")}>
                   Register
                 </button>
               </div>
@@ -176,9 +173,9 @@ const AuthPage = (): JSX.Element => {
                 <input type="password" value={password} onChange={(event) => setPassword(event.target.value)} required />
               </label>
               <label>
-                Account Type
+                Login As
                 <select value={userType} onChange={(event) => setUserType(event.target.value as UserType)}>
-                  <option value="user">Business User</option>
+                  <option value="user">User</option>
                   <option value="lawyer">Lawyer</option>
                 </select>
               </label>
@@ -190,15 +187,6 @@ const AuthPage = (): JSX.Element => {
           </div>
         </section>
       </main>
-      <footer className="marketing-footer" id="pricing">
-        <Brand />
-        <div>
-          <a href="#auth-panel">Privacy Policy</a>
-          <a href="#auth-panel">Terms of Service</a>
-          <a href="#auth-panel">Compliance</a>
-        </div>
-        <span>&copy; 2024 ContractSense Legal Tech. All rights reserved.</span>
-      </footer>
     </div>
   );
 };

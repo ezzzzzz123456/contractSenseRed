@@ -5,8 +5,8 @@ const PartyIntelligencePanel = ({ intel }: { intel?: PartyIntelligence }): JSX.E
   const navigate = useNavigate();
 
   return (
-    <section className="insight-panel">
-      <h2>Legal Professional Insight</h2>
+    <section className="insight-panel lift-card">
+      <h2>Party Intelligence</h2>
       {intel ? <p>{intel.summary}</p> : <p>Based on your jurisdiction and the analyzed clause mix, several provisions may need negotiation before signature.</p>}
       <ul className="insight-panel__list">
         {(intel?.riskIndicators ?? [

@@ -16,7 +16,7 @@ const ClauseCard = ({ clause }: { clause: Clause }): JSX.Element => {
   };
 
   return (
-    <article className={`risk-card risk-card--${clause.riskFlag}`}>
+    <article className={`risk-card risk-card--${clause.riskFlag} lift-card`}>
       <header className="risk-card__header">
         <div>
           <div className="risk-card__title-row">
